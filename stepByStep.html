@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <style>
+      @import url(./css/stepBystep.css);  
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="wrap">
+    <div class="pageBtns">
+      <button class="pageLink" type="button">.pageLink<br>#pageLink1</button>
+      <button class="pageLink" type="button">.pageLink<br>#pageLink2</button>
+      <button class="pageLink" type="button">.pageLink<br>#pageLink3</button>
+      <button class="pageLink" type="button">.pageLink<br>#pageLink4</button>
+    </div>
+    <form class="main" data-page='1' method="post" action="./waever.php">
+      <div class="page">.page #page1</div>
+      <div class="page">.page #page2</div>
+      <div class="page">.page #page3</div>
+      <div class="page">.page #page4</div>
+    </form>
+  </div>
+  <div class="ctrlBtns">
+    <button type="button" id='prevBtn' disabled>#prevBtn</button>
+    <button type="button" id='nextBtn'>#nextBtn</button>
+  </div>
+</div>
+<script>
+//🟡上一頁下一頁按鈕
+const totalPage = $('.page').length;
+const prevBtn = $('#prevBtn');
+const nextBtn = $('#nextBtn');
+const mainElm = $('.main');
+let currentPage = parseInt(mainElm.attr('data-page'));
+const checkPage = () => {
+  currentPage = parseInt($('.main').attr('data-page'))
+  prevBtn.attr('disabled',false);       //初始化
+  // nextBtn.attr('disabled',false);    //初始化 
+  if(currentPage === 1 ){
+    prevBtn.attr('disabled',true);}
+  else if(currentPage === totalPage){
+    nextBtn.prop("type", "submit");
+    nextBtn.html('submit');
+
+  }
+  else{
+    prevBtn.attr('disabled',false);
+    // nextBtn.attr('disabled',false);
+    nextBtn.html('#nextBtn');           //初始化
+    nextBtn.prop("type","button");      //初始化
+  }
+}
+nextBtn.click(()=>{
+  if(currentPage < totalPage ){
+    mainElm.attr('data-page',currentPage + 1);
+    checkPage();
+  }else if(currentPage == totalPage){
+    checkPage();
+    nextBtn.click($('form').submit());
+  }
+  
+})
+prevBtn.click(()=>{
+  mainElm.attr('data-page',currentPage - 1);
+  checkPage();
+})
+
+
+//🟡上方tag按鈕
+const pageLink = $('.pageLink');
+const whichPage = () => {
+  for(let i=0;i<totalPage;i++){
+    pageLink.eq(i).click(()=>{
+      currentPage=i+1;
+      mainElm.attr('data-page',currentPage);
+      checkPage();
+    })
+  }
+}
+window.addEventListener('load',whichPage);
+</script>
+</body>
+</html>

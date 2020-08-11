@@ -1,0 +1,68 @@
+  /*控制顯示*/
+  .container{
+    .wrap{
+       .main[data-page] .page {
+        display: none;
+      }
+      .main[data-page="1"] .page:nth-child(1),
+      .main[data-page="2"] .page:nth-child(2),
+      .main[data-page="3"] .page:nth-child(3),
+      .main[data-page="4"] .page:nth-child(4){
+        display: block;
+      }
+    }
+  }
+  
+  
+  
+  /*樣式*/
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  }
+  button{cursor:pointer;}
+  button[disabled]{visibility:hidden;}
+  .container{
+    margin: auto;
+    max-width:960px;
+    min-height: 100vh;
+    border: 0.5px solid black;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    .wrap{
+      width: 100%;
+      height: 90vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      .pageBtns{
+        font-size: 0;
+        button{
+          padding: 15px;
+        }
+      }
+      .main{
+        width: 100%;
+        height: 100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        // background: pink;
+        .page{ width: 100%;height: 100%;}
+        .page:nth-child(odd){background: lightblue;}
+        .page:nth-child(even){background: tomato;}
+      }
+    }
+    .ctrlBtns{
+      width: 100%;
+      display:flex;
+      justify-content:space-between;
+      font-size: 0;
+      button{
+        padding: 10px;
+      }
+    }
+  }
