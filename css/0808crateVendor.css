@@ -85,14 +85,12 @@ body {
   border: 0px;
   border-radius: 5px;
   position: relative;
-  overflow-x: scroll;
   white-space: nowrap;
 }
 
 .container input[type="text"] span,
 .container .selectcontrol span {
   width: 90%;
-  overflow-x: scroll;
 }
 
 .container input[type="text"] span::-webkit-scrollbar,
@@ -100,8 +98,8 @@ body {
   display: none;
 }
 
-.container input[type="text"]::-webkit-scrollbar,
-.container .selectcontrol::-webkit-scrollbar {
+.container input[type="text"] span::-ms-scrollbar,
+.container .selectcontrol span::-ms-scrollbar {
   display: none;
 }
 
@@ -176,19 +174,56 @@ form#createVendor {
 }
 
 form#createVendor .steps {
+  max-width: 960px;
+}
+
+form#createVendor .steps * {
+  border: 1px solid green;
+}
+
+form#createVendor .steps img {
+  width: 100%;
+}
+
+form#createVendor .steps > div {
+  align-items: center;
   flex-direction: row;
-  margin: 0 auto;
+}
+
+form#createVendor .steps .top > div, form#createVendor .steps .bom > div {
+  width: 20%;
+  justify-content: center;
+  height: 150px;
+}
+
+form#createVendor .steps .top .stepwrap, form#createVendor .steps .bom .stepwrap {
+  background: url(../img/gray.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+form#createVendor .steps .top .info, form#createVendor .steps .bom .info {
+  text-align: center;
+  align-items: center;
+}
+
+form#createVendor .steps .top .info .num, form#createVendor .steps .bom .info .num {
   width: fit-content;
-  color: white;
+  border-bottom: 3px solid white;
 }
 
-form#createVendor .steps .linetimeimg {
-  width: 90vw;
+form#createVendor .steps .bom {
+  transform: rotate(180deg);
 }
 
-form#createVendor .steps .step {
-  border: 2px solid black;
-  padding: 20px;
+form#createVendor .steps .bom .info {
+  transform: rotate(180deg);
+}
+
+form#createVendor .steps .stepwrap::after {
+  content: '56';
+  position: absolute;
 }
 
 form#createVendor .ctrlBtns {
