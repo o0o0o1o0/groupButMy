@@ -387,7 +387,7 @@ $bg-color-4: #4DB7FE;
 // 🟡控制顯示
 .container{
   form#createVendor{
-    .page{display: none;}
+    // .page{display: none;}
   }
   #createVendor[data-page="1"] .page:nth-child(1),
   #createVendor[data-page="2"] .page:nth-child(2),

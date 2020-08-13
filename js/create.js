@@ -18,7 +18,9 @@ function doFirst(){
             countSelect(this);
         }
     });
-    
+    $('.selectwrap').focusout(function(){
+        alert('dsfadfasdfa')
+    })
 
     //🟡第一步串接頭像
     $('#myHead').change(function(e){
