@@ -42,9 +42,18 @@ function doFirst(){
     const checkPage = function (){
         currentPage = parseInt($('#createVendor').attr('data-page'))
         prevBtn.attr('disabled',false);       //初始化
-        if(currentPage == 1 || currentPage == 4){
+        if(currentPage == 1){
             prevBtn.attr('disabled',true);
-            nextBtn.html('下一步');}
+            nextBtn.html('下一步');
+        }else if(currentPage == 4){
+            prevBtn.attr('disabled',true);
+            nextBtn.html('下一步');
+            $('.pageItem').find('input').attr('disabled',true);
+            $('.pageItem').find('textarea').attr('disabled',true);
+            $('.pageItem').find('.deleteBtn').css('visibility','hidden');
+            $('.pageItem').find('.addBtn').css('display','none');
+            $('.selectcontrol').unbind(plsdown);
+        }
         else if(currentPage === totalPage){
             nextBtn.html('完成');}    
         else{
@@ -177,7 +186,7 @@ function radTextHandler(e){
 //🟡第二步刪除鈕
 function removeMeal(e){
     let myMenu = document.querySelector('.page2 .pageItem');
-    myMenu.removeChild(e.target.parentNode);
+    myMenu.removeChild(e.target.parentNode.parentNode);
 };
 
 

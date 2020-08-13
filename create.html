@@ -8,9 +8,9 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css'/>
-  <script src="./js/0808createVendor.js"></script>
+  <script src="./js/create.js"></script>
   <style>
-    @import url(./css/0808crateVendor.css);
+    @import url(./css/create.css);
   </style>
 </head>
 <body>
@@ -22,28 +22,30 @@
         <label for=""><span>上傳圖片</span></label>
         <img src="" alt="" class="showMyMeal">
       </div>
-      <label for=""><input type="text"placeholder="商品名稱"></label>
-      <label for=""><input type="text"placeholder="商品價位"></label>
-      <div class="selectwrap">
-        <div class="selectcontrol"><span>商品類型</span></div>
-        <div class="selectnav">
-          <label for=""><input type="radio" name="" value="A1"data-text="炸的"><span>炸的</span></label>
-          <label for=""><input type="radio" name="" value="A2"data-text="滷的"><span>滷的</span></label>
-          <label for=""><input type="radio" name="" value="A3"data-text="烤的"><span>烤的</span></label>
-          <label for=""><input type="radio" name="" value="A4"data-text="其他吃的"><span>其他吃的</span></label>
-          <label for=""><input type="radio" name="" value="B1"data-text="茶類"><span>茶類</span></label>
-          <label for=""><input type="radio" name="" value="B2"data-text="果汁類"><span>果汁類</span></label>
-          <label for=""><input type="radio" name="" value="B3"data-text="其他喝的"><span>其他喝的</span></label>
-          <label for=""><input type="radio" name="" value="C1"data-text="遊戲"><span>遊戲</span></label>
+      <div class="mealtextwrap">
+        <label for=""><input type="text"placeholder="商品名稱"></label>
+        <label for=""><input type="text"placeholder="商品價位"></label>
+        <div class="selectwrap">
+          <div class="selectcontrol"><span>商品類型</span></div>
+          <div class="selectnav">
+            <label for=""><input type="radio" name="" value="A1"data-text="炸的"><span>炸的</span></label>
+            <label for=""><input type="radio" name="" value="A2"data-text="滷的"><span>滷的</span></label>
+            <label for=""><input type="radio" name="" value="A3"data-text="烤的"><span>烤的</span></label>
+            <label for=""><input type="radio" name="" value="A4"data-text="其他吃的"><span>其他吃的</span></label>
+            <label for=""><input type="radio" name="" value="B1"data-text="茶類"><span>茶類</span></label>
+            <label for=""><input type="radio" name="" value="B2"data-text="果汁類"><span>果汁類</span></label>
+            <label for=""><input type="radio" name="" value="B3"data-text="其他喝的"><span>其他喝的</span></label>
+            <label for=""><input type="radio" name="" value="C1"data-text="遊戲"><span>遊戲</span></label>
+          </div>
         </div>
+        <button type="button"class="deleteBtn">X</button>
       </div>
-      <button type="button"class="deleteBtn">X</button>
     </div>
     <!--↑第二步新增的放在form外面才不會被送出-->
-    <form action="./waever.php" id="createVendor" data-page='1'>
+    <form action="" id="createVendor" data-page='1'>
       <div class="steps">
         <div class="top">
-          <div class="stepwrap">
+          <div class="stepwrap" data-page="1">
             <!-- <img src="./img/gray.png" alt=""> -->
             <div class="info">
               <div class="num">01</div>
@@ -51,19 +53,19 @@
             </div>
           </div>
           <div></div>
-          <div class="stepwrap">
-            <!-- <img src="./img/gray.png" alt=""> -->
-            <div class="info">
-              <div class="num">02</div>
-              <div class="text">建立<br>菜單</div>
-            </div>
-          </div>
-          <div></div>
-          <div class="stepwrap">
+          <div class="stepwrap" data-page="3">
             <!-- <img src="./img/gray.png" alt=""> -->
             <div class="info">
               <div class="num">03</div>
               <div class="text">建立<br>地圖位置</div>
+            </div>
+          </div>
+          <div></div>
+          <div class="stepwrap" data-page="5">
+            <!-- <img src="./img/gray.png" alt=""> -->
+            <div class="info">
+              <div class="num">05</div>
+              <div class="text">&nbsp&nbsp&nbsp完成！</div>
             </div>
           </div>
         </div>
@@ -72,19 +74,19 @@
         </div>
         <div class="bom">
           <div></div>
-          <div class="stepwrap">
+          <div class="stepwrap"data-page="4">
             <!-- <img src="./img/gray.png" alt=""> -->
             <div class="info">
               <div class="num">04</div>
-              <div class="text">檢視<br>修改</div>
+              <div class="text">檢視<br>資料</div>
             </div>
           </div>
           <div></div>
-          <div class="stepwrap">
+          <div class="stepwrap"data-page="2">
             <!-- <img src="./img/gray.png" alt=""> -->
             <div class="info">
-              <div class="num">05</div>
-              <div class="text">完成！</div>
+              <div class="num">02</div>
+              <div class="text">建立<br>菜單</div>
             </div>
           </div>
           <div></div>
@@ -142,10 +144,17 @@
         <div class="page page2">
           <h2>建立菜單</h2>
           <div class="pageItem"> 
-          <div class="addBtn">
-            <label for="addBtn">+</label>
-            <input type="button" value="新增" id="addBtn" onclick="addMeal()">
-          </div>
+            <!-- <div class="mealNote">
+              <p>上傳圖片</p>
+              <p>商品名稱</p>
+              <p>商品價位</p>
+              <p>商品類型</p>
+              <p>刪除</p>
+            </div> -->
+            <div class="addBtn">
+              <label for="addBtn">+</label>
+              <input type="button" value="新增" id="addBtn" onclick="addMeal()">
+            </div>
             
             
           </div>
