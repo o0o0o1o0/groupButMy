@@ -5,7 +5,11 @@
     box-sizing:border-box;
   }
   /*color*/
-  $bgc:darkblue;
+$bg-color-1: #11245E;
+$bg-color-2: #384F95;
+$bg-color-3: #f2f2f2;
+$bg-color-4: #4DB7FE;
+  $bgc:$bg-color-1;
   $pageItemBG:white;
   $bdrs:15px;
   $textbdrs:5px;
@@ -15,10 +19,10 @@
   $LH:30px;
   $textM: 5px;
   $textP: 0 5px;
-  $textBGC:#eee;
-  $STRONGcolor:lightblue;
-  $STRONGgrren:green;
-  $STRONGred:tomato;
+  $textBGC:#f2f2f2;
+  $STRONGcolor:#4db7fe;
+  $STRONGgrren:#2DC8A9;
+  $STRONGred:#FF6B6B;
   $addBtnLabel:(
 
   );
@@ -257,6 +261,7 @@
             background: $textBGC;
             border-radius: $textbdrs;
             span{
+              color: white;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -306,6 +311,7 @@
             align-items: center;
             background: $STRONGcolor;
             span{
+              color: white;
               position:absolute;
               width: 100%;
               height: 100%;
