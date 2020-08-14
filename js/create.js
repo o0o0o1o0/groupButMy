@@ -19,7 +19,7 @@ function doFirst(){
         }
     });
     $('.selectwrap').focusout(function(){
-        alert('dsfadfasdfa')
+        // alert('dsfadfasdfa')
     })
 
     //🟡第一步串接頭像

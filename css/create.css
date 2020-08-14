@@ -424,11 +424,30 @@ form#createVendor .page2 .pageItem div.addBtn input#addBtn {
 }
 
 @media screen and (max-width: 578px) {
-  form#createVendor .page2 .putmealhere {
+  form#createVendor .page2 .putmealhere, form#createVendor .page2 input, form#createVendor .page2 .selectcontrol {
     margin-bottom: 5px;
   }
   form#createVendor .page2 .mealtextwrap {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  form#createVendor .page.page2 .meal, form#createVendor .page.page2 .mealtextwrap {
+    flex-direction: column;
+  }
+  form#createVendor .page.page2 .mealtextwrap {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  form#createVendor .page1 > div > div {
+    display: block;
+  }
+  form#createVendor .page1 input[type="text"], form#createVendor .page1 .selectcontrol, form#createVendor .page1 .selectnav,
+  form#createVendor .page1 textarea, form#createVendor .page1 img {
+    width: 100% !important;
   }
 }
 /*# sourceMappingURL=create.css.map */

@@ -435,12 +435,38 @@ $bg-color-4: #4DB7FE;
 @media screen and (max-width:578px){
   form#createVendor{
     .page2{
-      .putmealhere{
+      .putmealhere,input,.selectcontrol{
         margin-bottom: 5px;
       }
       .mealtextwrap{
         width: 100%;
       }
     }    
+  }
+}
+
+@media screen and (max-width:460px){
+  form#createVendor{
+    .page.page2{
+      .meal,.mealtextwrap{
+        flex-direction: column;
+      }
+      .mealtextwrap{
+        // justify-content: center;
+        align-items: center;
+      }
+    } 
+  }
+}
+
+@media screen and (max-width:310px){
+  form#createVendor{
+    .page1{
+      >div>div{display: block;}
+      input[type="text"],.selectcontrol,.selectnav,
+      textarea,img{
+        width: 100% !important;
+      }
+    }
   }
 }
