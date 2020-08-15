@@ -189,7 +189,7 @@ form{
         // margin: 15px 45px;
         line-height: $LH;
         div:nth-child(2){
-            @include flexrow()
+            @include flexrow();
             img{
                 width: 20px;
                 height: 20px;
