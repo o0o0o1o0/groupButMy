@@ -389,6 +389,10 @@ form#createVendor .page2 .pageItem div.addBtn input#addBtn {
   display: inline-block;
 }
 
+.container form#createVendor .page {
+  display: none;
+}
+
 .container #createVendor[data-page="1"] .page:nth-child(1),
 .container #createVendor[data-page="2"] .page:nth-child(2),
 .container #createVendor[data-page="3"] .page:nth-child(3),
