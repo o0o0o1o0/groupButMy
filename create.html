@@ -10,10 +10,11 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css'/>
   <script src="./js/create.js"></script>
   <style>
-    @import url(./css/create.css);
+    /* @import url(./css/create.css); */
+    @import url(./css/style.css);
   </style>
 </head>
-<body>
+<body id="create">
   <div class="container">
     <!--第二步新增的放在form外面才不會被送出-->
     <div class="meal" style="display:none;">
@@ -70,7 +71,7 @@
           </div>
         </div>
         <div class="mid">
-          <img class="stepline"src="./img/line.png" alt="">
+          <img class="stepline"src="./img/create/line.png" alt="">
         </div>
         <div class="bom">
           <div></div>
@@ -133,7 +134,7 @@
               <div>
                 <h3>上傳店家頭貼</h3>
                 <div class="putheadhere">
-                  <label for="myHead"><span>上傳</span></label>
+                  <label for="myHead"><span class="btn-cir_bl">上傳</span></label>
                   <input type="file" name="" id="myHead">
                   <img class="showMyHead">
                 </div>
@@ -173,8 +174,8 @@
         </div>
       </div>
       <div class="ctrlBtns">
-          <button type="button" id="prevBtn">上一步</button>
-          <button type="button" id="nextBtn">下一步</button>
+          <button type="button" id="prevBtn" class="btn-rect_gr2">上一步</button>
+          <button type="button" id="nextBtn" class="btn-rect_pk2">下一步</button>
         </div> 
     </form>
   </div>

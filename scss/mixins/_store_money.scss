@@ -1,0 +1,24 @@
+//全域
+$LH:30px;
+$lightGrayWidth:350px;
+$lightText:white;
+$lightGray:#eee;
+$darkGray:#aaa;
+$STRONGgrren:#2DC8A9;
+$STRONGred:#FF6B6B;
+$cardBGC:white;
+$bdrs:8px;
+@mixin flexcolum($jc:center,$ai:center) {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    justify-content: $jc;
+    align-items: $ai;
+}
+@mixin flexrow($jc:center,$ai:center) {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: $jc;
+    align-items: $ai;
+}

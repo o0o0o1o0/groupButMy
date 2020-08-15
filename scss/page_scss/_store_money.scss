@@ -1,40 +1,6 @@
-//全域
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-$LH:30px;
-$lightGrayWidth:350px;
-$lightText:white;
-$lightGray:#eee;
-$darkGray:#aaa;
-$STRONGgrren:#2DC8A9;
-$STRONGred:#FF6B6B;
-$cardBGC:white;
-@mixin colorBtn($col:$STRONGred){
-    cursor: pointer;
-    color: $lightText;
-    width: 80px;
-    line-height: $LH;
-    background-color:   $col;
-    border-radius: 5px;
-    border: 0 solid #000;
-}
-@mixin flexcolum($jc:center,$ai:center) {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    justify-content: $jc;
-    align-items: $ai;
-}
-@mixin flexrow($jc:center,$ai:center) {
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: row;
-    justify-content: $jc;
-    align-items: $ai;
-}
+@import "../mixins/store_money";//變數
+body#stroe_money{
+    background-color: $bg-color-3;
 // 🟡控制顯示
 .container{
     form{
@@ -56,9 +22,15 @@ form{
         -moz-appearance: textfield;
     }
 }
-
 //樣式
+label,input,h3{
+    font-size:$font-size-2;
+}
+p,h4{
+    font-size: $font-size-3;
+}
 h2{
+    font-size: $font-size-1;
     margin: 15px;
 }
 h3{
@@ -67,29 +39,43 @@ h3{
 }
 h4{
     font-weight: 500;
-    font-size: 16px;
+}
+input{
+    outline: none;
+}
+.coinTitle{
+    @include flexrow(space-between,);
+    img{
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        margin-right: 10px;
+    }
 }
 form{
-    @include flexcolum();
-    height: 90vh;
+    margin-top: 3em;
+    // @include flexcolum();
+    // height: 90vh;
     .page .pageItem input.error{
         background: rgba(255, 99, 71,.3) !important;
     }
     .pagewrap{
+        color: $text-color-1;
         background: $cardBGC;
-        width: fit-content;
-        width: -moz-fit-content;
+        /*width: fit-content;
+        width: -moz-fit-content;*/
+        width: 1200px;
         margin:auto;
         padding: 25px;
-        border-radius: 5px;
+        border-radius: $bdrs;
         box-shadow: 0px 0px 8px rgba(0,0,0,.3);
     }
     .ctrlBtns{
         @include flexrow();
         button{
-            @include colorBtn();
+   /* @include colorBtn();*/
             margin: 10px;
-            &:last-child{@include colorBtn($STRONGgrren);}
+         /*&:last-child{@include colorBtn($STRONGgrren);*/
         }
     }
     .page{
@@ -98,6 +84,7 @@ form{
         width: -moz-fit-content;
     }
     .page1 .pageItem{
+        input{color: $text-color-1;}
         width: fit-content;
         width: -moz-fit-content;
         >div{
@@ -105,9 +92,8 @@ form{
             input{
                 background-color: transparent;
                 border: 0 solid #000;
-                font-size: 18px;
                 // outline: none;
-                max-width: 60px;
+                max-width: 80px;
                 margin: 0 5px;
                 text-align: center;
             }
@@ -118,7 +104,7 @@ form{
                 padding: 5px;
                 margin: 15px;
                 margin-bottom: 40px;
-                border-radius: 5px;
+                border-radius: $bdrs;
                 background: $lightGray;
             }
         }
@@ -136,7 +122,7 @@ form{
         input[type="number"]{
             height: $LH;
             background-color: $darkGray;
-            border-radius: 5px;
+            border-radius: $bdrs;
             text-align: center;
             border: 0 solid #000;
             margin: 5px;
@@ -145,12 +131,12 @@ form{
         >div{
             width: $lightGrayWidth;
             background-color: $lightGray;
-            border-radius: 5px;
+            border-radius: $bdrs;
             padding: 10px;
             margin: 15px;
             &:nth-child(2){//儲值金額與代幣
                 >div{
-                    margin: 10px 0;
+                    margin: 15px 0;
                     @include flexrow(space-between,);
                 }
             }
@@ -162,6 +148,25 @@ form{
                     @include flexrow(space-between,);
                     input{
                         width: 60px;
+                    }
+                }
+                .cardsImg{
+                    justify-content: start;
+                    img{
+                        margin-right:5px;
+                        width: 50px;
+                        height: 30px;
+                        object-fit: cover;
+                    }
+                }
+                >div:nth-child(2){//三碼
+                    label{
+                        @include flexrow(start,);
+                        img{
+                            margin-left:5px;
+                            width: 40px;
+                            object-fit: cover;
+                        }
                     }
                 }
                 >div:nth-child(3)>div{//到期日
@@ -181,11 +186,10 @@ form{
         width: fit-content;
         width: -moz-fit-content;
         margin:auto;
-        padding: 25px 45px;
-        border-radius: 5px;
+        padding: 25px 5em;
+        border-radius: $bdrs;
         box-shadow: 0px 0px 15px rgba(0,0,0,.3);
         @include flexcolum();
-        // margin: 15px 45px;
         line-height: $LH;
         div:nth-child(2){
             @include flexrow();
@@ -196,33 +200,41 @@ form{
                 margin-left: 10px;
             }
         }
+        button{
+            margin-top: 20px;
+        }
     }
-    button{
+   /* button{
         @include colorBtn();
-        margin-top: 10px;
-    }
+         margin-top: 10px;
+     }*/
 }
 .popbox{display: none;}
+@media screen and (max-width:1200px){
+    form .pagewrap{
+        width: fit-content;
+        width: -moz-fit-content;
+        
+    }
+}
 
 @media screen and (max-width:470px){
-    form{
-        .pagewrap{
-            padding: 10px;
-        }
+    form .pagewrap{
+        padding: 10px;
         .page1 .pageItem{
-            >div{
-                width: 100%;
-            }
-            >div>div,>div label{
-                // width: 100%;
+            >div label,>div>div{
                 min-width: 250px;
             }
         }
         .page2 .pageItem{
             >div{
-                width: 100%;
+                width: 90%;
             }
-            div{flex-wrap: wrap;}
+            >div:last-child{
+                div{flex-wrap: wrap;}
+            }
         }
     }
 }
+
+}//#body

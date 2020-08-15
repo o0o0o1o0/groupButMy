@@ -7,23 +7,23 @@
 }
 
 /*color*/
-form#createVendor .page2 .pageItem div.addBtn input#addBtn {
+body#create form#createVendor .page2 .pageItem div.addBtn input#addBtn {
   width: 100px;
   line-height: 30px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 0 solid #000;
   background-color: white;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-form#createVendor .ctrlBtns button {
+body#create form#createVendor .ctrlBtns button {
   width: 100px;
   line-height: 30px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 0 solid #000;
 }
 
-form#createVendor .page2 .pageItem button.deleteBtn {
+body#create form#createVendor .page2 .pageItem button.deleteBtn {
   border: 0;
   width: 30px;
   height: 30px;
@@ -34,7 +34,7 @@ form#createVendor .page2 .pageItem button.deleteBtn {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-form#createVendor .page2 .pageItem div.addBtn label[for="addBtn"] {
+body#create form#createVendor .page2 .pageItem div.addBtn label[for="addBtn"] {
   border: 0;
   width: 40px;
   height: 40px;
@@ -52,64 +52,65 @@ form#createVendor .page2 .pageItem div.addBtn label[for="addBtn"] {
   margin-left: 3em;
 }
 
-body {
+body#create {
   background: #11245E;
+  /*step + page樣式*/
 }
 
-.container {
+body#create .container {
   height: 100vh;
 }
 
-.container button, .container input[type="button"] {
+body#create .container button, body#create .container input[type="button"] {
   outline: 0px;
 }
 
-.container div {
+body#create .container div {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
-.container h2 {
+body#create .container h2 {
   padding: 0 20px 0;
   color: white;
   margin: 30px 0px;
 }
 
-.container h3 {
+body#create .container h3 {
   margin-bottom: 10px;
 }
 
-.container input[type="text"],
-.container .selectcontrol {
+body#create .container input[type="text"],
+body#create .container .selectcontrol {
   height: 30px;
   display: flex;
   justify-content: center;
   padding: 0 10px;
   background: #f2f2f2;
   border: 0px;
-  border-radius: 5px;
+  border-radius: 8px;
   position: relative;
   white-space: nowrap;
 }
 
-.container input[type="text"] span,
-.container .selectcontrol span {
+body#create .container input[type="text"] span,
+body#create .container .selectcontrol span {
   width: 90%;
 }
 
-.container input[type="text"] span::-webkit-scrollbar,
-.container .selectcontrol span::-webkit-scrollbar {
+body#create .container input[type="text"] span::-webkit-scrollbar,
+body#create .container .selectcontrol span::-webkit-scrollbar {
   display: none;
 }
 
-.container input[type="text"] span::-ms-scrollbar,
-.container .selectcontrol span::-ms-scrollbar {
+body#create .container input[type="text"] span::-ms-scrollbar,
+body#create .container .selectcontrol span::-ms-scrollbar {
   display: none;
 }
 
-.container input[type="text"]::after,
-.container .selectcontrol::after {
+body#create .container input[type="text"]::after,
+body#create .container .selectcontrol::after {
   content: "▼";
   font-family: 'Font Awesome 3 Free';
   color: #4db7fe;
@@ -119,11 +120,11 @@ body {
   transform: translateY(-50%);
 }
 
-.container .selectwrap {
+body#create .container .selectwrap {
   position: relative;
 }
 
-.container .selectwrap .selectnav {
+body#create .container .selectwrap .selectnav {
   display: none;
   line-height: 30px;
   position: absolute;
@@ -134,22 +135,21 @@ body {
   padding: 10px;
 }
 
-.container .selectwrap .selectnav label {
+body#create .container .selectwrap .selectnav label {
   display: block;
 }
 
-.container input[type="file"] {
+body#create .container input[type="file"] {
   display: none;
 }
 
-.container .pageItem {
-  border-radius: 15px;
+body#create .container .pageItem {
+  border-radius: 8px;
   background: white;
   min-height: 70vh;
 }
 
-/*step + page樣式*/
-form#createVendor {
+body#create form#createVendor {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -158,32 +158,32 @@ form#createVendor {
   margin: auto;
 }
 
-form#createVendor .steps {
+body#create form#createVendor .steps {
   padding: 25px;
   max-width: 960px;
 }
 
-form#createVendor .steps img {
+body#create form#createVendor .steps img {
   width: 100%;
 }
 
-form#createVendor .steps > div {
+body#create form#createVendor .steps > div {
   align-items: center;
   flex-direction: row;
 }
 
-form#createVendor .steps .mid {
+body#create form#createVendor .steps .mid {
   position: relative;
   z-index: -2;
 }
 
-form#createVendor .steps .top > div, form#createVendor .steps .bom > div {
+body#create form#createVendor .steps .top > div, body#create form#createVendor .steps .bom > div {
   width: 20%;
   justify-content: center;
   height: 110px;
 }
 
-form#createVendor .steps .top .stepwrap, form#createVendor .steps .bom .stepwrap {
+body#create form#createVendor .steps .top .stepwrap, body#create form#createVendor .steps .bom .stepwrap {
   position: relative;
   background: url(../img/gray.png);
   background-repeat: no-repeat;
@@ -191,7 +191,7 @@ form#createVendor .steps .top .stepwrap, form#createVendor .steps .bom .stepwrap
   background-size: contain;
 }
 
-form#createVendor .steps .top .stepwrap::after, form#createVendor .steps .bom .stepwrap::after {
+body#create form#createVendor .steps .top .stepwrap::after, body#create form#createVendor .steps .bom .stepwrap::after {
   content: '　';
   z-index: -1;
   background: url(../img/dot.png);
@@ -207,91 +207,91 @@ form#createVendor .steps .top .stepwrap::after, form#createVendor .steps .bom .s
   align-items: center;
 }
 
-form#createVendor .steps .top .info, form#createVendor .steps .bom .info {
+body#create form#createVendor .steps .top .info, body#create form#createVendor .steps .bom .info {
   text-align: center;
   align-items: center;
 }
 
-form#createVendor .steps .top .info .num, form#createVendor .steps .bom .info .num {
+body#create form#createVendor .steps .top .info .num, body#create form#createVendor .steps .bom .info .num {
   color: white;
   font-weight: 900;
   width: fit-content;
   border-bottom: 3px solid white;
 }
 
-form#createVendor .steps .bom {
+body#create form#createVendor .steps .bom {
   transform: rotate(180deg);
 }
 
-form#createVendor .steps .bom .info {
+body#create form#createVendor .steps .bom .info {
   transform: rotate(180deg);
 }
 
-form#createVendor .ctrlBtns {
+body#create form#createVendor .ctrlBtns {
   margin: 0 20px;
   margin-top: 30px;
   flex-direction: row;
   justify-content: space-between;
 }
 
-form#createVendor .ctrlBtns button {
+body#create form#createVendor .ctrlBtns button {
   color: white;
 }
 
-form#createVendor .ctrlBtns #prevBtn {
+body#create form#createVendor .ctrlBtns #prevBtn {
   background-color: #2DC8A9;
 }
 
-form#createVendor .ctrlBtns #nextBtn {
+body#create form#createVendor .ctrlBtns #nextBtn {
   background-color: #FF6B6B;
 }
 
-form#createVendor .page1 .pageItem {
+body#create form#createVendor .page1 .pageItem {
   padding: 5vw 8vw;
   align-items: space-between;
   justify-content: space-around;
 }
 
-form#createVendor .page1 .pageItem > div {
+body#create form#createVendor .page1 .pageItem > div {
   flex-direction: row;
   justify-content: space-between;
 }
 
-form#createVendor .page1 .pageItem > div > div {
+body#create form#createVendor .page1 .pageItem > div > div {
   padding: 10px;
 }
 
-form#createVendor .page1 .pageItem > div:last-child textarea {
+body#create form#createVendor .page1 .pageItem > div:last-child textarea {
   padding: 5px;
 }
 
-form#createVendor .page1 .pageItem > div:last-child img {
+body#create form#createVendor .page1 .pageItem > div:last-child img {
   background: #f2f2f2;
 }
 
-form#createVendor .page1 .pageItem > div:last-child textarea, form#createVendor .page1 .pageItem > div:last-child img {
+body#create form#createVendor .page1 .pageItem > div:last-child textarea, body#create form#createVendor .page1 .pageItem > div:last-child img {
   background-color: #f2f2f2;
   resize: none;
   border: 0px;
-  border-radius: 5px;
+  border-radius: 8px;
   height: 150px;
   width: 250px;
 }
 
-form#createVendor .page1 .pageItem > div:last-child > div {
+body#create form#createVendor .page1 .pageItem > div:last-child > div {
   padding: 10px;
 }
 
-form#createVendor .page1 .pageItem .putheadhere {
+body#create form#createVendor .page1 .pageItem .putheadhere {
   position: relative;
   font-size: 0;
 }
 
-form#createVendor .page1 .pageItem .putheadhere img {
+body#create form#createVendor .page1 .pageItem .putheadhere img {
   object-fit: cover;
 }
 
-form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] {
+body#create form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -300,10 +300,10 @@ form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] {
   justify-content: center;
   font-size: 16px;
   background: #f2f2f2;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
-form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] span {
+body#create form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] span {
   color: white;
   display: flex;
   justify-content: center;
@@ -316,38 +316,38 @@ form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] span {
   height: 20%;
 }
 
-form#createVendor .page1 .pageItem input[type="text"], form#createVendor .page1 .pageItem .selectcontrol {
+body#create form#createVendor .page1 .pageItem input[type="text"], body#create form#createVendor .page1 .pageItem .selectcontrol {
   width: 250px;
 }
 
-form#createVendor .page2 .pageItem {
+body#create form#createVendor .page2 .pageItem {
   padding: 50px;
   flex-wrap: initial;
 }
 
-form#createVendor .page2 .pageItem .meal {
+body#create form#createVendor .page2 .pageItem .meal {
   margin: 10px;
   flex-wrap: wrap;
 }
 
-form#createVendor .page2 .pageItem .mealtextwrap {
+body#create form#createVendor .page2 .pageItem .mealtextwrap {
   min-width: 80%;
   flex-direction: row;
   justify-content: space-between;
 }
 
-form#createVendor .page2 .pageItem > div {
+body#create form#createVendor .page2 .pageItem > div {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-form#createVendor .page2 .pageItem input[type="text"], form#createVendor .page2 .pageItem .selectcontrol {
+body#create form#createVendor .page2 .pageItem input[type="text"], body#create form#createVendor .page2 .pageItem .selectcontrol {
   width: 120px;
   text-align: center;
 }
 
-form#createVendor .page2 .pageItem .putmealhere {
+body#create form#createVendor .page2 .pageItem .putmealhere {
   position: relative;
   width: 80px;
   height: 80px;
@@ -355,13 +355,13 @@ form#createVendor .page2 .pageItem .putmealhere {
   overflow: hidden;
 }
 
-form#createVendor .page2 .pageItem .putmealhere img {
+body#create form#createVendor .page2 .pageItem .putmealhere img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
 
-form#createVendor .page2 .pageItem .putmealhere label {
+body#create form#createVendor .page2 .pageItem .putmealhere label {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -371,7 +371,7 @@ form#createVendor .page2 .pageItem .putmealhere label {
   background: #4db7fe;
 }
 
-form#createVendor .page2 .pageItem .putmealhere label span {
+body#create form#createVendor .page2 .pageItem .putmealhere label span {
   color: white;
   position: absolute;
   width: 100%;
@@ -381,76 +381,76 @@ form#createVendor .page2 .pageItem .putmealhere label span {
   align-items: center;
 }
 
-form#createVendor .page2 .pageItem div.addBtn {
+body#create form#createVendor .page2 .pageItem div.addBtn {
   justify-content: start;
 }
 
-form#createVendor .page2 .pageItem div.addBtn input#addBtn {
+body#create form#createVendor .page2 .pageItem div.addBtn input#addBtn {
   display: inline-block;
 }
 
-.container form#createVendor .page {
+body#create .container form#createVendor .page {
   display: none;
 }
 
-.container #createVendor[data-page="1"] .page:nth-child(1),
-.container #createVendor[data-page="2"] .page:nth-child(2),
-.container #createVendor[data-page="3"] .page:nth-child(3),
-.container #createVendor[data-page="5"] .page:nth-child(4) {
+body#create .container #createVendor[data-page="1"] .page:nth-child(1),
+body#create .container #createVendor[data-page="2"] .page:nth-child(2),
+body#create .container #createVendor[data-page="3"] .page:nth-child(3),
+body#create .container #createVendor[data-page="5"] .page:nth-child(4) {
   display: flex;
 }
 
-.container #createVendor[data-page="4"] .page:nth-child(1),
-.container #createVendor[data-page="4"] .page:nth-child(2),
-.container #createVendor[data-page="4"] .page:nth-child(3) {
+body#create .container #createVendor[data-page="4"] .page:nth-child(1),
+body#create .container #createVendor[data-page="4"] .page:nth-child(2),
+body#create .container #createVendor[data-page="4"] .page:nth-child(3) {
   display: flex;
 }
 
-.container #createVendor[data-page="1"] .stepwrap[data-page="1"],
-.container #createVendor[data-page="2"] .stepwrap[data-page="2"],
-.container #createVendor[data-page="3"] .stepwrap[data-page="3"],
-.container #createVendor[data-page="4"] .stepwrap[data-page="4"],
-.container #createVendor[data-page="5"] .stepwrap[data-page="5"] {
+body#create .container #createVendor[data-page="1"] .stepwrap[data-page="1"],
+body#create .container #createVendor[data-page="2"] .stepwrap[data-page="2"],
+body#create .container #createVendor[data-page="3"] .stepwrap[data-page="3"],
+body#create .container #createVendor[data-page="4"] .stepwrap[data-page="4"],
+body#create .container #createVendor[data-page="5"] .stepwrap[data-page="5"] {
   background-image: url(../img/green.png);
 }
 
-.container .ctrlBtns button[disabled] {
+body#create .container .ctrlBtns button[disabled] {
   visibility: hidden;
 }
 
 @media screen and (max-width: 665px) {
-  form#createVendor .page1 .pageItem, form#createVendor .page2 .pageItem, form#createVendor .page3 .pageItem, form#createVendor .page5 .pageItem {
+  body#create form#createVendor .page1 .pageItem, body#create form#createVendor .page2 .pageItem, body#create form#createVendor .page3 .pageItem, body#create form#createVendor .page5 .pageItem {
     padding: 10px;
   }
-  form#createVendor .page1 .pageItem > div {
+  body#create form#createVendor .page1 .pageItem > div {
     justify-content: center;
   }
 }
 
 @media screen and (max-width: 578px) {
-  form#createVendor .page2 .putmealhere, form#createVendor .page2 input, form#createVendor .page2 .selectcontrol {
+  body#create form#createVendor .page2 .putmealhere, body#create form#createVendor .page2 input, body#create form#createVendor .page2 .selectcontrol {
     margin-bottom: 5px;
   }
-  form#createVendor .page2 .mealtextwrap {
+  body#create form#createVendor .page2 .mealtextwrap {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 460px) {
-  form#createVendor .page.page2 .meal, form#createVendor .page.page2 .mealtextwrap {
+  body#create form#createVendor .page.page2 .meal, body#create form#createVendor .page.page2 .mealtextwrap {
     flex-direction: column;
   }
-  form#createVendor .page.page2 .mealtextwrap {
+  body#create form#createVendor .page.page2 .mealtextwrap {
     align-items: center;
   }
 }
 
 @media screen and (max-width: 310px) {
-  form#createVendor .page1 > div > div {
+  body#create form#createVendor .page1 > div > div {
     display: block;
   }
-  form#createVendor .page1 input[type="text"], form#createVendor .page1 .selectcontrol, form#createVendor .page1 .selectnav,
-  form#createVendor .page1 textarea, form#createVendor .page1 img {
+  body#create form#createVendor .page1 input[type="text"], body#create form#createVendor .page1 .selectcontrol, body#create form#createVendor .page1 .selectnav,
+  body#create form#createVendor .page1 textarea, body#create form#createVendor .page1 img {
     width: 100% !important;
   }
 }

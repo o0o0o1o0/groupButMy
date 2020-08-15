@@ -4,11 +4,14 @@ function doFirst(){
         let ntdollor =  parseInt($('#ntcoin').val());
         $('.ntcoin').text('$'+ntdollor.toLocaleString('en-US'));
         if(ntdollor<0 || ntdollor==0){
+            $('.yescoin1').text("");
             $('.yescoin').text("");
         }else if(ntdollor<100){
+            $('.yescoin1').text(ntdollor.toLocaleString('en-US'));
             $('.yescoin').text('$'+ntdollor.toLocaleString('en-US'));
         }else if(ntdollor>=100){
             ntdollor+=20;
+            $('.yescoin1').text(ntdollor.toLocaleString('en-US'));
             $('.yescoin').text('$'+ntdollor.toLocaleString('en-US'));
         }
     })
