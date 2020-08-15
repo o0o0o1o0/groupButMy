@@ -206,7 +206,6 @@ form .page2 .pageItem > div:last-child > div:nth-child(3) > div {
 }
 
 .popbox {
-  display: none;
   height: 80vh;
   display: flex;
   display: -webkit-flex;
@@ -255,5 +254,9 @@ form .page2 .pageItem > div:last-child > div:nth-child(3) > div {
   border-radius: 5px;
   border: 0 solid #000;
   margin-top: 10px;
+}
+
+.popbox {
+  display: none;
 }
 /*# sourceMappingURL=store_money.css.map */

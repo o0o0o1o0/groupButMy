@@ -173,7 +173,6 @@ form{
     }
 }
 .popbox{
-    display: none;
     height: 80vh;
     @include flexcolum();
    
@@ -203,3 +202,4 @@ form{
         margin-top: 10px;
     }
 }
+.popbox{display: none;}
