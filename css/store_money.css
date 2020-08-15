@@ -259,4 +259,22 @@ form .page2 .pageItem > div:last-child > div:nth-child(3) > div {
 .popbox {
   display: none;
 }
+
+@media screen and (max-width: 470px) {
+  form .pagewrap {
+    padding: 10px;
+  }
+  form .page1 .pageItem > div {
+    width: 100%;
+  }
+  form .page1 .pageItem > div > div, form .page1 .pageItem > div label {
+    min-width: 250px;
+  }
+  form .page2 .pageItem > div {
+    width: 100%;
+  }
+  form .page2 .pageItem div {
+    flex-wrap: wrap;
+  }
+}
 /*# sourceMappingURL=store_money.css.map */

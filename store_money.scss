@@ -203,3 +203,26 @@ form{
     }
 }
 .popbox{display: none;}
+
+@media screen and (max-width:470px){
+    form{
+        .pagewrap{
+            padding: 10px;
+        }
+        .page1 .pageItem{
+            >div{
+                width: 100%;
+            }
+            >div>div,>div label{
+                // width: 100%;
+                min-width: 250px;
+            }
+        }
+        .page2 .pageItem{
+            >div{
+                width: 100%;
+            }
+            div{flex-wrap: wrap;}
+        }
+    }
+}
