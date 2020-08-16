@@ -1,9 +1,5 @@
 /*全域樣式*/
   /*color*/
-  $bg-color-1: #11245E;//#11245E
-  $bg-color-2: #384F95;
-  $bg-color-3: #f2f2f2;
-  $bg-color-4: #4DB7FE;
     $bgc:$bg-color-1;
     $pageItemBG:white;
     $bdrs:8px;
@@ -14,7 +10,7 @@
     $LH:30px;
     $textM: 5px;
     $textP: 0 5px;
-    $textBGC:#f2f2f2;
+    $textBGC:$bg-color-3;
     $STRONGcolor:#4db7fe;
     $STRONGgrren:#2DC8A9;
     $STRONGred:#FF6B6B;

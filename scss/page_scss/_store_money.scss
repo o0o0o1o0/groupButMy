@@ -62,9 +62,9 @@ form{
     .pagewrap{
         color: $text-color-1;
         background: $cardBGC;
-        /*width: fit-content;
-        width: -moz-fit-content;*/
-        width: 1200px;
+        width: fit-content;
+        width: -moz-fit-content;
+        /*width: 1200px;*/
         margin:auto;
         padding: 25px;
         border-radius: $bdrs;
@@ -210,31 +210,37 @@ form{
      }*/
 }
 .popbox{display: none;}
-@media screen and (max-width:1200px){
-    form .pagewrap{
-        width: fit-content;
-        width: -moz-fit-content;
-        
-    }
-}
 
-@media screen and (max-width:470px){
-    form .pagewrap{
-        padding: 10px;
-        .page1 .pageItem{
-            >div label,>div>div{
-                min-width: 250px;
-            }
-        }
-        .page2 .pageItem{
-            >div{
-                width: 90%;
-            }
-            >div:last-child{
-                div{flex-wrap: wrap;}
-            }
-        }
-    }
-}
+
+
 
 }//#body
+// @media screen and (max-width:1200px){
+//     body#stroe_money{
+//         form .pagewrap{
+//             width: fit-content;
+//             width: -moz-fit-content;
+            
+//         }
+//     }
+// }
+@media screen and (max-width:470px){
+    body#stroe_money{
+        form .pagewrap{
+            padding: 10px;
+            .page1 .pageItem{
+                >div label,>div>div{
+                    min-width: 250px;
+                }
+            }
+            .page2 .pageItem{
+                >div{
+                    width: 90%;
+                }
+                >div:last-child{
+                    div{flex-wrap: wrap;}
+                }
+            }
+        }
+    }
+}

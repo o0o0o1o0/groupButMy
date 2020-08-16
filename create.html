@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>創建指南 | 夜市客</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.js'></script>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.js'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css'/> -->
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="./path/css/fontawesome.css"> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css'/>
   <script src="./js/create.js"></script>
   <style>
     /* @import url(./css/create.css); */
@@ -24,8 +27,8 @@
         <img src="" alt="" class="showMyMeal">
       </div>
       <div class="mealtextwrap">
-        <label for=""><input type="text"placeholder="商品名稱"></label>
-        <label for=""><input type="text"placeholder="商品價位"></label>
+        <label for=""><input type="text"placeholder="商品名稱"required="required"></label>
+        <label for=""><input type="text"placeholder="商品價位"required="required"></label>
         <div class="selectwrap">
           <div class="selectcontrol"><span>商品類型</span></div>
           <div class="selectnav">
@@ -100,7 +103,7 @@
             <div>
               <div>
                 <h3>輸入攤位名稱</h3>
-                <input type="text">
+                <input type="text" required="required">
               </div>
   <!--             <div>
                 <h3>店家類型（可複選）</h3>

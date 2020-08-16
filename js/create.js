@@ -68,6 +68,43 @@ function doFirst(){
             nextBtn.prop("type","button");      //初始化
         }
     }
+
+    //🟡上方tag按鈕
+    const pageLink = $('.stepwrap');
+    pageLink.eq(0).click(()=>{
+        currentPage=1;
+        mainElm.attr('data-page',currentPage);
+        checkPage();
+    })
+    pageLink.eq(1).click(()=>{
+        currentPage=3;
+        mainElm.attr('data-page',currentPage);
+        checkPage();
+    })
+    pageLink.eq(2).click(()=>{
+        currentPage=5;
+        mainElm.attr('data-page',currentPage);
+        checkPage();
+    })
+    pageLink.eq(3).click(()=>{
+        currentPage=4;
+        mainElm.attr('data-page',currentPage);
+        checkPage();
+    })
+    pageLink.eq(4).click(()=>{
+        currentPage=2;
+        mainElm.attr('data-page',currentPage);
+        checkPage();
+    })
+    // const whichPage = () => {
+        // for(let i=0;i<totalPage;i++){
+        //     pageLink.eq(i).click(()=>{
+        //         currentPage=i+1;
+        //         mainElm.attr('data-page',currentPage);
+        //         checkPage();
+        //     })
+        // }
+    // }
     nextBtn.click(()=>{
         if(currentPage < totalPage ){
             mainElm.attr('data-page',currentPage + 1);
@@ -87,7 +124,7 @@ function doFirst(){
 }//doFirst
 
 //🟡第二步新增菜色
-    //🔰測試的記號，我ID要累加「mealimg$」
+    //🔰記號，我ID要累加「mealimg$」
 function addMeal(){
     let myMenu = document.querySelector('.page2 .pageItem');
     let addBtn = document.querySelector('.addBtn');
