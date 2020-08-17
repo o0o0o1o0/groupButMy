@@ -196,8 +196,9 @@ body#create{
             resize: none;
             border: 0px  ;
             border-radius: $textbdrs;
-            height:150px;
+            height:200px;
             width: $textWidth2c;
+            white-space: pre-wrap;
           }
           >div{
             padding: 10px;
@@ -339,7 +340,8 @@ body#create{
 
 }//body#
 
-@media screen and (max-width:665px){
+// @media screen and (max-width:665px){
+@media screen and (max-width:905px){
   body#create{
     form#createVendor{
       .page1,.page2,.page3,.page5{
@@ -356,9 +358,33 @@ body#create{
       }
     }
   }
+
+  body#create{
+    form#createVendor{
+      .page1 .pageItem{
+        >div>div{
+          // width: 80%;
+          input[type="text"],textarea,div.selectcontrol,label,img{
+            width: 250px;
+          }
+        }
+      }
+      .page2{
+        .putmealhere,input[type="file"],input[type="text"],.selectcontrol{
+          margin-bottom: 15px;
+        }
+        .mealtextwrap{
+          width: 100%;
+        }
+      }    
+    }
+  }
+
+
+
 }
 
-@media screen and (max-width:578px){
+@media screen and (max-width:665px){
   body#create{
     form#createVendor{
       .page1 .pageItem{
