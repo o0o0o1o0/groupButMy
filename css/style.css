@@ -1800,7 +1800,7 @@ body#create .container .ctrlBtns button[disabled] {
   }
 }
 
-body {
+body#check_finish {
   background-color: #11245E;
   color: white;
 }
