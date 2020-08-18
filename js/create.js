@@ -1,4 +1,6 @@
 function doFirst(){
+
+
     //🟣第二步新增菜色
     mealCount=0;//🔰
     seleWeekCtrlText = "選擇星期";
@@ -121,6 +123,145 @@ function doFirst(){
         checkPage();
     })
 
+
+
+//map
+//map
+//map
+//map
+//map
+//map
+//map
+let map;
+let markers = [];        
+const image ="./vendor2.png";
+// 限制地圖觀看範圍只在夜市附近(1)
+//     const ChungliNightMarket_Map_Boundary = {
+//         north: 24.962399017033672,
+//         south: 24.95570693350778,
+//         west: 121.21120964864063,
+//         east: 121.21965324261951,
+//   };
+function initMap() {
+    const ChungliNightMarket = {lat: 24.96015215165077, lng: 121.2154904542284,};
+    map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 17,
+        center: ChungliNightMarket,
+        mapTypeId: "roadmap",
+    // 限制地圖觀看範圍只在夜市附近(2)
+        // restriction: {
+        //     latLngBounds: ChungliNightMarket_Map_Boundary,
+        //     strictBounds: false,
+        // },               
+        
+    }); 
+    // 關閉原本地圖上的預設店家及其他指標
+        const styles = {
+            hide: [
+                {
+                featureType: "poi.business",
+                stylers: [{ visibility: "off" }]
+                },
+                {
+                featureType: "transit",
+                elementType: "labels.icon",
+                stylers: [{ visibility: "off" }]
+                }
+            ],
+        }
+        map.setOptions({
+        styles: styles["hide"]
+    });
+
+    // 點擊建立店家所在位置 + 擷取建立位置的經度及緯度
+    let position = document.createElement("div");
+    document.querySelector("#form").appendChild(position);
+    map.addListener("click", event => {
+            deleteMarkers(event.latLng);
+            addMarker(event.latLng);
+            let A = event.latLng.lng().toFixed(6);
+            let B = event.latLng.lat().toFixed(6);                  
+            position.innerHTML = 
+            `<input type="hidden" name="longitude" value="${A}"> <br>
+            <input type="hidden" name="latitude" value="${B}"> `;
+            
+    });
+} 
+
+
+// Adds a marker to the map and push to the array.
+function addMarker(location) {
+    const marker = new google.maps.Marker({
+        position: location,
+        title:"娘娘雞排", //抓攤商於前面步驟輸入的值 (店名)
+        map: map,
+        icon:image,
+        draggable: true,
+    });
+    const contentString =
+      '<div id="content">' +
+      '<div id="siteNotice"></div>'+
+      '<h1>娘娘雞排</h1>' + // 抓攤商於前面步驟輸入的值 (店名)
+      '<div id="bodyContent">' +
+      "<p>我是攤商說明文字我是攤商說明文字我是攤商說明文字我是攤商說明文字我是攤商說明文字我是攤商說明文字</p>" +//抓攤商於前面步驟輸入的值 (店家簡介)
+      "</div>" +
+      "</div>";
+      const infowindow = new google.maps.InfoWindow({
+      content: contentString
+      });
+      marker.addListener("click", () => {
+      infowindow.open(map, marker);
+      });
+  markers.push(marker);
+} 
+
+// Sets the map on all markers in the array.
+function setMapOnAll(map) {
+    for (let i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+    }
+} 
+
+// Removes the markers from the map, but keeps them in the array.
+function clearMarkers() {
+    setMapOnAll(null);
+} 
+
+     
+// Deletes all markers in the array by removing references to them.
+function deleteMarkers() {
+    clearMarkers();
+    markers = [];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }//doFirst
 
 //🟡第二步新增菜色
@@ -231,6 +372,20 @@ function removeMeal(e){
     let myMenu = document.querySelector('.page2 .pageItem');
     myMenu.removeChild(e.target.parentNode.parentNode);
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   window.addEventListener('load',doFirst);
