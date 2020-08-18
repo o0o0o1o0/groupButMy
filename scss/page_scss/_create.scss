@@ -306,9 +306,14 @@ body#create{
     }
   }
   .page3{
+    .pageItem{
+      overflow: hidden;
+    }
     #map {
-      height: 100%;
+      height: 70vh;
       width: 100%;
+      // min-height: 500px;
+      // min-width:  500px;
       margin: 0 auto;
     }
 
@@ -359,7 +364,7 @@ body#create{
 @media screen and (max-width:905px){
   body#create{
     form#createVendor{
-      .page1,.page2,.page3,.page5{
+      .page1,.page2,.page5{
         .pageItem{
           padding: 10px;
         }

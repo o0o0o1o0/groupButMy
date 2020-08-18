@@ -65,8 +65,8 @@
 
 
          // 點擊建立店家所在位置 + 擷取建立位置的經度及緯度
-            let position = document.createElement("div");
-            document.querySelector("#form").appendChild(position);
+            // let position = document.createElement("div");
+            // document.querySelector("#form").appendChild(position);
 
 
 
@@ -186,10 +186,12 @@
     <div id="map"></div>
     <div class="user_info">
         <p>請在地圖上點選滑鼠左鍵，建立您的店家所在位置。</p>
-        <form id="form" method="post" action="#.php"> <!-- 打包經度緯度值,送到後台 -->
+        <!-- <form id="form" method="post" action="#.php"> 打包經度緯度值,送到後台 -->
+        <div id="form">
             <input onclick="deleteMarkers();" type="button" value="重新建立位置" />
             <input type="submit" value="確認送出" id="submit">  
-        </form>
+        </div>
+        <!-- </form> -->
     </div>
    
 </body>
