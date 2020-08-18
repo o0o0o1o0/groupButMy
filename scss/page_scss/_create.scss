@@ -307,6 +307,7 @@ body#create{
   }
   .page3{
     .pageItem{
+      position: relative;
       overflow: hidden;
     }
     #map {
@@ -318,11 +319,17 @@ body#create{
     }
 
     .user_info{
-        width: 800px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      // display: none;
+      width: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      p{
+        background: white;
+        padding: 20px;
+        border-radius: $bdrs;
+      }
     }
   }
 }

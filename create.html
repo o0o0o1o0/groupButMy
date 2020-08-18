@@ -164,17 +164,17 @@
         <div class="page page3">
           <h2>建立地圖位置</h2>
           <div class="pageItem">
-            <div id="map">
+            <div id="map"></div>
               <div class="user_info">
                   <p>請在地圖上點選滑鼠左鍵，建立您的店家所在位置。</p>
                   <!-- <form id="form" method="post" action="#.php">  -->
-                    <div id="formIUnit">
-                      <input onclick="deleteMarkers();" type="button" value="重新建立位置" />
-                      <input type="submit" value="確認送出" id="submit">  
+                    <div id="form">
+                      <!-- <input onclick="deleteMarkers();" type="button" value="重新建立位置" />
+                      <input type="submit" value="確認送出" id="submit">   -->
                     </div>
                   <!-- </form> -->
               </div>
-            </div>
+            
           </div>
         </div>
         <div class="page page5">
@@ -239,16 +239,17 @@ function initMap() {
 
     // 點擊建立店家所在位置 + 擷取建立位置的經度及緯度
     let position = document.createElement("div");
-    document.querySelector("#formIUnit").appendChild(position);
+    document.querySelector("#form").appendChild(position);
     map.addListener("click", event => {
-            deleteMarkers(event.latLng);
-            addMarker(event.latLng);
-            let A = event.latLng.lng().toFixed(6);
-            let B = event.latLng.lat().toFixed(6);                  
-            position.innerHTML = 
-            `<input type="hidden" name="longitude" value="${A}"> <br>
-            <input type="hidden" name="latitude" value="${B}"> `;
-            
+      document.querySelector('.user_info').style.display="none";
+      deleteMarkers(event.latLng);
+      addMarker(event.latLng);
+      let A = event.latLng.lng().toFixed(6);
+      let B = event.latLng.lat().toFixed(6);                  
+      position.innerHTML = 
+      `<input type="hidden" name="longitude" value="${A}"> <br>
+      <input type="hidden" name="latitude" value="${B}"> `;
+      
     });
 } 
 
