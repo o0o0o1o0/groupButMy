@@ -1,16 +1,16 @@
 @import "../mixins/store_money";//變數
 body#stroe_money{
-    background-color: $bg-color-3;
+    // background-color: $bg-color-3;
 // 🟡控制顯示
-.container{
-    form{
-        .page{display: none;}
-    }
-    form[data-page="1"] .page:nth-child(1),
-    form[data-page="2"] .page:nth-child(2){
-        @include flexcolum();
-    }
-}
+// .container{
+//     form{
+//         .page{display: none;}
+//     }
+//     form[data-page="1"] .page:nth-child(2),
+//     form[data-page="2"] .page:nth-child(3){
+//         @include flexcolum();
+//     }
+// }
 //關於input:number scroll bar消失的傳言
 form{
     input::-webkit-outer-spin-button,
@@ -52,23 +52,42 @@ input{
         margin-right: 10px;
     }
 }
+.container{
+    width: 100vw;
+    height: 100vh;
+}
 form{
+    display: none;
     margin-top: 3em;
-    // @include flexcolum();
+    transition: 0.5s;
+    // @include flexcolumn();
     // height: 90vh;
     .page .pageItem input.error{
         background: rgba(255, 99, 71,.3) !important;
     }
     .pagewrap{
+        overflow: hidden;
         color: $text-color-1;
         background: $cardBGC;
-        width: fit-content;
-        width: -moz-fit-content;
+        max-width: 500px;;
+        /*width: fit-content;
+        width: -moz-fit-content;*/
         /*width: 1200px;*/
         margin:auto;
         padding: 25px;
         border-radius: $bdrs;
         box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+        >div:nth-child(2){
+            @include flexrow(flex-start,);
+        }
+        button.closeBtn:first-child{
+            display: block;
+            margin-left: auto;
+            background-color: transparent;
+            font-weight: 600;
+            font-size: 25px;
+            color: $text-color-1;
+        }
     }
     .ctrlBtns{
         @include flexrow();
@@ -80,8 +99,11 @@ form{
     }
     .page{
         margin: auto;
-        width: fit-content;
-        width: -moz-fit-content;
+        /*width: fit-content;
+        width: -moz-fit-content;*/
+        min-width: 100%;
+        @include flexrow();
+        transition: .5s;
     }
     .page1 .pageItem{
         input{color: $text-color-1;}
