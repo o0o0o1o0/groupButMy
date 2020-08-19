@@ -3442,7 +3442,7 @@ body#stroe_money .coinTitle img {
 
 body#stroe_money .container {
   /*width: 100vw;*/
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body#stroe_money form {
