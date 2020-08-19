@@ -1,0 +1,149 @@
+//背景顏色樣式
+$bg-color-1: #11245E;
+$bg-color-2: #384F95;
+$bg-color-3: #f2f2f2;
+$bg-color-4: #4DB7FE;
+$bg-color-5: #F0F2F5;//商店卡評論框專用
+//字體顏色樣式
+$text-color-1: #7D93B2;
+$text-color-2: #4DB7FE;
+$text-color-3: #566985;
+$text-color-4: #999999;
+//btn
+@mixin btn($w,$bgc,$rad){
+  font-size: 18px;
+  color: #fff;
+  background-color: $bgc;
+  border: 1.5px solid transparent;
+  width: $w;
+  height: 35px;
+  text-align: center;
+  border-radius: $rad;
+  cursor: pointer;
+  &:hover{
+    background-color: transparent;
+    border: 1.5px solid $bgc;
+    color: $bgc;
+    transition: ease-out 0.3s;
+  }
+}
+.btn-cir_pk1{
+  @include btn(80px,#FF6B6B,50px); //粉色圓矩形2個字
+}
+.btn-cir_pk2{
+  @include btn(100px,#FF6B6B,50px); //粉色圓矩形4個字
+}
+.btn-cir_gr1{
+  @include btn(80px,#2DC8A9,50px); //綠色圓矩形2個字
+}
+.btn-cir_gr2{
+  @include btn(100px,#2DC8A9,50px); //綠色圓矩形4個字
+}
+.btn-rect_pk1{
+  @include btn(80px,#FF6B6B,6px); //粉色方形2個字
+}
+.btn-rect_pk2{
+  @include btn(110px,#FF6B6B,6px); //粉色方形4.5個字
+}
+.btn-rect_gr1{
+  @include btn(80px,#2DC8A9,6px); //綠色方形2個字
+}
+.btn-rect_gr2{
+  @include btn(110px,#2DC8A9,6px); //綠色方形4.5個字
+}
+.btn-cir_bl{
+  @include btn(80px,#4db7fe,50px); //藍色圓形2個字
+}
+.btn-rect_bl1{
+  @include btn(80px,#4db7fe,6px); //藍色方形3個字
+}
+.btn-rect_bl2{
+  @include btn(110px,#4db7fe,6px); //藍色方形4.5個字
+}
+
+
+
+
+@mixin flexcolum($jc:center,$ai:center) {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin flexrow($jc:center,$ai:center) {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: $jc;
+  align-items: $ai;
+}
+body{
+  font-family: 微軟正黑體;
+  background-color: $bg-color-3;
+}
+.utnmcontanier{
+  padding: 50px;  
+  width: 80vw;
+  .utnmpagetitle{
+    font-size: 20px;
+    margin-bottom: 20px;
+    @include flexrow(space-between,);
+    >div{
+      @include flexrow(space-between,);
+    }
+    >div:last-child{
+      *{margin-right: 15px;}
+    }
+  }
+  .utnmtabbtns{
+    button{
+      margin-right: 15px;
+    }
+    button.active{
+      background: transparent;
+      color: #FF6B6B;
+      border: 2px solid #FF6B6B;
+    }
+  }
+  .utnmtabctrl{
+    color: $text-color-1;
+    .utnmtab{
+      display: none;
+    }
+    .utnmtab.active{
+      display: block;
+    }
+    table{
+      border-collapse: separate;
+      text-align: center;
+      width: 100%;
+      border-spacing: 0 1em;  
+      border-radius: 5px;
+      margin-bottom: 20px;
+      th,td{
+        width: 33.33%;
+      }
+    }
+    table:first-child{
+     font-size: 20px;
+    }
+    table:last-child{
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 8px rgba(0, 0, 0,.3);
+      td{
+        padding: 10px;
+        background: $bg-color-3;
+      }
+      td:first-child{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      td:last-child{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}

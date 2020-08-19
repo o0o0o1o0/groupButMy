@@ -1,0 +1,302 @@
+@charset "UTF-8";
+.btn-cir_pk1 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6B6B;
+  border: 1.5px solid transparent;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn-cir_pk1:hover {
+  background-color: transparent;
+  border: 1.5px solid #FF6B6B;
+  color: #FF6B6B;
+  transition: ease-out 0.3s;
+}
+
+.btn-cir_pk2 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6B6B;
+  border: 1.5px solid transparent;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn-cir_pk2:hover {
+  background-color: transparent;
+  border: 1.5px solid #FF6B6B;
+  color: #FF6B6B;
+  transition: ease-out 0.3s;
+}
+
+.btn-cir_gr1 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #2DC8A9;
+  border: 1.5px solid transparent;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn-cir_gr1:hover {
+  background-color: transparent;
+  border: 1.5px solid #2DC8A9;
+  color: #2DC8A9;
+  transition: ease-out 0.3s;
+}
+
+.btn-cir_gr2 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #2DC8A9;
+  border: 1.5px solid transparent;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn-cir_gr2:hover {
+  background-color: transparent;
+  border: 1.5px solid #2DC8A9;
+  color: #2DC8A9;
+  transition: ease-out 0.3s;
+}
+
+.btn-rect_pk1 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6B6B;
+  border: 1.5px solid transparent;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-rect_pk1:hover {
+  background-color: transparent;
+  border: 1.5px solid #FF6B6B;
+  color: #FF6B6B;
+  transition: ease-out 0.3s;
+}
+
+.btn-rect_pk2 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #FF6B6B;
+  border: 1.5px solid transparent;
+  width: 110px;
+  height: 35px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-rect_pk2:hover {
+  background-color: transparent;
+  border: 1.5px solid #FF6B6B;
+  color: #FF6B6B;
+  transition: ease-out 0.3s;
+}
+
+.btn-rect_gr1 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #2DC8A9;
+  border: 1.5px solid transparent;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-rect_gr1:hover {
+  background-color: transparent;
+  border: 1.5px solid #2DC8A9;
+  color: #2DC8A9;
+  transition: ease-out 0.3s;
+}
+
+.btn-rect_gr2 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #2DC8A9;
+  border: 1.5px solid transparent;
+  width: 110px;
+  height: 35px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-rect_gr2:hover {
+  background-color: transparent;
+  border: 1.5px solid #2DC8A9;
+  color: #2DC8A9;
+  transition: ease-out 0.3s;
+}
+
+.btn-cir_bl {
+  font-size: 18px;
+  color: #fff;
+  background-color: #4db7fe;
+  border: 1.5px solid transparent;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.btn-cir_bl:hover {
+  background-color: transparent;
+  border: 1.5px solid #4db7fe;
+  color: #4db7fe;
+  transition: ease-out 0.3s;
+}
+
+.btn-rect_bl1 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #4db7fe;
+  border: 1.5px solid transparent;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-rect_bl1:hover {
+  background-color: transparent;
+  border: 1.5px solid #4db7fe;
+  color: #4db7fe;
+  transition: ease-out 0.3s;
+}
+
+.btn-rect_bl2 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #4db7fe;
+  border: 1.5px solid transparent;
+  width: 110px;
+  height: 35px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-rect_bl2:hover {
+  background-color: transparent;
+  border: 1.5px solid #4db7fe;
+  color: #4db7fe;
+  transition: ease-out 0.3s;
+}
+
+body {
+  font-family: 微軟正黑體;
+  background-color: #f2f2f2;
+}
+
+.utnmcontanier {
+  padding: 50px;
+  width: 80vw;
+}
+
+.utnmcontanier .utnmpagetitle {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utnmcontanier .utnmpagetitle > div {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.utnmcontanier .utnmpagetitle > div:last-child * {
+  margin-right: 15px;
+}
+
+.utnmcontanier .utnmtabbtns button {
+  margin-right: 15px;
+}
+
+.utnmcontanier .utnmtabbtns button.active {
+  background: transparent;
+  color: #FF6B6B;
+  border: 2px solid #FF6B6B;
+}
+
+.utnmcontanier .utnmtabctrl {
+  color: #7D93B2;
+}
+
+.utnmcontanier .utnmtabctrl .utnmtab {
+  display: none;
+}
+
+.utnmcontanier .utnmtabctrl .utnmtab.active {
+  display: block;
+}
+
+.utnmcontanier .utnmtabctrl table {
+  border-collapse: separate;
+  text-align: center;
+  width: 100%;
+  border-spacing: 0 1em;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.utnmcontanier .utnmtabctrl table th, .utnmcontanier .utnmtabctrl table td {
+  width: 33.33%;
+}
+
+.utnmcontanier .utnmtabctrl table:first-child {
+  font-size: 20px;
+}
+
+.utnmcontanier .utnmtabctrl table:last-child {
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.utnmcontanier .utnmtabctrl table:last-child td {
+  padding: 10px;
+  background: #f2f2f2;
+}
+
+.utnmcontanier .utnmtabctrl table:last-child td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.utnmcontanier .utnmtabctrl table:last-child td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/*# sourceMappingURL=myacount.css.map */
