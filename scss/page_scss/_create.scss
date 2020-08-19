@@ -391,9 +391,9 @@ body#create{
       .page1 .pageItem{
         >div>div{
           // width: 80%;
-          input[type="text"],textarea,div.selectcontrol,label,img{
-            width: 250px;
-          }
+          // input[type="text"],textarea,div.selectcontrol,label,img{
+          //   width: 250px;
+          // }
         }
       }
       .page2{
@@ -418,7 +418,7 @@ body#create{
         >div>div{
           width: 80%;
           input[type="text"],textarea,div.selectcontrol,label,img{
-            width: 100%;
+            width: 100% !important;
           }
         }
       }

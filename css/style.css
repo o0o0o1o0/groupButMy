@@ -3262,9 +3262,6 @@ body#create .container .ctrlBtns button[disabled] {
   body#create form#createVendor .page1 .pageItem > div {
     justify-content: center;
   }
-  body#create form#createVendor .page1 .pageItem > div > div input[type="text"], body#create form#createVendor .page1 .pageItem > div > div textarea, body#create form#createVendor .page1 .pageItem > div > div div.selectcontrol, body#create form#createVendor .page1 .pageItem > div > div label, body#create form#createVendor .page1 .pageItem > div > div img {
-    width: 250px;
-  }
   body#create form#createVendor .page2 .putmealhere, body#create form#createVendor .page2 input[type="file"], body#create form#createVendor .page2 input[type="text"], body#create form#createVendor .page2 .selectcontrol {
     margin-bottom: 15px;
   }
@@ -3278,7 +3275,7 @@ body#create .container .ctrlBtns button[disabled] {
     width: 80%;
   }
   body#create form#createVendor .page1 .pageItem > div > div input[type="text"], body#create form#createVendor .page1 .pageItem > div > div textarea, body#create form#createVendor .page1 .pageItem > div > div div.selectcontrol, body#create form#createVendor .page1 .pageItem > div > div label, body#create form#createVendor .page1 .pageItem > div > div img {
-    width: 100%;
+    width: 100% !important;
   }
   body#create form#createVendor .page2 .putmealhere, body#create form#createVendor .page2 input[type="file"], body#create form#createVendor .page2 input[type="text"], body#create form#createVendor .page2 .selectcontrol {
     margin-bottom: 15px;
