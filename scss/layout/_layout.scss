@@ -1,57 +1,118 @@
-.menu{
+@mixin flexcolum($jc:center,$ai:center) {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin flexrow($jc:center,$ai:center) {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: $jc;
+  align-items: $ai;
+}
+.navmenu{
+  position: sticky;
+  top: 0;
   font-size: $font-size-1;
-  background-color: $bg-color-1;
+  width: 100vw;
   .wrap{
-    // border: 1px solid red;
-    max-width: $container-width;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    .logo{
+    background-color: lightblue;
+    @include flexrow(space-between, );
+    .logo{                        //左側欄
+      @include flexrow();
       border: 1px solid #41d4e4;
-      color: #fff;
-      margin: auto;
+      color: $text-color-3;
       text-align: center;
       padding: 15px 40px;
+      margin-left: 15px;
     }
-    ul{
-      width: 900px;
-      display: flex;
-      li{
-        // border:1px solid red;
-        width: 900px;
-        height: 70px;
-        line-height: 70px;
-        text-align: center;
-        a{
-          color: #fff;
-          text-decoration: none;
-          &:hover{
-            color: #41d4e4;
-            transition: ease-out 0.3s;
-          }
-        }
-        a.order{
-          border: 3px solid #41d4e4;
-          margin: 0 auto;
-          padding: 10PX 12PX;
-          i{
-            margin-left: 8px;
-            font-size: 20px;
-          }
-        }
-        a.cart,a.user{
-          i{
-            // border: 1px solid red;
-            font-size: 20px;
-            padding: 0 12px;
-          }
+    >div:last-child{
+      @include flexrow();
+      a{
+        padding: 0 15px;
+        color: $text-color-3;
+        text-decoration: none;
+        display: inline-block;
+        &:hover{
+          color: #41d4e4;
+          transition: ease-out 0.3s;
         }
       }
-    
+      ul{                           //右側欄
+        // margin-right: 15px;
+        @include flexrow();
+        li{
+          height: 70px;
+          line-height: 70px;
+          text-align: center;
+        }
+      }
+      a.hamburger{
+        display: none;
+      }
+    }
+     
+  }
+}
+
+@media screen and (max-width:1200px){//漢堡
+  .navmenu{
+    .wrap{
+      @include flexcolum();
+      height: 70px;
+      // height: 100vh; //✅
+      .logo{
+        position: fixed;
+        top: 8px;
+        left: 0;
+        margin-left: 0;
+        align-self: start;
+      }
+      >div:last-child{
+        width: 100%;
+        height: 0;
+        ul{
+          // @include flexcolum(flex-start,);
+          align-self: start;
+          display: none; //✅
+          margin: 0;
+          margin-right: 0px;
+          li{
+            width: 100vw;
+            a{
+              display: block;
+            }
+          }
+        }
+        .rIcon{
+          @include flexrow();
+          position: fixed;
+          top: 22px;
+          right: 0;
+          .hamburger{
+            display: block;
+          }
+          transition: 0.3s;
+        }
+      }
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer{
   font-size: 16px;
