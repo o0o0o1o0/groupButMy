@@ -3389,43 +3389,47 @@ body#cart_final .footer .wrap {
   font-weight: 500;
 }
 
-body#stroe_money form input::-webkit-outer-spin-button,
-body#stroe_money form input::-webkit-inner-spin-button {
+#store_money {
+  min-height: 100vh;
+}
+
+#store_money form input::-webkit-outer-spin-button,
+#store_money form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-body#stroe_money form input[type=number] {
+#store_money form input[type=number] {
   -moz-appearance: textfield;
 }
 
-body#stroe_money label, body#stroe_money input, body#stroe_money h3 {
+#store_money label, #store_money input, #store_money h3 {
   font-size: 20px;
 }
 
-body#stroe_money p, body#stroe_money h4 {
+#store_money p, #store_money h4 {
   font-size: 18px;
 }
 
-body#stroe_money h2 {
+#store_money h2 {
   font-size: 22px;
   margin: 15px;
 }
 
-body#stroe_money h3 {
+#store_money h3 {
   text-align: center;
   margin: 15px 0;
 }
 
-body#stroe_money h4 {
+#store_money h4 {
   font-weight: 500;
 }
 
-body#stroe_money input {
+#store_money input {
   outline: none;
 }
 
-body#stroe_money .coinTitle {
+#store_money .coinTitle {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -3433,29 +3437,24 @@ body#stroe_money .coinTitle {
   align-items: center;
 }
 
-body#stroe_money .coinTitle img {
+#store_money .coinTitle img {
   width: 30px;
   height: 30px;
   object-fit: cover;
   margin-right: 10px;
 }
 
-body#stroe_money .container {
-  /*width: 100vw;*/
-  min-height: 100vh;
-}
-
-body#stroe_money form {
+#store_money form {
   display: none;
   margin-top: 3em;
   transition: 0.5s;
 }
 
-body#stroe_money form .page .pageItem input.error {
+#store_money form .page .pageItem input.error {
   background: rgba(255, 99, 71, 0.3) !important;
 }
 
-body#stroe_money form .pagewrap {
+#store_money form .pagewrap {
   overflow: hidden;
   color: #7D93B2;
   background: white;
@@ -3469,7 +3468,7 @@ body#stroe_money form .pagewrap {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
-body#stroe_money form .pagewrap > div:nth-child(2) {
+#store_money form .pagewrap > div:nth-child(2) {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -3477,7 +3476,7 @@ body#stroe_money form .pagewrap > div:nth-child(2) {
   align-items: center;
 }
 
-body#stroe_money form .pagewrap button.closeBtn:first-child {
+#store_money form .pagewrap button.closeBtn:first-child {
   display: block;
   margin-left: auto;
   background-color: transparent;
@@ -3486,7 +3485,7 @@ body#stroe_money form .pagewrap button.closeBtn:first-child {
   color: #7D93B2;
 }
 
-body#stroe_money form .ctrlBtns {
+#store_money form .ctrlBtns {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -3494,13 +3493,13 @@ body#stroe_money form .ctrlBtns {
   align-items: center;
 }
 
-body#stroe_money form .ctrlBtns button {
+#store_money form .ctrlBtns button {
   /* @include colorBtn();*/
   margin: 10px;
   /*&:last-child{@include colorBtn($STRONGgrren);*/
 }
 
-body#stroe_money form .page {
+#store_money form .page {
   margin: auto;
   /*width: fit-content;
         width: -moz-fit-content;*/
@@ -3513,16 +3512,16 @@ body#stroe_money form .page {
   transition: .5s;
 }
 
-body#stroe_money form .page1 .pageItem {
+#store_money form .page1 .pageItem {
   width: fit-content;
   width: -moz-fit-content;
 }
 
-body#stroe_money form .page1 .pageItem input {
+#store_money form .page1 .pageItem input {
   color: #7D93B2;
 }
 
-body#stroe_money form .page1 .pageItem > div {
+#store_money form .page1 .pageItem > div {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -3530,7 +3529,7 @@ body#stroe_money form .page1 .pageItem > div {
   align-items: center;
 }
 
-body#stroe_money form .page1 .pageItem > div input {
+#store_money form .page1 .pageItem > div input {
   background-color: transparent;
   border: 0 solid #000;
   max-width: 80px;
@@ -3538,7 +3537,7 @@ body#stroe_money form .page1 .pageItem > div input {
   text-align: center;
 }
 
-body#stroe_money form .page1 .pageItem > div > div, body#stroe_money form .page1 .pageItem > div label {
+#store_money form .page1 .pageItem > div > div, #store_money form .page1 .pageItem > div label {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -3553,14 +3552,14 @@ body#stroe_money form .page1 .pageItem > div > div, body#stroe_money form .page1
   background: #eee;
 }
 
-body#stroe_money form .page1 .pageItem > div:last-child img {
+#store_money form .page1 .pageItem > div:last-child img {
   width: 30px;
   height: 30px;
   object-fit: cover;
   margin-right: 10px;
 }
 
-body#stroe_money form .page2 .pageItem {
+#store_money form .page2 .pageItem {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -3568,7 +3567,7 @@ body#stroe_money form .page2 .pageItem {
   align-items: center;
 }
 
-body#stroe_money form .page2 .pageItem input[type="number"] {
+#store_money form .page2 .pageItem input[type="number"] {
   height: 30px;
   background-color: #aaa;
   border-radius: 8px;
@@ -3577,11 +3576,11 @@ body#stroe_money form .page2 .pageItem input[type="number"] {
   margin: 5px;
 }
 
-body#stroe_money form .page2 .pageItem h4 {
+#store_money form .page2 .pageItem h4 {
   margin: 5px 0 5px 5px;
 }
 
-body#stroe_money form .page2 .pageItem > div {
+#store_money form .page2 .pageItem > div {
   width: 350px;
   background-color: #eee;
   border-radius: 8px;
@@ -3589,7 +3588,7 @@ body#stroe_money form .page2 .pageItem > div {
   margin: 15px;
 }
 
-body#stroe_money form .page2 .pageItem > div:nth-child(2) > div {
+#store_money form .page2 .pageItem > div:nth-child(2) > div {
   margin: 15px 0;
   display: flex;
   display: -webkit-flex;
@@ -3598,11 +3597,11 @@ body#stroe_money form .page2 .pageItem > div:nth-child(2) > div {
   align-items: center;
 }
 
-body#stroe_money form .page2 .pageItem > div:last-child > div {
+#store_money form .page2 .pageItem > div:last-child > div {
   margin-bottom: 25px;
 }
 
-body#stroe_money form .page2 .pageItem > div:last-child > div > div {
+#store_money form .page2 .pageItem > div:last-child > div > div {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -3610,22 +3609,22 @@ body#stroe_money form .page2 .pageItem > div:last-child > div > div {
   align-items: center;
 }
 
-body#stroe_money form .page2 .pageItem > div:last-child > div > div input {
+#store_money form .page2 .pageItem > div:last-child > div > div input {
   width: 60px;
 }
 
-body#stroe_money form .page2 .pageItem > div:last-child .cardsImg {
+#store_money form .page2 .pageItem > div:last-child .cardsImg {
   justify-content: start;
 }
 
-body#stroe_money form .page2 .pageItem > div:last-child .cardsImg img {
+#store_money form .page2 .pageItem > div:last-child .cardsImg img {
   margin-right: 5px;
   width: 50px;
   height: 30px;
   object-fit: cover;
 }
 
-body#stroe_money form .page2 .pageItem > div:last-child > div:nth-child(2) label {
+#store_money form .page2 .pageItem > div:last-child > div:nth-child(2) label {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -3633,13 +3632,13 @@ body#stroe_money form .page2 .pageItem > div:last-child > div:nth-child(2) label
   align-items: center;
 }
 
-body#stroe_money form .page2 .pageItem > div:last-child > div:nth-child(2) label img {
+#store_money form .page2 .pageItem > div:last-child > div:nth-child(2) label img {
   margin-left: 5px;
   width: 40px;
   object-fit: cover;
 }
 
-body#stroe_money form .page2 .pageItem > div:last-child > div:nth-child(3) > div {
+#store_money form .page2 .pageItem > div:last-child > div:nth-child(3) > div {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -3647,7 +3646,7 @@ body#stroe_money form .page2 .pageItem > div:last-child > div:nth-child(3) > div
   align-items: center;
 }
 
-body#stroe_money .popbox {
+#store_money .popbox {
   height: 80vh;
   display: flex;
   display: -webkit-flex;
@@ -3660,7 +3659,7 @@ body#stroe_money .popbox {
      }*/
 }
 
-body#stroe_money .popbox .pageItem {
+#store_money .popbox .pageItem {
   background: white;
   width: fit-content;
   width: -moz-fit-content;
@@ -3676,7 +3675,7 @@ body#stroe_money .popbox .pageItem {
   line-height: 30px;
 }
 
-body#stroe_money .popbox .pageItem div:nth-child(2) {
+#store_money .popbox .pageItem div:nth-child(2) {
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -3684,32 +3683,32 @@ body#stroe_money .popbox .pageItem div:nth-child(2) {
   align-items: center;
 }
 
-body#stroe_money .popbox .pageItem div:nth-child(2) img {
+#store_money .popbox .pageItem div:nth-child(2) img {
   width: 20px;
   height: 20px;
   object-fit: cover;
   margin-left: 10px;
 }
 
-body#stroe_money .popbox .pageItem button {
+#store_money .popbox .pageItem button {
   margin-top: 20px;
 }
 
-body#stroe_money .popbox {
+#store_money .popbox {
   display: none;
 }
 
 @media screen and (max-width: 470px) {
-  body#stroe_money form .pagewrap {
+  #store_money form .pagewrap {
     padding: 10px;
   }
-  body#stroe_money form .pagewrap .page1 .pageItem > div label, body#stroe_money form .pagewrap .page1 .pageItem > div > div {
+  #store_money form .pagewrap .page1 .pageItem > div label, #store_money form .pagewrap .page1 .pageItem > div > div {
     min-width: 250px;
   }
-  body#stroe_money form .pagewrap .page2 .pageItem > div {
+  #store_money form .pagewrap .page2 .pageItem > div {
     width: 90%;
   }
-  body#stroe_money form .pagewrap .page2 .pageItem > div:last-child div {
+  #store_money form .pagewrap .page2 .pageItem > div:last-child div {
     flex-wrap: wrap;
   }
 }

@@ -1,6 +1,6 @@
 function doFirst(){
     //整個彈跳視窗的顯示
-    $('#clickBoxBtn').click(function(){
+    $('.storeMoneyOpenBtn').click(function(){
         $('form#storeMoneyForm').css('display','block');
         $('.container').css('background','rgba(0,0,0,.5)')
         // $('form#storeMoneyForm .pagewrap').css('max-width','500px');

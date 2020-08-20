@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CACzB",
-    "sources": [
-        "c:/Users/User/Downloads/store_money.scss"
-    ],
-    "names": [],
-    "file": "store_money.css"
-}

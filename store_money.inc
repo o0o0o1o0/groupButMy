@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>夜市幣儲值 | 夜市客</title>
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
-    <script src="./js/store_money.js"></script>
-    <style>
-        /* @import url(./css/store_money.css); */
-        @import url(./css/style.css);
-        /* @import url(./path/css/fontawesome.min.css); */
-    </style>
-</head>
-<body id="stroe_money">
-<?php    
-    require_once('navigation.inc');
-?>
-<div class="container">
+<div class="container" id="store_money">
     <div class="coinTitle"><h2>夜市幣儲值</h2><div><img src="./img/store_money/money.png" alt=""></div></div>
     <button id="clickBoxBtn">點擊打開！</button>
     <form action="打上PHP的名字.php" method="POST" data-page="1" id="storeMoneyForm">
@@ -91,8 +71,3 @@
         </div>
 </div>
 </div>
-<?php    
-    require_once('footer.inc');
-?>
-</body>
-</html>
