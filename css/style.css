@@ -3389,8 +3389,19 @@ body#cart_final .footer .wrap {
   font-weight: 500;
 }
 
+body {
+  min-height: 100vh;
+  width: 100vw;
+}
+
 #store_money {
   min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #store_money form input::-webkit-outer-spin-button,
@@ -3404,15 +3415,15 @@ body#cart_final .footer .wrap {
 }
 
 #store_money label, #store_money input, #store_money h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #store_money p, #store_money h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #store_money h2 {
-  font-size: 22px;
+  font-size: 18px;
   margin: 15px;
 }
 
@@ -3446,8 +3457,10 @@ body#cart_final .footer .wrap {
 
 #store_money form {
   display: none;
-  margin-top: 3em;
+  margin-top: 15px;
   transition: 0.5s;
+  /*// @include flexcolumn();
+     height: 90vh;*/
 }
 
 #store_money form .page .pageItem input.error {
@@ -3647,12 +3660,17 @@ body#cart_final .footer .wrap {
 }
 
 #store_money .popbox {
-  height: 80vh;
+  white-space: nowrap;
+  /* height: 80vh;*/
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   /* button{
         @include colorBtn();
          margin-top: 10px;
@@ -3698,8 +3716,85 @@ body#cart_final .footer .wrap {
   display: none;
 }
 
+@media screen and (max-width: 550px) {
+  #store_money form .pagewrap {
+    max-width: 90vw;
+    height: 90vh;
+    overflow: auto;
+    padding: 5px;
+  }
+  #store_money form .pagewrap h3 {
+    font-size: 18px;
+  }
+  #store_money form .pagewrap h4, #store_money form .pagewrap label, #store_money form .pagewrap p, #store_money form .pagewrap input {
+    font-size: 16px;
+  }
+  #store_money form .pagewrap .closeBtn {
+    margin: 3px;
+  }
+  #store_money form .pagewrap .page2 h3 {
+    margin: 0;
+  }
+  #store_money form .pagewrap .page2 .pageItem > div {
+    margin: 0;
+    margin-top: 5px;
+  }
+  #store_money form .pagewrap .page2 .pageItem > div:nth-child(2) > div {
+    margin: 5px 0;
+  }
+  #store_money form .pagewrap .page2 .pageItem > div:last-child > div {
+    margin-bottom: 15px;
+  }
+  #store_money form .pagewrap::-webkit-scrollbar {
+    display: none !important;
+  }
+  #store_money .popbox .pageItem {
+    padding: 25px 25px;
+    white-space: nomal;
+  }
+}
+
+@media screen and (max-height: 760px) {
+  #store_money form .pagewrap {
+    max-width: 90vw;
+    height: 90vh;
+    overflow: auto;
+    padding: 5px;
+  }
+  #store_money form .pagewrap h3 {
+    font-size: 18px;
+  }
+  #store_money form .pagewrap h4, #store_money form .pagewrap label, #store_money form .pagewrap p, #store_money form .pagewrap input {
+    font-size: 16px;
+  }
+  #store_money form .pagewrap .closeBtn {
+    margin: 3px;
+  }
+  #store_money form .pagewrap .page2 h3 {
+    margin: 0;
+  }
+  #store_money form .pagewrap .page2 .pageItem > div {
+    margin: 0;
+    margin-top: 5px;
+  }
+  #store_money form .pagewrap .page2 .pageItem > div:nth-child(2) > div {
+    margin: 5px 0;
+  }
+  #store_money form .pagewrap .page2 .pageItem > div:last-child > div {
+    margin-bottom: 15px;
+  }
+  #store_money form .pagewrap::-webkit-scrollbar {
+    display: none !important;
+  }
+  #store_money .popbox .pageItem {
+    padding: 25px 25px;
+    white-space: nomal;
+  }
+}
+
 @media screen and (max-width: 470px) {
   #store_money form .pagewrap {
+    min-width: 100%;
     padding: 10px;
   }
   #store_money form .pagewrap .page1 .pageItem > div label, #store_money form .pagewrap .page1 .pageItem > div > div {

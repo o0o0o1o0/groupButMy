@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>一般會員－我的帳戶－消費紀錄+儲值紀錄</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
+
   <style>
     @import url(./css/style.css);
     @import url(./css/myacount.css);
@@ -12,6 +13,7 @@
 </head>
 <body>
   <?php
+  require_once('store_money.inc');
   require_once('navigation.inc');
   ?>
   <div class="utnmcontanier">
@@ -22,7 +24,7 @@
         <span>$125200</span>
         <button class="btn-cir_pk1 storeMoneyOpenBtn">儲值</button>
         <?php
-            require_once('store_money.inc');
+            
         ?>
       </div>
     </div>

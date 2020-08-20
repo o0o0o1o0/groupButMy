@@ -1,6 +1,4 @@
 <div class="container" id="store_money">
-    <div class="coinTitle"><h2>夜市幣儲值</h2><div><img src="./img/store_money/money.png" alt=""></div></div>
-    <button id="clickBoxBtn">點擊打開！</button>
     <form action="打上PHP的名字.php" method="POST" data-page="1" id="storeMoneyForm">
         <div class="pagewrap">
             <button type="button" class="closeBtn">X</button>
@@ -31,8 +29,8 @@
                             <div>
                                 <h4>請輸入信用卡號</h4>
                                 <div>
-                                    <input type="number" min="1" required><input type="number" min="1" required>
-                                    <input type="number" min="1" required><input type="number" min="1" required>
+                                    <input type="number" min="1" required><input type="number" min="1" required value="3785">
+                                    <input type="number" min="1" required value="8763"><input type="number" min="1" required value="9046">
                                 </div>
                                 <div class="cardsImg">
                                     <img src="./img/store_money/creditCardV.png">
@@ -42,13 +40,13 @@
                             </div>
                             <div>
                                 <h4>輸入安全碼</h4>
-                                <label><input type="number" min="1" max="999" required>xxx <img src="./img/store_money/creditCard3c.png"></label>
+                                <label><input type="number" min="1" max="999" required value="321">xxx <img src="./img/store_money/creditCard3c.png"></label>
                             </div>
                             <div>
                                 <h4>信用卡到期日</h4>
                                 <div>
-                                    <label><input type="number" min="1" required>月</label>
-                                    <label><input type="number" min="1" required>年</label>
+                                    <label><input type="number" min="1" required value="08">月</label>
+                                    <label><input type="number" min="1" required value="24">年</label>
                                 </div>
                             </div>
                         </div>
@@ -69,5 +67,6 @@
             <div>目前剩餘夜市幣<p id="myyescoin"></p></div>
             <button type="button" id="okIKnow" class="btn-rect_pk1">確認</button>
         </div>
+    </div>
 </div>
-</div>
+<script src='./js/store_money.js'></script>

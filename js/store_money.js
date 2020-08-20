@@ -3,6 +3,8 @@ function doFirst(){
     $('.storeMoneyOpenBtn').click(function(){
         $('form#storeMoneyForm').css('display','block');
         $('.container').css('background','rgba(0,0,0,.5)')
+        $('#store_money').css({'min-height':'100vh','z-index':'1'})
+        
         // $('form#storeMoneyForm .pagewrap').css('max-width','500px');
     })
     //關閉按鈕
@@ -12,6 +14,7 @@ function doFirst(){
         currentPage=1;
         $('.pagewrap .page').css('transform','');
         nextBtn.text("儲值夜市幣");
+        $('#store_money').css({'min-height':'','z-index':'-1'})
         // $('form#storeMoneyForm .pagewrap').css('max-width','0');
     })
 
@@ -90,6 +93,7 @@ function doFirst(){
         currentPage=1;
         $('.pagewrap .page').css('transform','');
         nextBtn.text("儲值夜市幣");
+        $('#store_money').css({'min-height':'','z-index':'-1'})
     })
 }//doFirst
 window.addEventListener('load',doFirst);

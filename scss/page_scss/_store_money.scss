@@ -1,6 +1,16 @@
 @import "../mixins/store_money";//變數
+body{
+    min-height: 100vh;
+    width: 100vw;
+}
 #store_money{
     min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     // background-color: $bg-color-3;
 // 🟡控制顯示
 // .container{
@@ -14,6 +24,7 @@
 // }
 //關於input:number scroll bar消失的傳言
 form{
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -25,13 +36,13 @@ form{
 }
 //樣式
 label,input,h3{
-    font-size:$font-size-2;
+    font-size:22px;//$font-size-2
 }
 p,h4{
-    font-size: $font-size-3;
+    font-size: 20px;//$font-size-3
 }
 h2{
-    font-size: $font-size-1;
+    font-size: 18px;//$font-size-1
     margin: 15px;
 }
 h3{
@@ -54,15 +65,15 @@ input{
     }
 }
 // .container{
-//     min-height: 100vh;
+//     /*min-height: 100vh;*/
 // }
 
 form{
     display: none;
-    margin-top: 3em;
+    margin-top: 15px;
     transition: 0.5s;
-    // @include flexcolumn();
-    // height: 90vh;
+    /*// @include flexcolumn();
+     height: 90vh;*/
     .page .pageItem input.error{
         background: rgba(255, 99, 71,.3) !important;
     }
@@ -201,8 +212,13 @@ form{
     }
 }
 .popbox{
-    height: 80vh;
+    white-space: nowrap;
+    /* height: 80vh;*/
     @include flexcolum();
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
    
     .pageItem{
         background: $cardBGC;
@@ -238,9 +254,102 @@ form{
 
 
 }
+
+@media screen and (max-width:550px){//寬
+  #store_money{
+    form{
+        .pagewrap{
+            max-width: 90vw;
+            height: 90vh;
+            overflow: auto;
+            h3{font-size: 18px;}
+            h4,label,p,input{font-size: 16px;}
+            padding: 5px;
+            .closeBtn{
+                margin: 3px;
+            }
+            .page2{
+                h3{margin: 0;}
+                .pageItem>div{
+                    margin: 0;
+                    margin-top: 5px;
+                }
+                .pageItem>div:nth-child(2){
+                    >div{
+                        margin: 5px 0;
+                    }
+                }
+                .pageItem>div:last-child{
+                    >div{
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        //隱藏scrollbar
+        .pagewrap::-webkit-scrollbar {
+            display: none !important;
+        }
+    }
+    .popbox{
+       .pageItem{
+            padding: 25px 25px;
+            white-space: nomal;
+       }
+    }
+  }
+}
+@media screen and (max-height:760px){//高
+    #store_money{
+        form{
+            .pagewrap{
+                max-width: 90vw;
+                height: 90vh;
+                overflow: auto;
+                h3{font-size: 18px;}
+                h4,label,p,input{font-size: 16px;}
+                padding: 5px;
+                .closeBtn{
+                    margin: 3px;
+                }
+                .page2{
+                    h3{margin: 0;}
+                    .pageItem>div{
+                        margin: 0;
+                        margin-top: 5px;
+                    }
+                    .pageItem>div:nth-child(2){
+                        >div{
+                            margin: 5px 0;
+                        }
+                    }
+                    .pageItem>div:last-child{
+                        >div{
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+            //隱藏scrollbar
+            .pagewrap::-webkit-scrollbar {
+                display: none !important;
+            }
+        }
+        .popbox{
+           .pageItem{
+                padding: 25px 25px;
+                white-space: nomal;
+           }
+        }
+      }
+}
+
+
+
 @media screen and (max-width:470px){
     #store_money{
         form .pagewrap{
+            min-width: 100%;
             padding: 10px;
             .page1 .pageItem{
                 >div label,>div>div{

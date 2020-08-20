@@ -82,10 +82,10 @@ body{
   font-family: 微軟正黑體;
   background-color: $bg-color-3;
 }
-.utnmcontanier{
+.utvdcontanier{
   padding: 50px;  
   width: 80vw;
-  .utnmpagetitle{
+  .utvdpagetitle{
     font-size: 20px;
     margin-bottom: 20px;
     @include flexrow(space-between,);
@@ -96,7 +96,7 @@ body{
       *{margin-right: 15px;}
     }
   }
-  .utnmtabbtns{
+  .utvdtabbtns{
     button{
       margin-right: 15px;
     }
@@ -106,12 +106,12 @@ body{
       border: 2px solid #FF6B6B;
     }
   }
-  .utnmtabctrl{
+  .utvdtabctrl{
     color: $text-color-1;
-    .utnmtab{
+    .utvdtab{
       display: none;
     }
-    .utnmtab.active{
+    .utvdtab.active{
       display: block;
     }
     table{
