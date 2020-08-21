@@ -39,6 +39,13 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.js'></script>
 <script>
@@ -48,10 +55,10 @@
   $(window).resize(function(){
     winW = $(window).width();  //把resize 的值帶進去
     if(winW>1200){
-      $('.navmenu .wrap div').eq(1).css('height','70px')
+      $('.navmenu .wrap div').eq(1).find('ul').css('height','70px')
       $('.navmenu .wrap div').eq(1).find('ul').css({'display':'flex'});
     }else if(winW<=1200){
-      $('.navmenu .wrap div').eq(1).css('height','0px');
+      $('.navmenu .wrap div').eq(1).find('ul').css('height','0px');
       $('.navmenu .wrap div').eq(1).find('ul').slideUp();
       $('.hamburger').removeClass('is-active')
     }
@@ -60,10 +67,10 @@
   $(".hamburger").click(function(){
     $(this).toggleClass("is-active");
     if($('.hamburger').hasClass('is-active')){
-      $('.navmenu .wrap div').eq(1).css('height','calc(100vh - 70px)')
+      $('.navmenu .wrap div').eq(1).find('ul').css('height','calc(100vh - 70px)')
       $('.navmenu .wrap div').eq(1).find('ul').slideDown();
     }else{
-      $('.navmenu .wrap div').eq(1).css('height','')
+      $('.navmenu .wrap div').eq(1).find('ul').css('height','')
       $('.navmenu .wrap div').eq(1).find('ul').slideUp();
     }
   });

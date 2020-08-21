@@ -1391,6 +1391,9 @@ button {
     margin-top: 70px;
   }
   .navmenu .wrap > div:last-child ul {
+    position: fixed;
+    top: 70px;
+    z-index: 5;
     width: 100%;
     overflow: auto;
     display: flex;
@@ -1431,12 +1434,16 @@ button {
   }
 }
 
+html, body {
+  position: relative;
+  height: 100%;
+}
+
 .footer {
   z-index: -1;
   position: absolute;
-  bottom: 0;
-  left: 0;
   font-size: 16px;
+  background-color: #f7f7f7;
   width: 100%;
 }
 

@@ -6,27 +6,33 @@
   <link rel="stylesheet" href="./css/style.css">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
-  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
   <link rel="stylesheet" href="./path/css/fontawesome.min.css">
   <title>夜市客</title>
 </head>
 <body id="index">
-  <div class="menu">
+  <div class="navmenu">
     <div class="wrap">
-      <div class="logo">LOGO</div>
-      
-      <ul>
-        <li><a href="#">食玩圖鑑</a></li>
-        <li><a href="#">食玩指南</a></li>
-        <li><a href="#">食尚玩家</a></li>
-        <li><a href="#">夜市新鮮事</a></li>
-        <li><a href="#">創建指南</a></li>
-        <li><a href="#" class="order">去點餐<i class="fas fa-arrow-right"></i></a></li>
-        <li>
-          <a href="#" class="user"><i class="fas fa-user"></i></a>
-          <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
-        </li>
-      </ul>
+      <div class="logo"><img src="https://picsum.photos/150/90"></div>
+      <div>
+        <ul class="navlist">
+          <li><a href="#">食玩圖鑑</a></li>
+          <li><a href="#">食玩指南</a></li>
+          <li><a href="#">食尚玩家</a></li>
+          <li><a href="#">夜市新鮮事</a></li>
+          <li><a href="#">創建指南</a></li>
+          </ul>
+          <div class="rIcon">
+            <button class="hamburger hamburger--squeeze" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+            <!--<a href=""class="hamburger"><i class="fas fa-bars bar-open"></i></a>-->
+            <a href="#"class="user"><i class="fas fa-user"></i></a>
+            <a href="#"class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+      </div>
     </div>
   </div>
 
@@ -168,8 +174,36 @@
     </div>
   </div>
 
-  <!-- <div class="footer">
+  <div class="footer">
     <div class="wrap">© YesMan 2020 . All rights reserved.</div>
-  </div> -->
+  </div>
+
+  <script>
+    let winH = $(window).height();
+    let winW = $(window).width();
+    //resize事件
+    $(window).resize(function(){
+      winW = $(window).width();  //把resize 的值帶進去
+      if(winW>1200){
+        $('.navmenu .wrap div').eq(1).find('ul').css('height','70px')
+        $('.navmenu .wrap div').eq(1).find('ul').css({'display':'flex'});
+      }else if(winW<=1200){
+        $('.navmenu .wrap div').eq(1).find('ul').css('height','0px');
+        $('.navmenu .wrap div').eq(1).find('ul').slideUp();
+        $('.hamburger').removeClass('is-active')
+      }
+    })
+    // 導覽列漢堡切換
+    $(".hamburger").click(function(){
+      $(this).toggleClass("is-active");
+      if($('.hamburger').hasClass('is-active')){
+        $('.navmenu .wrap div').eq(1).find('ul').css('height','calc(100vh - 70px)')
+        $('.navmenu .wrap div').eq(1).find('ul').slideDown();
+      }else{
+        $('.navmenu .wrap div').eq(1).find('ul').css('height','')
+        $('.navmenu .wrap div').eq(1).find('ul').slideUp();
+      }
+    });
+  </script>
 </body>
 </html>
