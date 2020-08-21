@@ -1,0 +1,72 @@
+#index{
+  background-color: $bg-color-1;
+  .banner{
+    width: 100%;
+    position: relative;
+    .scroll_banner{
+      width: 100%;
+      display: block;
+    }
+    .banner_content{
+      position: absolute;
+      top: 20%;
+      left: 5%;
+      color: $white-color;
+      .banner_title{
+        font-size: 50px;
+      }
+      .banner_text{
+        font-size: 40px;
+        margin-top: 20px;
+      }
+      .banner_text2{
+        font-size: 24px;
+        width: 550px;
+        line-height: 30px;
+        margin: 15px 0;
+        opacity: 0.9;
+      }
+    }
+    .banner_circle{
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      transform:translateX(-241px) ;
+    }
+    .circle_content{
+      position: absolute;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-150px);
+      text-align: center;
+      .clrcel_num{
+        color: $text-color-5;
+        font-size: 130px;
+      }
+      .circle_text{
+        font-size: 50px;
+      }
+      .circle_text2{
+        font-size: 40px;
+        margin-top: 5px;
+      }
+    }
+  }
+  .container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    margin-top: 300px;
+    .hot_shop,.new_shop{
+      .shop_card_title{
+        font-size: $title-font-size;
+      }
+      .shop_card_list{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}

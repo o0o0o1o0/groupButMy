@@ -1,0 +1,61 @@
+//function
+@mixin text_center() {
+    width: fit-content;
+    text-align: center;
+}
+
+@mixin list_style() {
+    width: 95%;
+    border-radius: 5px;
+}
+  
+// color
+$main_color: #11245E;
+$font_color: #ffffff;
+$money_color: #ffc145;
+$bg_color: #E6E6E6;
+$btn_color: #80ebeb;
+
+$center: 0 auto;
+
+//font
+$text: 微軟正黑體;
+$title: 華康雅宋體;
+
+$h1: 40px;
+$h2: 32px;
+$h3: 28px;
+$h4: 22px;
+$h5: 20px;
+// index_stand
+$aside_width1: 80%;
+$aside_width2: 60%;
+$aside_width3: 30%;
+
+$center2: 20px auto;
+$center3: 15px auto;
+
+$padding1: 20px;
+
+$title_width: 120px;
+$content_width: 300px;
+
+//btn
+@mixin btn($w,$bgc,$rad){
+    font-size: 18px;
+    color: #fff;
+    background-color: $bgc;
+    border: 1.5px solid transparent;
+    width: $w;
+    height: 35px;
+    // line-height: 35px;
+    text-align: center;
+    border-radius: $rad;
+    cursor: pointer;
+    &:hover{
+      background-color: transparent;
+      border: 1.5px solid $bgc;
+      color: $bgc;
+      transition: ease-out 0.3s;
+    }
+}

@@ -17,8 +17,8 @@
 </head>
 <body id="create">
 <?php    
-        require_once('navigation.inc');
-    ?>
+  require_once('navigation.inc');
+?>
   <div class="container">
     <!--第二步新增的放在form外面才不會被送出-->
     <div class="meal" style="display:none;">
@@ -197,6 +197,16 @@
   <?php    
         require_once('footer.inc');
   ?>
+  <!-- map -->
+  <!-- map -->
+  <!-- map -->
+  <!-- map -->
+  <!-- map -->
+  <!-- map -->
+  <!-- map -->
+  <!-- map -->
+  <!-- map -->
+  <!-- map -->
   <!-- map -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>

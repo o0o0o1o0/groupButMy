@@ -1,0 +1,21 @@
+
+
+
+@mixin go-order-btn{
+  font-size: 20PX;
+  color: $white-color;
+  background-color: $bg-color-2;
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  &:hover{
+    background-color: $bg-color-4;
+    transition: ease-out 0.4s;
+  }
+}
+
+//套用
+.go-order-btn{
+  @include go-order-btn;
+}
