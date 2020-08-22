@@ -1713,7 +1713,6 @@ body#create form#createVendor .page2 .pageItem div.addBtn label[for="addBtn"] {
   justify-content: center;
   align-items: center;
   margin: 1em;
-  margin-left: 3em;
 }
 
 * {
