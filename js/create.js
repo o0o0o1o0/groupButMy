@@ -125,41 +125,6 @@ function doFirst(){
 
 
 
-//map
-//map
-//map
-//map
-//map
-//map
-//map
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }//doFirst
 

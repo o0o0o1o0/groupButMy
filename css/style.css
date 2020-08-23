@@ -1295,16 +1295,17 @@ button {
 
 /*主要樣式*/
 .navmenu {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   z-index: 6;
   top: 0;
   font-size: 22px;
-  background-color: lightblue;
+  background-color: transparent;
 }
 
 .navmenu .wrap {
   max-width: 1200px;
-  margin: auto;
+  margin-left: auto;
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -1338,7 +1339,7 @@ button {
 
 .navmenu .wrap > div:last-child a {
   padding: 0 20px;
-  color: #01200f;
+  color: #fff;
   text-decoration: none;
   display: inline-block;
 }

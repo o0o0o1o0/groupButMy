@@ -87,15 +87,16 @@
 
 /*主要樣式*/
 .navmenu{
-  position: sticky;
+  position: fixed;
+  width: 100%;
   z-index: 6;
   top: 0;
   font-size: $font-size-1;
   // width: 100vw;
-  background-color: lightblue;
+  background-color: transparent;//lightblue
   .wrap{
     max-width: 1200px;
-    margin: auto;
+    margin-left: auto;
     @include flexrow(space-between, );
     .logo{                        //左側欄
       @include flexrow();
@@ -112,7 +113,7 @@
       @include flexrow();
       a{
         padding: 0 20px;
-        color: $text-color-3;
+        color: $white-color;
         text-decoration: none;
         display: inline-block;
         &:hover{

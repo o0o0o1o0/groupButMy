@@ -8,6 +8,10 @@
   <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
   <link rel="stylesheet" href="./path/css/fontawesome.min.css">
+  <script src="./js/index.js"></script>
+  <style>
+    @import url(./css/slider.css);
+  </style>
   <title>夜市客</title>
 </head>
 <body id="index">
@@ -35,24 +39,113 @@
       </div>
     </div>
   </div>
-
-  <div class="banner">
-    <img class="scroll_banner" src="./img/index/banner.jpg">
-    <img class="banner_circle" src="./img/index/banner-circle.png">
-    <div class="banner_content">
-      <div class="banner_title">夜市客</div>
-      <div class="banner_text">夜市推薦美食，線上立即下單</div>
-      <div class="banner_text2">專門為中壢夜市打造的夜市線上訂餐系統讓你不用排隊等美食</div>
-      <button class="go-order-btn">立即點餐</button>
+  <div class="section">
+    <div class="slider slider1">
+        <!-- <a class="control_next control_next1">👉</a>
+        <a class="control_prev control_prev1">👈</a> -->
+        <ul class="slides slides1">
+          <li data-page="1">
+            <div class="banner">
+              <img class="scroll_banner" src="./img/index/banner.jpg">
+              <img class="banner_circle" src="./img/index/banner-circle.png">
+              <div class="banner_content">
+                <div class="banner_title">夜市客</div>
+                <div class="banner_text">夜市推薦美食，線上立即下單</div>
+                <div class="banner_text2">專門為中壢夜市打造的夜市線上訂餐系統讓你不用排隊等美食</div>
+                <button class="go-order-btn">立即點餐</button>
+              </div>
+              <div class="circle_content">
+                <div class="clrcel_num">01</div>
+                <div class="circle_text">立即訂餐</div>
+                <div class="circle_text2">TAP TO ORDER</div>
+              </div>
+            </div>
+            <div class="banbmimg">
+              <img src="https://www.yo-woo.com/static/images/webp/img-homepage-qrcode.webp" alt="">
+            </div>
+          </li>
+          <li data-page="2">
+            <div class="banner">
+              <img class="scroll_banner" src="./img/index/banner.jpg">
+              <img class="banner_circle" src="./img/index/banner-circle.png">
+              <div class="banner_content">
+                <div class="banner_title">夜市客</div>
+                <div class="banner_text">夜市推薦美食，線上立即下單</div>
+                <div class="banner_text2">專門為中壢夜市打造的夜市線上訂餐系統讓你不用排隊等美食</div>
+                <button class="go-order-btn">立即點餐</button>
+              </div>
+              <div class="circle_content">
+                <div class="clrcel_num">02</div>
+                <div class="circle_text">立即訂餐</div>
+                <div class="circle_text2">TAP TO ORDER</div>
+              </div>
+            </div>
+            <div class="banbmimg">
+              <img src="https://www.yo-woo.com/static/images/webp/img-homepage-restaurant.webp" alt="">
+            </div>
+          </li>
+          <li data-page="3">
+            <div class="banner">
+              <img class="scroll_banner" src="./img/index/banner.jpg">
+              <img class="banner_circle" src="./img/index/banner-circle.png">
+              <div class="banner_content">
+                <div class="banner_title">夜市客</div>
+                <div class="banner_text">夜市推薦美食，線上立即下單</div>
+                <div class="banner_text2">專門為中壢夜市打造的夜市線上訂餐系統讓你不用排隊等美食</div>
+                <button class="go-order-btn">立即點餐</button>
+              </div>
+              <div class="circle_content">
+                <div class="clrcel_num">03</div>
+                <div class="circle_text">立即訂餐</div>
+                <div class="circle_text2">TAP TO ORDER</div>
+              </div>
+            </div>
+            <div class="banbmimg">
+              <img src="https://www.yo-woo.com/static/images/webp/img-homepage-friends.webp" alt="">
+            </div>
+          </li>
+        </ul>  
+        <div class="steps steps1">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
     </div>
-    <div class="circle_content">
-      <div class="clrcel_num">01</div>
-      <div class="circle_text">立即訂餐</div>
-      <div class="circle_text2">TAP TO ORDER</div>
+    <div class="scrollDownBtn">
+      <div class="img"></div>
+      <div class="txt">SCROLLDOWN</div>
     </div>
-  </div>
+</div>
 
-  <div class="container">
+<!-- <div class="section">
+  <div class="slider slider2">
+        <a class="control_next control_next2">👉</a>
+        <a class="control_prev control_prev2">👈</a>
+        <ul class="slides slides2">
+          <li data-page="1">SLIDE 2-1</li>
+          <li data-page="2">SLIDE 2-2</li>
+          <li data-page="3">SLIDE 2-3</li>
+        </ul>  
+        <div class="steps steps2">
+          
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+</div>  -->
+  
+  <!-- <div class="slider_option">
+    <label for="checkbox">
+      <input type="checkbox" id="checkbox">Autoplay Slider</label>
+  </div>  -->
+  
+
+  <!-- <div class="container">
     <div class="ad"></div>
     <div class="hot_shop">
       <div class="shop_card_title">近期熱門店家</div>
@@ -172,7 +265,66 @@
           </div>
       </div>
     </div>
+  </div> -->
+
+  <div style="width: 300px;">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum provident nulla ex commodi dignissimos error atque aut. Id, corrupti eaque debitis impedit perspiciatis quasi cumque officiis obcaecati a esse minus.
+    Repudiandae voluptatem quia nisi minus? Iure hic neque sunt labore recusandae aliquam distinctio ipsum vel quos rem ipsam harum, provident debitis atque corporis dolore beatae expedita. Ducimus maiores recusandae exercitationem!
+    Quisquam eligendi, in voluptatum provident porro molestiae aut magni quod nihil, eos expedita rem consequatur pariatur doloribus ratione delectus fugit ea voluptatem. Dignissimos doloribus laboriosam fugit quis ratione esse iste.
+    Est hic eligendi illum, nihil obcaecati magni doloremque, velit a praesentium at assumenda dolor sapiente. Impedit, esse vitae ex fugit enim aut rem quo ipsum magni placeat assumenda dolore error?
+    Numquam consequatur accusamus officiis, saepe eius ut tenetur neque fugiat iste quibusdam cum perferendis, dolores mollitia a! Officia eum placeat rem alias itaque, in veritatis officiis! Officia dolorem sit molestiae!
+    Harum exercitationem iste magnam! Maiores, dolores harum! Repellat dolorem libero dicta vitae voluptatum? Cumque voluptas quasi nulla culpa sunt, tenetur omnis quibusdam tempore ea voluptate quod eius impedit est nobis!
+    Dolores praesentium consectetur, eveniet ab repellat, error voluptatem blanditiis laboriosam natus dignissimos mollitia quod? Blanditiis at nihil qui ipsam iure, laborum ea tenetur expedita, illum et numquam atque, eius earum.
+    Laboriosam ipsam libero iure. Dolorum commodi quibusdam placeat aliquam adipisci dolore consequuntur ipsam, laboriosam, perferendis asperiores, autem qui quae quis. Maiores nam eos earum dolor totam quisquam iusto nostrum nihil.
+    A, voluptates possimus corrupti quaerat eius inventore doloremque assumenda laboriosam rem, earum, ullam quos ipsam ratione tenetur totam? Vero voluptatibus assumenda ullam beatae suscipit veniam rerum! Quaerat eos placeat saepe.
+    Fugit, aliquam mollitia. Cumque facere aut eos fugit voluptatem, commodi quidem, repellendus velit, ullam labore harum. Odio sint explicabo quis obcaecati tempora ut, doloribus animi et facere modi amet excepturi?
+    Aliquam tempore amet quo alias similique assumenda eius, aperiam voluptates adipisci hic eos quibusdam qui error, perspiciatis vitae asperiores maiores inventore id in illum, iusto distinctio corporis? Sint, sapiente fugiat?
+    Temporibus, nisi delectus. Molestiae harum nobis doloremque soluta at commodi doloribus voluptas corrupti delectus eligendi corporis accusamus, eveniet iure ab suscipit? Deserunt corrupti hic enim velit dolores vel perspiciatis consequatur!
+    Mollitia nobis corrupti eligendi. Suscipit vel praesentium quia nihil! Consequatur laboriosam accusantium at nesciunt iusto doloremque inventore atque non? Officiis natus ab tempora praesentium quasi qui corrupti minima sunt sit.
+    Quos eos nulla, ratione, quas soluta totam at, eius reprehenderit voluptas quo unde! Ut, voluptates. Omnis nihil architecto saepe odio voluptatem sequi! Laborum reprehenderit fuga possimus cum sequi incidunt sint?
+    Voluptatum reprehenderit quam quo dignissimos enim libero neque alias similique possimus veniam ea hic aut inventore quia tempore, temporibus, eveniet illo. Eveniet voluptate fugiat molestiae esse nostrum velit quibusdam quod.
+    Consectetur nemo temporibus incidunt nobis nam, quos maiores, quod officia quisquam doloremque excepturi assumenda. Esse reiciendis sapiente fugiat quas, repudiandae dolor nulla odit adipisci ipsa amet eum voluptatum excepturi dolores.
+    Explicabo corrupti quas molestias esse, dicta accusantium animi? Qui dignissimos cupiditate enim assumenda est perferendis, et consectetur officiis voluptate dicta doloremque expedita, aut corporis recusandae doloribus quam tempore dolorem itaque?
+    Temporibus repellendus illo deserunt, quibusdam asperiores nobis sed suscipit ea. Deleniti ducimus voluptatum mollitia animi, ipsum rerum cupiditate maiores fugiat repellat aliquam? Vero alias aperiam modi magnam! Quaerat, culpa unde!
+    Autem temporibus illo ipsam omnis porro dolorem natus. Distinctio unde cupiditate voluptate laudantium fugit assumenda in, rerum ratione dolores natus voluptates quidem incidunt dolore. Magnam, soluta doloribus. Laboriosam, ut cumque.
+    Tempore veritatis deserunt excepturi. Necessitatibus laboriosam vitae id corporis animi corrupti eius distinctio delectus neque facilis error fugit laudantium obcaecati, soluta minus debitis odio dolorum temporibus tempore sapiente asperiores officia?
+    Provident numquam voluptate odit temporibus quisquam harum nam excepturi esse. Autem, est! Fugit ea possimus iusto animi consequatur eligendi quos aut in ex, nulla nisi, suscipit quam excepturi commodi voluptatum?
+    Quae commodi labore, exercitationem sit inventore suscipit sed enim voluptatibus eius praesentium modi nisi pariatur provident dolor maiores error optio. Possimus voluptatibus voluptates neque numquam, ab inventore explicabo culpa optio!
+    Placeat quia minima soluta! Commodi rerum molestias atque deserunt, iusto unde dolores minus vitae magnam cupiditate ipsam impedit quaerat hic aliquam laborum eum omnis accusantium vel aperiam. Deleniti, consectetur asperiores?
+    Quibusdam non, distinctio at, enim dolorum exercitationem rem ducimus ab temporibus molestiae magni, cupiditate vitae animi molestias. Voluptas dolore laborum quasi, nam quae debitis quaerat sint, repellat eos ullam saepe!
+    Optio molestiae aspernatur quo vero accusantium libero aliquam ab necessitatibus, blanditiis magni aperiam eum at quos labore ducimus autem distinctio nihil eveniet natus deleniti consectetur voluptates? Quae temporibus recusandae quidem.
+    Nemo quia dolores doloremque et? Vitae suscipit perferendis provident commodi eligendi possimus deleniti aspernatur pariatur sit nesciunt maiores doloremque et fugiat quod labore, nulla facere error optio ipsa. Amet, voluptatibus.
+    Quaerat perferendis dolorum, facere facilis incidunt nemo ipsa quasi tenetur ex iure quis voluptatem saepe veritatis iusto illum fuga quam nobis. Eum aperiam magni vel unde eligendi, aut similique totam?
+    Incidunt, doloremque qui iusto odit pariatur neque in modi ullam quaerat id illo recusandae necessitatibus dolores eum ab vitae numquam placeat fugiat quibusdam alias porro? Excepturi deserunt reiciendis impedit? Odio.
+    Dolor sunt accusamus optio. Sunt, deserunt! Blanditiis, excepturi quas accusamus aperiam quidem ex officiis pariatur sapiente perspiciatis molestiae! Incidunt, eius voluptas commodi rerum dolor vero reiciendis ipsum corporis at beatae.
+    Quos vero nulla expedita modi odit, voluptatibus explicabo adipisci, aliquam omnis fugit distinctio totam repellendus recusandae libero velit tenetur! Laborum enim beatae dignissimos in suscipit. Nemo minima ipsa alias repellendus?
+    Minus, doloribus. Tempore ab ipsa voluptas officia praesentium qui nobis consectetur voluptatem reiciendis. Cupiditate, nihil magnam? Commodi quisquam mollitia, nisi quas excepturi, quaerat exercitationem numquam quibusdam unde error ipsum tempore?
+    Reiciendis dolorem odit eaque doloribus similique nulla nemo hic ipsa quos, alias rem necessitatibus. Inventore repellendus, eligendi possimus aut pariatur asperiores fugiat id odio nihil quo illum officiis quis quaerat!
+    Error optio repellat, aliquam a quibusdam amet nulla nemo quidem ex consectetur voluptates, odio debitis laborum qui adipisci repudiandae accusantium, distinctio voluptatum vero laboriosam provident dolore veritatis est. Dolorem, exercitationem.
+    Aspernatur culpa in totam quam aut quo soluta id laborum fugiat! Cumque soluta quia quasi et neque laborum ipsum? Non sequi aspernatur quo ratione? Dolore consectetur impedit quis ipsum blanditiis?
+    Harum aspernatur doloremque perferendis sequi nobis animi suscipit quae accusantium, praesentium aut, debitis quod aliquam consequatur, nulla unde dolores officia quas saepe recusandae rem labore! Labore perferendis sapiente aspernatur repudiandae.
+    Quo eveniet optio adipisci a voluptatum. Ullam, consequatur similique, dicta modi dolorem quae aut eveniet veniam fugit magnam, voluptatem voluptatum. Incidunt harum ratione nihil nobis earum, iure ducimus nulla quam?
+    Magni accusantium iste iusto non eius. Temporibus maiores iure dolor provident error! Aut, laborum repellendus aliquid iusto voluptatem similique est provident cumque eius obcaecati perferendis iste natus voluptates earum ut.
+    Laborum unde necessitatibus sapiente autem, qui impedit id libero at voluptate inventore repudiandae distinctio! Necessitatibus quae nihil eligendi dicta corporis ut, minus sed quas nemo. Ex, dolores. Necessitatibus, assumenda architecto!
+    Expedita doloribus vero commodi sit numquam eligendi voluptate maxime quos aliquid, ullam voluptates nostrum repellendus iure et, nam nemo accusantium velit ipsa hic consequuntur tempore accusamus odio! Beatae, fugiat suscipit!
+    Est sunt quod qui voluptatem eos temporibus minima accusamus optio excepturi enim veniam ex delectus, quisquam eveniet voluptates tempore magnam aperiam? Aliquam quis velit ea tempora neque, illo itaque earum.
+    Tempore cupiditate eveniet a nostrum libero molestiae quidem dolore natus nam ea error voluptatibus quibusdam ducimus accusamus, earum dolorem soluta. Aliquam officia in ipsum non reprehenderit sequi aut sed vitae?
+    Temporibus tenetur tempora nobis, magni maxime a velit quaerat eveniet quia, voluptates ex voluptate provident modi ipsa nisi aliquam sequi totam ratione aut, reprehenderit doloremque? Nulla blanditiis reprehenderit delectus officiis.
+    Delectus fugiat quae pariatur corporis rerum. Autem, quas ad fugit laudantium doloribus minima ab blanditiis quod consequatur delectus saepe praesentium eum repellat magni qui adipisci iusto vero expedita. Impedit, molestias?
+    Unde eveniet sit dolor, sed reiciendis dolorem delectus ipsum possimus, doloribus ut exercitationem labore, aliquam dolorum. Nemo, quas quam saepe quibusdam beatae animi praesentium iusto, possimus nostrum assumenda neque vero.
+    Eveniet voluptate libero in earum, pariatur facere quis perferendis? Aperiam, praesentium beatae animi nulla in consequuntur explicabo, delectus possimus reprehenderit voluptatum libero. Vero illum corporis fuga sit veritatis, eveniet reiciendis!
+    Eaque animi unde amet adipisci temporibus laboriosam necessitatibus voluptate suscipit, quaerat voluptatibus, placeat praesentium fugit fuga inventore, ea porro saepe ducimus vero. Dolore quaerat impedit optio eum nesciunt unde? Atque!
+    Iusto possimus beatae officiis quo consequatur totam nihil ullam est temporibus vero, expedita tenetur minus? Ex inventore ipsa enim! Error officia odio quisquam quia labore, animi laboriosam fugit temporibus debitis.
+    Nam quo harum non adipisci earum iure sint fugiat. Soluta consequuntur vero praesentium dicta consequatur sit eos saepe eligendi suscipit voluptatem odio quisquam, accusamus provident omnis nesciunt voluptatibus facere commodi!
+    Delectus sequi distinctio quos culpa consequatur quaerat nobis, eaque accusamus quo dolores fuga natus perspiciatis nihil odit enim magnam itaque! Ut ratione vel error sequi dignissimos perferendis aliquam blanditiis odio.
+    Libero deserunt vitae exercitationem repudiandae vero odit voluptate est explicabo, unde doloremque quas quam perferendis commodi quod culpa fugit? Ab nobis culpa porro, at expedita voluptatem delectus repellat quaerat illum?
   </div>
+
+
+
+
+
+
 
   <div class="footer">
     <div class="wrap">© YesMan 2020 . All rights reserved.</div>
