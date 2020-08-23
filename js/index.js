@@ -1,20 +1,15 @@
 jQuery(document).ready(function ($) {
   //scroll down
   let ww = parseInt(window.innerHeight- 70+'px' )           //一個..視窗的高度..   然後減掉導覽列高度              
-
   $(window).on('wheel', function(e) {                       //當我滾動滑鼠的時候
     let delta = e.originalEvent.deltaY;
-    
       if (delta > 0 && $(window).scrollTop() < 80) {          //滑鼠往下滑  而且  <80
         $('body,html').animate({scrollTop: ww }, 1200 )
+      } else if(delta < 0 ) {                               //滑鼠往上滑 
+
       }
-      else if(delta < 0 ) {                                   //滑鼠往上滑 
-        // console.log($(window).height(),$(window).scrollTop()) //目前沒加功能..
-      }
-  
     // return false; // this line is only added so the whole page won't scroll in the demo
   });
-
 $('.scrollDownBtn').click(function() {
   $('html, body').animate({ scrollTop: ww }, 800);
 })
@@ -31,6 +26,7 @@ $('.scrollDownBtn').click(function() {
   
   $('.slider1').css({ width:  window.innerWidth-25, height: parseInt(`${window.innerHeight}`) });
   $('.slider1 .slides').css({ width: sliderUlWidth1, marginLeft: - slideWidth1 });
+ //resize
   $(window).resize(function(){
     slideWidth1 = window.innerWidth-25;
     slideHeight1 = parseInt(`${window.innerHeight}`);//-100
@@ -38,6 +34,13 @@ $('.scrollDownBtn').click(function() {
     console.log(slideWidth1,window.innerWidth,'---',slideHeight1,window.innerHeight,sliderUlWidth1)
     $('.slider1').css({ width: slideWidth1, height: slideHeight1 });
     $('.slider1 .slides').css({ width: sliderUlWidth1, marginLeft: - slideWidth1 });
+    
+    winW = $(window).width();  //把resize 的值帶進去
+    if(winW>1200){
+    }else if(winW<=1200){
+      
+    }
+   
   })
 $('.slider1 .slides li:last-child').prependTo('.slider1 .slides');
 //hover   
@@ -77,14 +80,9 @@ function moveRight1() {            //向右走
   });
 };
 
+//自動播放輪播
 var timeId1 = 0
-// $('#checkbox').change(function(e){                      //自動播放
-//   if($(this).prop('checked')==true){
-    timeId1=setInterval( () => { moveRight1(); }, 3000);
-//   }else{
-//     clearInterval(timeId1)                               //停止播放
-//   }
-// });
+timeId1=setInterval( () => { moveRight1(); }, 3000);
 $('a.control_prev1').click(function () {
   moveLeft1();
 });

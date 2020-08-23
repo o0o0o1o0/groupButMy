@@ -165,9 +165,35 @@
   }
 }
 
+/*導覽列>1200時，且scrollTop > 80*/
+.navmenu.letmeout{
+  background-color:$white-color;
+  .wrap{
+    ul{
+      a{
+        color: $text-color-1 ;
+        &:hover{
+          color: $bg-color-2;
+        }
+      } 
+    }
+    .rIcon{
+      a{
+        color: $text-color-1 ;
+        &:hover{
+          color: $bg-color-2;
+        }
+      } 
+    }
+  }
+
+
+}
+
 @media screen and (max-width:1200px){//漢堡
   .navmenu{
     background: transparent;
+    // position: sticky;
     .wrap{
       .logo{
         position: fixed;

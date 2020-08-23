@@ -1397,6 +1397,27 @@ button {
   display: none;
 }
 
+/*導覽列>1200時，且scrollTop > 80*/
+.navmenu.letmeout {
+  background-color: #fff;
+}
+
+.navmenu.letmeout .wrap ul a {
+  color: #01200f;
+}
+
+.navmenu.letmeout .wrap ul a:hover {
+  color: #f47927;
+}
+
+.navmenu.letmeout .wrap .rIcon a {
+  color: #01200f;
+}
+
+.navmenu.letmeout .wrap .rIcon a:hover {
+  color: #f47927;
+}
+
 @media screen and (max-width: 1200px) {
   .navmenu {
     background: transparent;
