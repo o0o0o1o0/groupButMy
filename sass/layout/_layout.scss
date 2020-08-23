@@ -17,7 +17,7 @@
   .hamburger{
     cursor: pointer;
     transition-property: opacity, filter;
-    transition-duration: 0.15s;
+    transition-duration: 0.15s;   
     transition-timing-function: linear;
     font: inherit;
     color: inherit;
@@ -25,11 +25,38 @@
     background-color: transparent;
     border: 0;
     margin: 0;
-    overflow: visible; }
+    overflow: visible;
+  }
     .hamburger:hover {
-      opacity: 0.7; }
+      opacity: 0.7; 
+      .hamburger-inner{
+        background-color: $bg-color-2;
+        transition: ease 0.25s;
+      }
+      .hamburger-inner::before{
+        background-color: $bg-color-2;
+        transition: ease 0.25s;
+      }
+      .hamburger-inner::after{
+        background-color: $bg-color-2;
+        transition: ease 0.25s;
+      }
+    }
     .hamburger.is-active:hover {
-      opacity: 0.7; }
+      opacity: 0.7; 
+      .hamburger-inner{
+        background-color: $bg-color-2;
+        transition: ease 0.25s;
+      }
+      .hamburger-inner::before{
+        background-color: $bg-color-2;
+        transition: ease 0.25s;
+      }
+      .hamburger-inner::after{
+        background-color: $bg-color-2;
+        transition: ease 0.25s;
+      }
+    }
     .hamburger.is-active .hamburger-inner,
     .hamburger.is-active .hamburger-inner::before,
     .hamburger.is-active .hamburger-inner::after {
@@ -54,7 +81,9 @@
       position: absolute;
       transition-property: transform;
       transition-duration: 0.15s;
-      transition-timing-function: ease; }
+      transition-timing-function: ease;
+      
+     }
     .hamburger-inner::before, .hamburger-inner::after {
       content: "";
       display: block; }
@@ -117,8 +146,8 @@
         text-decoration: none;
         display: inline-block;
         &:hover{
-          color: #41d4e4;
-          transition: ease-out 0.3s;
+          color: $bg-color-2;
+          transition: ease 0.25s;
         }
       }
       ul{                           //右側欄
@@ -149,7 +178,7 @@
         justify-content: start;
         width: 100%;
         height: 70px;
-        background-color: lightblue;
+        background-color: $white-color;
       }
       >div:last-child{
         // position: fixed;
@@ -166,12 +195,13 @@
           margin: 0;
           margin-right: 0px;
           align-self: start;
-          background: pink;
+          background: $white-color;//pink
           height: 100%;
           display: none; //✅
           li{
             width: 100vw;
             a{
+              color: $text-color-1;
               padding: 0;
               display: block;
             }
@@ -179,17 +209,24 @@
         }
         //隱藏scrollbar
         ul::-webkit-scrollbar {
-            display: none !important;
+          display: none !important;
         }
         .rIcon{
           @include flexrow();
           position: fixed;
           top: 22px;
           right: 0;
+          a{
+            color: $text-color-1;
+            &:hover{
+              color: $bg-color-2;
+              transition: ease 0.25s;
+            }
+          }
           .hamburger{
             display: inline-block;
           }
-          transition: 0.3s;
+          transition: 0.25s;
         }
       }
     }

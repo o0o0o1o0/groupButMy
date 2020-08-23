@@ -1215,8 +1215,38 @@ button {
   opacity: 0.7;
 }
 
+.navmenu .hamburger:hover .hamburger-inner {
+  background-color: #f47927;
+  transition: ease 0.25s;
+}
+
+.navmenu .hamburger:hover .hamburger-inner::before {
+  background-color: #f47927;
+  transition: ease 0.25s;
+}
+
+.navmenu .hamburger:hover .hamburger-inner::after {
+  background-color: #f47927;
+  transition: ease 0.25s;
+}
+
 .navmenu .hamburger.is-active:hover {
   opacity: 0.7;
+}
+
+.navmenu .hamburger.is-active:hover .hamburger-inner {
+  background-color: #f47927;
+  transition: ease 0.25s;
+}
+
+.navmenu .hamburger.is-active:hover .hamburger-inner::before {
+  background-color: #f47927;
+  transition: ease 0.25s;
+}
+
+.navmenu .hamburger.is-active:hover .hamburger-inner::after {
+  background-color: #f47927;
+  transition: ease 0.25s;
 }
 
 .navmenu .hamburger.is-active .hamburger-inner,
@@ -1345,8 +1375,8 @@ button {
 }
 
 .navmenu .wrap > div:last-child a:hover {
-  color: #41d4e4;
-  transition: ease-out 0.3s;
+  color: #f47927;
+  transition: ease 0.25s;
 }
 
 .navmenu .wrap > div:last-child ul {
@@ -1380,7 +1410,7 @@ button {
     justify-content: start;
     width: 100%;
     height: 70px;
-    background-color: lightblue;
+    background-color: #fff;
   }
   .navmenu .wrap > div:last-child {
     display: flex;
@@ -1405,7 +1435,7 @@ button {
     margin: 0;
     margin-right: 0px;
     align-self: start;
-    background: pink;
+    background: #fff;
     height: 100%;
     display: none;
   }
@@ -1413,6 +1443,7 @@ button {
     width: 100vw;
   }
   .navmenu .wrap > div:last-child ul li a {
+    color: #01200f;
     padding: 0;
     display: block;
   }
@@ -1428,7 +1459,14 @@ button {
     position: fixed;
     top: 22px;
     right: 0;
-    transition: 0.3s;
+    transition: 0.25s;
+  }
+  .navmenu .wrap > div:last-child .rIcon a {
+    color: #01200f;
+  }
+  .navmenu .wrap > div:last-child .rIcon a:hover {
+    color: #f47927;
+    transition: ease 0.25s;
   }
   .navmenu .wrap > div:last-child .rIcon .hamburger {
     display: inline-block;

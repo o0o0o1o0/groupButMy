@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
         $('body,html').animate({scrollTop: ww }, 1200 )
       }
       else if(delta < 0 ) {                                   //滑鼠往上滑 
-        console.log($(window).height(),$(window).scrollTop()) //目前沒加功能..
+        // console.log($(window).height(),$(window).scrollTop()) //目前沒加功能..
       }
   
     // return false; // this line is only added so the whole page won't scroll in the demo
