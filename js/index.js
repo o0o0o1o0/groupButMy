@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-//🟡第一屏(第一個輪播)
+//🟡第一屏(banner輪播)
   var slideCount1 = $('.slider1 .slides li').length;
   var slideWidth1 = $('.slider1 .slides li').width();
   var slideHeight1 = $('.slider1 .slides li').height();
@@ -28,14 +28,16 @@ jQuery(document).ready(function ($) {
    
   })
 //scroll down
-// $(document).on('mousewheel', function(e) {                       //當我滾動滑鼠的時候
-//   let delta = e.originalEvent.deltaY;
-//     if (delta > 0 ) {          //滑鼠往下滑  而且  <80
-//       $('body,html').animate({scrollTop: ww }, 500 )
-//     } else if(delta < 0 ) {                               //滑鼠往上滑 
-//     }
-//   return false; // this line is only added so the whole page won't scroll in the demo
-// });
+$(document).on('mousewheel', function(e) {                       //當我滾動滑鼠的時候
+  let delta = e.originalEvent.deltaY;
+    if (delta > 0 ) {          //滑鼠往下滑  而且  <80
+      if($(window).scrollTop() < 80){
+        $('body,html').animate({scrollTop: ww }, 500 )
+      }
+    } else if(delta < 0 ) {                               //滑鼠往上滑 
+    }
+  return false; // this line is only added so the whole page won't scroll in the demo
+});
 $('.scrollDownBtn').click(function() {
 $('html, body').animate({ scrollTop: ww }, 800);
 })
@@ -111,7 +113,7 @@ for(let i=1;i<=slideCount1;i++){//1~5頁
     });
 }
    
-//🟡三倍卡片triple
+//🟡三倍卡片triple(近期熱門店家、最新合作店家)
 $(".tripleNextBtn").click(function () { 
   let leftPos = $(this).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
   let imgsW = $(this).closest('.tripleImgWrap').find('.shop_card_list').width();
@@ -125,17 +127,32 @@ $(".triplePrevBtn").click(function () {
 
 
 
-
-  var slideCount2 = $('.slider2 .slides li').length;
-  var slideWidth2 = $('.slider2 .slides li').width();
-  var slideHeight2 = $('.slider2 .slides li').height();
+//🟡不知道如何逛中壢夜市嗎？ 羅東臭薯條
+  var slideCount2 = $('div.slider2 ul.slides li').length;
+  var divWidth = $('div.slider2').width();
+  $('div.slider2 ul.slides li').css('width',divWidth);
+  var slideWidth2 = $('div.slider2 ul.slides li').width();
+  var slideWidth2LT = $('.plan .littleText li span').width();
+  var slideHeight2 = $('div.slider2 ul.slides li').height();
   var sliderUlWidth2 = slideCount2 * slideWidth2;
-  let slidePage2 = parseInt($('.slides li').attr('data-page'))
-  let currentLi2 = parseInt($('.slider2 ul li:first-child').attr('data-page'));
-  let currentDot2 = $('.steps2 li').eq(currentLi2-1);
-  $('.slider2').css({ width: slideWidth2, height: slideHeight2 });
-  $('.slider2 .slides').css({ width: sliderUlWidth2, marginLeft: - slideWidth2 });
-$('.slider2 .slides li:last-child').prependTo('.slider2 .slides');
+  // let currentLi2 = parseInt($('.slider2 ul li:first-child').attr('data-page'));
+  // let currentDot2 = $('.steps2 li').eq(currentLi2-1);
+
+//resize
+$(window).resize(function(){
+  divWidth = $('.slider2').width()
+  $('.slider2 .slides li').width(divWidth);
+  slideWidth2 = $('.news .section').width();
+  slideHeight2 = $('.slider2 .slides li').height();
+  sliderUlWidth2 = slideCount2 * slideWidth2;
+  
+  winW = $(window).width();  //把resize 的值帶進去
+  if(winW>1200){
+  }else if(winW<=1200){
+    
+  }
+})
+
 //hover
 $('.steps2 li').hover(
   function(){                   //滑到的時候
@@ -145,21 +162,22 @@ $('.steps2 li').hover(
   $(this).css("opacity", "0.5");
   currentDot2.css('opacity','1');//定點的不能被影響
 });
-function dotColorChange2(){      //點點的顏色切換
-  $('.steps2 li').css('opacity','0.5')
-  currentDot2.css('opacity','1')
-}
-dotColorChange2()                //load時就執行一次點點顏色(起始值)
+
 function moveLeft2() {           //向左走
   $('.slider2 .slides').animate({
     left: + slideWidth2
   }, 200, function () {
     $('.slider2 .slides li:last-child').prependTo('.slider2 .slides');
-    $('.slider2 .slides').css('left', '');
-    currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
-    currentDot2 = $('.steps2 li').eq(currentLi2-1);           //目前的點點在第幾個(物件)
-    dotColorChange2()
+    $('.slider2 .slides').css('left', ''); 
+    // currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
   });
+  $('.plan .littleText ul').animate({
+    left: + slideWidth2LT
+  }, 0, function () {
+    $('.plan .littleText li:last-child').prependTo('.plan .littleText ul');
+    $('.plan .littleText ul').css('left', '');
+  });
+  
 };
 function moveRight2() {            //向右走
   $('.slider2 .slides').animate({
@@ -167,51 +185,31 @@ function moveRight2() {            //向右走
   }, 200, function () {
     $('.slider2 .slides li:first-child').appendTo('.slider2 .slides');
     $('.slider2 .slides').css('left', '');
-    currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
-    currentDot2 = $('.steps2 li').eq(currentLi2-1);           //目前的點點在第幾個(物件)
-    dotColorChange2()
+    // currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
   });
+  $('.plan .littleText ul').animate({
+    left: - slideWidth2LT
+  }, 0, function () {
+    $('.plan .littleText li:first-child').appendTo('.plan .littleText ul');
+    $('.plan .littleText ul').css('left', '');
+  });
+
 };
 
-var timeId2 = 0
-$('#checkbox').change(function(e){                      //自動播放
-  if($(this).prop('checked')==true){
-    timeId2=setInterval( () => { moveRight2(); }, 300);
-  }else{
-    clearInterval(timeId2)                               //停止播放
-  }
-});
-$('a.control_prev2').click(function () {
+
+$('.plan_prev-btn').click(function () {
   moveLeft2();
 });
-$('a.control_next2').click(function () {
+$('.plan_next-btn').click(function () {
   moveRight2();
 });
-for(let i=1;i<=slideCount2;i++){//1~5頁
-   $('.steps2 li').eq(i-1).click(function(){//哪個newP被按了
-     if(($(this).index()+1) > currentLi2){
-       let mm = ($(this).index()+1) - currentLi2
-        console.log(mm)
-        for(let j=0;j<mm;j++){
-          moveRight2();
-        }
-     }else if(($(this).index()+1) < currentLi2){
-       let mm = currentLi2 - ($(this).index()+1)
-        console.log(mm)
-        for(let p=0;p<mm;p++){
-          moveLeft2();
-        }
-     }
-    });
-}  
    
 
-//🟡第三個輪播
+//🟡第三個輪播(news)(夜市夯話題)
   var slideCount3 = $('.slider3 .slides li').length;
   var slideWidth3 = $('.news .section').width();
   var slideHeight3 = $('.slider3 .slides li').height();
   var sliderUlWidth3 = slideCount3 * slideWidth3;
-  let slidePage3 = parseInt($('.slides li').attr('data-page'))
   let currentLi3 = parseInt($('.slider3 ul li:first-child').attr('data-page'));
   let currentDot3 = $('.steps3 li').eq(currentLi3-1);
   $('.slider3').css({ width: slideWidth3, height: slideHeight3 });
@@ -219,8 +217,6 @@ for(let i=1;i<=slideCount2;i++){//1~5頁
 $('.slider3 .slides li:last-child').prependTo('.slider3 .slides');
 //resize
 $(window).resize(function(){
-  $('.slider1').css({ width: slideWidth1, height: slideHeight1 });
-  $('.slider1 .slides').css({ width: sliderUlWidth1, marginLeft: - slideWidth1 });
   slideWidth3 = $('.news .section').width();
   slideHeight3 = $('.slider3 .slides li').height();
   sliderUlWidth3 = slideCount3 * slideWidth3;
@@ -257,8 +253,8 @@ $('.news .section').hover(
 
 
 function dotColorChange3(){      //點點的顏色切換
-  $('.steps3 li').css({'opacity':'0.5','width':'90px'})
-  currentDot3.css({'opacity':'1','width':'45px'})
+  $('.steps3 li').css({'opacity':'0.5','width':'50px'})
+  currentDot3.css({'opacity':'1','width':'40px'})
 }
 dotColorChange3()                //load時就執行一次點點顏色(起始值)
 function moveLeft3() {           //向左走
