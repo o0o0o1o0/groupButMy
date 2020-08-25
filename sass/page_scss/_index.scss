@@ -214,12 +214,17 @@
     padding: 20px;
     .ad{
       margin-bottom: 80px;
-      // display: flex;
+      display: flex;
       justify-content: space-between;
-      .ad_imgaa{
+      .ad_img{
         width: 48%;
         height: 150px;
-        border: 1px solid red;
+        // border: 1px solid red;
+        img{
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
     .hot_shop,.new_shop{
@@ -318,8 +323,9 @@
                         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
                         position: relative;
                         height: calc(20% - 10px);//因為每個上下margin:5px
+                        padding: 5px;
                         padding-right: 20%;
-                        margin: 5px;
+                        // margin: 5px;
                         margin-right: 20%;
                         &::after{
                           content: '\f105';
