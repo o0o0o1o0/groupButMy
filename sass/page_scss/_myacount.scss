@@ -1,0 +1,83 @@
+@mixin flexcolum($jc:center,$ai:center) {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin flexrow($jc:center,$ai:center) {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: $jc;
+  align-items: $ai;
+}
+body{
+  font-family: 微軟正黑體;
+  background-color: $bg-color-3;
+}
+.utnmcontanier{
+  padding: 50px;  
+  width: 80vw;
+  .utnmpagetitle{
+    font-size: 20px;
+    margin-bottom: 20px;
+    @include flexrow(space-between,);
+    >div{
+      @include flexrow(space-between,);
+    }
+    >div:last-child{
+      *{margin-right: 15px;}
+    }
+  }
+  .utnmtabbtns{
+    button{
+      margin-right: 15px;
+    }
+    button.active{
+      background: transparent;
+      color: #FF6B6B;
+      border: 2px solid #FF6B6B;
+    }
+  }
+  .utnmtabctrl{
+    color: $text-color-1;
+    .utnmtab{
+      display: none;
+    }
+    .utnmtab.active{
+      display: block;
+    }
+    table{
+      border-collapse: separate;
+      text-align: center;
+      width: 100%;
+      border-spacing: 0 1em;  
+      border-radius: 5px;
+      margin-bottom: 20px;
+      th,td{
+        width: 33.33%;
+      }
+    }
+    table:first-child{
+     font-size: 20px;
+    }
+    table:last-child{
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 8px rgba(0, 0, 0,.3);
+      td{
+        padding: 20px;
+        background: $bg-color-3;
+      }
+      td:first-child{
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      td:last-child{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}

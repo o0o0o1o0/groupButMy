@@ -1,7 +1,7 @@
 //btn
 @mixin btn($w,$bgc,$rad){
   font-size: 18px;
-  color: #fff;
+  color: $white-color;
   background-color: $bgc;
   border: 1.5px solid transparent;
   width: $w;

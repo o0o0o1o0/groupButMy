@@ -17,107 +17,156 @@ body{
     background-size: cover; 
   }
 
-  //搜尋吧下拉
-  .book_slide{
-    max-width: $container-width;
+  .container{
+    max-width: 1200px;
     width: 100%;
     margin: auto;
-    position: relative;
-    .bk_slide_link{
-      position: absolute;
-      left: 50%;
-      transform: translateX(-100px);
-      bottom:58px;
-      a::before{
-        content: '\f103';
-        font-family: 'FontAwesome';
-        font-size: 20px;
-        color: $text-color-2;
+    // padding: 0 20px;
+    //搜尋吧下拉
+    .book_slide{
+      position: relative;
+      .bk_slide_link{
         position: absolute;
-        transform: translateX(93px);
-        top: 15px;
-      }
-    }
-    .bk_slide_con{
-      color: $text-color-1;
-      background-color: $white-color;
-      height: 70px;
-      line-height: 70px;
-      border-radius: 0 0 8px 8px;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 20px;
-      .bk_search{
-        position: relative;
-        .search_input{
-          background-color: #F6F6F6;
-          width: 160px;
-          border-radius: 3px;
-          outline:none;
-          border: 0;
-          padding: 12px 12px 12px 38px;
-        }
-        i{
-          font-size: 16px;
+        left: 50%;
+        transform: translateX(-100px);
+        bottom:58px;
+        a::before{
+          content: '\f103';
+          font-family: 'FontAwesome';
+          font-size: 20px;
+          color: $text-color-2;
           position: absolute;
-          top: 30px;
-          left: 10px;
+          transform: translateX(93px);
+          top: 15px;
+        }
+      }
+      .bk_slide_con{
+        color: $text-color-1;
+        background-color: $white-color;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 0 0 8px 8px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        .bk_search{
+          position: relative;
+          .search_input{
+            background-color: #F6F6F6;
+            width: 160px;
+            border-radius: 3px;
+            outline:none;
+            border: 0;
+            padding: 12px 12px 12px 38px;
+          }
+          i{
+            font-size: 16px;
+            position: absolute;
+            top: 30px;
+            left: 10px;
+          }
         }
       }
     }
-  }
 
-  //搜尋列表
-  .search_book{
-    max-width: $container-width;
-    width: 100%;
-    margin: auto;
-    .sea_book_filter{
-      margin-top: 20px;
-      max-width: 1200px;
-      width: 100%;
-      background-color: $white-color;
-      border-radius: 8px;
-      color: $text-color-4;
-      font-size: 18px;
-      .filter_list{
-        .filter_item{
-          display: flex;
-          align-items: center;
-          border-bottom: 1px solid #eaecf1;
-          padding: 10px 0;
-          .book_filter-title{
-            width: 100px;
-            text-align: center;
-          }
-          .book_filter-content{
-            border-left: 1px solid #eaecf1;
-            padding-left: 20px;
-            ul{
-              display: flex;
-              .filter_select{
-                padding: 6px 10px;
-                margin: 2px 5px;
-                cursor: pointer;
-                &:hover{
-                  background-color: $bg-color-1;
+    //搜尋列表
+    .search_book{
+      .sea_book_filter{
+        margin-top: 20px;
+        max-width: 1200px;
+        width: 100%;
+        background-color: $white-color;
+        border-radius: 8px;
+        color: $text-color-4;
+        font-size: 18px;
+        .filter_list{
+          .filter_item{
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eaecf1;
+            padding: 10px 0;
+            .book_filter-title{
+              width: 100px;
+              text-align: center;
+            }
+            .book_filter-content{
+              border-left: 1px solid #eaecf1;
+              padding-left: 20px;
+              ul{
+                display: flex;
+                .filter_select{
+                  padding: 6px 10px;
+                  margin: 2px 5px;
+                  cursor: pointer;
+                  &:hover{
+                    background-color: $bg-color-1;
+                    border-radius: 3px;
+                  }
+                }
+                #part_filter{
+                  color: $white-color;
+                  background-color: $bg-color-2;
                   border-radius: 3px;
                 }
-              }
-              #part_filter{
-                color: $white-color;
-                background-color: $bg-color-2;
-                border-radius: 3px;
               }
             }
           }
         }
       }
-    }
-    .sea_book_list{
-      .bk_list_warp{
+      .sea_book_list{
         display: flex;
         justify-content: space-between;
+      }
+    }
+  }
+
+  @media screen and (max-width:1200px){
+    .book_slide{
+      padding: 0 20px;
+    }
+    .search_book{
+      padding: 0 20px;
+    }
+    #shop_card{
+      width: 32%;
+      .card_img_2{
+        img{
+          height: 200px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:992px){
+    .sea_book_list{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #shop_card{
+      width: 48.5%;
+      .card_img_2{
+        img{
+          height: 250px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:768px){
+    #shop_card{
+      width: 48.5%;
+      .card_img_2{
+        img{
+          height: 190px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:576px){
+    #shop_card{
+      width: 100%;
+      .card_img_2{
+        img{
+          height: 250px;
+        }
       }
     }
   }

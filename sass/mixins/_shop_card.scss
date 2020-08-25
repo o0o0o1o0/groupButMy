@@ -1,8 +1,7 @@
 //商店卡
-@mixin shop_card($w,$h,$img-h){
+@mixin shop_card{
   background-color: $white-color;
-  width: $w;
-  height: $h;
+  width: 31.5%;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -19,12 +18,11 @@
       height: 20px;
       border-radius: 25px 25px 0 0;
       background: $white-color;
-      z-index: 100;
+      z-index: 1;
     }
     img{
       display: block;
       width: 100%;
-      height: $img-h;
       position: relative;
     }
     .heart_save{
@@ -454,23 +452,34 @@
 }
 
 //商店卡
-#shop_card{
+.shop_card{
   .card_img,.card_content{
     display: none;
   }
-  @include shop_card(31.5%,auto,220px); //$img-h:簡單樣式版(.card_content_2)高度是220px 正常版是250px
-  min-width: 380px;
+  @include shop_card; //$img-h:簡單樣式版(.card_content_2)高度是220px 正常版是250px
   margin-top: 30px;
+  .card_img_2{
+    img{
+      height: 250px;
+    }
+  }
 }
 //商店卡燈箱
 #shop_card_lightbox{
   .card_img_2,.card_content_2,#card_report_comment,#card_write_comment,#card_comment,.card_content{
     display: none;
   }
-  @include shop_card(440px,650px,310px);
+  @include shop_card;
   position: fixed;
   top: 120px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: 1;
+  width: 450px;
+  height: 650px;
+  .card_img_2{
+    img{
+      height: 310px;
+    }
+  }
 }

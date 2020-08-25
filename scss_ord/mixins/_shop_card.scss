@@ -1,12 +1,12 @@
 //商店卡
-@mixin shop_card($w,$h,$img-h){
+@mixin shop_card{
   background-color: $white-color;
-  width: $w;
-  height: $h;
+  width: 31.5%;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  .card_img,.card_img_2{
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  .card_img_2{
     width: 100%;
     position: relative;
     &::before{
@@ -23,7 +23,6 @@
     img{
       display: block;
       width: 100%;
-      height: $img-h;
       position: relative;
     }
     .heart_save{
@@ -68,106 +67,38 @@
       right: 20px;
     }
   }
-  .card_content{
-    margin: 0 20px;
-    margin-bottom: 15px;
-    .card_warp{
-      display: flex;
-      justify-content: space-between;
-      .card_score{
-        display: flex;
-        .score_num{
-          color: $white-color;
-          background-color: $bg-color-2;
-          width: 50px;
-          height: 50px;
-          line-height: 52px;
-          border-radius: 10px;
-          text-align: center;
-          font-weight: 400;
-        }
-        .score_con{
-          margin-left: 15px;
-          .score_star{
-            i{
-              font-size: 16px;
-              color: $star-color;
-            }
-          }
-          .score_comment{
-            font-size: 16px;
-            color: $text-color-3;
-            margin-top: 10px;
-          }
-        }
-      }
-    }
-    .card_title{
-      font-size: $font-size-1;
-      color: $text-color-3;
-      margin-top: 15px;
-    }
-    .card_detail{
-      color: $text-color-4;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-      margin: 20px 0;
-      .card_text{
-        line-height: 25px;
-        margin: 20px 0;
-      }
-      .card_time{
-        line-height: 25px;
-        margin: 20px 0;
-      }
-    }
-    .card_warp_btn{
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
   .card_content_2{
     margin: 0 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     .card_warp{
+      color: $text-color-4;
       display: flex;
       justify-content: space-between;
       .card_score{
         display: flex;
-        .score_num{
-          color: $white-color;
-          background-color: $bg-color-2;
-          width: 50px;
-          height: 50px;
-          line-height: 52px;
-          border-radius: 10px;
-          text-align: center;
-          font-weight: 400;
+        margin-top: 20px;
+        .score_star{
+          i{
+            display: block;
+            font-size: 14px;
+            color: $star-color;
+          }
         }
-        .score_con{
-          margin-left: 15px;
-          .score_star{
-            i{
-              font-size: 16px;
-              color: $star-color;
-            }
-          }
-          .score_comment{
-            font-size: 16px;
+        .score_num{
+          font-size: 14px;
+          margin: 0 10px 0 5px;
+          span{
             color: $text-color-3;
-            margin-top: 10px;
           }
+        }
+        .score_comment{
+          font-size: 14px;
         }
       }
-    }
-    .card_warp_2{
-      display: flex;
-      justify-content: space-between;
     }
     .card_title{
       font-size: $font-size-1;
       color: $text-color-3;
-      margin-top: 15px;
     }
   }
   #card_menu{
@@ -428,12 +359,13 @@
   margin: 0 8px;
 }
 @mixin card_look_detail-btn{
-  font-size: 16PX;
+  font-size: 14PX;
   color: $white-color;
   background-color: $bg-color-2;
-  width: 90px;
-  height: 35px;
+  width: 70px;
+  height: 30px;
   border-radius: 6px;
+  margin-top: 10px;
   cursor: pointer;
   &:hover{
     background-color: $bg-color-4;
@@ -524,19 +456,30 @@
   .card_img,.card_content{
     display: none;
   }
-  @include shop_card(31.5%,auto,220px); //$img-h:簡單樣式版(.card_content_2)高度是220px 正常版是250px
-  min-width: 380px;
+  @include shop_card; //$img-h:簡單樣式版(.card_content_2)高度是220px 正常版是250px
   margin-top: 30px;
+  .card_img_2{
+    img{
+      height: 250px;
+    }
+  }
 }
 //商店卡燈箱
 #shop_card_lightbox{
   .card_img_2,.card_content_2,#card_report_comment,#card_write_comment,#card_comment,.card_content{
     display: none;
   }
-  @include shop_card(440px,650px,310px);
+  @include shop_card;
   position: fixed;
   top: 120px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
+  width: 450px;
+  height: 650px;
+  .card_img_2{
+    img{
+      height: 310px;
+    }
+  }
 }
