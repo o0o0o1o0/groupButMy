@@ -28,15 +28,18 @@ jQuery(document).ready(function ($) {
    
   })
 //scroll down
-$(document).on('mousewheel', function(e) {                       //當我滾動滑鼠的時候
+$(window).on('wheel', function(e) {   
+                     //當我滾動滑鼠的時候
+  e.stopPropagation();
   let delta = e.originalEvent.deltaY;
-    if (delta > 0 ) {          //滑鼠往下滑  而且  <80
-      if($(window).scrollTop() < 80){
-        $('body,html').animate({scrollTop: ww }, 500 )
-      }
-    } else if(delta < 0 ) {                               //滑鼠往上滑 
+  console.log(ww,$(window).scrollTop());
+   
+    if (delta > 0 && $(window).scrollTop() < 80) {          //滑鼠往下滑  而且  <80
+        $('body,html').animate({scrollTop: ww } )
+    } else if(delta < 0 && $(window).scrollTop() > 80 && $(window).scrollTop() <900) {          
+      $('body,html').animate({scrollTop: 0 } )                   //滑鼠往上滑 
     }
-  return false; // this line is only added so the whole page won't scroll in the demo
+  // return false; // this line is only added so the whole page won't scroll in the demo
 });
 $('.scrollDownBtn').click(function() {
 $('html, body').animate({ scrollTop: ww }, 800);
