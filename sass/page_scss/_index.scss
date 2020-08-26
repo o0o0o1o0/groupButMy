@@ -77,16 +77,19 @@
           height:100vh;//calc(95vh - 70px)
           flex-direction: column;
           justify-content: space-between;
+          overflow: hidden;
           .banner{
-            height: 50%;
+            height: 60%;
             .scroll_banner{
               height: 100%;
               object-fit: cover;
             }
           }
           .banbmimg{
+            height: 40%;
+            overflow: hidden;
             img{
-              max-width: 960px;
+              height: 100%;
               object-fit: cover;
             }
           }
@@ -148,65 +151,72 @@
 
 #index{
   background-color: $bg-color-1;
-  .banner{
-    width: 100%;
-    position: relative;
-    // img{
-    //   object-fit: cover;
-    //   width: 100%;
-    //   height: 100%;
-    // }
-    .scroll_banner{
+  li{
+    .banner{
       width: 100%;
-      display: block;
-    }
-    .banner_content{
-      position: absolute;
-      top: 20%;
-      left: 5%;
-      color: $white-color;
+      position: relative;
+      background-image: url(../img/index/banner.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       display: flex;
-      flex-direction: column;
-      .banner_title{
-        text-align: left;
-        font-size: 50px;
+      align-items: center;
+      // .scroll_banner{
+      //   width: 100%;
+      //   display: block;
+      // }
+      .banner_content{
+        // position: absolute;
+        // top: 20%;
+        // left: 5%;
+        margin-left: 40px;
+        color: $white-color;
+        display: flex;
+        flex-direction: column;
+        .banner_title{
+          text-align: left;
+          font-size: 50px;
+        }
+        .banner_text{
+          text-align: left;
+          font-size: 40px;
+          margin-top: 20px;
+        }
+        .banner_text2{
+          text-align: left;
+          font-size: 24px;
+          width: 550px;
+          line-height: 30px;
+          margin: 15px 0;
+          opacity: 0.9;
+        }
       }
-      .banner_text{
-        text-align: left;
-        font-size: 40px;
-        margin-top: 20px;
+      .banner_circle{
+        position: absolute;
+        bottom: 0px;
+        max-height: 33.33%;
+        max-width: 50%;
+        left: 50%;
+        transform:translateX(-50%) ;
+        // object-fit: contain;
       }
-      .banner_text2{
-        text-align: left;
-        font-size: 24px;
-        width: 550px;
-        line-height: 30px;
-        margin: 15px 0;
-        opacity: 0.9;
-      }
-    }
-    .banner_circle{
-      position: absolute;
-      bottom: 0px;
-      left: 50%;
-      transform:translateX(-241px) ;
-    }
-    .circle_content{
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-150px);
-      text-align: center;
-      .clrcel_num{
-        color: $text-color-5;
-        font-size: 130px;
-      }
-      .circle_text{
-        font-size: 50px;
-      }
-      .circle_text2{
-        font-size: 40px;
-        margin-top: 5px;
+      .circle_content{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        .clrcel_num{
+          color: $text-color-5;
+          font-size: 8em;
+        }
+        .circle_text{
+          font-size: 3em;
+        }
+        .circle_text2{
+          font-size: 2.5em;
+          margin-top: 5px;
+        }
       }
     }
   }
@@ -333,7 +343,7 @@
                         padding-left:  20px;
                         padding-right: 20%;
                         // margin: 5px;
-                        margin-right: 20%;
+                        margin-right: 12px;
                         cursor: pointer;
                         &::after{
                           content: '\f105';
@@ -565,22 +575,50 @@
       }
     }
   }
- /* @media screen and (max-width:1200px){
-    .shop_card{
-      min-width:;
-      .card_img_2{
-        img{
-          height: 200px;
-        }
-      }
-    }
-  }*/
+  @media screen and (max-width:1200px){
+   
+  }
   @media screen and (max-width:992px){
     .shop_card{
       min-width: calc( 50% - 20px )!important;
       .card_img_2{
         img{
           height: 250px;
+        }
+      }
+    }
+    .section{//banner
+      .slider1{
+        .slides1{
+          li{
+            .banner{
+              .circle_content{
+                .clrcel_num{
+                  font-size: 7em;
+                }
+                .circle_text{
+                  font-size: 2.6em;
+                }
+                .circle_text2{
+                  font-size: 2.2em;
+                }
+              }
+              .banner_content{
+                margin-left: 35px;
+                margin-right: 35px;
+                .banner_title{
+                  font-size: 2.6em;
+                }
+                .banner_text{
+                  font-size: 2.2em;
+                }
+                .banner_text2{
+                  width: 100%;
+                  font-size: 1.3em;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -642,6 +680,39 @@
         }
       }
     }
+    .section{//banner
+      .slider1{
+        .slides1{
+          li{
+            .banner{
+              .circle_content{
+                .clrcel_num{
+                  font-size: 6em;
+                }
+                .circle_text{
+                  font-size: 2.25em;
+                }
+                .circle_text2{
+                  font-size: 1.9em;
+                }
+              }
+              .banner_content{
+                .banner_title{
+                  font-size: 2.25em;
+                }
+                .banner_text{
+                  font-size: 1.9em;
+                }
+                .banner_text2{
+                  width: 100%;
+                  font-size: 1.125em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     .container{
       .plan{
         .plan_content{
@@ -656,13 +727,6 @@
         }
       }
     }
-
-
-
-
-
-
-
   }
   @media screen and (max-width:576px){
     .shop_card_list{
@@ -675,10 +739,39 @@
         }
       }
     }
-  }
-
-
-  @media screen and (max-width:460px){
+    .section{//banner
+      .slider1{
+        ul.slides1{
+          li{
+            .banner{
+              .circle_content{
+                .clrcel_num{
+                  font-size: 5em;
+                }
+                .circle_text{
+                  font-size: 2em;
+                }
+                .circle_text2{
+                  font-size: 1.5em;
+                }
+              }
+              .banner_content{
+                .banner_title{
+                  // font-size: 2.25em;
+                }
+                .banner_text{
+                  // font-size: 1.9em;
+                }
+                .banner_text2{
+                  // width: 100%;
+                  // font-size: 1.125em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     .plan{
       .plan_content{
         .plan_route_warp{
@@ -701,8 +794,46 @@
         }
       }
     }
+  }
+
+
+  @media screen and (max-width:375px){
+    .section{//banner
+      .slider1{
+        ul.slides1{
+          li{
+            .banner{
+              .circle_content{
+                .clrcel_num{
+                  font-size: 3.25em;
+                }
+                .circle_text{
+                  font-size: 1.5em;
+                }
+                .circle_text2{
+                  font-size: 1.125em;
+                }
+              }
+              .banner_content{
+                .banner_title{
+                  // font-size: 2.25em;
+                }
+                .banner_text{
+                  // font-size: 1.9em;
+                }
+                .banner_text2{
+                  // width: 100%;
+                  // font-size: 1.125em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
 
   }
+  
 }
 
 
