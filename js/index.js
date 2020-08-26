@@ -70,8 +70,8 @@ $('.scrollDownBtn').click(function() {
 //輪播
 $('.slider1 .slides li:last-child').prependTo('.slider1 .slides');
 //自動播放輪播
-var timeId1 = 0
-timeId1=setInterval( () => { moveRight1(); }, 2500);
+// var timeId1 = 0
+// timeId1=setInterval( () => { moveRight1(); }, 2500);
 //hover   
 $('.steps1 li').hover(
   function(){                   //滑到的時候

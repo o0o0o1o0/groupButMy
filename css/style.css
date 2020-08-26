@@ -1717,13 +1717,17 @@ html, body {
   top: 20%;
   left: 5%;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 #index .banner .banner_content .banner_title {
+  text-align: left;
   font-size: 50px;
 }
 
 #index .banner .banner_content .banner_text {
+  text-align: left;
   font-size: 40px;
   margin-top: 20px;
 }
@@ -2881,7 +2885,7 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   visibility: hidden;
 }
 
-@media screen and (max-width: 905px) {
+@media screen and (max-width: 1200px) {
   body#create form#createVendor .page1 .pageItem, body#create form#createVendor .page2 .pageItem, body#create form#createVendor .page5 .pageItem {
     padding: 10px;
   }
@@ -2896,7 +2900,7 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   }
 }
 
-@media screen and (max-width: 665px) {
+@media screen and (max-width: 992px) {
   body#create form#createVendor .page1 .pageItem > div > div {
     width: 80%;
   }
@@ -2911,7 +2915,7 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 576px) {
   body#create form#createVendor .page.page2 .meal, body#create form#createVendor .page.page2 .mealtextwrap {
     flex-direction: column;
   }
@@ -2921,7 +2925,7 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   }
 }
 
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 375px) {
   body#create form#createVendor .page1 > div > div {
     display: block;
   }
