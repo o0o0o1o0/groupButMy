@@ -40,7 +40,8 @@ body#create{
       white-space: nowrap;
       span{
         width: 90%;
-        // overflow-x: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
         &::-webkit-scrollbar {
           display: none;
         }
@@ -48,9 +49,6 @@ body#create{
           display: none;
         }
       }
-      // &::-webkit-scrollbar {
-      //   display: none;
-      // }
       &::after{
         content: "\f107";
         // content: "▼";

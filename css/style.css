@@ -1460,6 +1460,10 @@ button {
     background: #fff;
     height: 100%;
     display: none;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
   }
   .navmenu .wrap > div:last-child ul li {
     width: 100vw;
@@ -1806,6 +1810,10 @@ html, body {
   margin-bottom: 80px;
   width: 100%;
   overflow-x: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 #index .container .hot_shop .shop_card_list::-webkit-scrollbar, #index .container .new_shop .shop_card_list::-webkit-scrollbar {
@@ -1899,6 +1907,7 @@ html, body {
   padding: 5px;
   padding-right: 20%;
   margin-right: 20%;
+  cursor: pointer;
 }
 
 #index .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route::after {
@@ -1915,7 +1924,11 @@ html, body {
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
   position: absolute;
   right: -15px;
-  cursor: pointer;
+}
+
+#index .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route:hover::after {
+  background: #F36E30;
+  color: #fff;
 }
 
 #index .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route > div {
@@ -2150,6 +2163,42 @@ html, body {
 
 #index .container .news .news_content .news_img img {
   width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  #index .shop_card {
+    width: 32%;
+  }
+  #index .shop_card .card_img_2 img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #index .shop_card {
+    width: 48.5%;
+  }
+  #index .shop_card .card_img_2 img {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #index .shop_card {
+    width: 48.5%;
+  }
+  #index .shop_card .card_img_2 img {
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #index .shop_card {
+    width: 100%;
+  }
+  #index .shop_card .card_img_2 img {
+    height: 250px;
+  }
 }
 
 body {
@@ -2417,6 +2466,10 @@ body#create .container .selectcontrol, body#create .container textarea {
 body#create .container input[type="text"] span,
 body#create .container .selectcontrol span, body#create .container textarea span {
   width: 90%;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 body#create .container input[type="text"] span::-webkit-scrollbar,

@@ -41,16 +41,13 @@ body#create{
       span{
         width: 90%;
         // overflow-x: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
         &::-webkit-scrollbar {
           display: none;
         }
-        &::-ms-scrollbar{
-          display: none;
-        }
+        &::-ms-scrollbar{display: none;}
       }
-      // &::-webkit-scrollbar {
-      //   display: none;
-      // }
       &::after{
         content: "\f107";
         // content: "▼";

@@ -224,6 +224,8 @@
           background: $white-color;//pink
           height: 100%;
           display: none; //✅
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
           li{
             width: 100vw;
             a{

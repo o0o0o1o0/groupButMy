@@ -257,6 +257,8 @@
         margin-bottom: 80px;
         width: 100%;
         overflow-x: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
         &::-webkit-scrollbar{display: none;}
         .shop_card{
           min-width: calc(33.33% - 20px);
@@ -327,6 +329,7 @@
                         padding-right: 20%;
                         // margin: 5px;
                         margin-right: 20%;
+                        cursor: pointer;
                         &::after{
                           content: '\f105';
                           font-family: 'FontAwesome';
@@ -341,7 +344,12 @@
                           box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
                           position: absolute;
                           right: -15px;
-                          cursor: pointer;
+                        }
+                        &:hover{
+                          &::after{
+                            background: $text-color-5;
+                            color: $white-color;
+                          }
                         }
                         >div{
                           padding-top: 20%;
@@ -547,6 +555,46 @@
           img{
             width: 100%;
           }
+        }
+      }
+    }
+  }
+  @media screen and (max-width:1200px){
+    .shop_card{
+      width: 32%;
+      .card_img_2{
+        img{
+          height: 200px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:992px){
+    .shop_card{
+      width: 48.5%;
+      .card_img_2{
+        img{
+          height: 250px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:768px){
+    .shop_card{
+      width: 48.5%;
+      .card_img_2{
+        img{
+          height: 190px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:576px){
+    .shop_card{
+      width: 100%;
+      .card_img_2{
+        img{
+          height: 250px;
         }
       }
     }
