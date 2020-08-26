@@ -11,10 +11,6 @@
     /* @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.css); */
   </style>
 
-
-
-
-
 <!-- 🟡複製下方即可 -->
   <div class="navmenu">
     <div class="wrap">
@@ -44,18 +40,22 @@
       </div>
     </div>
   </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
 <script>
-  let winH = $(window).height();
-  let winW = $(window).width();
+  let winW = parseInt($(window).width()+17);//scrollbar 寬17px
+  let winH = parseInt($(window).height());
+  let winST = parseInt($(window).scrollTop())
+  console.log(winH,winW,winST)
 //每次resize 就把漢堡下拉選單關掉
   $(window).resize(function(){
-    winW = $(window).width();  //把resize 的值帶進去
+    winW = parseInt($(window).width()+17);  
+    winST = parseInt($(window).scrollTop())
     if(winW>1200){
       $('.navmenu .wrap div').eq(2).find('ul').css('height','70px')
       $('.navmenu .wrap div').eq(2).find('ul').css({'display':'flex'});
     }else if(winW<=1200){
-      $('.navmenu .wrap div').eq(2).find('ul').css('height','0px');
+      $('.navmenu .wrap div').eq(2).find('ul').css('height','');
       $('.navmenu .wrap div').eq(2).find('ul').slideUp();
       $('.hamburger').removeClass('is-active')
     }
@@ -63,8 +63,8 @@
   
   //導覽列加陰影
   $(document).scroll(function(){
-    let wt = parseInt($(window).scrollTop())
-    if( wt > 80){                         //scroll > 80
+    winST = parseInt($(window).scrollTop())
+    if( winST > 0){                         //scroll > 80
       $('.navmenu').addClass('letmeout')     //陰影
     }else{                               //scroll <= 80 
       $('.navmenu').removeClass('letmeout') //去除陰影

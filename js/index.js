@@ -35,14 +35,34 @@ $(window).on('wheel', function(e) {
   console.log(ww,$(window).scrollTop());
    
     if (delta > 0 && $(window).scrollTop() < 80) {          //滑鼠往下滑  而且  <80
-        $('body,html').animate({scrollTop: ww } )
+        $('body,html').animate({scrollTop: ww },800 )
     } else if(delta < 0 && $(window).scrollTop() > 80 && $(window).scrollTop() <900) {          
-      $('body,html').animate({scrollTop: 0 } )                   //滑鼠往上滑 
+      $('body,html').animate({scrollTop: 0 },800 )                   //滑鼠往上滑 
     }
   // return false; // this line is only added so the whole page won't scroll in the demo
 });
+
+//scroll
+// let lastST = 0;
+// $(window).scroll(function(){
+//   let winST = $(this).scrollTop();
+//   console.log('ww'+ww,'lastST'+lastST,'winST'+winST,'windowScrollTop'+$(window).scrollTop());
+//   if(lastST<winST){   //往下滑
+//     if(winST <= 80){  　　　　　　　　　//scrollTop < 80
+//       $('body,html').animate({scrollTop: ww } )
+//     }
+//     winST = $(window).scrollTop();
+//   }else if(lastST>winST){//往上滑
+//     if(winST < ww-100  && winST>80){
+//       $('body,html').animate({scrollTop: 0 } ) 
+//     }
+//     // winST = $(window).scrollTop();
+//   }
+//   lastST = $(window).scrollTop();
+// });
+
 $('.scrollDownBtn').click(function() {
-$('html, body').animate({ scrollTop: ww }, 800);
+  $('html, body').animate({ scrollTop: ww }, 800);
 })
 
 
@@ -135,30 +155,29 @@ $(".triplePrevBtn").click(function () {
 });
 //卡片低於某個寬度，多的要刪掉
 let ooxx = $('.hot_shop').find('.shop_card').length
-console.log(ooxx,$(window).width())
 // for(let i=0;i<$('.hot_shop').find('.shop_card').length;i++){
 //   if($('.hot_shop').find('.shop_card').eq(i).has() == false){//沒有東西
 //     console.log('aaa',i)
 //   }
+// // }
+// if($(window).width() >= 1200){
+
 // }
-if($(window).width() >= 1200){
+// else if($(window).width() <　992){
 
-}
-else if($(window).width() <　992){
-  console.log('aaaaa',$(window).width())
   
   
-}
-else if($(window).width() < 768){
-  console.log('aaaaa',$(window).width())
+// }
+// else if($(window).width() < 768){
+
   
   
-}
-else if($(window).width() < 576){
-  console.log('aaaaa',$(window).width())
+// }
+// else if($(window).width() < 576){
 
 
-}
+
+// }
 
 
 

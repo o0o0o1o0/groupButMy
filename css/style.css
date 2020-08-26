@@ -2493,8 +2493,7 @@ body#create .container div {
 }
 
 body#create .container h2 {
-  padding: 0 20px 0;
-  color: #fff;
+  color: #01200f;
   font-size: 24px;
   margin: 30px 0px;
 }
@@ -2521,6 +2520,7 @@ body#create .container .selectcontrol, body#create .container textarea {
   border-radius: 8px;
   position: relative;
   white-space: nowrap;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 body#create .container input[type="text"] span,
@@ -2729,6 +2729,7 @@ body#create form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] 
   font-size: 16px;
   background: #E6E6E6;
   border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 body#create form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] span {
@@ -2876,6 +2877,9 @@ body#create .container .ctrlBtns button[disabled] {
 @media screen and (max-width: 905px) {
   body#create form#createVendor .page1 .pageItem, body#create form#createVendor .page2 .pageItem, body#create form#createVendor .page5 .pageItem {
     padding: 10px;
+  }
+  body#create form#createVendor .page1, body#create form#createVendor .page2, body#create form#createVendor .page3, body#create form#createVendor .page5 {
+    margin: 0 20px;
   }
   body#create form#createVendor .page1 .pageItem > div {
     justify-content: center;

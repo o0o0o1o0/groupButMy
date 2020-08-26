@@ -10,8 +10,8 @@ body#create{
       flex-wrap:wrap;
     }
     h2{
-      padding:0 20px 0 ;
-      color:$white-color;
+      // padding:0 20px 0 ;
+      color:$text-color-1;
       font-size: $font-size-0;
       margin: $LH 0px;
       // flex: 2;
@@ -38,6 +38,7 @@ body#create{
       // padding-right: 20px;
       // overflow-x: scroll;
       white-space: nowrap;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
       span{
         width: 90%;
         // overflow-x: scroll;
@@ -219,6 +220,7 @@ body#create{
           font-size: 16px;
           background: $textBGC;
           border-radius: $textbdrs;
+          box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
           span{
             // color: white;
             display: flex;
@@ -372,6 +374,9 @@ body#create{
         .pageItem{
           padding: 10px;
         }
+      }
+      .page1,.page2,.page3,.page5{
+        margin: 0 20px;
       }
       .page1{
         .pageItem{
