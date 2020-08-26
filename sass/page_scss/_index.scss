@@ -219,6 +219,13 @@
         }
       }
     }
+    .banbmimg{
+      display: flex;
+      align-items: flex-end;
+    }
+    .banbmimg3{
+      img{height: 50%;object-fit: cover;}
+    }
   }
   .container{
     max-width: 1200px;

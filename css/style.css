@@ -1767,6 +1767,16 @@ html, body {
   margin-top: 5px;
 }
 
+#index li .banbmimg {
+  display: flex;
+  align-items: flex-end;
+}
+
+#index li .banbmimg3 img {
+  height: 50%;
+  object-fit: cover;
+}
+
 #index .container {
   max-width: 1200px;
   width: 100%;
