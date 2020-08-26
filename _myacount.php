@@ -14,7 +14,7 @@
 <body>
   <?php
   require_once('store_money.inc');
-  require_once('navigation.inc');
+  // require_once('navigation.inc');
   ?>
   <div class="utnmcontanier">
     <div class="utnmpagetitle">

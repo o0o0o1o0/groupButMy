@@ -2,15 +2,15 @@
 *{box-sizing: border-box;}
 body#create{
   background:$bgc;
-  .container{
-    // height: 100vh;
+  .createVendorContainer{
+    /* height: 100vh;*/
     div{
       display:flex;
       flex-direction:column;
       flex-wrap:wrap;
     }
     h2{
-      // padding:0 20px 0 ;
+
       color:$text-color-1;
       font-size: $font-size-0;
       margin: $LH 0px;
@@ -18,7 +18,7 @@ body#create{
     }
     h3{
       margin-bottom: 10px;
-      font-size: $font-size-3;
+      font-size: $font-size-2;
       color: $text-color-1;
     }
     input[type="text"],textarea,p,div,.selectwrap{
@@ -38,7 +38,6 @@ body#create{
       // padding-right: 20px;
       // overflow-x: scroll;
       white-space: nowrap;
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
       span{
         width: 90%;
         // overflow-x: scroll;
@@ -51,11 +50,10 @@ body#create{
       }
       &::after{
         content: "\f107";
-        // content: "▼";
-        font-family: 'Font Awesome';
+        font-family: 'FontAwesome';
         color:$STRONGcolor;
         position:absolute;
-        right: 5px;
+        right: 12px;
         top:50%;
         transform:translateY(-50%);
       }
@@ -84,6 +82,7 @@ body#create{
       border-radius: $bdrs;
       background: $pageItemBG;
       min-height: 70vh;
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
       // width: 100%;
       // overflow-y: scroll;
     }
@@ -106,6 +105,9 @@ body#create{
   // height: fit-content;
   max-width: 1200px;
   margin: auto;
+  .page1,.page2,.page3,.page5{
+    margin: 0 20px;
+  }
   .steps{
     padding: 25px;
     max-width: 1200px;
@@ -220,7 +222,6 @@ body#create{
           font-size: 16px;
           background: $textBGC;
           border-radius: $textbdrs;
-          box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
           span{
             // color: white;
             display: flex;
@@ -334,32 +335,34 @@ body#create{
 }
 
 // 🟡控制顯示
-.container{
-  form#createVendor{
-    .page{display: none;}
+  .createVendorContainer{
+    form#createVendor{
+      .page{display: none;}
+    }
+    #createVendor[data-page="1"] .page:nth-child(1),
+    #createVendor[data-page="2"] .page:nth-child(2),
+    #createVendor[data-page="3"] .page:nth-child(3),
+    #createVendor[data-page="5"] .page:nth-child(4){
+      display: flex;
+    }
+    #createVendor[data-page="4"] .page:nth-child(1),
+    #createVendor[data-page="4"] .page:nth-child(2),
+    #createVendor[data-page="4"] .page:nth-child(3){
+      display: flex;
+    }
+    #createVendor[data-page="1"] .stepwrap[data-page="1"],
+    #createVendor[data-page="2"] .stepwrap[data-page="2"],
+    #createVendor[data-page="3"] .stepwrap[data-page="3"],
+    #createVendor[data-page="4"] .stepwrap[data-page="4"],
+    #createVendor[data-page="5"] .stepwrap[data-page="5"]{
+      background-image: url(../img/create/green.png);
+    }
+    .ctrlBtns{
+      button[disabled]{visibility: hidden;}
+    }
   }
-  #createVendor[data-page="1"] .page:nth-child(1),
-  #createVendor[data-page="2"] .page:nth-child(2),
-  #createVendor[data-page="3"] .page:nth-child(3),
-  #createVendor[data-page="5"] .page:nth-child(4){
-    display: flex;
-  }
-  #createVendor[data-page="4"] .page:nth-child(1),
-  #createVendor[data-page="4"] .page:nth-child(2),
-  #createVendor[data-page="4"] .page:nth-child(3){
-    display: flex;
-  }
-  #createVendor[data-page="1"] .stepwrap[data-page="1"],
-  #createVendor[data-page="2"] .stepwrap[data-page="2"],
-  #createVendor[data-page="3"] .stepwrap[data-page="3"],
-  #createVendor[data-page="4"] .stepwrap[data-page="4"],
-  #createVendor[data-page="5"] .stepwrap[data-page="5"]{
-    background-image: url(../img/create/green.png);
-  }
-  .ctrlBtns{
-    button[disabled]{visibility: hidden;}
-  }
-}
+
+
 
   
 
@@ -374,9 +377,6 @@ body#create{
         .pageItem{
           padding: 10px;
         }
-      }
-      .page1,.page2,.page3,.page5{
-        margin: 0 20px;
       }
       .page1{
         .pageItem{

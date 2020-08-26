@@ -64,7 +64,7 @@
         <div class="pageItem">
             <div><h4>來自夜市客的通知</h4></div>
             <div>儲值成功<img src="./img/store_money/tick.png"></div>
-            <div>目前剩餘夜市幣<p id="myyescoin"></p></div>
+            <div>目前剩餘夜市幣<p id="myyescoin">250</p></div>
             <button type="button" id="okIKnow" class="btn-rect_pk1">確認</button>
         </div>
     </div>
