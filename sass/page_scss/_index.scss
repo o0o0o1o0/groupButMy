@@ -20,6 +20,7 @@
           height: 300px;
           // background: #ccc;
           text-align: center;
+          overflow: hidden;
         }
       }
       
@@ -188,7 +189,6 @@
     }
     .circle_content{
       position: absolute;
-      position: absolute;
       bottom: 0;
       left: 50%;
       transform: translateX(-150px);
@@ -261,7 +261,7 @@
         scrollbar-width: none;  /* Firefox */
         &::-webkit-scrollbar{display: none;}
         .shop_card{
-          min-width: calc(33.33% - 20px);
+          min-width: calc(33.33% - 20px);/*因為margin左右20*/
           margin: 10px;
           margin-top: 30px;
           margin-bottom: 0;
@@ -297,11 +297,12 @@
                 ul.slides{
                   display: flex;
                   li{
+                    height:450px;
                     flex-shrink: 0;
                     .plan_img{
                       font-size: 0;
                       width: 65%;
-                      height: 100%;
+                      height:100%;
                       border-radius: 8px;
                       overflow: hidden;
                       img{
@@ -325,7 +326,7 @@
                         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
                         position: relative;
                         height: calc(20% - 10px);//因為每個上下margin:5px
-                        padding: 5px;
+                        padding-left:  20px;
                         padding-right: 20%;
                         // margin: 5px;
                         margin-right: 20%;
@@ -522,8 +523,9 @@
             li{
               overflow: hidden;
               width: 100%;
+              height: 450px;
               img{
-                height: 500px;
+                height: 100%;
                 object-fit: cover;
               }
             }
@@ -559,45 +561,143 @@
       }
     }
   }
-  @media screen and (max-width:1200px){
+ /* @media screen and (max-width:1200px){
     .shop_card{
-      width: 32%;
+      min-width:;
       .card_img_2{
         img{
           height: 200px;
         }
       }
     }
-  }
+  }*/
   @media screen and (max-width:992px){
     .shop_card{
-      width: 48.5%;
+      min-width: calc( 50% - 20px )!important;
       .card_img_2{
         img{
           height: 250px;
         }
       }
     }
+    .container{
+      .plan{
+        .plan_content{
+          .plan_route_warp{
+            .section .slider2 ul.slides{
+              li{
+                flex-direction: column;
+                .plan_img{
+                  width: 100%;
+                }
+                .plan_route_list{
+                  flex-direction: row;
+                  justify-content: space-around;
+                  width: 100%;
+                  height: 50%;
+                  margin-left: 0;
+                  margin-bottom: 50px;                  
+                  .plan_route{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    padding: initial;
+                    margin:  initial;
+                    height: 100%;
+                    width: 100%;
+                    margin: 10px;
+                    &::after{
+                      right: initial;
+                      bottom: -30px;
+                    }
+                    span{
+                      writing-mode: vertical-lr;
+                      padding: initial;margin: initial;
+                      white-space: pre;
+                      padding: 5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .plan_route_text{
+            width: 100%;
+          }
+        }
+      }
+    }
+
   }
   @media screen and (max-width:768px){
     .shop_card{
-      width: 48.5%;
+      width: calc( 50% - 20px )!important;
       .card_img_2{
         img{
           height: 190px;
         }
       }
     }
-  }
-  @media screen and (max-width:576px){
-    .shop_card{
-      width: 100%;
-      .card_img_2{
-        img{
-          height: 250px;
+    .container{
+      .plan{
+        .plan_content{
+          .plan_route_warp{
+            .section .slider2 ul.slides{
+              li{
+
+              }
+            }
+          }
+          
         }
       }
     }
+
+
+
+
+
+
+
+  }
+  @media screen and (max-width:576px){
+    .shop_card_list{
+      .shop_card{
+        min-width: calc( 100% - 20px ) !important;
+        .card_img_2{
+          height: 250px;
+          img{
+          }
+        }
+      }
+    }
+  }
+
+
+  @media screen and (max-width:460px){
+    .plan{
+      .plan_content{
+        .plan_route_warp{
+          .section .slider2 ul.slides{
+            li{
+
+            }
+          }
+        }
+        .plan_route_text{
+          flex-direction: column;
+          justify-content: center;
+          .plan_route_ttitle{
+            align-self: center;
+          }
+          .plan_route_btn{
+            margin-top: 20px;
+            align-self: center;
+          }
+        }
+      }
+    }
+
   }
 }
 

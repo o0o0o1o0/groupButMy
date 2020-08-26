@@ -18,14 +18,16 @@
 <body id="index">
   <div class="navmenu">
     <div class="wrap">
-      <div class="logo"><img src="https://picsum.photos/150/90"></div>
+      <div class="logo">
+        <div class="img"><a href="./index.html"><img src="./img/layout/logo.png"></a></div>
+      </div>
       <div>
         <ul class="navlist">
-          <li><a href="#">食玩圖鑑</a></li>
-          <li><a href="#">食玩指南</a></li>
-          <li><a href="#">食尚玩家</a></li>
-          <li><a href="#">夜市新鮮事</a></li>
-          <li><a href="#">創建指南</a></li>
+          <li><a href="./book.html">食玩圖鑑</a></li>
+          <li><a href="./guide.html">食玩指南</a></li>
+          <li><a href="./game.html">食尚玩家</a></li>
+          <li><a href="./ad.html">夜市新鮮事</a></li>
+          <li><a href="./create.html">創建指南</a></li>
           </ul>
           <div class="rIcon">
             <button class="hamburger hamburger--squeeze" type="button">
@@ -272,7 +274,7 @@
           <img src="./img/shop_card/card_img.jpg">
         </div>
         <div class="card_content_2">
-          <div class="card_title">娘娘雞排</div>
+          <div class="card_title">娘娘雞排(最後一筆顯示)</div>
           <div class="card_warp">
             <div class="card_score">
               <div class="score_star">
@@ -409,8 +411,56 @@
                   </div>
                 </div>
               </li>
-              <li data-page="2">SLIDE 2-2</li>
-              <li data-page="3">SLIDE 2-3</li>
+              <li data-page="2">
+                <div class="plan_img"><img src="./img/index/20181024073115_21.jpg"></div>
+                <div class="plan_route_list">
+                  <div class="plan_route">
+                    <div><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                  <div class="plan_route">
+                    <div><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                  <div class="plan_route">
+                    <div><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                  <div class="plan_route">
+                    <div class="route_img"><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                  <div class="plan_route">
+                    <div><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                </div>
+              </li>
+              <li data-page="3">
+                <div class="plan_img"><img src="./img/index/20181024073115_21.jpg"></div>
+                <div class="plan_route_list">
+                  <div class="plan_route">
+                    <div><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                  <div class="plan_route">
+                    <div><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                  <div class="plan_route">
+                    <div><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                  <div class="plan_route">
+                    <div class="route_img"><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                  <div class="plan_route">
+                    <div><img src="./img/index/1403051973-2389570243.jpg"></div>
+                    <span>羅東臭薯條</span>
+                  </div>
+                </div>
+              </li>
             </ul>  
             <!-- <div class="steps steps2">
                   
@@ -490,36 +540,53 @@
 <div class="footer">
   <div class="wrap">© YesMan 2020 . All rights reserved.</div>
 </div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
 
 <script>
+  let winH = parseInt($(window).height());
+  let winW = parseInt($(window).width()+17);
+  let winST = parseInt($(window).scrollTop())
+  //導覽列  load時
   $(document).ready(function(){
-    $('.navmenu').addClass('bgTransparent')     
+    $('.navmenu').addClass('bgTransparent')
+    if(winW>1200 && winST<=0){                 //寬>1200 高<=0
+      $('.navmenu .logo img').attr('src','./img/layout/logo2.png')//logo改白字(透明底)
+    }else{
+      $('.navmenu .logo img').attr('src','./img/layout/logo.png') //logo改黑字(白底)
+    }
   })
-  let winH = $(window).height();
-  let winW = $(window).width();
-//每次resize 就把漢堡下拉選單關掉
+  //導覽列resize (就把漢堡下拉選單關掉、改圖片)
   $(window).resize(function(){
-    winW = $(window).width();  //把resize 的值帶進去
+    winH = parseInt($(window).height());
+    winW = parseInt($(window).width()+17);
+    winST = parseInt($(window).scrollTop())
+    console.log(winH,winW,winST)
     if(winW>1200){
-      $('.navmenu .wrap div').eq(1).find('ul').css('height','70px')
-      $('.navmenu .wrap div').eq(1).find('ul').css({'display':'flex'});
+      $('.navmenu .wrap div').eq(2).find('ul').css('height','70px')
+      $('.navmenu .wrap div').eq(2).find('ul').css({'display':'flex'});
+      if(winST <=0){$('.navmenu .logo img').attr('src','./img/layout/logo2.png')}//logo改白字(透明底)
+      else{$('.navmenu .logo img').attr('src','./img/layout/logo.png') }//logo改黑字(白底)
     }else if(winW<=1200){
-      $('.navmenu .wrap div').eq(1).find('ul').css('height','0px');
-      $('.navmenu .wrap div').eq(1).find('ul').slideUp();
+      $('.navmenu .wrap div').eq(2).find('ul').css('height','0px');
+      $('.navmenu .wrap div').eq(2).find('ul').slideUp();
       $('.hamburger').removeClass('is-active')
+      $('.navmenu .logo img').attr('src','./img/layout/logo.png') //logo改黑字(白底)
     }
   })
   
-  //導覽列加陰影
+  //導覽列Scroll(加陰影、改圖片)
   $(document).scroll(function(){
-    let wt = parseInt($(window).scrollTop())
-    if( wt > 0){                         //scroll > 80
+    winH = parseInt($(window).height());
+    winW = parseInt($(window).width()+17);
+    winST = parseInt($(window).scrollTop())
+    if( winST > 0){                         //scroll > 80
       $('.navmenu').addClass('letmeout')     //陰影
       $('.navmenu').removeClass('bgTransparent') 
+      $('.navmenu .logo img').attr('src','./img/layout/logo.png') //logo改黑字(白底)
     }else{                               //scroll <= 80 
       $('.navmenu').removeClass('letmeout') //去除陰影
       $('.navmenu').addClass('bgTransparent')  
+      if(winW > 1200){$('.navmenu .logo img').attr('src','./img/layout/logo2.png')}//logo改白字(透明底)
+      else if(winW <=1200){$('.navmenu .logo img').attr('src','./img/layout/logo.png') }//logo改黑字(白底)
     }
   })
 
@@ -527,11 +594,11 @@
   $(".hamburger").click(function(){
     $(this).toggleClass("is-active");
     if($('.hamburger').hasClass('is-active')){
-      $('.navmenu .wrap div').eq(1).find('ul').css('height','calc(100vh - 70px)')
-      $('.navmenu .wrap div').eq(1).find('ul').slideDown();
+      $('.navmenu .wrap div').eq(2).find('ul').css('height','calc(100vh - 70px)')
+      $('.navmenu .wrap div').eq(2).find('ul').slideDown();
     }else{
-      $('.navmenu .wrap div').eq(1).find('ul').css('height','')
-      $('.navmenu .wrap div').eq(1).find('ul').slideUp();
+      $('.navmenu .wrap div').eq(2).find('ul').css('height','')
+      $('.navmenu .wrap div').eq(2).find('ul').slideUp();
     }
   });
 </script>

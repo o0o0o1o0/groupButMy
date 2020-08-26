@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
     slideHeight1 = parseInt(`${window.innerHeight}`);//-100
     sliderUlWidth1 = slideCount1 * slideWidth1;
     ww = parseInt(window.innerHeight- 70+'px' )
-    console.log(slideWidth1,window.innerWidth,'---',slideHeight1,window.innerHeight,sliderUlWidth1)
+    // console.log(slideWidth1,window.innerWidth,'---',slideHeight1,window.innerHeight,sliderUlWidth1)
     $('.slider1').css({ width: slideWidth1, height: slideHeight1 });
     $('.slider1 .slides').css({ width: sliderUlWidth1, marginLeft: - slideWidth1 });
     
@@ -117,16 +117,48 @@ for(let i=1;i<=slideCount1;i++){//1~5頁
 }
    
 //🟡三倍卡片triple(近期熱門店家、最新合作店家)
+function smoothRight(e,p){
+  let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
+  let imgsW = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
+  $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos + imgsW}, 300);
+}
+function smoothLeft(e,p){
+  let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
+  let imgsW = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
+  $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos - imgsW}, 300);
+}
 $(".tripleNextBtn").click(function () { 
-  let leftPos = $(this).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
-  let imgsW = $(this).closest('.tripleImgWrap').find('.shop_card_list').width();
-  $(this).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos + imgsW}, 300);
+  smoothRight(this,0);
 });
 $(".triplePrevBtn").click(function () { 
-  let leftPos = $(this).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
-  let imgsW = $(this).closest('.tripleImgWrap').find('.shop_card_list').width();
-  $(this).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos - imgsW}, 300);
+  smoothLeft(this,0)
 });
+//卡片低於某個寬度，多的要刪掉
+let ooxx = $('.hot_shop').find('.shop_card').length
+console.log(ooxx,$(window).width())
+// for(let i=0;i<$('.hot_shop').find('.shop_card').length;i++){
+//   if($('.hot_shop').find('.shop_card').eq(i).has() == false){//沒有東西
+//     console.log('aaa',i)
+//   }
+// }
+if($(window).width() >= 1200){
+
+}
+else if($(window).width() <　992){
+  console.log('aaaaa',$(window).width())
+  
+  
+}
+else if($(window).width() < 768){
+  console.log('aaaaa',$(window).width())
+  
+  
+}
+else if($(window).width() < 576){
+  console.log('aaaaa',$(window).width())
+
+
+}
 
 
 
@@ -226,11 +258,7 @@ $(window).resize(function(){
   $('.slider3').css({ width: slideWidth3, height: slideHeight3 });
   $('.slider3 .slides').css({ width: sliderUlWidth3, marginLeft: - slideWidth3 });
 
-  winW = $(window).width();  //把resize 的值帶進去
-  if(winW>1200){
-  }else if(winW<=1200){
-    
-  }
+
  
 })
 //自動輪播

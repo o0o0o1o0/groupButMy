@@ -113,7 +113,6 @@
       transform: rotate(-90deg);
       transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 }
-
 /*主要樣式*/
 .navmenu{
   position: fixed;
@@ -124,19 +123,23 @@
   // width: 100vw;
   background-color: $white-color;//lightblue
   .wrap{
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    // max-width: 1200px;
+    // margin: auto;
     @include flexrow(space-between, );
     .logo{                        //左側欄
       @include flexrow();
       color: $text-color-3;
       text-align: center;
-      padding-left: 20px;
-      img{
-        height: 70px; 
-        object-fit: cover;
+      .img{
+        padding: 20px;
+        height: 70px;
+        img{
+          height: 100%; 
+          object-fit: cover;
+          // padding: 15px 40px;
+        }
       }
-      // padding: 15px 40px;
     }
     >div:last-child{
       @include flexrow();
@@ -273,8 +276,9 @@ html,body{
   // position: absolute;
   // bottom: 0;
   font-size: 16px;
-  background-color: $bg-color-1;
+  background-color: $bg-color-2;
   width: 100%;
+  margin-top: 40px;
   .wrap{
     // color: #fff;
     max-width: 1200px;
