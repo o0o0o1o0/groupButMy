@@ -1605,10 +1605,11 @@ html, body {
   height: 100vh;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 #index .section:nth-child(2) .slider .slides li .banner {
-  height: 50%;
+  height: 60%;
 }
 
 #index .section:nth-child(2) .slider .slides li .banner .scroll_banner {
@@ -1616,8 +1617,13 @@ html, body {
   object-fit: cover;
 }
 
+#index .section:nth-child(2) .slider .slides li .banbmimg {
+  height: 40%;
+  overflow: hidden;
+}
+
 #index .section:nth-child(2) .slider .slides li .banbmimg img {
-  max-width: 960px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -1690,49 +1696,38 @@ html, body {
 
 #index {
   background-color: #f7f7f7;
-  /* @media screen and (max-width:1200px){
-    .shop_card{
-      min-width:;
-      .card_img_2{
-        img{
-          height: 200px;
-        }
-      }
-    }
-  }*/
 }
 
-#index .banner {
+#index li .banner {
   width: 100%;
   position: relative;
+  background-image: url(../img/index/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
 }
 
-#index .banner .scroll_banner {
-  width: 100%;
-  display: block;
-}
-
-#index .banner .banner_content {
-  position: absolute;
-  top: 20%;
-  left: 5%;
+#index li .banner .banner_content {
+  margin-left: 40px;
   color: #fff;
   display: flex;
   flex-direction: column;
 }
 
-#index .banner .banner_content .banner_title {
+#index li .banner .banner_content .banner_title {
   text-align: left;
   font-size: 50px;
 }
 
-#index .banner .banner_content .banner_text {
+#index li .banner .banner_content .banner_text {
   text-align: left;
   font-size: 40px;
   margin-top: 20px;
 }
 
-#index .banner .banner_content .banner_text2 {
+#index li .banner .banner_content .banner_text2 {
   text-align: left;
   font-size: 24px;
   width: 550px;
@@ -1741,33 +1736,45 @@ html, body {
   opacity: 0.9;
 }
 
-#index .banner .banner_circle {
+#index li .banner .banner_circle {
   position: absolute;
   bottom: 0px;
+  max-height: 33.33%;
+  max-width: 50%;
   left: 50%;
-  transform: translateX(-241px);
+  transform: translateX(-50%);
 }
 
-#index .banner .circle_content {
+#index li .banner .circle_content {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-150px);
+  transform: translateX(-50%);
   text-align: center;
 }
 
-#index .banner .circle_content .clrcel_num {
+#index li .banner .circle_content .clrcel_num {
   color: #F36E30;
-  font-size: 130px;
+  font-size: 8em;
 }
 
-#index .banner .circle_content .circle_text {
-  font-size: 50px;
+#index li .banner .circle_content .circle_text {
+  font-size: 3em;
 }
 
-#index .banner .circle_content .circle_text2 {
-  font-size: 40px;
+#index li .banner .circle_content .circle_text2 {
+  font-size: 2.5em;
   margin-top: 5px;
+}
+
+#index li .banbmimg {
+  display: flex;
+  align-items: flex-end;
+}
+
+#index li .banbmimg3 img {
+  height: 50%;
+  object-fit: cover;
 }
 
 #index .container {
@@ -1926,7 +1933,7 @@ html, body {
   height: calc(20% - 10px);
   padding-left: 20px;
   padding-right: 20%;
-  margin-right: 20%;
+  margin-right: 12px;
   cursor: pointer;
 }
 
@@ -2193,6 +2200,29 @@ html, body {
   #index .shop_card .card_img_2 img {
     height: 250px;
   }
+  #index .section .slider1 .slides1 li .banner .circle_content .clrcel_num {
+    font-size: 7em;
+  }
+  #index .section .slider1 .slides1 li .banner .circle_content .circle_text {
+    font-size: 2.6em;
+  }
+  #index .section .slider1 .slides1 li .banner .circle_content .circle_text2 {
+    font-size: 2.2em;
+  }
+  #index .section .slider1 .slides1 li .banner .banner_content {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  #index .section .slider1 .slides1 li .banner .banner_content .banner_title {
+    font-size: 2.6em;
+  }
+  #index .section .slider1 .slides1 li .banner .banner_content .banner_text {
+    font-size: 2.2em;
+  }
+  #index .section .slider1 .slides1 li .banner .banner_content .banner_text2 {
+    width: 100%;
+    font-size: 1.3em;
+  }
   #index .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li {
     flex-direction: column;
   }
@@ -2240,6 +2270,25 @@ html, body {
   #index .shop_card .card_img_2 img {
     height: 190px;
   }
+  #index .section .slider1 .slides1 li .banner .circle_content .clrcel_num {
+    font-size: 6em;
+  }
+  #index .section .slider1 .slides1 li .banner .circle_content .circle_text {
+    font-size: 2.25em;
+  }
+  #index .section .slider1 .slides1 li .banner .circle_content .circle_text2 {
+    font-size: 1.9em;
+  }
+  #index .section .slider1 .slides1 li .banner .banner_content .banner_title {
+    font-size: 2.25em;
+  }
+  #index .section .slider1 .slides1 li .banner .banner_content .banner_text {
+    font-size: 1.9em;
+  }
+  #index .section .slider1 .slides1 li .banner .banner_content .banner_text2 {
+    width: 100%;
+    font-size: 1.125em;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -2249,9 +2298,15 @@ html, body {
   #index .shop_card_list .shop_card .card_img_2 {
     height: 250px;
   }
-}
-
-@media screen and (max-width: 460px) {
+  #index .section .slider1 ul.slides1 li .banner .circle_content .clrcel_num {
+    font-size: 5em;
+  }
+  #index .section .slider1 ul.slides1 li .banner .circle_content .circle_text {
+    font-size: 2em;
+  }
+  #index .section .slider1 ul.slides1 li .banner .circle_content .circle_text2 {
+    font-size: 1.5em;
+  }
   #index .plan .plan_content .plan_route_text {
     flex-direction: column;
     justify-content: center;
@@ -2262,6 +2317,18 @@ html, body {
   #index .plan .plan_content .plan_route_text .plan_route_btn {
     margin-top: 20px;
     align-self: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #index .section .slider1 ul.slides1 li .banner .circle_content .clrcel_num {
+    font-size: 3.25em;
+  }
+  #index .section .slider1 ul.slides1 li .banner .circle_content .circle_text {
+    font-size: 1.5em;
+  }
+  #index .section .slider1 ul.slides1 li .banner .circle_content .circle_text2 {
+    font-size: 1.125em;
   }
 }
 
@@ -4585,7 +4652,7 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   vertical-align: top;
   cursor: pointer;
   background-color: none;
-  border: 0px solid  #c8c8c8;
+  border: 0px solid  #c8c8c8;
   border-radius: 3px;
   color: #c8c8c8;
   -o-user-select: none;

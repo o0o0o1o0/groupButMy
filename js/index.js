@@ -70,8 +70,8 @@ $('.scrollDownBtn').click(function() {
 //輪播
 $('.slider1 .slides li:last-child').prependTo('.slider1 .slides');
 //自動播放輪播
-// var timeId1 = 0
-// timeId1=setInterval( () => { moveRight1(); }, 2500);
+var timeId1 = 0
+timeId1=setInterval( () => { moveRight1(); }, 2500);
 //hover   
 $('.steps1 li').hover(
   function(){                   //滑到的時候
@@ -83,6 +83,9 @@ $('.steps1 li').hover(
   currentDot1.css('opacity','1');//定點的不能被影響
   timeId1=setInterval( () => { moveRight1(); }, 2500);//繼續輪播
 });
+
+
+
 function dotColorChange1(){      //點點的顏色切換
   $('.steps1 li').css('opacity','0.5')
   currentDot1.css('opacity','1')
