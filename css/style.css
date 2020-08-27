@@ -5908,6 +5908,10 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   margin-left: 10px;
 }
 
+#store_money .popbox .pageItem div:last-child {
+  display: flex;
+}
+
 #store_money .popbox .pageItem button {
   margin-top: 20px;
 }
@@ -5916,7 +5920,7 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   display: none;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 576px) {
   #store_money form .pagewrap {
     max-width: 90vw;
     height: 90vh;
