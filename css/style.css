@@ -2923,6 +2923,15 @@ body#create form#createVendor .page3 .user_info p {
   border-radius: 8px;
 }
 
+body#create form#createVendor .page5 .pageItem img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 20px auto;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
 body#create .createVendorContainer form#createVendor .page {
   display: none;
 }
@@ -4652,7 +4661,7 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   vertical-align: top;
   cursor: pointer;
   background-color: none;
-  border: 0px solid  #c8c8c8;
+  border: 0px solid  #c8c8c8;
   border-radius: 3px;
   color: #c8c8c8;
   -o-user-select: none;
