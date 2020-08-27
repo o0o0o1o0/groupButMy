@@ -5,20 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>結帳完成 | 夜市客</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
+    <script src="./js/layout.js"></script>
     <style>
         /* @import url(./css/style.css); */
         /* @import url(./scss/base/_font.scss); */
-      
 
-
-        
     </style>
 </head>
 <body id="cart_final">
 <!-- navigation inc -->
-    <!-- require_once('layout.inc'); -->
+    <!-- require_once('navigation'.inc'); -->
 <!-- navigation inc -->
-
+<div class="navmenu">
+    <div class="wrap">
+      <div class="logo">
+        <div class="img">
+          <a href="./index.html"><img src="./img/layout/logo.png"></a>
+        </div>
+      </div>
+      <div>
+        <ul class="navlist">
+          <li><a href="./book.html">食玩圖鑑</a></li>
+          <li><a href="./guide.html">食玩指南</a></li>
+          <li><a href="./game.html">食尚玩家</a></li>
+          <li><a href="./ad.html">夜市新鮮事</a></li>
+          <li><a href="./create.html">創建指南</a></li>
+        </ul>
+          <div class="rIcon">
+            <button class="hamburger hamburger--squeeze" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+            <!--<a href=""class="hamburger"><i class="fas fa-bars bar-open"></i></a>-->
+            <a href="#"class="user"><i class="fas fa-user"></i></a>
+            <a href="#"class="cart"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+      </div>
+    </div>
+  </div>
 <div class="container">
     <div class="text">
         <div>
@@ -33,7 +60,7 @@
     <div class="bom">
         <div class="txt">
             <img src="./img/store_money/money.png">
-            <span>剩餘夜市幣 
+            <span>剩餘夜市幣   $25,000
                 <!-- <??> -->
             </span>
 
@@ -48,5 +75,6 @@
 <div class="footer">
     <div class="wrap">© YesMan 2020 . All rights reserved.</div>
 </div>
+
 </body>
 </html>

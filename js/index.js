@@ -359,6 +359,54 @@ for(let i=1;i<=slideCount3;i++){//1~5頁
 }
    
    
-   
+  //幫我做決定!!!!!!!!
+  $('.select-btn').click(function(){
+    
+    $('.choose_shuffle_frame').show();
+
+
+    $('.frame').addClass('show'); 
+    
+    $('#card01').addClass('show');
+    $('#card02').addClass('show');
+    $('#card03').addClass('show');
+    $('#card04').addClass('show');
+    $('#card05').addClass('show');
+    $('#card06').addClass('show');
+    $('#card07').addClass('show');
+    $('#card08').addClass('show');
+    $('#card09').addClass('show');
+    $('#card10').addClass('show');
+    $('#card11').addClass('show');
+    $('#card12').addClass('show');
+    $('#card13').addClass('show');
+
+    $('#card_shuffle_close').addClass('show');
+});
+
+
+$('#card_shuffle_close').click(function(){
+    
+    $('.choose_shuffle_frame').hide();
+
+
+    $('.frame').removeClass('show'); 
+    
+    $('#card01').removeClass('show');
+    $('#card02').removeClass('show');
+    $('#card03').removeClass('show');
+    $('#card04').removeClass('show');
+    $('#card05').removeClass('show');
+    $('#card06').removeClass('show');
+    $('#card07').removeClass('show');
+    $('#card08').removeClass('show');
+    $('#card09').removeClass('show');
+    $('#card10').removeClass('show');
+    $('#card11').removeClass('show');
+    $('#card12').removeClass('show');
+    $('#card13').removeClass('show');
+
+    $('#card_shuffle_close').removeClass('show');
+});
    
 });    

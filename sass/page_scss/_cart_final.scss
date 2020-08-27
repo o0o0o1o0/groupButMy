@@ -3,8 +3,8 @@ body#cart_final{
         box-sizing: border-box;
         font-family: 微軟正黑體 !important;
     }
-    background-color: #11245E;
-    color: white;
+    // background-color: #11245E;
+    color: $text-color-1;
     .container{
         max-width: 1200px;
         margin: auto;
@@ -58,20 +58,6 @@ body#cart_final{
             font-size: 20px;
         }
     }
-    .footer{
-        font-size: 16px;
-        background-color: $bg-color-1;
-        width: 100%;
-        .wrap{
-          color: $white-color;
-          max-width: $container-width;
-          width: 100%;
-          height: 50px;
-          line-height: 50px;
-          margin: 0 auto;
-          text-align: center;
-          font-weight: 500;
-        }
-      }
+
       
 }

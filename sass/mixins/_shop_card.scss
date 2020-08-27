@@ -465,21 +465,21 @@
   }
 }
 //商店卡燈箱
-#shop_card_lightbox{
-  .card_img_2,.card_content_2,#card_report_comment,#card_write_comment,#card_comment,.card_content{
-    display: none;
-  }
-  @include shop_card;
-  position: fixed;
-  top: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  width: 450px;
-  height: 650px;
-  .card_img_2{
-    img{
-      height: 310px;
-    }
-  }
-}
+// #shop_card_lightbox{
+//   .card_img_2,.card_content_2,#card_report_comment,#card_write_comment,#card_comment,.card_content{
+//     display: none;
+//   }
+//   @include shop_card;
+//   position: fixed;
+//   top: 120px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   z-index: 1;
+//   width: 450px;
+//   height: 650px;
+//   .card_img_2{
+//     img{
+//       height: 310px;
+//     }
+//   }
+// }

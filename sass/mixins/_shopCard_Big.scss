@@ -1,0 +1,204 @@
+//商店卡
+@mixin shop_card_big($w,$h,$img-h){
+  background-color: $white-color;
+  width: $w;
+  height: $h;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  .card_img{
+    width: 100%;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      border-radius: 25px 25px 0 0;
+      background: $white-color;
+      z-index: 10;
+    }
+    img{
+      display: block;
+      width: 100%;
+      height: $img-h;
+      position: relative;
+    }
+    .heart_save{
+      display: block;
+      background-color: $bg-color-2;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      i{
+        display: block;
+        color: $white-color;
+        cursor: pointer;
+        &:hover{
+          color: $text-color-2;
+          font-weight: 900;
+          transition: ease-out 0.3s;
+        }
+      }
+    }
+    .card_close{
+      background-color: $white-color;
+      box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.2);
+      width: 50px;
+      height: 50px;
+      border-radius: 0 8px 0 8px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      i{
+        display: block;
+        font-size: 30px;
+        color: $text-color-2;
+      }
+    }
+    .card_timenow-btn{
+      position: absolute;
+      bottom: 50px;
+      right: 20px;
+    }
+  }
+  .card_content{
+    margin: 0 20px;
+    margin-bottom: 15px;
+    .card_warp{
+      display: flex;
+      justify-content: space-between;
+      .card_score{
+        display: flex;
+        .score_num{
+          color: $white-color;
+          background-color: $bg-color-2;
+          width: 50px;
+          height: 50px;
+          line-height: 52px;
+          border-radius: 10px;
+          text-align: center;
+          font-weight: 400;
+        }
+        .score_con{
+          margin-left: 15px;
+          .score_star{
+            i{
+              font-size: 16px;
+              color: $star-color;
+            }
+          }
+          .score_comment{
+            font-size: 16px;
+            color: $text-color-3;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .card_title{
+      font-size: $font-size-1;
+      color: $text-color-3;
+      margin-top: 15px;
+    }
+    .card_detail{
+      color: $text-color-4;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      margin: 20px 0;
+      .card_text{
+        line-height: 25px;
+        margin: 20px 0;
+      }
+      .card_time{
+        line-height: 25px;
+        margin: 20px 0;
+      }
+    }
+    .card_warp_btn{
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+ 
+}
+
+@mixin card-btn($bg,$w){
+  font-size: 16px;
+  color: $white-color;
+  background-color: $bg;
+  width: $w;
+  border-radius: 50px;
+  height: 35px;
+  text-align: center;
+  margin: 0 8px;
+}
+@mixin card-timenow-btn($bg){
+  font-size: 14px;
+  color: $white-color;
+  background-color: $bg;
+  width: 80px;
+  border-radius: 50px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 8px;
+}
+@mixin card_look_detail-btn{
+  font-size: 16PX;
+  color: $white-color;
+  background-color: $bg-color-2;
+  width: 90px;
+  height: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+  &:hover{
+    background-color: $bg-color-4;
+    transition: ease-out 0.4s;
+  }
+}
+
+//套用
+.card_map-btn{
+  @include card_map-btn;
+}
+.card_menu-btn{
+  @include card-btn(#134f6c,80px);
+  &:hover{
+    background-color: $bg-color-4;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+  }
+}
+
+.card_timenow-btn{
+  @include card-timenow-btn(#F75C96);
+  box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.2);
+}
+.card_look_detail-btn{
+  @include card_look_detail-btn;
+}
+
+
+
+
+
+
+
+//商店卡燈箱
+.shop_card_lightbox{
+    @include shop_card_big(440PX,650px,310px);
+    // position: fixed;
+    // top: 120px;
+    // left: 50%;
+    // transform: translateX(-50%);
+    transform-origin:0 0 ;
+    transform: scale(0.4,0.4);
+    z-index: 10;
+}
