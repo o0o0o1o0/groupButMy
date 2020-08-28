@@ -1,0 +1,51 @@
+@import "../style";
+
+#ad{
+    font-size: $font-size-2;
+    background-color: $bg-color-1;
+      .container{
+              margin-top: 5%;
+              margin-bottom: 5%;
+          .row{
+              .adCard{
+                  .item{
+                      position: relative;
+                      margin-bottom: 50px;
+                      -o-transition: 0.9s;
+                      transition: 0.9s;
+                      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+                      .adImg{
+                          // border: 2px solid $bg-color-3;
+                          .img-fluid{
+                              width: 100%;
+                              display: block;
+                          }
+                      }
+                      .adText{
+                          position: absolute;
+                          bottom: -20px;
+                          left: -10px;
+                          width: 75%;
+                          background-color: $white-color;
+                          border-radius: 5px;
+                          padding: 5%;
+                          line-height: 25px;
+                          p{
+                              display: inline-block;
+                              border-bottom: 3px solid rgb(255, 255, 96);
+                          }
+                          span{
+                              display: block;
+                              padding-top: 5px;
+                          }
+                      }
+                  }
+                  .item:hover{
+                    -ms-transform: translate(0, -15px);
+                    transform: translate(0, -15px);
+                  }
+              }
+          }
+      }
+  }
+  

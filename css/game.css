@@ -734,6 +734,90 @@ body {
   justify-content: flex-end;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.d-display {
+  display: inline;
+}
+
+.flex-direction-r {
+  flex-direction: row-reverse;
+}
+
+.justify-content-s {
+  justify-content: space-between;
+}
+
+.justify-content-a {
+  justify-content: space-around;
+}
+
+.justify-content-c {
+  justify-content: center;
+}
+
+.justify-content-d {
+  justify-content: flex-end;
+}
+
+.align-items-c {
+  align-items: center;
+}
+
+.mb-1 {
+  margin-bottom: 100px;
+}
+
+.mb-2 {
+  margin-bottom: 30px;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+.mb-4 {
+  margin-bottom: 8px;
+}
+
+.ml-1 {
+  margin-left: 20px;
+}
+
+.mr-1 {
+  margin-right: 30px;
+}
+
+.pb-1 {
+  padding-bottom: 10px;
+}
+
+.pb-2 {
+  padding-bottom: 20px;
+}
+
+.pl-1 {
+  padding-left: 20px;
+}
+
+.pl-2 {
+  padding-left: 100px;
+}
+
+.pt-1 {
+  padding-top: 180px;
+}
+
+.mt-1 {
+  margin-top: 20px;
+}
+
+.mt-2 {
+  margin-top: 40px;
+}
+
 /*漢堡樣式*/
 .navmenu .hamburger {
   cursor: pointer;
@@ -1060,4 +1144,328 @@ html, body {
   text-align: center;
   font-weight: 600;
 }
-/*# sourceMappingURL=style.css.map */
+
+#game {
+  /* 元素 article 置中及基本樣式 */
+}
+
+#game * {
+  box-sizing: border-box;
+}
+
+#game img {
+  max-width: 100%;
+}
+
+#game h1 {
+  font-size: 22px;
+}
+
+#game .warpOne {
+  margin-top: 100px;
+}
+
+#game .warpOne .stick {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+#game .warpOne .stick .stickPhoto {
+  width: 1400px;
+}
+
+#game .warpOne .main {
+  background-image: url(../img/game/F2F2F2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 70px;
+  width: 1200px;
+  z-index: 10;
+  position: relative;
+  margin-top: -40px;
+  margin: 0 auto;
+}
+
+#game .warpOne .main .photoTitle {
+  width: 1200px;
+  margin-top: -40px;
+}
+
+#game .warpOne .main .photoTitle .photo {
+  max-height: 135px;
+}
+
+#game .warpOne .main .fraction {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+#game .warpOne .main .fraction .Score {
+  color: red;
+  font-size: 24px;
+}
+
+#game .warpOne .main .fraction .numberOftimes {
+  color: red;
+  font-size: 24px;
+}
+
+#game .warpOne .main .section {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#game .warpOne .main .section .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+#game .warpOne .main .section .row .Turntable {
+  transform: rotate(360deg);
+  animation: turn 2.5s linear infinite;
+  border-radius: 100%;
+  width: 300px;
+  background-color: #487ecf;
+  position: relative;
+}
+
+#game .warpOne .main .section .row .Turntable::before {
+  content: "";
+  position: absolute;
+  top: 140px;
+  left: 140px;
+  border-radius: 100%;
+  background-color: #9b9320;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+}
+
+#game .warpOne .main .section .row .Turntable .ballOne {
+  width: 80px;
+  position: absolute;
+  top: 10px;
+  left: 110px;
+}
+
+#game .warpOne .main .section .row .Turntable .ballTwo {
+  width: 80px;
+  position: absolute;
+  top: 100px;
+  left: 25px;
+  transform: rotate(-90deg);
+}
+
+#game .warpOne .main .section .row .Turntable .ballThree {
+  width: 80px;
+  position: absolute;
+  bottom: 10px;
+  left: 110px;
+  transform: rotate(180deg);
+}
+
+#game .warpOne .main .section .row .Turntable .ballFour {
+  width: 80px;
+  position: absolute;
+  top: 100px;
+  right: 25px;
+  transform: rotate(90deg);
+}
+
+#game .warpOne .main .section .row .TurntableTwo {
+  transform: rotate(360deg);
+  animation: turnTwo 2.5s linear infinite;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  background-color: #487ecf;
+  position: relative;
+}
+
+#game .warpOne .main .section .row .TurntableTwo::before {
+  content: "";
+  position: absolute;
+  top: 140px;
+  left: 140px;
+  border-radius: 100%;
+  background-color: #9b9320;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+}
+
+#game .warpOne .main .section .row .TurntableTwo .ballfive {
+  width: 80px;
+  position: absolute;
+  top: 10px;
+  left: 110px;
+}
+
+#game .warpOne .main .section .row .TurntableTwo .ballsix {
+  width: 80px;
+  position: absolute;
+  top: 100px;
+  left: 25px;
+  transform: rotate(-90deg);
+}
+
+#game .warpOne .main .section .row .TurntableTwo .ballseven {
+  width: 80px;
+  position: absolute;
+  bottom: 10px;
+  left: 110px;
+  transform: rotate(180deg);
+}
+
+#game .warpOne .main .section .row .TurntableTwo .ballEight {
+  width: 80px;
+  position: absolute;
+  top: 100px;
+  right: 25px;
+  transform: rotate(90deg);
+}
+
+#game .warpOne .stall {
+  width: 1300px;
+  height: 250px;
+  background-image: url(../img/game/攤位.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  z-index: -10;
+}
+
+#game .warpOne .boss {
+  position: absolute;
+  bottom: 0px;
+  left: -600px;
+  transform: translateX(0) translateY(0) translateZ(0);
+  animation: run 3s linear infinite;
+  z-index: 100;
+  /* animation-delay: 3s; */
+}
+
+#game .warpOne .boss .bossPhoto {
+  width: 400px;
+  display: block;
+}
+
+#game .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+  opacity: 1;
+  z-index: 100;
+  transition: opacity 1s;
+}
+
+#game article {
+  background-color: #f7f7f7;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 200px;
+}
+
+#game article h1 {
+  margin-top: 30px;
+}
+
+#game article p {
+  margin-top: 30px;
+}
+
+#game article button {
+  margin-top: 30px;
+}
+
+#game .gameOver {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  z-index: 100;
+}
+
+#game .gameOver .gameOvertext {
+  background-color: #f7f7f7;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 200px;
+}
+
+#game .gameOver .gameOvertext h1 {
+  line-height: 50px;
+  color: #000000;
+  margin-top: 30px;
+}
+
+#game .gameOver .gameOvertext p {
+  margin-top: 30px;
+}
+
+#game .gameOver .gameOvertext button {
+  margin-top: 30px;
+}
+
+#game .gameOver .gameOvertext button a {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+
+#game .gameOver .gameOvertext button a:hover {
+  color: #FF6B6B;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes turnTwo {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+/*# sourceMappingURL=game.css.map */

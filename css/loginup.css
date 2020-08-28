@@ -734,6 +734,90 @@ body {
   justify-content: flex-end;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.d-display {
+  display: inline;
+}
+
+.flex-direction-r {
+  flex-direction: row-reverse;
+}
+
+.justify-content-s {
+  justify-content: space-between;
+}
+
+.justify-content-a {
+  justify-content: space-around;
+}
+
+.justify-content-c {
+  justify-content: center;
+}
+
+.justify-content-d {
+  justify-content: flex-end;
+}
+
+.align-items-c {
+  align-items: center;
+}
+
+.mb-1 {
+  margin-bottom: 100px;
+}
+
+.mb-2 {
+  margin-bottom: 30px;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+.mb-4 {
+  margin-bottom: 8px;
+}
+
+.ml-1 {
+  margin-left: 20px;
+}
+
+.mr-1 {
+  margin-right: 30px;
+}
+
+.pb-1 {
+  padding-bottom: 10px;
+}
+
+.pb-2 {
+  padding-bottom: 20px;
+}
+
+.pl-1 {
+  padding-left: 20px;
+}
+
+.pl-2 {
+  padding-left: 100px;
+}
+
+.pt-1 {
+  padding-top: 180px;
+}
+
+.mt-1 {
+  margin-top: 20px;
+}
+
+.mt-2 {
+  margin-top: 40px;
+}
+
 /*漢堡樣式*/
 .navmenu .hamburger {
   cursor: pointer;
@@ -1060,4 +1144,408 @@ html, body {
   text-align: center;
   font-weight: 600;
 }
-/*# sourceMappingURL=style.css.map */
+
+#loginup {
+  background-image: url(../img/loginup/login.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #5264AE;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+#loginup .hero .inimg {
+  position: fixed;
+  width: 10%;
+  left: 15%;
+  top: 25%;
+  transition: .5s;
+}
+
+#loginup .hero .inimg img {
+  width: 100%;
+}
+
+#loginup .hero .upimg {
+  position: fixed;
+  width: 5%;
+  right: -30%;
+  top: 90%;
+  transition: .5s;
+}
+
+#loginup .hero .upimg img {
+  width: 100%;
+}
+
+#loginup .hero .form-box {
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 4% auto;
+  background: rgba(255, 255, 255, 0.739);
+  box-shadow: 0 0 15px #929292c0;
+  padding: 5px;
+  overflow: hidden;
+  transition: .5s;
+  animation-name: zoom;
+  animation-duration: 0.4s;
+  margin-top: 200px;
+}
+
+#loginup .hero .form-box .button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 5px #adadad8e;
+  border-radius: 30px;
+  background-color: #6d311932;
+}
+
+#loginup .hero .form-box .button-box #btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: #f4703b;
+  border-radius: 30px;
+  transition: .5s;
+}
+
+#loginup .hero .form-box .button-box .toggle-btn {
+  padding: 10px 21.8px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  color: #fff;
+}
+
+#loginup .hero .form-box h2 {
+  text-align: center;
+  font-size: 22px;
+  color: #333333;
+}
+
+#loginup .hero .form-box .input-group {
+  top: 170px;
+  position: absolute;
+  width: 280px;
+  transition: .5s;
+}
+
+#loginup .hero .form-box .input-group .group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+#loginup .hero .form-box .input-group .group .input-field {
+  width: 270px;
+  background: transparent;
+  padding: 10px 5px 5px 5px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+#loginup .hero .form-box .input-group .group .input-field:focus {
+  outline: none;
+}
+
+#loginup .hero .form-box .input-group .group .input-field:focus ~ label, #loginup .hero .form-box .input-group .group .input-field:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+
+#loginup .hero .form-box .input-group .group .input-field:focus ~ .bar:before, #loginup .hero .form-box .input-group .group .input-field:focus ~ .bar:after {
+  width: 50%;
+}
+
+#loginup .hero .form-box .input-group .group .input-field:focus ~ .linehight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+#loginup .hero .form-box .input-group .group .linehight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#loginup .hero .form-box .input-group .group .bar {
+  position: relative;
+  display: block;
+  width: 280px;
+}
+
+#loginup .hero .form-box .input-group .group .bar:before, #loginup .hero .form-box .input-group .group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+#loginup .hero .form-box .input-group .group .bar:before {
+  left: 50%;
+}
+
+#loginup .hero .form-box .input-group .group .bar:after {
+  right: 50%;
+}
+
+#loginup .hero .form-box .input-group .group label {
+  color: #333333;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+#loginup .hero .form-box .input-group .registr {
+  float: right;
+  margin-bottom: 45px;
+}
+
+#loginup .hero .form-box .input-group .registr span {
+  font-size: 14px;
+  cursor: pointer;
+  color: #333333;
+}
+
+#loginup .hero .form-box .input-group a {
+  text-decoration: none;
+}
+
+#loginup .hero .form-box .input-group a .submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: #f4703b;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  color: #fff;
+}
+
+#loginup .hero #generalmember {
+  left: 50px;
+}
+
+#loginup .hero #vendormember {
+  left: 450px;
+}
+
+#loginup .hero #signin {
+  display: block;
+}
+
+#loginup .hero .form-box-up {
+  width: 380px;
+  position: relative;
+  margin: 4% auto;
+  background: rgba(255, 255, 255, 0.739);
+  box-shadow: 0 0 15px #929292c0;
+  padding: 5px;
+  overflow: hidden;
+  animation-name: zoom;
+  animation-duration: 0.4s;
+  transition: .5s;
+}
+
+#loginup .hero .form-box-up .button-box {
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 5px #adadad8e;
+  border-radius: 30px;
+  background-color: #6d311932;
+}
+
+#loginup .hero .form-box-up .button-box #btnup {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: #f4703b;
+  border-radius: 30px;
+  transition: .5s;
+}
+
+#loginup .hero .form-box-up .button-box .toggle-btn {
+  padding: 10px 21.8px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  color: #fff;
+}
+
+#loginup .hero .form-box-up h2 {
+  text-align: center;
+  font-size: 22px;
+  color: #333333;
+}
+
+#loginup .hero .form-box-up .input-group {
+  top: 170px;
+  position: absolute;
+  width: 280px;
+  transition: .5s;
+}
+
+#loginup .hero .form-box-up .input-group .group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+#loginup .hero .form-box-up .input-group .group .input-field {
+  width: 270px;
+  background: transparent;
+  padding: 10px 5px 5px 5px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #333333;
+}
+
+#loginup .hero .form-box-up .input-group .group .input-field:focus {
+  outline: none;
+}
+
+#loginup .hero .form-box-up .input-group .group .input-field:focus ~ label, #loginup .hero .form-box-up .input-group .group .input-field:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+
+#loginup .hero .form-box-up .input-group .group .input-field:focus ~ .bar:before, #loginup .hero .form-box-up .input-group .group .input-field:focus ~ .bar:after {
+  width: 50%;
+}
+
+#loginup .hero .form-box-up .input-group .group .input-field:focus ~ .linehight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+#loginup .hero .form-box-up .input-group .group .linehight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+#loginup .hero .form-box-up .input-group .group .bar {
+  position: relative;
+  display: block;
+  width: 280px;
+}
+
+#loginup .hero .form-box-up .input-group .group .bar:before, #loginup .hero .form-box-up .input-group .group .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+#loginup .hero .form-box-up .input-group .group .bar:before {
+  left: 50%;
+}
+
+#loginup .hero .form-box-up .input-group .group .bar:after {
+  right: 50%;
+}
+
+#loginup .hero .form-box-up .input-group .group label {
+  color: #333333;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+#loginup .hero .form-box-up .input-group .registr {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#loginup .hero .form-box-up .input-group .registr span {
+  font-size: 14px;
+  cursor: pointer;
+  color: #333333;
+}
+
+#loginup .hero .form-box-up .input-group .submit-btn {
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: #f4703b;
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  color: #fff;
+}
+
+#loginup .hero #generalmemberup {
+  left: 50px;
+}
+
+#loginup .hero #vendormemberup {
+  left: 450px;
+}
+
+#loginup #signup {
+  display: none;
+  height: 0;
+}
+/*# sourceMappingURL=loginup.css.map */

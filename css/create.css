@@ -407,6 +407,43 @@ body {
 
 /*全域樣式*/
 /*color*/
+body#create form#createVendor .page2 .pageItem div.addBtn input#addBtn {
+  width: 100px;
+  line-height: 30px;
+  border-radius: 8px;
+  border: 0 solid #000;
+  background-color: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+body#create form#createVendor .page2 .pageItem button.deleteBtn {
+  border: 0;
+  width: 30px;
+  height: 30px;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #2DC8A9;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body#create form#createVendor .page2 .pageItem div.addBtn label[for="addBtn"] {
+  border: 0;
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-weight: 900;
+  font-size: 25px;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: #ccc;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
 .card_order-btn {
   font-size: 14PX;
   color: #fff;
@@ -732,6 +769,90 @@ body {
 .shop_card_lightbox .card_content .card_warp_btn {
   display: flex;
   justify-content: flex-end;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-display {
+  display: inline;
+}
+
+.flex-direction-r {
+  flex-direction: row-reverse;
+}
+
+.justify-content-s {
+  justify-content: space-between;
+}
+
+.justify-content-a {
+  justify-content: space-around;
+}
+
+.justify-content-c {
+  justify-content: center;
+}
+
+.justify-content-d {
+  justify-content: flex-end;
+}
+
+.align-items-c {
+  align-items: center;
+}
+
+.mb-1 {
+  margin-bottom: 100px;
+}
+
+.mb-2 {
+  margin-bottom: 30px;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+.mb-4 {
+  margin-bottom: 8px;
+}
+
+.ml-1 {
+  margin-left: 20px;
+}
+
+.mr-1 {
+  margin-right: 30px;
+}
+
+.pb-1 {
+  padding-bottom: 10px;
+}
+
+.pb-2 {
+  padding-bottom: 20px;
+}
+
+.pl-1 {
+  padding-left: 20px;
+}
+
+.pl-2 {
+  padding-left: 100px;
+}
+
+.pt-1 {
+  padding-top: 180px;
+}
+
+.mt-1 {
+  margin-top: 20px;
+}
+
+.mt-2 {
+  margin-top: 40px;
 }
 
 /*漢堡樣式*/
@@ -1060,4 +1181,458 @@ html, body {
   text-align: center;
   font-weight: 600;
 }
-/*# sourceMappingURL=style.css.map */
+
+* {
+  box-sizing: border-box;
+}
+
+body#create {
+  background: #f7f7f7;
+  /*step + page樣式*/
+}
+
+body#create .createVendorContainer {
+  /* height: 100vh;*/
+}
+
+body#create .createVendorContainer div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+body#create .createVendorContainer h2 {
+  color: #000000;
+  font-size: 24px;
+  margin: 30px 0px;
+}
+
+body#create .createVendorContainer h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #000000;
+}
+
+body#create .createVendorContainer input[type="text"], body#create .createVendorContainer textarea, body#create .createVendorContainer p, body#create .createVendorContainer div, body#create .createVendorContainer .selectwrap {
+  color: #000000;
+  font-size: 18px;
+}
+
+body#create .createVendorContainer input[type="text"],
+body#create .createVendorContainer .selectcontrol, body#create .createVendorContainer textarea {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #E6E6E6;
+  border: 0px;
+  border-radius: 8px;
+  position: relative;
+  white-space: nowrap;
+}
+
+body#create .createVendorContainer input[type="text"] span,
+body#create .createVendorContainer .selectcontrol span, body#create .createVendorContainer textarea span {
+  width: 90%;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+body#create .createVendorContainer input[type="text"] span::-webkit-scrollbar,
+body#create .createVendorContainer .selectcontrol span::-webkit-scrollbar, body#create .createVendorContainer textarea span::-webkit-scrollbar {
+  display: none;
+}
+
+body#create .createVendorContainer input[type="text"] span::-ms-scrollbar,
+body#create .createVendorContainer .selectcontrol span::-ms-scrollbar, body#create .createVendorContainer textarea span::-ms-scrollbar {
+  display: none;
+}
+
+body#create .createVendorContainer input[type="text"]::after,
+body#create .createVendorContainer .selectcontrol::after, body#create .createVendorContainer textarea::after {
+  content: "\f107";
+  font-family: 'FontAwesome';
+  color: #4db7fe;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body#create .createVendorContainer .selectwrap {
+  position: relative;
+}
+
+body#create .createVendorContainer .selectwrap .selectnav {
+  display: none;
+  line-height: 30px;
+  position: absolute;
+  top: 30px;
+  z-index: 2;
+  width: 100%;
+  background: #E6E6E6;
+  padding: 10px;
+}
+
+body#create .createVendorContainer .selectwrap .selectnav label {
+  display: block;
+}
+
+body#create .createVendorContainer input[type="file"] {
+  display: none;
+}
+
+body#create .createVendorContainer .pageItem {
+  border-radius: 8px;
+  background: white;
+  min-height: 70vh;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+}
+
+body#create .createVendorContainer input, body#create .createVendorContainer textarea, body#create .createVendorContainer button {
+  outline: none;
+  font-family: 微軟正黑體,serif;
+}
+
+body#create .createVendorContainer input[type="radio"], body#create .createVendorContainer input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+body#create form#createVendor {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh-300px);
+  max-width: 1200px;
+  margin: auto;
+}
+
+body#create form#createVendor .page1, body#create form#createVendor .page2, body#create form#createVendor .page3, body#create form#createVendor .page5 {
+  margin: 0 20px;
+}
+
+body#create form#createVendor .steps {
+  padding: 25px;
+  max-width: 1200px;
+}
+
+body#create form#createVendor .steps img {
+  width: 100%;
+}
+
+body#create form#createVendor .steps > div {
+  align-items: center;
+  flex-direction: row;
+}
+
+body#create form#createVendor .steps .mid {
+  position: relative;
+  z-index: -2;
+}
+
+body#create form#createVendor .steps .top > div, body#create form#createVendor .steps .bom > div {
+  width: 20%;
+  justify-content: center;
+  height: 110px;
+}
+
+body#create form#createVendor .steps .top .stepwrap, body#create form#createVendor .steps .bom .stepwrap {
+  cursor: pointer;
+  position: relative;
+  background: url(../img/create/gray.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+body#create form#createVendor .steps .top .stepwrap::after, body#create form#createVendor .steps .bom .stepwrap::after {
+  content: '　';
+  z-index: -1;
+  background: url(../img/create/dot.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  bottom: -0.79em;
+  left: 50%;
+  transform: translateX(-40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body#create form#createVendor .steps .top .info, body#create form#createVendor .steps .bom .info {
+  text-align: center;
+  align-items: center;
+}
+
+body#create form#createVendor .steps .top .info .num, body#create form#createVendor .steps .bom .info .num {
+  color: white;
+  font-weight: 900;
+  width: fit-content;
+  border-bottom: 3px solid white;
+}
+
+body#create form#createVendor .steps .bom {
+  transform: rotate(180deg);
+}
+
+body#create form#createVendor .steps .bom .info {
+  transform: rotate(180deg);
+}
+
+body#create form#createVendor .ctrlBtns {
+  margin: 0 20px;
+  margin-top: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+body#create form#createVendor .page1 .pageItem {
+  padding: 5vw 8vw;
+  align-items: space-between;
+  justify-content: space-around;
+}
+
+body#create form#createVendor .page1 .pageItem > div {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+body#create form#createVendor .page1 .pageItem > div > div {
+  padding: 10px;
+}
+
+body#create form#createVendor .page1 .pageItem > div:last-child img {
+  background: #E6E6E6;
+}
+
+body#create form#createVendor .page1 .pageItem > div:last-child textarea, body#create form#createVendor .page1 .pageItem > div:last-child img {
+  background-color: #E6E6E6;
+  resize: none;
+  border: 0px;
+  border-radius: 8px;
+  height: 200px;
+  width: 350px;
+  white-space: pre-wrap;
+}
+
+body#create form#createVendor .page1 .pageItem > div:last-child > div {
+  padding: 10px;
+}
+
+body#create form#createVendor .page1 .pageItem .putheadhere {
+  position: relative;
+  font-size: 0;
+}
+
+body#create form#createVendor .page1 .pageItem .putheadhere img {
+  object-fit: cover;
+}
+
+body#create form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background: #E6E6E6;
+  border-radius: 8px;
+}
+
+body#create form#createVendor .page1 .pageItem .putheadhere label[for="myHead"] span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+body#create form#createVendor .page1 .pageItem input[type="text"], body#create form#createVendor .page1 .pageItem .selectcontrol {
+  width: 350px;
+}
+
+body#create form#createVendor .page2 .pageItem {
+  padding: 50px;
+  flex-wrap: initial;
+}
+
+body#create form#createVendor .page2 .pageItem .meal {
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+body#create form#createVendor .page2 .pageItem .mealtextwrap {
+  min-width: 80%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+body#create form#createVendor .page2 .pageItem > div {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body#create form#createVendor .page2 .pageItem input[type="text"], body#create form#createVendor .page2 .pageItem .selectcontrol {
+  width: 120px;
+  text-align: center;
+}
+
+body#create form#createVendor .page2 .pageItem .putmealhere {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+body#create form#createVendor .page2 .pageItem .putmealhere img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body#create form#createVendor .page2 .pageItem .putmealhere label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4db7fe;
+}
+
+body#create form#createVendor .page2 .pageItem .putmealhere label span {
+  color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body#create form#createVendor .page2 .pageItem div.addBtn {
+  display: flex;
+  justify-content: start;
+}
+
+body#create form#createVendor .page2 .pageItem div.addBtn label[for="addBtn"] {
+  cursor: pointer;
+}
+
+body#create form#createVendor .page2 .pageItem div.addBtn input#addBtn {
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-block;
+}
+
+body#create form#createVendor .page3 .pageItem {
+  position: relative;
+  overflow: hidden;
+}
+
+body#create form#createVendor .page3 #map {
+  height: 70vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body#create form#createVendor .page3 .user_info {
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body#create form#createVendor .page3 .user_info p {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+body#create .createVendorContainer form#createVendor .page {
+  display: none;
+}
+
+body#create .createVendorContainer #createVendor[data-page="1"] .page:nth-child(1),
+body#create .createVendorContainer #createVendor[data-page="2"] .page:nth-child(2),
+body#create .createVendorContainer #createVendor[data-page="3"] .page:nth-child(3),
+body#create .createVendorContainer #createVendor[data-page="5"] .page:nth-child(4) {
+  display: flex;
+}
+
+body#create .createVendorContainer #createVendor[data-page="4"] .page:nth-child(1),
+body#create .createVendorContainer #createVendor[data-page="4"] .page:nth-child(2),
+body#create .createVendorContainer #createVendor[data-page="4"] .page:nth-child(3) {
+  display: flex;
+}
+
+body#create .createVendorContainer #createVendor[data-page="1"] .stepwrap[data-page="1"],
+body#create .createVendorContainer #createVendor[data-page="2"] .stepwrap[data-page="2"],
+body#create .createVendorContainer #createVendor[data-page="3"] .stepwrap[data-page="3"],
+body#create .createVendorContainer #createVendor[data-page="4"] .stepwrap[data-page="4"],
+body#create .createVendorContainer #createVendor[data-page="5"] .stepwrap[data-page="5"] {
+  background-image: url(../img/create/green.png);
+}
+
+body#create .createVendorContainer .ctrlBtns button[disabled] {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  body#create form#createVendor .page1 .pageItem, body#create form#createVendor .page2 .pageItem, body#create form#createVendor .page5 .pageItem {
+    padding: 10px;
+  }
+  body#create form#createVendor .page1 .pageItem > div {
+    justify-content: center;
+  }
+  body#create form#createVendor .page2 .putmealhere, body#create form#createVendor .page2 input[type="file"], body#create form#createVendor .page2 input[type="text"], body#create form#createVendor .page2 .selectcontrol {
+    margin-bottom: 15px;
+  }
+  body#create form#createVendor .page2 .mealtextwrap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body#create form#createVendor .page1 .pageItem > div > div {
+    width: 80%;
+  }
+  body#create form#createVendor .page1 .pageItem > div > div input[type="text"], body#create form#createVendor .page1 .pageItem > div > div textarea, body#create form#createVendor .page1 .pageItem > div > div div.selectcontrol, body#create form#createVendor .page1 .pageItem > div > div label, body#create form#createVendor .page1 .pageItem > div > div img {
+    width: 100% !important;
+  }
+  body#create form#createVendor .page2 .putmealhere, body#create form#createVendor .page2 input[type="file"], body#create form#createVendor .page2 input[type="text"], body#create form#createVendor .page2 .selectcontrol {
+    margin-bottom: 15px;
+  }
+  body#create form#createVendor .page2 .mealtextwrap {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body#create form#createVendor .page.page2 .meal, body#create form#createVendor .page.page2 .mealtextwrap {
+    flex-direction: column;
+  }
+  body#create form#createVendor .page.page2 .mealtextwrap {
+    align-items: center;
+    margin-bottom: 3em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body#create form#createVendor .page1 > div > div {
+    display: block;
+  }
+  body#create form#createVendor .page1 input[type="text"], body#create form#createVendor .page1 .selectcontrol, body#create form#createVendor .page1 .selectnav,
+  body#create form#createVendor .page1 textarea, body#create form#createVendor .page1 img {
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=create.css.map */

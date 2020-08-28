@@ -2,30 +2,11 @@
 @import "./base/reset";
 @import "./base/font";
 @import "./base/color";
-@import "./base/web";
 @import "./base/btn";
 
 //mixin
 @import "./mixins/mixin";
-@import "./mixins/flex";
 
 //layout
 @import "./layout/layout";
 
-//page
-@import "./page_scss/index";
-@import "./page_scss/welcome";
-@import "./page_scss/assign";
-@import "./page_scss/book";
-@import "./page_scss/guide";
-@import "./page_scss/create";
-@import "./page_scss/ad";
-@import "./page_scss/game"; 
-@import "./page_scss/cart";
-@import "./page_scss/slide_cart";
-@import "./page_scss/shop_menu";
-@import "./page_scss/vendor_member_main";
-@import "./page_scss/general_member_main";
-@import "./page_scss/admin";
-@import "./page_scss/loginup";
-@import "./page_scss/cart_final";
