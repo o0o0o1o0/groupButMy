@@ -1,730 +1,734 @@
-@keyframes close_shuffle_button{
-  0%{ 
-    opacity: 0;
-}
 
-100%{
-    opacity: 1;
-}
- 
-}
- /* stage_01動畫開始 */
- @keyframes stage_01{
-
-  0%{ 
-      position:absolute;
-      width:1%;
-      transform: translateY(800px);
+#index{
+  @keyframes close_shuffle_button{
+    0%{ 
       opacity: 0;
   }
-
-  50%{
-      position:absolute;
-      width:1%;
-      transform: translateY(0px);
-      opacity: 0.5;
-
-  }        
-
+  
   100%{
-      position: absolute;
-      width:1%;
-      transform: translateY(0px);
       opacity: 1;
-
   }
- }
-
- @keyframes stage_01_11_12_13{
-
-  0%{ 
-      position:absolute;
-      width:1%;
-      transform: translateY(800px);
-      opacity: 0;
-  }
-
-  50%{
-      position:absolute;
-      width:1%;
-      transform: translateY(0px);
-      opacity: 0;
-
-  }        
-
-  100%{
-      position: absolute;
-      width:1%;
-      transform: translateY(0px);
-      opacity: 0;
-
-  }
- }
-
-   /* stage_01動畫結束 */
-
-  /* stage_02動畫開始 */
- @keyframes stage_02_card01{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-  }
- }
- 
-
- @keyframes stage_02_card02{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(36deg);
-      transform-origin: 0% 0%;
-
-  }
- }
-
- 
- @keyframes stage_02_card03{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(72deg);
-      transform-origin: 0% 0%;
-
-  }
- }
-
-
- @keyframes stage_02_card04{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(108deg);
-      transform-origin: 0% 0%;
-
-  }
- }
-
- @keyframes stage_02_card05{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(144deg);
-      transform-origin: 0% 0%;
-
-  }
- }
-
- @keyframes stage_02_card06{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(180deg);
-      transform-origin: 0% 0%;
-
-  }
- }
-
- @keyframes stage_02_card07{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(216deg);
-      transform-origin: 0% 0%;
-
-  }
- }
-
- @keyframes stage_02_card08{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(252deg);
-      transform-origin: 0% 0%;
-
-  }
- }
-
- @keyframes stage_02_card09{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(288deg);
-      transform-origin: 0% 0%;
-
-  }
- }
-
- @keyframes stage_02_card10{
-   0%{
-      position:absolute;
-      transform:rotate(0deg);
-      transform-origin: 0% 0%;
-   }
-
-  100%{
-      position:absolute;
-      transform:rotate(324deg);
-      transform-origin: 0% 0%;
-
-  }
- }
-
- @keyframes stage_02_card11_12_13{
-  0%{
-     position:absolute;
-     transform:rotate(0deg);
-     transform-origin: 0% 0%;
-     opacity: 0;
-  }
-
- 100%{
-     position:absolute;
-     transform:rotate(324deg);
-     transform-origin: 0% 0%;
-     opacity: 0;
-
- }
-}
- 
-  /* stage_02動畫結束 */
-
-
-
-  /* stage_03動畫開始 */
-  @keyframes stage_03_all{
-      
-      0%{transform: rotateZ(0deg);
-         
-         
-        }
-
-      100%{transform: rotateZ(720deg);
-          }
-  }
-  /* stage_03動畫結束 */
-
-
-
-
-  /* stage_04動畫開始 */       
-
-  @keyframes stage_04_card01{
-   0%{       
-      transform:translate(0,0) rotate(0deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-      
-      
-      
-   }
-
-  100%{
-      transform:translate(200px,0px) rotate(0deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-      
-      
-  }
- }
- 
-
- @keyframes stage_04_card02{
-   0%{
-      transform:translate(0,0) rotate(36deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-   }
-
-  100%{
-      transform:translate(162px,118px) rotate(36deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-      
-
-  }
- }
-
- 
- @keyframes stage_04_card03{
-   0%{
-      transform:translate(0,0) rotate(72deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-   }
-
-  100%{
-      transform:translate(62px,190px) rotate(72deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-      
-  }
- }
-
-
- @keyframes stage_04_card04{
-   0%{
-      transform:translate(0,0) rotate(108deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-   }
-
-  100%{
-      transform:translate(-62px,190px) rotate(108deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-      
-  }
- }
-
- @keyframes stage_04_card05{
-   0%{
-      transform:translate(0,0) rotate(144deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-   }
-
-  100%{
-      transform:translate(-162px,118px) rotate(144deg);
-      transform-origin: 0% 0%;
-      position:absolute;
    
   }
- }
-
- @keyframes stage_04_card06{
-   0%{
-      transform:translate(0,0) rotate(180deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-   }
-
-  100%{
-      transform:translate(-200px,0px) rotate(180deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-      
-  }
- }
-
- @keyframes stage_04_card07{
-   0%{
-      transform:translate(0,0) rotate(216deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-   }
-
-  100%{
-      transform:translate(-162px,-118px) rotate(216deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-      
-  }
- }
-
- @keyframes stage_04_card08{
-   0%{
-      transform:translate(0,0) rotate(252deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-   }
-
-  100%{
-      transform:translate(-62px,-190px) rotate(252deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-     
-  }
- }
-
- @keyframes stage_04_card09{
-   0%{
-      transform:translate(0,0) rotate(288deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-   }
-
-  100%{
-      transform:translate(62px,-190px) rotate(288deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-     
-  }
- }
-
- @keyframes stage_04_card10{
-   0%{
-      transform:translate(0,0) rotate(324deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-   }
-
-  100%{
-      transform:translate(162px,-118px) rotate(324deg);
-      transform-origin: 0% 0%;
-      position:absolute;
-     
-  }
- }
-
-
- @keyframes stage_04_card11_12_13{
-  0%{
-     transform:translate(0,0) rotate(324deg);
-     transform-origin: 0% 0%;
-     position:absolute;
-     opacity: 0;
-  }
-
- 100%{
-     transform:translate(162px,-118px) rotate(324deg);
-     transform-origin: 0% 0%;
-     position:absolute;
-     opacity: 0;
-    
- }
-}
-  /* stage_04動畫結束 */
-
-
-  /* stage_05動畫開始 */
-  @keyframes stage_05_card01{
-    0%{       
-      transform:translate(200px,0px) rotate(0deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
-       
-       
-       
-    }
-
-   100%{
-       transform:translate(200px,0px) rotate(0deg);
-       transform-origin: 0% 0%;
-       opacity: 0;
-       position:absolute;
-       
-       
-   }
-  }
+   /* stage_01動畫開始 */
+   @keyframes stage_01{
   
-
-  @keyframes stage_05_card02{
-    0%{
-      transform:translate(162px,118px) rotate(36deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
+    0%{ 
+        position:absolute;
+        width:1%;
+        transform: translateY(800px);
+        opacity: 0;
     }
-
-   100%{
-       transform:translate(162px,118px) rotate(36deg);
-       transform-origin: 0% 0%;
-       opacity: 0;
-       position:absolute;
-       
-
-   }
-  }
-
   
-  @keyframes stage_05_card03{
-    0%{
-      transform:translate(62px,190px) rotate(72deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
+    50%{
+        position:absolute;
+        width:1%;
+        transform: translateY(0px);
+        opacity: 0.5;
+  
+    }        
+  
+    100%{
+        position: absolute;
+        width:1%;
+        transform: translateY(0px);
+        opacity: 1;
+  
     }
-
-   100%{
-       transform:translate(62px,190px) rotate(72deg);
+   }
+  
+   @keyframes stage_01_11_12_13{
+  
+    0%{ 
+        position:absolute;
+        width:1%;
+        transform: translateY(800px);
+        opacity: 0;
+    }
+  
+    50%{
+        position:absolute;
+        width:1%;
+        transform: translateY(0px);
+        opacity: 0;
+  
+    }        
+  
+    100%{
+        position: absolute;
+        width:1%;
+        transform: translateY(0px);
+        opacity: 0;
+  
+    }
+   }
+  
+     /* stage_01動畫結束 */
+  
+    /* stage_02動畫開始 */
+   @keyframes stage_02_card01{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+    }
+   }
+   
+  
+   @keyframes stage_02_card02{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(36deg);
+        transform-origin: 0% 0%;
+  
+    }
+   }
+  
+   
+   @keyframes stage_02_card03{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(72deg);
+        transform-origin: 0% 0%;
+  
+    }
+   }
+  
+  
+   @keyframes stage_02_card04{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(108deg);
+        transform-origin: 0% 0%;
+  
+    }
+   }
+  
+   @keyframes stage_02_card05{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(144deg);
+        transform-origin: 0% 0%;
+  
+    }
+   }
+  
+   @keyframes stage_02_card06{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(180deg);
+        transform-origin: 0% 0%;
+  
+    }
+   }
+  
+   @keyframes stage_02_card07{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(216deg);
+        transform-origin: 0% 0%;
+  
+    }
+   }
+  
+   @keyframes stage_02_card08{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(252deg);
+        transform-origin: 0% 0%;
+  
+    }
+   }
+  
+   @keyframes stage_02_card09{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(288deg);
+        transform-origin: 0% 0%;
+  
+    }
+   }
+  
+   @keyframes stage_02_card10{
+     0%{
+        position:absolute;
+        transform:rotate(0deg);
+        transform-origin: 0% 0%;
+     }
+  
+    100%{
+        position:absolute;
+        transform:rotate(324deg);
+        transform-origin: 0% 0%;
+  
+    }
+   }
+  
+   @keyframes stage_02_card11_12_13{
+    0%{
+       position:absolute;
+       transform:rotate(0deg);
        transform-origin: 0% 0%;
        opacity: 0;
+    }
+  
+   100%{
        position:absolute;
+       transform:rotate(324deg);
+       transform-origin: 0% 0%;
+       opacity: 0;
+  
+   }
+  }
+   
+    /* stage_02動畫結束 */
+  
+  
+  
+    /* stage_03動畫開始 */
+    @keyframes stage_03_all{
+        
+        0%{transform: rotateZ(0deg);
+           
+           
+          }
+  
+        100%{transform: rotateZ(720deg);
+            }
+    }
+    /* stage_03動畫結束 */
+  
+  
+  
+  
+    /* stage_04動畫開始 */       
+  
+    @keyframes stage_04_card01{
+     0%{       
+        transform:translate(0,0) rotate(0deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+        
+        
+        
+     }
+  
+    100%{
+        transform:translate(200px,0px) rotate(0deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+        
+        
+    }
+   }
+   
+  
+   @keyframes stage_04_card02{
+     0%{
+        transform:translate(0,0) rotate(36deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     }
+  
+    100%{
+        transform:translate(162px,118px) rotate(36deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+        
+  
+    }
+   }
+  
+   
+   @keyframes stage_04_card03{
+     0%{
+        transform:translate(0,0) rotate(72deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     }
+  
+    100%{
+        transform:translate(62px,190px) rotate(72deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+        
+    }
+   }
+  
+  
+   @keyframes stage_04_card04{
+     0%{
+        transform:translate(0,0) rotate(108deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     }
+  
+    100%{
+        transform:translate(-62px,190px) rotate(108deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+        
+    }
+   }
+  
+   @keyframes stage_04_card05{
+     0%{
+        transform:translate(0,0) rotate(144deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     }
+  
+    100%{
+        transform:translate(-162px,118px) rotate(144deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     
+    }
+   }
+  
+   @keyframes stage_04_card06{
+     0%{
+        transform:translate(0,0) rotate(180deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     }
+  
+    100%{
+        transform:translate(-200px,0px) rotate(180deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+        
+    }
+   }
+  
+   @keyframes stage_04_card07{
+     0%{
+        transform:translate(0,0) rotate(216deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     }
+  
+    100%{
+        transform:translate(-162px,-118px) rotate(216deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+        
+    }
+   }
+  
+   @keyframes stage_04_card08{
+     0%{
+        transform:translate(0,0) rotate(252deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     }
+  
+    100%{
+        transform:translate(-62px,-190px) rotate(252deg);
+        transform-origin: 0% 0%;
+        position:absolute;
        
-   }
-  }
-
-
-  @keyframes stage_05_card04{
-    0%{
-      transform:translate(-62px,190px) rotate(108deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
     }
-
-   100%{
-       transform:translate(-62px,190px) rotate(108deg);
-       transform-origin: 0% 0%;
-       opacity: 0;
-       position:absolute;
+   }
+  
+   @keyframes stage_04_card09{
+     0%{
+        transform:translate(0,0) rotate(288deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     }
+  
+    100%{
+        transform:translate(62px,-190px) rotate(288deg);
+        transform-origin: 0% 0%;
+        position:absolute;
        
-   }
-  }
-
-  @keyframes stage_05_card05{
-    0%{
-      transform:translate(-162px,118px) rotate(144deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
     }
-
-   100%{
-       transform:translate(-162px,118px) rotate(144deg);
-       transform-origin: 0% 0%;
-       opacity: 0;
-       position:absolute;
-    
    }
-  }
-
-  @keyframes stage_05_card06{
-    0%{
-      transform:translate(-200px,0px) rotate(180deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
-    }
-
-   100%{
-       transform:translate(-200px,0px) rotate(180deg);
-       transform-origin: 0% 0%;
-       opacity: 0;
-       position:absolute;
+  
+   @keyframes stage_04_card10{
+     0%{
+        transform:translate(0,0) rotate(324deg);
+        transform-origin: 0% 0%;
+        position:absolute;
+     }
+  
+    100%{
+        transform:translate(162px,-118px) rotate(324deg);
+        transform-origin: 0% 0%;
+        position:absolute;
        
-   }
-  }
-
-  @keyframes stage_05_card07{
-    0%{
-      transform:translate(-162px,-118px) rotate(216deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
     }
-
-   100%{
-       transform:translate(-162px,-118px) rotate(216deg);
+   }
+  
+  
+   @keyframes stage_04_card11_12_13{
+    0%{
+       transform:translate(0,0) rotate(324deg);
        transform-origin: 0% 0%;
+       position:absolute;
        opacity: 0;
-       position:absolute;
-   }
-  }
-
-  @keyframes stage_05_card08{
-    0%{
-      transform:translate(-62px,-190px) rotate(252deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
     }
-
-   100%{
-       transform:translate(-62px,-190px) rotate(252deg);
-       transform-origin: 0% 0%;
-       opacity: 0;
-       position:absolute;
-      
-   }
-  }
-
-  @keyframes stage_05_card09{
-    0%{
-      transform:translate(62px,-190px) rotate(288deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
-    }
-
-   100%{
-       transform:translate(62px,-190px) rotate(288deg);
-       transform-origin: 0% 0%;
-       opacity: 0;
-       position:absolute;
-      
-   }
-  }
-
-  @keyframes stage_05_card10{
-    0%{
-      transform:translate(162px,-118px) rotate(324deg);
-       transform-origin: 0% 0%;
-       opacity: 1;
-       position:absolute;
-    }
-
+  
    100%{
        transform:translate(162px,-118px) rotate(324deg);
        transform-origin: 0% 0%;
-       opacity: 0;
        position:absolute;
+       opacity: 0;
       
    }
   }
-
-
-  @keyframes stage_05_card11{
-    0%{
-
-      opacity: 0;
-      transform:translate(81px,-59px) rotate(0deg);
-      transform-origin: 50% 50%;
-      position:absolute;
-    }
-
-    5%{
-
-      opacity: 0;
-      transform:translate(-10px,-30px) rotate(0deg) scale(0.1,0.1);
-      transform-origin: -100% -100%;
-      position:absolute;
-
-    }
-    
-
-
-    30%{
-
-      opacity: 0;
-      transform:translate(100px,30px) rotate(0deg) scale(0.1,0.1);
-      transform-origin: -100% -100%;
-      position:absolute;
-
-    }
-    100%{
-      opacity: 1;
-      transform:translate(-170px,-300px) rotate(720deg) scale(2,2);
-      // transform-origin: -100% -100%;
-      z-index: 3;
-      position:absolute;
-    }
-  }
-
-
-  @keyframes stage_05_card12{
-    0%{
-
-      opacity: 0;
-      transform:translate(81px,-59px) rotate(0deg);
-      transform-origin: 50% 50%;
-      position:absolute;
-    }
-
-    5%{
-
-      opacity: 0;
-      transform:translate(-110px,-330px) rotate(0deg) scale(0.1,0.1);
-      transform-origin: -100% -100%;
-      position:absolute;
-
+    /* stage_04動畫結束 */
+  
+  
+    /* stage_05動畫開始 */
+    @keyframes stage_05_card01{
+      0%{       
+        transform:translate(200px,0px) rotate(0deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+         
+         
+         
+      }
+  
+     100%{
+         transform:translate(200px,0px) rotate(0deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+         
+         
+     }
     }
     
-
-
-    30%{
-
-      opacity: 0;
-      transform:translate(100px,30px) rotate(0deg) scale(0.1,0.1);
-      transform-origin: -100% -100%;
-      position:absolute;
-
+  
+    @keyframes stage_05_card02{
+      0%{
+        transform:translate(162px,118px) rotate(36deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+      }
+  
+     100%{
+         transform:translate(162px,118px) rotate(36deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+         
+  
+     }
     }
-    100%{
-      opacity: 1;
-      transform:translate(-590px,-300px) rotate(-720deg) scale(2,2);
-      // transform-origin: -100% -100%;
-      z-index: 3;
-      position:absolute;
-    }
-  }
-
-  @keyframes stage_05_card13{
-    0%{
-
-      opacity: 0;
-      transform:translate(81px,-59px) rotate(0deg);
-      transform-origin: 50% 50%;
-      position:absolute;
-    }
-
-    5%{
-
-      opacity: 0;
-      transform:translate(-400px,-300px) rotate(0deg) scale(0.1,0.1);
-      transform-origin: -100% -100%;
-      position:absolute;
-
-    }
+  
     
-
-
-    30%{
-
-      opacity: 0;
-      transform:translate(100px,230px) rotate(0deg) scale(0.1,0.1);
-      transform-origin: -100% -100%;
-      position:absolute;
-
+    @keyframes stage_05_card03{
+      0%{
+        transform:translate(62px,190px) rotate(72deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+      }
+  
+     100%{
+         transform:translate(62px,190px) rotate(72deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+         
+     }
     }
-    100%{
-      opacity: 1;
-      transform:translate(250px,-300px) rotate(-720deg) scale(2,2);
-      // transform-origin: -100% -100%;     
-
-      z-index: 3;
-      position:absolute;      
-      // border:10px solid red;
+  
+  
+    @keyframes stage_05_card04{
+      0%{
+        transform:translate(-62px,190px) rotate(108deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+      }
+  
+     100%{
+         transform:translate(-62px,190px) rotate(108deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+         
+     }
     }
-  }
+  
+    @keyframes stage_05_card05{
+      0%{
+        transform:translate(-162px,118px) rotate(144deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+      }
+  
+     100%{
+         transform:translate(-162px,118px) rotate(144deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+      
+     }
+    }
+  
+    @keyframes stage_05_card06{
+      0%{
+        transform:translate(-200px,0px) rotate(180deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+      }
+  
+     100%{
+         transform:translate(-200px,0px) rotate(180deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+         
+     }
+    }
+  
+    @keyframes stage_05_card07{
+      0%{
+        transform:translate(-162px,-118px) rotate(216deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+      }
+  
+     100%{
+         transform:translate(-162px,-118px) rotate(216deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+     }
+    }
+  
+    @keyframes stage_05_card08{
+      0%{
+        transform:translate(-62px,-190px) rotate(252deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+      }
+  
+     100%{
+         transform:translate(-62px,-190px) rotate(252deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+        
+     }
+    }
+  
+    @keyframes stage_05_card09{
+      0%{
+        transform:translate(62px,-190px) rotate(288deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+      }
+  
+     100%{
+         transform:translate(62px,-190px) rotate(288deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+        
+     }
+    }
+  
+    @keyframes stage_05_card10{
+      0%{
+        transform:translate(162px,-118px) rotate(324deg);
+         transform-origin: 0% 0%;
+         opacity: 1;
+         position:absolute;
+      }
+  
+     100%{
+         transform:translate(162px,-118px) rotate(324deg);
+         transform-origin: 0% 0%;
+         opacity: 0;
+         position:absolute;
+        
+     }
+    }
+  
+  
+    @keyframes stage_05_card11{
+      0%{
+  
+        opacity: 0;
+        transform:translate(81px,-59px) rotate(0deg);
+        transform-origin: 50% 50%;
+        position:absolute;
+      }
+  
+      5%{
+  
+        opacity: 0;
+        transform:translate(-10px,-30px) rotate(0deg) scale(0.1,0.1);
+        transform-origin: -100% -100%;
+        position:absolute;
+  
+      }
+      
+  
+  
+      30%{
+  
+        opacity: 0;
+        transform:translate(100px,30px) rotate(0deg) scale(0.1,0.1);
+        transform-origin: -100% -100%;
+        position:absolute;
+  
+      }
+      100%{
+        opacity: 1;
+        transform:translate(-170px,-300px) rotate(720deg) scale(2,2);
+        // transform-origin: -100% -100%;
+        z-index: 3;
+        position:absolute;
+      }
+    }
+  
+  
+    @keyframes stage_05_card12{
+      0%{
+  
+        opacity: 0;
+        transform:translate(81px,-59px) rotate(0deg);
+        transform-origin: 50% 50%;
+        position:absolute;
+      }
+  
+      5%{
+  
+        opacity: 0;
+        transform:translate(-110px,-330px) rotate(0deg) scale(0.1,0.1);
+        transform-origin: -100% -100%;
+        position:absolute;
+  
+      }
+      
+  
+  
+      30%{
+  
+        opacity: 0;
+        transform:translate(100px,30px) rotate(0deg) scale(0.1,0.1);
+        transform-origin: -100% -100%;
+        position:absolute;
+  
+      }
+      100%{
+        opacity: 1;
+        transform:translate(-590px,-300px) rotate(-720deg) scale(2,2);
+        // transform-origin: -100% -100%;
+        z-index: 3;
+        position:absolute;
+      }
+    }
+  
+    @keyframes stage_05_card13{
+      0%{
+  
+        opacity: 0;
+        transform:translate(81px,-59px) rotate(0deg);
+        transform-origin: 50% 50%;
+        position:absolute;
+      }
+  
+      5%{
+  
+        opacity: 0;
+        transform:translate(-400px,-300px) rotate(0deg) scale(0.1,0.1);
+        transform-origin: -100% -100%;
+        position:absolute;
+  
+      }
+      
+  
+  
+      30%{
+  
+        opacity: 0;
+        transform:translate(100px,230px) rotate(0deg) scale(0.1,0.1);
+        transform-origin: -100% -100%;
+        position:absolute;
+  
+      }
+      100%{
+        opacity: 1;
+        transform:translate(250px,-300px) rotate(-720deg) scale(2,2);
+        // transform-origin: -100% -100%;     
+  
+        z-index: 3;
+        position:absolute;      
+        // border:10px solid red;
+      }
+    }
+}
+
   /* stage_05動畫結束 */
 
 

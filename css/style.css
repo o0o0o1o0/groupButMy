@@ -1177,6 +1177,18 @@ html, body {
   font-weight: 600;
 }
 
+#index {
+  /* stage_01動畫開始 */
+  /* stage_01動畫結束 */
+  /* stage_02動畫開始 */
+  /* stage_02動畫結束 */
+  /* stage_03動畫開始 */
+  /* stage_03動畫結束 */
+  /* stage_04動畫開始 */
+  /* stage_04動畫結束 */
+  /* stage_05動畫開始 */
+}
+
 @keyframes close_shuffle_button {
   0% {
     opacity: 0;
@@ -1186,7 +1198,6 @@ html, body {
   }
 }
 
-/* stage_01動畫開始 */
 @keyframes stage_01 {
   0% {
     position: absolute;
@@ -1229,8 +1240,6 @@ html, body {
   }
 }
 
-/* stage_01動畫結束 */
-/* stage_02動畫開始 */
 @keyframes stage_02_card01 {
   0% {
     position: absolute;
@@ -1376,8 +1385,6 @@ html, body {
   }
 }
 
-/* stage_02動畫結束 */
-/* stage_03動畫開始 */
 @keyframes stage_03_all {
   0% {
     transform: rotateZ(0deg);
@@ -1387,8 +1394,6 @@ html, body {
   }
 }
 
-/* stage_03動畫結束 */
-/* stage_04動畫開始 */
 @keyframes stage_04_card01 {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -1534,8 +1539,6 @@ html, body {
   }
 }
 
-/* stage_04動畫結束 */
-/* stage_05動畫開始 */
 @keyframes stage_05_card01 {
   0% {
     transform: translate(200px, 0px) rotate(0deg);
