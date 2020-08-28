@@ -28,9 +28,9 @@ jQuery(document).ready(function ($) {
    
   })
 //scroll down
-$(window).on('wheel', function(e) {   
-                     //當我滾動滑鼠的時候
+$(window).on('wheel', function(e) { //當我滾動滑鼠的時候
   e.stopPropagation();
+  //Jquery的event物件，並沒有包含所有 原本javascipt的特殊事件。用event.originalEvent 就可以使用原本javascript的event事件了
   let delta = e.originalEvent.deltaY;
   console.log(ww,$(window).scrollTop());
    
