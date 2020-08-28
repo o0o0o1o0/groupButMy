@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./path/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>管理員｜夜市客</title>
+</head>
+<body id="admin">
+    <aside>
+        <!-- 帳號頭貼 -->
+        <div class="account">
+            <img src="./img/vendor_member/boss.png">          
+        </div>
+        <!-- 歡迎詞＆登出 -->
+        <div class="intro">
+            <span>管理員帳號</span>
+            <button class="btn-cir_gr1">登出</button>
+        </div>
+        <!-- 功能列選單 -->
+        <div class="select">
+            <ul>
+                <li><a href="#" data-target="tab1" class="tab -on"><i class="fas fa-user-shield"></i>後台帳號管理</a></li>
+                <li><a href="#" data-target="tab2" class="tab"><i class="fas fa-user-friends"></i>一般會員管理</a></li>
+                <li><a href="#" data-target="tab3" class="tab"><i class="fas fa-store-alt"></i>攤商會員管理</a></li>
+                <li><a href="#" data-target="tab4" class="tab"><i class="fas fa-comment-dots"></i>會員評價管理</a></li>
+                <li><a href="#" data-target="tab5" class="tab"><i class="fas fa-ad"></i>廣告上架管理</a></li>
+                <li><a href="#" data-target="tab6" class="tab"><i class="fas fa-donate"></i>交易資料管理</a></li>
+            </ul>
+        </div>
+    </aside>
+    <main>
+        <!-- 管理員管理 -->
+        <div class="tab_change tab tab1 -on">
+            <div class="tabs-and-contents">
+                <ul class="tabs">
+                    <li class="tab_btn active btn-rect_gr2" data-content = "one">管理員列表</li>
+                    <li class="tab_btn btn-rect_bl2" data-content = "two">新增管理員</li>
+                </ul>
+                <div class="contents">
+                    <div class="one">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>編號</th>
+                                    <th>姓名</th>
+                                    <th>帳號</th>
+                                    <!-- 需要停權功能嗎？ -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01</td>
+                                    <td>Ann</td>
+                                    <td>ann001</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="two">
+                        <form action="">
+                            <label>姓名：<input type="text" name="" id=""></label>
+                            <label>帳號：<input type="text" name="" id=""></label>
+                            <label>密碼：<input type="text" name="" id=""></label>
+                            <button class="btn-cir_pk1">送出</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 一般會員管理 -->
+        <div class="member tab tab2">
+            <div class="search">
+                <label>帳號：<input type="text" name="" id="" placeholder="請輸入一般會員帳號"> 
+                </label>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>編號</th>
+                            <th>會員帳號</th>
+                            <th>密碼</th>
+                            <th>姓名</th>
+                            <th>電話</th>
+                            <th>Email</th>
+                            <th>權限狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>yesman123</td>
+                            <td>yesman_good</td>
+                            <td>yesMan</td>
+                            <td>0912-345678</td>
+                            <td>yesman@gmail.com</td>
+                            <td>
+                                <span>啟用</span>
+                                <div class="toggle normal">
+                                    <input type="checkbox" name="normal" id="normal"><label class="toggle-item" for="normal"></label>
+                                </div>
+                                <span>停權</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 攤商會員管理 -->
+        <div class="member tab tab3">
+            <div class="search">
+                <label>帳號：<input type="text" name="" id="" placeholder="請輸入攤商會員帳號"> 
+                </label>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>編號</th>
+                            <th>營登編號</th>
+                            <th>帳號</th>
+                            <th>密碼</th>
+                            <th>負責人姓名</th>
+                            <th>電話</th>
+                            <th>Email</th>
+                            <th>權限狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>中壢0125</td>
+                            <td>chickenyaya</td>
+                            <td>chicken_good</td>
+                            <td>李娘娘</td>
+                            <td>0923-456789</td>
+                            <td>chickenyaya@gmail.com</td>
+                            <td>
+                                <span>未審核</span>
+                                <div class="toggle normal">
+                                    <input type="checkbox" name="normal" id="normal"><label class="toggle-item" for="normal"></label>
+                                </div>
+                                <span>已啟用</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 評論檢舉管理 -->
+        <div class="member tab tab4">
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>檢舉編號</th>
+                            <th>評價內容</th>
+                            <th>被檢舉會員帳號</th>
+                            <th>被檢舉會員名稱</th>
+                            <th>檢舉原因</th>
+                            <th>審核狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>abc減肥藥超有效</td>
+                            <td>lier</td>
+                            <td>愛減肥小美</td>
+                            <td>03-廣告</td>
+                            <td>
+                                <span>待審核</span>
+                                <div class="toggle normal">
+                                    <input type="checkbox" name="normal" id="normal"><label class="toggle-item" for="normal"></label>
+                                </div>
+                                <span>確認檢舉</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 廣告上架管理 -->
+        <div class="member tab tab5">
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>廣告編號</th>
+                            <th>攤商姓名</th>
+                            <th>廣告內容</th>
+                            <th>廣告圖片</th>
+                            <th>審核狀態</th>
+                            <th>上架日期</th>
+                            <th>到期日期</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>娘娘雞排</td>
+                            <td>大特價！
+                                <br>
+                                8/20 - 9/15 雞排限時特價55元
+                            </td>
+                            <td>pic</td>
+                            <td>
+                                <span>未審核</span>
+                                <div class="toggle normal">
+                                    <input type="checkbox" name="normal" id="normal"><label class="toggle-item" for="normal"></label>
+                                </div>
+                                <span>已上架</span>
+                            </td>
+                            <td>2020/9/1</td>
+                            <td>2020/9/8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 交易資料管理 -->
+        <div class="tab_change transation tab tab6">
+            <div class="tabs-and-contents">
+                <ul class="tabs">
+                    <li class="tab_btn active btn-rect_gr2" data-content = "one">訂單資料</li>
+                    <li class="tab_btn btn-rect_bl2" data-content = "two">匯款紀錄</li>
+                </ul>
+                <div class="contents">
+                    <div class="one">
+                        <div class="search">
+                            <label>帳號：<input type="text" name="" id="" placeholder="請輸入一般會員帳號"> 
+                            </label>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>訂單編號</th>
+                                    <th>訂單日期</th>
+                                    <th>攤商名稱</th>
+                                    <th>會員名稱</th>
+                                    <th>訂單金額</th>
+                                    <th>訂單狀態</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>2020/9/1</td>
+                                    <td>娘娘雞排</td>
+                                    <td>顧客001</td>
+                                    <td>$100</td>
+                                    <td>已/未完成</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="two">
+                        <div class="search">
+                            <label>帳號：<input type="text" name="" id="" placeholder="請輸入攤商會員帳號"> 
+                            </label>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>編號</th>
+                                    <th>申請日期</th>
+                                    <th>攤商帳號</th>
+                                    <th>攤商名稱</th>
+                                    <th>匯款金額</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>2020/9/1</td>
+                                    <td>chickenyaya</td>
+                                    <td>娘娘雞排</td>
+                                    <td>$10000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".contents > div").hide();
+            $(".contents > .one").show();
+            $(".tabs .tab_btn").on("click", function() {
+                $(this).addClass("active").siblings().removeClass("active");
+                $(".contents > div").hide();
+                $("." + $(this).data("content")).fadeIn(600);
+            });
+
+            $(".switch").on("click",function() {
+                $(".tabs-and-contents").toggleClass("left");
+            })
+        });
+    </script>
+    <script>
+        $(function(){
+            $("a.tab").on("click", function(e){
+            e.preventDefault();
+    
+            /* 將頁籤列表移除所有 -on，再將指定的加上 -on */
+            $(this).closest("ul").find("a.tab").removeClass("-on");
+            $(this).addClass("-on");
+    
+            /* 找到對應的頁籤內容，加上 -on 來顯示 */
+            $("div.tab").removeClass("-on");
+            $("div.tab." + $(this).attr("data-target")).addClass("-on");
+            });
+        });
+    </script>
+</body>
+</html>

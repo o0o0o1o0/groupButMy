@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>會員資訊</title>
+        <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./path/css/fontawesome.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body id="general_member">
+
+        <main class="">
+
+            <section class="left_section">
+
+                <div class="m_mug_shot">
+                    <div class="photo">
+                        <img src="./img/general_member/貓_頭貼.png" alt="">
+                    </div>
+                    <i class="fas fa-camera"></i>
+                </div>
+
+                <div class="m_status">
+                    <div class="identity ms_1">
+                        遊客001
+                    </div>
+                    <div class="nm_money ms_1">
+                        <img src="./img/general_member/coin.png" alt="">
+                        <div class="quantity">125,200</div>
+                    </div>
+                    <!-- <div class="m_logOut">
+                        <input type="button" value="登出" class="aLink_1 btn-cir_gr1 fs_20 ff_m">
+                    </div> -->
+                </div>
+
+                <div class="function_bar">
+                    <a href="javascript:void(0)" class="m_information aLink_1 tablink testbtn" onclick="openClass(event, 'class1')"><i class="fas fa-user"></i>會員資訊</a>
+                    <a href="javascript:void(0)" class="m_order aLink_1 tablink" onclick="openClass(event, 'class2')"><i class="fas fa-file-invoice-dollar"></i>訂單查詢</a>
+                    <a href="javascript:void(0)" class="m_account aLink_1 tablink" onclick="openClass(event, 'class3')"><i class="fas fa-piggy-bank"></i>我的帳戶</a>
+                    <a href="javascript:void(0)" class="m_news aLink_1 tablink" onclick="openClass(event, 'class4')"><i class="fas fa-bell"></i>動態消息</a>
+                    <a href="javascript:void(0)" class="m_collect aLink_1 tablink" onclick="openClass(event, 'class5')"><i class="fas fa-heart"></i>我的收藏</a>
+                </div>
+
+            </section>
+
+            <section class="left_section_mobile">
+                <div class="mo_mugShot">
+                    <div class="mo_photo">
+                        <img src="./img/general_member/貓_頭貼.png" alt="">
+                    </div>
+                    <div class="mo_status">
+                        <div class="mo_identity ms_1">
+                            遊客001
+                        </div>
+                        <div class="mo_money ms_1">
+                            <img src="./img/general_member/coin.png" alt="">
+                            <div class="quantity">125,200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="javascript:void(0)" class="mo_information aLink_1_m tablink testbtn" onclick="openClass(event, 'class1')"><i class="fas fa-user"></i>會員資訊</a>
+                <a href="javascript:void(0)" class="mo_order aLink_1_m tablink" onclick="openClass(event, 'class2')"><i class="fas fa-file-invoice-dollar"></i>訂單查詢</a>
+                <a href="javascript:void(0)" class="mo_account aLink_1_m tablink" onclick="openClass(event, 'class3')"><i class="fas fa-piggy-bank"></i>我的帳戶</a>
+                <a href="javascript:void(0)" class="mo_news aLink_1_m tablink" onclick="openClass(event, 'class4')"><i class="fas fa-bell"></i>動態消息</a>
+                <a href="javascript:void(0)" class="mo_collect aLink_1_m tablink" onclick="openClass(event, 'class5')"><i class="fas fa-heart"></i>我的收藏</a>
+
+            </section>
+
+            <section class="right_section">
+                
+                <div class="mem_information class" id="class1">
+
+                    <!-- <div class="mi_1">
+                        <div>會員資訊</div>
+                        <input type="button" value="密碼修改" class="btn-cir_gr2 fs_20 ff_m">
+                    </div> -->
+
+                    <div class="mi_2">
+                        <div class="mi_2_acc mi_2_br">
+                            <span class="mi_2_text_1">用戶帳號</span>
+                            <div class="mi_2_text_2">遊客001</div>
+                            <input type="button" value="修改" class="btn-cir_gr1 fs_20 ff_m fc_w fw_b">
+                        </div>
+
+                        <div class="mi_2_mail mi_2_br">
+                            <span class="mi_2_text_1">電子郵件</span>
+                            <div class="mi_2_text_2">user001@gmail.com</div>
+                            <input type="button" value="修改" class="btn-cir_gr1 fs_20 ff_m fc_w fw_b">
+                        </div>
+
+                        <div class="mi_2_tel mi_2_br">
+                            <span class="mi_2_text_1">連絡電話</span>
+                            <div class="mi_2_text_2">0978952188</div>
+                            <input type="button" value="修改" class="btn-cir_gr1 fs_20 ff_m fc_w fw_b">
+                        </div>
+
+                    </div>
+
+                    <div class="mi_3">
+                        <div class="mi_3_store">
+
+                            <div class="mi_3_img">
+                                <img src="./img/general_member/coin.png" alt="">
+                            </div>
+
+                            <div class="mi_3_text">
+                                <div>剩餘夜市幣</div>
+                                <div class="mi_3_money">125200</div>
+                            </div>
+
+                            <input type="button" value="儲值" class="btn-cir_pk1 fs_20 ff_m fc_w fw_b">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mem_order class" id="class2">
+
+                    <div class="right">
+                        <div class="rightOne">
+                            <ul class="rightOnebutton d-flex">
+                                <li>
+                                    <button data-target="tab1" class="btn-rect_pk2 tab -on">未領取菜單</button>
+                                </li>
+                                <li>
+                                    <button data-target="tab2" class="btn-rect_gr2 ml-1 tab">已領取菜單</button>
+                                </li>
+                                <!-- a連結 tab 測試
+                                <li>
+                                    <button class="btn-rect_pk2">
+                                        <a href="#" data-target="tab1" class="tab -on">未領取菜單</a>    
+                                    </button>
+                                    <button class="btn-rect_gr2">
+                                        <a href="#" data-target="tab2" class="tab">已領取菜單</a>    
+                                    </button>                        
+                                </li> -->
+                            </ul>
+                            <!-- order-1 -->
+                            <div class="order tab tab1 -on" id="order1">
+                                <div class="ordertop d-flex">
+                                    <div class="orderListone lh_28">
+                                        <h1>訂單編號:中壢001</h1>
+                                        <h1>店家名稱:中壢祥伯東山鴨頭</h1>
+                                    </div>
+                                    <div class="orderListtwo lh_28">
+                                        <h1>訂單日期:2020/09/02</h1>
+                                        <h1>總金額:$80</h1>
+                                    </div>
+                                    <div class="icon">                 
+                                            <!-- <i class="fas fa-angle-up fa-3x"></i> -->
+                                            <i class="fas fa-angle-down fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="orderTitle" style="display: none;">
+                                    <div class="orderlistone d-flex">
+                                        <div class="listLeft d-flex">
+                                            <p>品名</p>
+                                        </div>
+                                        <div class="listRight d-flex">
+                                            <p class="lr-1">數量</p>
+                                            <p class="lr-1">單價</p>
+                                            <p class="lr-1">總價</p>
+                                        </div>
+                                    </div>
+                                    <div class="borderOne"></div>
+                                    <div class="orderlisttwo d-flex">
+                                        <div class="listTwoleft d-flex">
+                                            <p>鴨頭</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1">2</p>
+                                            <p class="lt-1"><span>$</span>25</p>
+                                            <p class="lt-1"><span>$</span>50</p>
+                                        </div>
+                                    </div>
+                                    <div class="orderlisttwo d-flex">
+                                        <div class="listTwoleft d-flex">
+                                            <p>鴨皮</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1">2</p>
+                                            <p class="lt-1"><span>$</span>15</p>
+                                            <p class="lt-1"><span>$</span>30</p>
+                                        </div>
+                                    </div>
+                                    <div class="bordertwo"></div>
+                                    <!-- total -->
+                                    <div class="total">
+                                        <div class="listTwoleft d-flex">
+                                            <p>合計</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1 opacity">2</p>
+                                            <p class="lt-1 opacity"><span>$</span>15</p>
+                                            <p class="lt-1 "><span>$</span>80</p>
+                                        </div>
+                                    </div>                  
+                                    <div class="delorder d-flex">
+                                        <button class="btn-cir_gr2">取消訂單</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- order-2 -->
+                            <div class="order tab tab1 " id="order2">
+                                <div class="ordertop d-flex">
+                                    <div class="orderListone lh_28">
+                                        <h1>訂單編號:中壢004</h1>
+                                        <h1>店家名稱:阿弟炭烤</h1>
+                                    </div>
+                                    <div class="orderListtwo lh_28">
+                                        <h1>訂單日期:2020/09/02</h1>
+                                        <h1>總金額:$80</h1>
+                                    </div>  
+                                    <div class="icon">                 
+                                            <!-- <i class="fas fa-angle-up fa-3x"></i> -->
+                                            <i class="fas fa-angle-down fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="orderTitle" style="display: none;">
+                                    <div class="orderlistone d-flex">
+                                        <div class="listLeft d-flex">
+                                            <p>品名</p>
+                                        </div>
+                                        <div class="listRight d-flex">
+                                            <p class="lr-1">數量</p>
+                                            <p class="lr-1">單價</p>
+                                            <p class="lr-1">總價</p>
+                                        </div>
+                                    </div>
+                                    <div class="borderOne"></div>
+                                    <div class="orderlisttwo d-flex">
+                                        <div class="listTwoleft d-flex">
+                                            <p>甜不辣</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1">2</p>
+                                            <p class="lt-1"><span>$</span>20</p>
+                                            <p class="lt-1"><span>$</span>40</p>
+                                        </div>
+                                    </div>
+                                    <div class="orderlisttwo d-flex">
+                                        <div class="listTwoleft d-flex">
+                                            <p>貢丸</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1">2</p>
+                                            <p class="lt-1"><span>$</span>30</p>
+                                            <p class="lt-1"><span>$</span>60</p>
+                                        </div>
+                                    </div>
+                                    <div class="bordertwo"></div>
+                                    <!-- total -->
+                                    <div class="total">
+                                        <div class="listTwoleft d-flex">
+                                            <p>合計</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1 opacity">2</p>
+                                            <p class="lt-1 opacity"><span>$</span>15</p>
+                                            <p class="lt-1 "><span>$</span>80</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="delorder d-flex">
+                                        <button class="btn-cir_gr2">取消訂單</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- order-3 -->
+                            <div class="order tab tab1 " id="order3">
+                                <div class="ordertop d-flex">
+                                    <div class="orderListone lh_28">
+                                        <h1>訂單編號:中壢008</h1>
+                                        <h1>店家名稱:小溫豆花</h1>
+                                    </div>
+                                    <div class="orderListtwo lh_28">
+                                        <h1>訂單日期:2020/09/02</h1>
+                                        <h1>總金額:$140</h1>
+                                    </div>
+                                    <div class="icon">                 
+                                            <!-- <i class="fas fa-angle-up fa-3x"></i> -->
+                                            <i class="fas fa-angle-down fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="orderTitle" style="display: none;">
+                                    <div class="orderlistone d-flex">
+                                        <div class="listLeft d-flex">
+                                            <p>品名</p>
+                                        </div>
+                                        <div class="listRight d-flex">
+                                            <p class="lr-1">數量</p>
+                                            <p class="lr-1">單價</p>
+                                            <p class="lr-1">總價</p>
+                                        </div>
+                                    </div>
+                                    <div class="borderOne"></div>
+                                    <div class="orderlisttwo d-flex">
+                                        <div class="listTwoleft d-flex">
+                                            <p>傳統豆花</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1">2</p>
+                                            <p class="lt-1"><span>$</span>35</p>
+                                            <p class="lt-1"><span>$</span>70</p>
+                                        </div>
+                                    </div>
+                                    <div class="orderlisttwo d-flex">
+                                        <div class="listTwoleft d-flex">
+                                            <p>布丁豆花</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1">2</p>
+                                            <p class="lt-1"><span>$</span>35</p>
+                                            <p class="lt-1"><span>$</span>70</p>
+                                        </div>
+                                    </div>
+                                    <div class="bordertwo"></div>
+                                    <!-- total -->
+                                    <div class="total">
+                                        <div class="listTwoleft d-flex">
+                                            <p>合計</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1 opacity">2</p>
+                                            <p class="lt-1 opacity"><span>$</span>15</p>
+                                            <p class="lt-1 "><span>$</span>140</p>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="delorder d-flex">
+                                        <button class="btn-cir_gr2">取消訂單</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- order-4 -->
+                            <div class="order tab tab2" id="order4">
+                                <div class="ordertop d-flex">
+                                    <div class="orderListone lh_28">
+                                        <h1>訂單編號:中壢003</h1>
+                                        <h1>店家名稱:魷魚寶寶</h1>
+                                    </div>
+                                    <div class="orderListtwo lh_28">
+                                        <h1>訂單日期:2020/09/02</h1>
+                                        <h1>總金額:$100</h1>
+                                    </div>  
+                                    <div class="icon">                 
+                                            <!-- <i class="fas fa-angle-up fa-3x"></i> -->
+                                            <i class="fas fa-angle-down fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="orderTitle" style="display: none;">
+                                    <div class="orderlistone d-flex">
+                                        <div class="listLeft d-flex">
+                                            <p>品名</p>
+                                        </div>
+                                        <div class="listRight d-flex">
+                                            <p class="lr-1">數量</p>
+                                            <p class="lr-1">單價</p>
+                                            <p class="lr-1">總價</p>
+                                        </div>
+                                    </div>
+                                    <div class="borderOne"></div>
+                                    <div class="orderlisttwo d-flex">
+                                        <div class="listTwoleft d-flex">
+                                            <p>原味椒鹽魷魚</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1">2</p>
+                                            <p class="lt-1"><span>$</span>50</p>
+                                            <p class="lt-1"><span>$</span>100</p>
+                                        </div>
+                                    </div>
+                                    <div class="bordertwo"></div>
+                                    <!-- total -->
+                                    <div class="total">
+                                        <div class="listTwoleft d-flex">
+                                            <p>合計</p>
+                                        </div>
+                                        <div class="listTworight d-flex pb-2">
+                                            <p class="lt-1 opacity">2</p>
+                                            <p class="lt-1 opacity"><span>$</span>15</p>
+                                            <p class="lt-1 "><span>$</span>100  </p>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="delorder d-flex">
+                                        <button class="btn-cir_gr2">取消訂單</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mem_account class" id="class3">
+                    
+                    <div class="utnmcontanier">
+                        <div class="utnmpagetitle">
+                            <div></div>
+                            <div>
+                                <img src="./img/general_member/coin.png" class="utmn_img">
+                                <span>$125200</span>
+                                <button class="btn-cir_pk1">儲值</button>
+                            </div>
+                        </div>
+
+                        <div class="utnmtabbtns">
+                            <button data-target="utnmtab1" class="btn-rect_pk2 utnmtab utnmtab1 active">消費紀錄</button>
+                            <button data-target="utnmtab2" class="btn-rect_pk2 utnmtab utnmtab2">儲值紀錄</button>
+                        </div>
+
+                        <div class="utnmtabctrl">
+                            <div class="utnmtab utnmtab1 active">
+                                <table>
+                                <tr><th>訂單日期</th><th>訂單編號</th><th>消費金額</th></tr>
+                                </table>
+                                <table>
+                                <tr><td>2020/08/04</td><td>1524535</td><td>$500</td></tr>
+                                <tr><td>2020/08/04</td><td>1524535</td><td>$500</td></tr>
+                                <tr><td>2020/08/04</td><td>1524535</td><td>$500</td></tr>
+                                <tr><td>2020/08/04</td><td>1524535</td><td>$500</td></tr>
+                                </table>
+                            </div>
+                            <div class="utnmtab utnmtab2">
+                                <table>
+                                <tr><th>儲值日期</th><th>訂單編號</th><th>消費金額</th></tr>
+                                </table>
+                                <table>
+                                <tr><td>2020/08/04</td><td>125525</td><td>+$200</td></tr>
+                                <tr><td>2020/08/04</td><td>125525</td><td>+$200</td></tr>
+                                <tr><td>2020/08/04</td><td>125525</td><td>+$200</td></tr>
+                                <tr><td>2020/08/04</td><td>125525</td><td>+$200</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mem_news class" id="class4">
+
+                    <div class="mn_title">
+                        <div class="mn_subTitle_2 color_mn">
+                            共有<div class="mnS_count">7</div>則通知
+                        </div>
+
+                        <input type="button" value="全選" class="mn_checkBox_1 btn-cir_gr1 ff_m fc_w fw_b" id="check_all">
+                        <button class="btn-cir_pk2 ff_m del_all_button" id="del">刪除通知</button>
+                    </div>
+
+                    <div class="mn_div" id="mnDiv">
+                        <!-- 這邊需要特別注意，資料輸入時，需要依序給每筆區塊最底層input_id、value，label_id不同的數字 -->
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_1" class="read_input delete" value="1"><label for="read_1" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_2" class="read_input delete" value="2"><label for="read_2" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_3" class="read_input delete" value="3"><label for="read_3" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_4" class="read_input delete" value="4"><label for="read_4" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_5" class="read_input delete" value="5"><label for="read_5" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_6" class="read_input delete" value="6"><label for="read_6" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_7" class="read_input delete" value="7"><label for="read_7" class="read_label">已讀</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <div class="mem_collect class" id="class5">
+
+                    <div class="mc_title">
+
+                        <!-- <div class="mc_subTitle_1 font_mc">
+                            收藏店家
+                        </div> -->
+
+                        <div class="mc_subTitle_2 color_mc">
+                            已收藏了<div class="mnS_count">12</div>間店家
+                        </div>
+
+                    </div>
+
+                    <div class="mc_div">
+                        <div class="mc_div_in" id="mcDivIn">
+                            <div class="collect_div">
+                                <div class="collect_photo">
+                                    <img src="./img/shop_card/card_img_01.jpg" alt="">
+                                </div>
+                                <div class="collect_detail">
+                                    <div class="mc_cd_title">娘娘雞排</div>
+                                    <div class="mc_score">4.8/5&nbsp;(125)</div>
+                                    <div class="mc_star">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <input type="button" value="店家資訊" class="cd_input btn-cir_pk2 ff_m">
+                                    <input type="button" value="取消收藏" class="cd_input_2 btn-cir_gr2 ff_m">
+                                </div>
+                            </div>
+                            <div class="collect_div">
+                                <div class="collect_photo">
+                                    <img src="./img/shop_card/card_img_01.jpg" alt="">
+                                </div>
+                                <div class="collect_detail">
+                                    <div class="mc_cd_title">娘娘雞排</div>
+                                    <div class="mc_score">4.8/5&nbsp;(125)</div>
+                                    <div class="mc_star">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <input type="button" value="店家資訊" class="cd_input btn-cir_pk2 ff_m">
+                                    <input type="button" value="取消收藏" class="cd_input_2 btn-cir_gr2 ff_m">
+                                </div>
+                            </div>
+                            <div class="collect_div">
+                                <div class="collect_photo">
+                                    <img src="./img/shop_card/card_img_01.jpg" alt="">
+                                </div>
+                                <div class="collect_detail">
+                                    <div class="mc_cd_title">娘娘雞排</div>
+                                    <div class="mc_score">4.8/5&nbsp;(125)</div>
+                                    <div class="mc_star">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <input type="button" value="店家資訊" class="cd_input btn-cir_pk2 ff_m">
+                                    <input type="button" value="取消收藏" class="cd_input_2 btn-cir_gr2 ff_m">
+                                </div>
+                            </div>
+                            <div class="collect_div">
+                                <div class="collect_photo">
+                                    <img src="./img/shop_card/card_img_01.jpg" alt="">
+                                </div>
+                                <div class="collect_detail">
+                                    <div class="mc_cd_title">娘娘雞排</div>
+                                    <div class="mc_score">4.8/5&nbsp;(125)</div>
+                                    <div class="mc_star">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <input type="button" value="店家資訊" class="cd_input btn-cir_pk2 ff_m">
+                                    <input type="button" value="取消收藏" class="cd_input_2 btn-cir_gr2 ff_m">
+                                </div>
+                            </div>
+                            <div class="collect_div">
+                                <div class="collect_photo">
+                                    <img src="./img/shop_card/card_img_01.jpg" alt="">
+                                </div>
+                                <div class="collect_detail">
+                                    <div class="mc_cd_title">娘娘雞排</div>
+                                    <div class="mc_score">4.8/5&nbsp;(125)</div>
+                                    <div class="mc_star">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <input type="button" value="店家資訊" class="cd_input btn-cir_pk2 ff_m">
+                                    <input type="button" value="取消收藏" class="cd_input_2 btn-cir_gr2 ff_m">
+                                </div>
+                            </div>
+                            <div class="collect_div">
+                                <div class="collect_photo">
+                                    <img src="./img/shop_card/card_img_01.jpg" alt="">
+                                </div>
+                                <div class="collect_detail">
+                                    <div class="mc_cd_title">娘娘雞排</div>
+                                    <div class="mc_score">4.8/5&nbsp;(125)</div>
+                                    <div class="mc_star">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <input type="button" value="店家資訊" class="cd_input btn-cir_pk2 ff_m">
+                                    <input type="button" value="取消收藏" class="cd_input_2 btn-cir_gr2 ff_m">
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
+        <script src="./js/general_member_main.js"></script>
+    </body>
+</html>

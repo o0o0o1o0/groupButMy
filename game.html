@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夜市遊戲</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> -->
+    <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./path/css/fontawesome.min.css">
+</head>
+<body id="game">
+    <!-- 🟡複製下方即可 -->
+    <div class="navmenu">
+        <div class="wrap">
+          <div class="logo">
+            <div class="img">
+              <a href="./home.html"><img src="./img/layout/logo.png"></a>
+            </div>
+          </div>
+          <div>
+            <ul class="navlist">
+              <li><a href="./book.html">食玩圖鑑</a></li>
+              <li><a href="./guide.html">食玩指南</a></li>
+              <li><a href="./game.html">食尚玩家</a></li>
+              <li><a href="./ad.html">夜市新鮮事</a></li>
+              <li><a href="./create.html">創建指南</a></li>
+              </ul>
+              <div class="rIcon">
+                <button class="hamburger hamburger--squeeze" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+                <!--<a href=""class="hamburger"><i class="fas fa-bars bar-open"></i></a>-->
+                <a href="./loginup.html"class="user"><i class="fas fa-user"></i></a>
+                <a href="./cart.html"class="cart"><i class="fas fa-shopping-cart"></i></a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
+      <script>
+      let winW = parseInt($(window).width()+17);//scrollbar 寬17px
+      let winH = parseInt($(window).height());
+      let winST = parseInt($(window).scrollTop())
+      console.log(winH,winW,winST)
+    //每次resize 就把漢堡下拉選單關掉
+      $(window).resize(function(){
+        winW = parseInt($(window).width()+17);  
+        winST = parseInt($(window).scrollTop())
+        if(winW>1200){
+          $('.navmenu .wrap div').eq(2).find('ul').css('height','70px')
+          $('.navmenu .wrap div').eq(2).find('ul').css({'display':'flex'});
+        }else if(winW<=1200){
+          $('.navmenu .wrap div').eq(2).find('ul').css('height','');
+          $('.navmenu .wrap div').eq(2).find('ul').slideUp();
+          $('.hamburger').removeClass('is-active')
+        }
+      })
+      
+      //導覽列加陰影
+      $(document).scroll(function(){
+        winST = parseInt($(window).scrollTop())
+        if( winST > 0){                         //scroll > 80
+          $('.navmenu').addClass('letmeout')     //陰影
+        }else{                               //scroll <= 80 
+          $('.navmenu').removeClass('letmeout') //去除陰影
+        }
+      })
+  
+      // 導覽列漢堡、下拉選單切換
+      $(".hamburger").click(function(){
+        $(this).toggleClass("is-active");
+        if($('.hamburger').hasClass('is-active')){
+          $('.navmenu .wrap div').eq(2).find('ul').css('height','calc(100vh - 70px)')
+          $('.navmenu .wrap div').eq(2).find('ul').slideDown();
+        }else{
+          $('.navmenu .wrap div').eq(2).find('ul').css('height','')
+          $('.navmenu .wrap div').eq(2).find('ul').slideUp();
+        }
+      });
+      </script>
+    <!-- 複製上方即可 -->
+    
+    <div class="warpOne">
+        <div class="stick">
+            <img class="stickPhoto" src="./img/game/stick.png" alt="">
+        </div>
+        <main class="main">
+            <div class="photoTitle d-flex justify-content-center">
+                <img class="photo" src="./img/game/無尾熊.png" alt="">
+                <img class="photo" src="./img/game/豬.png" alt="">
+                <img class="photo" src="./img/game/狗.png" alt="">
+                <img class="photo" src="./img/game/熊貓.png" alt="">
+                <img class="photo" src="./img/game/熊.png" alt="">
+                <img class="photo" src="./img/game/青蛙.png" alt="">
+                <img class="photo" src="./img/game/老虎.png" alt="">
+                <img class="photo" src="./img/game/熊貓.png" alt="">
+            </div>
+            <div class="fraction d-flex">
+                <div class="Score">
+                    <p class="status">總分:0</p>
+                </div>
+                <div class="numberOftimes">
+                    <p class="numberOftimesList">剩餘次數:7</p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="row">
+                    <div class="Turntable">
+                        <div class="ballOne"><img src="./img/game/氣球- 黃.png" alt=""></div>
+                        <div class="ballTwo"><img src="./img/game/氣球- 紅.png" alt=""></div>
+                        <div class="ballThree"><img src="./img/game/氣球-藍.png" alt=""></div>
+                        <div class="ballFour"><img src="./img/game/氣球- 橘.png" alt=""></div>
+                    </div>
+                    <div class="TurntableTwo">
+                        <div class="ballfive"><img src="./img/game/氣球-藍.png" alt=""></div>
+                        <div class="ballsix"><img src="./img/game/氣球- 橘.png" alt=""></div>
+                        <div class="ballseven"><img src="./img/game/氣球- 黃.png" alt=""></div>
+                        <div class="ballEight"><img src="./img/game/氣球- 紅.png" alt=""></ </div>
+                        </div>
+                    </div>
+                    <div class="boss">
+                        <img class="bossPhoto" src="./img/game/boss.png">
+                    </div>
+                </div>
+        </main>
+
+        <div class="stall">
+            <!-- <img src="./image/攤位.png" alt=""> -->
+        </div>
+        <!-- 燈箱效果 -->
+        <div class="overlay">
+            <article>
+                <h1>遊戲說明</h1>
+                <p>擊破1顆氣球得1分，共有七次機會</p>
+                <button type="button" class="btn_modal_close btn-rect_pk2">遊戲開始</button>
+            </article>
+        </div>
+    </div>
+      <!-- 燈箱遊戲結束 -->
+    <div class="gameOver">
+        <div class="gameOvertext">
+            <h1>GameOver</h1>
+            <button type="button" class="index btn-rect_pk2">
+                <a href="./home.html">回首頁</a>
+            </button>
+            <button type="button" class="gameOverbutton btn-rect_pk2">再玩一次</button>
+        </div>
+    </div>
+    <script src="./js/game.js"></script>
+</body>
+
+</html>

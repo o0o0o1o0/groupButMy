@@ -165,9 +165,9 @@
 }
 
 //套用
-.card_map-btn{
-  @include card_map-btn;
-}
+// .card_map-btn{
+//   @include card_map-btn;
+// }
 .card_menu-btn{
   @include card-btn(#134f6c,80px);
   &:hover{
