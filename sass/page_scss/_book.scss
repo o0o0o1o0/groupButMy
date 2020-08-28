@@ -9,22 +9,21 @@ body{
   //卡片動態效果
   .card_ani{
     width: 100%;
-    height: calc(100vh - 70px);
-    background-image: url("../img/book/road.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; 
+    height: 400px;
+    img{
+      max-width: 100%;
+    }
   }
 
   .container{
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    // padding: 0 20px;
     //搜尋吧下拉
     .book_slide{
       position: relative;
+      transform: translateY(100px);
+      margin-bottom: 130px;
       .bk_slide_link{
         position: absolute;
         left: 50%;
@@ -69,16 +68,13 @@ body{
       }
     }
 
-    //搜尋列表
+    //搜尋列表 
     .search_book{
-      .sea_book_filter{
-        margin-top: 20px;
-        max-width: 1200px;
-        width: 100%;
+      .book_filter{
         background-color: $white-color;
-        border-radius: 8px;
         color: $text-color-4;
-        font-size: 18px;
+        font-size: 17px;
+        margin-top: 30px;
         .filter_list{
           .filter_item{
             display: flex;
@@ -94,16 +90,20 @@ body{
               padding-left: 20px;
               ul{
                 display: flex;
+                .filter_weak_warp{
+                  display: flex;
+                }
                 .filter_select{
-                  padding: 6px 10px;
+                  padding: 6px 6px;
                   margin: 2px 5px;
                   cursor: pointer;
                   &:hover{
+                    color: $text-color-3;
                     background-color: $bg-color-1;
                     border-radius: 3px;
                   }
                 }
-                #part_filter{
+                .part_filter{
                   color: $white-color;
                   background-color: $bg-color-2;
                   border-radius: 3px;
@@ -113,21 +113,66 @@ body{
           }
         }
       }
-      .sea_book_list{
+      .book_list{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        &::after{
+          content: '';
+          display: block;
+          width: 31.5%;
+          height: 0;
+        }
+        #shop_card{
+          width: 32%;
+          .card_img_2{
+            height: 220px;
+            overflow: hidden;
+            img{
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    //頁碼
+    .page{
+      margin-top: 40px;
+      .page_list{
+        display: flex;
+        justify-content: center;
+        a{
+          display: block;
+          font-size: 16px;
+          color: $white-color;
+          background-color: #254151;
+          border-radius: 5px;
+          padding: 10px 15px;
+          margin: 0 10px;
+          text-decoration: none;
+          &:hover{
+            color: #254151;
+            background-color: #ddd;
+            transition: ease-out .4s;
+          }
+        }
+        a.page-current{
+            background-color: #aaa;
+          }
       }
     }
   }
 
   @media screen and (max-width:1200px){
-    .book_slide{
+    .book_slide,.search_book{
       padding: 0 20px;
     }
-    .search_book{
-      padding: 0 20px;
+    .sea_book_list{
+      display: flex;
+      flex-wrap: wrap;
     }
-    #shop_card{
+    .shop_card{
       width: 32%;
       .card_img_2{
         img{
@@ -141,31 +186,55 @@ body{
       display: flex;
       flex-wrap: wrap;
     }
-    #shop_card{
-      width: 48.5%;
-      .card_img_2{
-        img{
-          height: 250px;
+    .search_book{
+      .book_contents{
+        .book_list{
+          .shop_card{
+            width: 48.5%;
+          }
         }
       }
     }
   }
   @media screen and (max-width:768px){
-    #shop_card{
-      width: 48.5%;
-      .card_img_2{
-        img{
-          height: 190px;
+    .filter_weak{
+      display: flex;
+      flex-direction: column;
+    }
+    .search_book{
+      .book_contents{
+        .book_list{
+          .shop_card{
+            width: 48.5%;
+            .card_img_2{
+              height: 200px;
+              overflow: hidden;
+              img{
+                height: auto;
+              }
+            }
+          }
         }
       }
     }
   }
   @media screen and (max-width:576px){
-    #shop_card{
-      width: 100%;
-      .card_img_2{
-        img{
-          height: 250px;
+    .filter_list{
+      font-size: 15px;
+    }
+    .search_book{
+      .book_contents{
+        .book_list{
+          .shop_card{
+            width: 100%;
+            .card_img_2{
+              height: 230px;
+              overflow: hidden;
+              img{
+                height: auto;
+              }
+            }
+          }
         }
       }
     }

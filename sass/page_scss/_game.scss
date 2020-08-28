@@ -1,0 +1,288 @@
+#game{
+    *{
+        box-sizing: border-box;
+    }
+    img {
+        max-width: 100%;
+    }
+    h1 {
+        font-size: $font-size-1;
+        }
+    cursor: url(../img/game/001.ico),auto;
+    .warpOne{
+        margin-top: 100px;
+        .stick {
+            width: 1400px;
+            margin: 0 auto;
+            .stickPhoto {
+                width: 1400px;
+            }
+        }
+        .main {
+            background-image: url(../img/game/F2F2F2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 70px;
+            width: 1200px;
+            z-index: 10;
+            position: relative;
+            margin-top: -40px;
+            margin: 0 auto;
+            .photoTitle {
+                width: 1200px;
+                margin-top: -40px;
+                .photo{
+                    // max-width:225px;
+                    //動物圖片跑版
+                    max-height:135px;
+                }
+            }
+            .fraction {
+                display: flex;
+                justify-content: space-around;
+                margin: 30px;
+                .Score {
+                    color:red;
+                    font-size: 24px;
+                }
+                .numberOftimes{
+                    color:red;
+                    font-size: 24px;
+                }
+            }
+            //氣球
+            .section {
+                width: 1200px;
+                margin: 0 auto;
+                
+                .row{
+                    display: flex;
+                    justify-content: space-around;
+                    .Turntable{
+                        transform: rotate(360deg);
+                        animation: turn 2.5s linear infinite;               
+                        border-radius:100%;
+                        width: 300px;
+                        // height: 300px;
+                        background-color: rgb(72, 126, 207);
+                        position: relative;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 140px;
+                            left: 140px;
+                            border-radius:100%;
+                            background-color: rgb(155, 147, 32);
+                            width: 20px;
+                            height: 20px;
+                            z-index: 10;
+                        }
+                        .ballOne{
+                            width: 80px;
+                            position: absolute;
+                            top: 10px;
+                            left: 110px;
+                        }
+                        .ballTwo{
+                            width: 80px;
+                            position: absolute;
+                            top: 100px;
+                            left: 25px;
+                            transform: rotate(-90deg);
+                        }
+                        .ballThree{
+                            width: 80px;
+                            position: absolute;
+                            bottom: 10px;
+                            left: 110px;
+                            transform: rotate(180deg);
+                        }
+                        .ballFour{
+                            width: 80px;
+                            position: absolute;
+                            top: 100px;
+                            right: 25px;
+                            transform: rotate(90deg);
+                        }
+                    }
+                    .TurntableTwo{
+                        transform: rotate(360deg);
+                        animation: turnTwo 2.5s linear infinite;               
+                        border-radius:100%;
+                        width: 300px;
+                        height: 300px;
+                        background-color: rgb(72, 126, 207);
+                        position: relative;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 140px;
+                            left: 140px;
+                            border-radius:100%;
+                            background-color: rgb(155, 147, 32);
+                            width: 20px;
+                            height: 20px;
+                            z-index: 10;   
+                        }
+                        .ballfive{
+                            width: 80px;
+                            position: absolute;
+                            top: 10px;
+                            left: 110px;
+                        }
+                        .ballsix{
+                            width: 80px;
+                            position: absolute;
+                            top: 100px;
+                            left: 25px;
+                            transform: rotate(-90deg);
+                        }
+                        .ballseven{
+                            width: 80px;
+                            position: absolute;
+                            bottom: 10px;
+                            left: 110px;
+                            transform: rotate(180deg);
+                        }
+                        .ballEight{
+                            width: 80px;
+                            position: absolute;
+                            top: 100px;
+                            right: 25px;
+                            transform: rotate(90deg);
+                        }
+                     
+                    }
+                }
+            }
+        }
+        .stall {
+            width: 1300px;
+            height: 250px;
+            background-image: url(../img/game/攤位.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            z-index: -10;
+        }
+        .boss {
+            position: absolute;
+            bottom: 0px;
+            left: -600px;
+            transform:  translateX(0) translateY(0) translateZ(0);
+            animation: run 3s linear infinite;
+            z-index: 100;
+            /* animation-delay: 3s; */
+            .bossPhoto {
+                width: 400px;
+                display: block;
+            }
+        }
+    }
+    //遊戲說明
+      .overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: hsla(0, 0%, 0%, .5);
+        /* 預設：完全透明；設定 z-index: -1 會在整個頁面的後方，看不到，才不會擋到頁面元素。 */
+        opacity: 1;
+        z-index: 100;
+        transition: opacity 1s;
+        // button{
+        //     cursor: pointer;
+        //   }
+        }
+       /* 元素 article 置中及基本樣式 */
+       article{
+            background-color: $bg-color-1;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            height: 200px;
+        // h1 {
+        //     line-height: 40px;
+        // }
+        // p {
+        //     line-height: 50px;
+        // }
+        h1 {
+            margin-top: 30px;
+        }
+        p {
+            margin-top: 30px;
+        }
+        button {
+            margin-top: 30px;
+        }
+    }
+      //遊戲結束
+      .gameOver {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        background-color:hsla(0, 0%, 0%, .5);
+        opacity: 1;
+        z-index: 100;
+        .gameOvertext{
+            background-color: $bg-color-1;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            height: 200px;
+            h1 {
+                line-height: 50px;
+                color: $text-color-1;
+                margin-top: 30px;            }
+            p {
+                margin-top: 30px;
+            }
+            button  {
+                margin-top: 30px;
+                    a {
+                        text-decoration:none;
+                        color: #f7f7f7;
+                        &:hover{
+                            color: #FF6B6B;
+                        }
+                    }
+                }
+            }
+        }     
+    @keyframes turn{
+        from {transform: rotate(0deg);}
+        to  {transform: rotate(360deg);}
+    }
+    @keyframes turnTwo{
+        from {transform: rotate(360deg);}
+        to  {transform: rotate(0deg);}
+    }
+    @keyframes run{ 
+       0%{
+        transform: translateX(0%);
+       } 
+       50%{
+        transform: translateX(50%);
+       }
+       100%{
+        transform: translateX(400%);
+       }
+    }
+}

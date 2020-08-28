@@ -7,28 +7,25 @@
 
 //mixin
 @import "./mixins/mixin";
+@import "./mixins/flex";
 
 //layout
 @import "./layout/layout";
 
-//bootstrap
-// @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
 //page
 @import "./page_scss/index";
+@import "./page_scss/welcome";
 @import "./page_scss/assign";
 @import "./page_scss/book";
 @import "./page_scss/guide";
 @import "./page_scss/create";
-@import "./page_scss/game";
-@import "./page_scss/ad"; 
+@import "./page_scss/ad";
+@import "./page_scss/game"; 
 @import "./page_scss/cart";
 @import "./page_scss/slide_cart";
-@import "./page_scss/general_member";
-@import "./page_scss/vendor_member";
-@import "./page_scss/vendor_member_2";
 @import "./page_scss/shop_menu";
-//index的第一屏..
-@import "./page_scss/slider"; 
-@import "./page_scss/store_money"; 
-@import "./page_scss/_cart_final"; 
+@import "./page_scss/vendor_member_main";
+@import "./page_scss/general_member_main";
+@import "./page_scss/admin";
+@import "./page_scss/loginup";
+@import "./page_scss/cart_final";

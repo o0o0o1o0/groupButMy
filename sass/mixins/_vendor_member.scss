@@ -5,57 +5,36 @@
 }
 
 @mixin list_style() {
-    width: 95%;
+    width: 90%;
     border-radius: 5px;
 }
   
 // color
-$main_color: #11245E;
-$font_color: #ffffff;
 $money_color: #ffc145;
-$bg_color: #E6E6E6;
-$btn_color: #80ebeb;
+$admin_color: #0a2463;//#f28482
+$admin_th: #333533;
+$admin_on: #384E97;
 
-$center: 0 auto;
 
 //font
 $text: 微軟正黑體;
 $title: 華康雅宋體;
 
-$h1: 40px;
-$h2: 32px;
-$h3: 28px;
-$h4: 22px;
-$h5: 20px;
-// index_stand
+
+//帳號資訊
 $aside_width1: 80%;
 $aside_width2: 60%;
 $aside_width3: 30%;
 
+$center: 0 auto;
 $center2: 20px auto;
 $center3: 15px auto;
+$center4: 30px auto;
+$center5: 10px auto;
 
-$padding1: 20px;
+
+$padding1: 10px;
+$padding2: 20px;
 
 $title_width: 120px;
 $content_width: 300px;
-
-//btn
-@mixin btn($w,$bgc,$rad){
-    font-size: 18px;
-    color: #fff;
-    background-color: $bgc;
-    border: 1.5px solid transparent;
-    width: $w;
-    height: 35px;
-    // line-height: 35px;
-    text-align: center;
-    border-radius: $rad;
-    cursor: pointer;
-    &:hover{
-      background-color: transparent;
-      border: 1.5px solid $bgc;
-      color: $bgc;
-      transition: ease-out 0.3s;
-    }
-}

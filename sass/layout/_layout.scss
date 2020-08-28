@@ -124,16 +124,15 @@
   background-color: $white-color;//lightblue
   .wrap{
     width: 100%;
-    // max-width: 1200px;
-    // margin: auto;
+    margin: auto;
     @include flexrow(space-between, );
     .logo{                        //左側欄
       @include flexrow();
       color: $text-color-3;
       text-align: center;
       .img{
-        padding: 20px;
-        height: 70px;
+        padding: 0 20px;
+        height: 50px;
         img{
           height: 100%; 
           object-fit: cover;
@@ -269,7 +268,7 @@
 
 html,body{
   position: relative;
-  height: 100%;
+  // height: 100%;
 }
 .footer{
   // z-index: -1;
@@ -287,6 +286,6 @@ html,body{
     line-height: 50px;
     margin: 0 auto;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
   }
 }

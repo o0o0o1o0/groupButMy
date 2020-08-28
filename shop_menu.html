@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>菜單詳情</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
+
+    <!-- Vue.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+
+    <!-- Google map API -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+
+
+    <!-- Google map API:顯示攤商所在位置 -->
+    <script src="./js/vendor_position.js"></script>
+
+    <!-- shop_menu本頁JS -->
+    <script src="./js/shop_menu.js"></script>
+
+    <link rel="stylesheet" href="./path/css/fontawesome.min.css">
+</head>
+
+<body>
+      <!-- 🟡複製下方即可 -->
+      <div class="navmenu">
+        <div class="wrap">
+          <div class="logo">
+            <div class="img">
+              <a href="./home.html"><img src="./img/layout/logo.png"></a>
+            </div>
+          </div>
+          <div>
+            <ul class="navlist">
+              <li><a href="./book.html">食玩圖鑑</a></li>
+              <li><a href="./guide.html">食玩指南</a></li>
+              <li><a href="./game.html">食尚玩家</a></li>
+              <li><a href="./ad.html">夜市新鮮事</a></li>
+              <li><a href="./create.html">創建指南</a></li>
+              </ul>
+              <div class="rIcon">
+                <button class="hamburger hamburger--squeeze" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+                <!--<a href=""class="hamburger"><i class="fas fa-bars bar-open"></i></a>-->
+                <a href="./loginup.html"class="user"><i class="fas fa-user"></i></a>
+                <a href="./cart.html"class="cart"><i class="fas fa-shopping-cart"></i></a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
+      <script>
+      let winH = $(window).height();
+      let winW = $(window).width();
+    //每次resize 就把漢堡下拉選單關掉
+      $(window).resize(function(){
+        winW = $(window).width();  //把resize 的值帶進去
+        if(winW>1200){
+          $('.navmenu .wrap div').eq(2).find('ul').css('height','70px')
+          $('.navmenu .wrap div').eq(2).find('ul').css({'display':'flex'});
+        }else if(winW<=1200){
+          $('.navmenu .wrap div').eq(2).find('ul').css('height','0px');
+          $('.navmenu .wrap div').eq(2).find('ul').slideUp();
+          $('.hamburger').removeClass('is-active')
+        }
+      })
+      
+      //導覽列加陰影
+      $(document).scroll(function(){
+        let wt = parseInt($(window).scrollTop())
+        if( wt > 80){                         //scroll > 80
+          $('.navmenu').addClass('letmeout')     //陰影
+        }else{                               //scroll <= 80 
+          $('.navmenu').removeClass('letmeout') //去除陰影
+        }
+      })
+  
+      // 導覽列漢堡、下拉選單切換
+      $(".hamburger").click(function(){
+        $(this).toggleClass("is-active");
+        if($('.hamburger').hasClass('is-active')){
+          $('.navmenu .wrap div').eq(2).find('ul').css('height','calc(100vh - 70px)')
+          $('.navmenu .wrap div').eq(2).find('ul').slideDown();
+        }else{
+          $('.navmenu .wrap div').eq(2).find('ul').css('height','')
+          $('.navmenu .wrap div').eq(2).find('ul').slideUp();
+        }
+      });
+      </script>
+    <!-- 🟡複製上方即可 -->
+
+    <!-- google map 燈箱 -->
+    <div class="map_lightBox">
+        <div class="map_frame">
+            <div id="map">
+                <div class="lat" style="display:none">24.959331</div>
+                <div class="lon" style="display:none">121.214998</div>
+            </div>
+            <div class="close_map">
+                <button type="button" class="btn-rect_bl2" id="close_map_btn">關閉地圖</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 寫評論 燈箱 -->
+    <div class="write_comment_lightbox">
+        <div class="frame">
+            <div class="title">撰寫您的評價</div>
+            <div class="cancel" id="canel_comment">
+                <i class="far fa-times-circle"></i> <!-- x 取消icon -->
+            </div>
+            <form action="#.php" method="GET" id="form_comment">
+                <div class="content">
+                    <div class="member_photo">
+                        <img src="./img/shop_menu/貓_頭貼.png" alt="會員大頭貼">
+                    </div>
+                    <input type="hidden" name="mem_id" class="member"><span class="mem_id">會員001</span>
+                    <div class="comment_star">
+                        <span>評分</span>
+                        <button type="button"><i class="far fa-star" id="star01"></i></button>
+                        <button type="button"><i class="far fa-star" id="star02"></i></button>
+                        <button type="button"><i class="far fa-star" id="star03"></i></button>
+                        <button type="button"><i class="far fa-star" id="star04"></i></button>
+                        <button type="button"><i class="far fa-star" id="star05"></i></button>
+                        <input type="hidden" name="vendor_est" id="comment_star">
+                    </div>
+                    <div class="comment">
+                        <textarea style="resize:none;" name="" id="textarea" cols="32" rows="10" placeholder="詳細說明你在這個地點親身體驗"></textarea>
+                    </div>
+                    <div class="comment-btn-frame">
+                        <button type="submit" class="btn-rect_bl2" id="comment_submit">發佈評價</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 檢舉評論 燈箱 -->
+    <div id="judge_comment_lightbox">
+        <div class="judge_comment_content">
+            <div class="title">檢舉評論</div>
+            <form action="#.php" method="GET" id="judge_comment">
+                <input type="hidden" name="sto_eva_no" id="sto_eva_no"> <!-- 抓取評價的編號用 -->
+                <div class="report_comment_content">
+                    <button type="button" class="report_comment_content-1" id="judge_selection_01">色情/暴力等不雅內容</button>
+                    <button type="button" class="report_comment_content-2" id="judge_selection_02">辱罵他人文字</button>
+                    <button type="button" class="report_comment_content-3" id="judge_selection_03">其他違規事項</button>
+                    <input type="hidden" name="evaluation_accuse" id="judge_comment_code"> <!-- 抓取檢舉的類別用 -->
+                </div>
+                <div class="funtion_btn">
+                    <button type="submit" class="send-btn" id="judge_submit" onclick="return false">送出</button>
+                    <button type="button" class="return-btn">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- 側邊購物車 -->
+    <div class="cart_frame">
+        <form action="#.php" method="GET">
+            <div class="my_order">我的訂單</div>
+            <div class="shopping_list_frame">
+                <!-- <div class="shopping_list">
+                    <input type="hidden" name="vendor_id">
+                    <input type="hidden" name="" value="">
+                    <span class="shop_name">潶溏茶飲</span>
+                    <div class="cancel_shop">
+                        <button type="button" class="cancel_shop_btn">刪除</button>
+                    </div>
+                    <div class="shopping_items">
+                        <div class="shopping">
+                            <div class="item_name">綠蛙撞奶</div>
+                            <div class="item_price">NT$ <span>45</span></div>
+                        </div>
+                        <div class="count_quantity">
+                            <div class="minus">
+                                <i class="fas fa-minus-circle"></i>
+                            </div>
+                            <input type="hidden" class="buy_quantity" value="1" min="1">
+                            <span class="buy_quantity">1</span>
+                            <div class="plus">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                        </div>
+                        <div class="cancel_one_list">
+                            <i class="far fa-times-circle"></i>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="count_price">
+                <div class="total_price_text">總計金額: NT$</div>
+                <div class="total_price_number" id="total_price_number">0</div>
+            </div>
+            <div class="pay_bill">
+                <button type="submit" class="btn-rect_bl2" id="pay_bill"><a href="./cart.html">來去結帳</a></button>
+            </div>
+        </form>
+        <div class="slide_cart">
+            <i class="fas fa-cart-plus"></i>
+        </div>
+    </div>
+
+
+
+<!-- 商家菜單 -->
+    <div id="shop_menu">
+        <div id="vendor_num" style="display: none;">{{vendor_id}}</div> <!-- 從前一頁抓取攤商會員編號用 -->
+        <!-- 商家基本資料 -->
+        <div class="shop_banner">
+            <div class="shop_picture">
+                <img src="./img/shop_menu/060-shop-picture.jpg" alt="shop_banner">
+            </div>
+            <div class="shop_info">
+                <div class="shop_info_left">
+                    <div id="shop_name">{{shopName}}</div> <!-- 從$sql撈攤商名稱 -->
+                    <div class="shop_collect">
+                        <form action="#.php" method="GET">
+                            <button type="button" id="shop_collect_submit"><i class="far fa-heart"
+                                    id="shop_love"></i></button>
+                            <input type="hidden" id="shop_collect_state"> <!-- 偵測收藏攤商的狀態 -->
+                        </form>
+                    </div>
+                    <div class="shop_score">
+                        <div class="shop_score_block">
+                            <i class="fas fa-star"></i>
+                            <div class="score_num">{{score}}/5</div> <!-- 從$sql撈攤商總評分 -->
+                        </div>
+                    </div>
+                    <div class="shop_intro">{{intro}}</div> <!-- 從$sql撈攤商簡介 -->
+                </div>
+
+                <div class="shop_info_right">
+                    <button id="see_map" class="btn-cir_bl">看地圖</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 菜單細目、價格+評價內容 -->
+        <div class="shop_menu_list">
+            <div class="menu_title">商品名稱</div>
+            <div class="menu_content_frame">
+                <div class="menu_content" v-for="product in products">
+                    <div class="menu_content_left">
+                        <div class="menu_item_pic">
+                            <img :src="product.src" alt="">
+                        </div>
+                    </div>
+                    <div class="menu_content_right">
+                        <div class="product">
+                            <div class="menu_item_name">{{product.name}}</div>
+                            <div class="menu_item_pirce">NT$ <span>{{product.price}}</span></div>
+                        </div>
+                        <div class="menu_add"><i class="fas fa-plus-square add_list"></i></div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <!-- 商家評價 -->
+        <div class="shop_comment_list">
+            <div class="comment_title">商家評價</div>
+
+            <div class="write_comment">
+                <button id="write_comment_btn" class="btn-cir_bl">我要評價</button>
+            </div>
+            <div class="frame">
+                <div class="comment_frame" v-for="comm in comments">
+                    <div class="comment_no" style="display: none;">{{comm.no}}</div> <!-- 商家評價編號 -->
+                    <div class="comment_frame_left">
+                        <div class="member_photo">
+                            <img :src="comm.member_photo" alt="會員大頭貼">
+                        </div>
+                    </div>
+                    <div class="comment_frame_right">
+                        <div class="member_id">{{comm.member_id}}</div>
+                        <div class="judge_comment">
+                            <i class="fas fa-ellipsis-v"></i>
+                            <div class="judge_hint">檢舉此評論</div>
+                        </div>
+                        <div class="star">
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="comment_content">
+                            <span>{{comm.comment}}</span>
+                        </div>
+                        <button class="good-btn">
+                            <i class="far fa-thumbs-up"></i>
+                        </button>
+                        <div class="good_count">{{comm.likecount}}</div>
+                    </div>
+                </div>               
+            </div>
+        </div>
+
+        
+
+        <div id="go_top">Top</div>
+    </div>
+
+    <div class="footer">
+        <div class="wrap">© YesMan 2020 . All rights reserved.</div>
+    </div>
+
+
+    <script>
+        var vue = new Vue({
+            el: '#shop_menu',
+            data: {
+                shopName: '潶溏茶飲',
+                score: '4.8',
+                intro: '我們採用光泉鮮奶，沒有額外再加水、加糖。每顆珍珠的外圍都裹著厚厚一層的黑糖，味道濃郁，口感軟中帶Q！',
+                vendor_id: '1',
+                products: [{
+                    src: './img/shop_menu/336.jpg',
+                    name: '綠蛙撞奶',
+                    price: '45',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '黑糖鮮奶',
+                    price: '45',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '青蛙薏仁奶',
+                    price: '45',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '青蛙紅豆',
+                    price: '45',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '青蛙檸檬',
+                    price: '55',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '青蛙薏仁',
+                    price: '45',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '檸檬愛玉',
+                    price: '50',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '翡翠綠茶',
+                    price: '35',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '金喜紅茶',
+                    price: '35',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '翡翠檸檬',
+                    price: '50',         
+
+                },{
+                    src: './img/shop_menu/336.jpg',
+                    name: '冬瓜檸檬',
+                    price: '50',         
+
+                },],
+
+
+                comments:[{
+                    no:'1',
+                    member_id:'會員001',
+                    member_photo:'./img/shop_menu/貓_頭貼.png',
+                    comment:'好喝到爆炸!!此生一定要喝一次!',
+                    likecount:'55',
+
+                },{
+                    no:'11',
+                    member_id:'會員002',
+                    member_photo:'./img/shop_menu/貓_頭貼.png',
+                    comment:'讚啦!',
+                    likecount:'70',
+                },{
+                    no:'30',
+                    member_id:'會員003',
+                    member_photo:'./img/shop_menu/貓_頭貼.png',
+                    comment:'永生難忘的滋味，只有喝過的才懂！',
+                    likecount:'75',
+                }],
+
+            }
+
+
+        });
+
+       
+    </script>
+
+</body>
+
+</html>
+
+<!-- <div class="menu_content">
+    <div class="menu_content_left">
+        <div class="menu_item_pic">
+            <img src="./img/shop_menu/336.jpg" alt="">
+        </div>
+    </div>
+    <div class="menu_content_right">
+        <div class="product">
+            <div class="menu_item_name">金喜紅茶</div>
+            <div class="menu_item_pirce">NT$ <span>35</span></div>
+        </div>
+        <div class="menu_add"><i class="fas fa-plus-square add_list"></i></div>
+    </div>
+</div> -->

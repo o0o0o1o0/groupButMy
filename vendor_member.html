@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>攤商會員</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./path/css/fontawesome.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+
+    <body id="vendor_member">
+
+        <main class="">
+
+            <section class="left_section">
+
+                <div class="m_mug_shot">
+                    <div class="photo">
+                        <img src="./img/general_member/貓_頭貼.png" alt="">
+                    </div>
+                    <i class="fas fa-camera"></i>
+                </div>
+
+                <div class="m_status">
+                    <div class="identity ms_1">
+                        遊客001
+                    </div>
+                    <div class="nm_money ms_1">
+                        <img src="./img/general_member/coin.png" alt="">
+                        <div class="quantity">125,200</div>
+                    </div>
+                    <!-- <div class="m_logOut">
+                        <input type="button" value="登出" class="aLink_1 btn-cir_gr1 fs_1">
+                    </div> -->
+                </div>
+
+                <div class="function_bar">
+                    <a href="javascript:void(0)" class="m_information aLink_1 tablink testbtn" onclick="openClass(event, 'class1')"><i class="fas fa-user"></i>帳號資訊</a>
+                    <a href="javascript:void(0)" class="m_collect aLink_1 tablink" onclick="openClass(event, 'class2')"><i class="fas fa-file-invoice-dollar"></i>訂單查詢</a>
+                    <a href="javascript:void(0)" class="m_news aLink_1 tablink" onclick="openClass(event, 'class3')"><i class="fas fa-bell"></i>動態消息</a>
+                    <a href="javascript:void(0)" class="m_account aLink_1 tablink" onclick="openClass(event, 'class4')"><i class="fas fa-store-alt"></i>我的店面</a>
+                    <a href="javascript:void(0)" class="m_order aLink_1 tablink" onclick="openClass(event, 'class5')"><i class="fas fa-ad"></i>我的廣告</a>
+                    <a href="javascript:void(0)" class="m_order aLink_1 tablink" onclick="openClass(event, 'class6')"><i class="fas fa-donate"></i>我的帳戶</a>
+                </div>
+
+            </section>
+
+            <section class="left_section_mobile">
+                <div class="mo_mugShot">
+                    <div class="mo_photo">
+                        <img src="./img/general_member/貓_頭貼.png" alt="">
+                    </div>
+                    <div class="mo_status">
+                        <div class="mo_identity ms_1">
+                            遊客001
+                        </div>
+                        <div class="mo_money ms_1">
+                            <img src="./img/general_member/coin.png" alt="">
+                            <div class="quantity">125,200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="javascript:void(0)" class="mo_information aLink_1_m tablink testbtn" onclick="openClass(event, 'class1')"><i class="fas fa-user"></i>帳號資訊</a>
+                <a href="javascript:void(0)" class="mo_order aLink_1_m tablink" onclick="openClass(event, 'class2')"><i class="fas fa-file-invoice-dollar"></i>訂單查詢</a>
+                <a href="javascript:void(0)" class="mo_news aLink_1_m tablink" onclick="openClass(event, 'class3')"><i class="fas fa-bell"></i>動態消息</a>
+                <a href="javascript:void(0)" class="mo_store aLink_1_m tablink" onclick="openClass(event, 'class4')"><i class="fas fa-store-alt"></i>我的店面</a>
+                <a href="javascript:void(0)" class="mo_ad aLink_1_m tablink" onclick="openClass(event, 'class5')"><i class="fas fa-ad"></i>我的廣告</a>
+                <a href="javascript:void(0)" class="mo_account aLink_1_m tablink" onclick="openClass(event, 'class6')"><i class="fas fa-donate"></i>我的帳戶</a>
+
+            </section>
+
+            <section class="right_section">
+                
+                <div class="ven_information class" id="class1">
+                    <div class="all">
+                        <div class="item">
+                            <span class="title">會員編號</span>
+                            <span class="content">001</span>
+                        </div>
+                        <div class="item">
+                            <span class="title">帳號</span>
+                            <span class="content">chicken168</span>
+                        </div>
+                        <div class="item">
+                            <span class="title">密碼</span>
+                            <span class="content">＊＊＊＊＊＊</span>
+                            <!-- <button>修改</button> -->
+                        </div>
+                        <div class="item">
+                            <span class="title">負責人</span>
+                            <span class="content">娘娘</span>
+                        </div>
+                        <div class="item">
+                            <span class="title">聯絡電話</span>
+                            <span class="content">0912-345678</span>
+                            <!-- <button class="">修改</button> -->
+                        </div>
+                        <div class="item">
+                            <span class="title">Email</span>
+                            <span class="content">chicken@gmail.com</span>
+                            <!-- <button class="btn-cir_gr1">修改</button> -->
+                        </div>
+                        <div class="item">
+                            <span class="title">認證狀態</span>
+                            <span class="content">待認證</span>
+                        </div>
+                        <div class="btn">
+                            <input type="button" value="修改資料" name="edit" id="edit" class="btn-cir_gr2">
+                            <input type="submit" value="確認送出" name="submit" id="submit" class="btn-cir_pk2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ven_order class" id="class2">
+                    
+                    <div class="veright">
+                        <div class="verightOne">
+                            <ul class="verightOnebutton d-flex">
+                                <li><button  data-target="tab1" class="btn-rect_pk2 tab -on">未領取菜單</button></li>
+                                <li><button  data-target="tab2" class="btn-rect_gr2 ml-1 tab">已領取菜單</button></li>
+                            </ul>
+                            <!-- order-1 -->
+                            <div class="veorder tab tab1 -on" id="order1">
+                                <div class="veordertop">
+                                    <div class="veorderListone lh_28">
+                                        <h1>訂單編號:中壢001</h1>
+                                        <h1 class="op">店家名稱:中壢祥伯東山鴨頭</h1>
+                                    </div>
+                                    <div class="veorderListtwo lh_28">
+                                        <h1>訂單日期:2020/09/02</h1>
+                                        <h1>總金額:$80</h1>
+                                    </div>
+                                    <div class="veicon">                 
+                                            <!-- <i class="fas fa-angle-up fa-3x"></i> -->
+                                            <i class="fas fa-angle-down fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="veorderTitle" style="display: none;">
+                                    <div class="orderNum">
+                                        <h1><span>訂單人:</span>中壢001</h1>
+                                        <h1 class="orderTel">聯絡電話:0923-456789</h1>
+                                    </div>
+                                    <div class="veorderlistone d-flex">
+                                        <div class="velistLeft d-flex">
+                                            <p>品名</p>
+                                        </div>
+                                        <div class="velistRight d-flex">
+                                            <p class="velr-1">數量</p>
+                                            <p class="velr-1">單價</p>
+                                            <p class="velr-1">總價</p>
+                                        </div>
+                                    </div>
+                                    <div class="veborderOne"></div>
+                                    <div class="veorderlisttwo d-flex">
+                                        <div class="velistTwoleft d-flex">
+                                            <p>鴨頭</p>
+                                        </div>
+                                        <div class="velistTworight d-flex pb-2">
+                                            <p class="velt-1">2</p>
+                                            <p class="velt-1"><span>$</span>25</p>
+                                            <p class="velt-1"><span>$</span>50</p>
+                                        </div>
+                                    </div>
+                                    <div class="veorderlisttwo d-flex">
+                                        <div class="velistTwoleft d-flex">
+                                            <p>鴨皮</p>
+                                        </div>
+                                        <div class="velistTworight d-flex pb-2">
+                                            <p class="velt-1">2</p>
+                                            <p class="velt-1"><span>$</span>15</p>
+                                            <p class="velt-1"><span>$</span>30</p>
+                                        </div>
+                                    </div>
+                                    <div class="vebordertwo"></div>
+                                    <!-- total -->
+                                    <div class="vetotal">
+                                        <div class="velistTwoleft d-flex">
+                                            <p>合計</p>
+                                        </div>
+                                        <div class="velistTworight d-flex pb-2">
+                                            <p class="velt-1 opacity">2</p>
+                                            <p class="velt-1 opacity"><span>$</span>15</p>
+                                            <p class="velt-1 "><span>$</span>80</p>
+                                        </div>
+                                    </div>                  
+                                    <div class="vedelorder d-flex">
+                                        <button class="btn-cir_gr2">取消訂單</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- order-2 -->
+                            <div class="veorder tab tab1 -on" id="order2">
+                                <div class="veordertop d-flex">
+                                    <div class="veorderListone lh_28">
+                                        <h1>訂單編號:中壢004</h1>
+                                        <h1 class="op">店家名稱:阿弟炭烤</h1>
+                                    </div>
+                                    <div class="veorderListtwo lh_28">
+                                        <h1>訂單日期:2020/09/02</h1>
+                                        <h1>總金額:$80</h1>
+                                    </div>  
+                                    <div class="veicon">                 
+                                            <!-- <i class="fas fa-angle-up fa-3x"></i> -->
+                                            <i class="fas fa-angle-down fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="veorderTitle" style="display: none;">
+                                    <div class="veorderlistone d-flex">
+                                        <div class="velistLeft d-flex">
+                                            <p>品名</p>
+                                        </div>
+                                        <div class="velistRight d-flex">
+                                            <p class="velr-1">數量</p>
+                                            <p class="velr-1">單價</p>
+                                            <p class="velr-1">總價</p>
+                                        </div>
+                                    </div>
+                                    <div class="veborderOne"></div>
+                                    <div class="veorderlisttwo d-flex">
+                                        <div class="velistTwoleft d-flex">
+                                            <p>甜不辣</p>
+                                        </div>
+                                        <div class="velistTworight d-flex pb-2">
+                                            <p class="velt-1">2</p>
+                                            <p class="velt-1"><span>$</span>20</p>
+                                            <p class="velt-1"><span>$</span>40</p>
+                                        </div>
+                                    </div>
+                                    <div class="veorderlisttwo d-flex">
+                                        <div class="velistTwoleft d-flex">
+                                            <p>貢丸</p>
+                                        </div>
+                                        <div class="velistTworight d-flex pb-2">
+                                            <p class="velt-1">2</p>
+                                            <p class="velt-1"><span>$</span>30</p>
+                                            <p class="velt-1"><span>$</span>60</p>
+                                        </div>
+                                    </div>
+                                    <div class="vebordertwo"></div>
+                                    <!-- total -->
+                                    <div class="vetotal">
+                                        <div class="velistTwoleft d-flex">
+                                            <p>合計</p>
+                                        </div>
+                                        <div class="velistTworight d-flex pb-2">
+                                            <p class="velt-1 opacity">2</p>
+                                            <p class="velt-1 opacity"><span>$</span>15</p>
+                                            <p class="velt-1 "><span>$</span>80</p>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="vedelorder d-flex">
+                                        <button class="btn-cir_gr2">取消訂單</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- order-3 -->
+                            <div class="veorder tab tab1 -on" id="order3">
+                                <div class="veordertop d-flex">
+                                    <div class="veorderListone lh_28">
+                                        <h1>訂單編號:中壢008</h1>
+                                        <h1 class="op">店家名稱:小溫豆花</h1>
+                                    </div>
+                                    <div class="veorderListtwo lh_28">
+                                        <h1>訂單日期:2020/09/02</h1>
+                                        <h1>總金額:$140</h1>
+                                    </div>
+                                    <div class="veicon">                 
+                                            <!-- <i class="fas fa-angle-up fa-3x"></i> -->
+                                            <i class="fas fa-angle-down fa-3x"></i>
+                                    </div>
+                                </div>
+                                <div class="veorderTitle" style="display: none;">
+                                    <div class="veorderlistone d-flex">
+                                        <div class="velistLeft d-flex">
+                                            <p>品名</p>
+                                        </div>
+                                        <div class="velistRight d-flex">
+                                            <p class="velr-1">數量</p>
+                                            <p class="velr-1">單價</p>
+                                            <p class="velr-1">總價</p>
+                                        </div>
+                                    </div>
+                                    <div class="veborderOne"></div>
+                                    <div class="veorderlisttwo d-flex">
+                                        <div class="velistTwoleft d-flex">
+                                            <p>傳統豆花</p>
+                                        </div>
+                                        <div class="velistTworight d-flex pb-2">
+                                            <p class="velt-1">2</p>
+                                            <p class="velt-1"><span>$</span>35</p>
+                                            <p class="velt-1"><span>$</span>70</p>
+                                        </div>
+                                    </div>
+                                    <div class="veorderlisttwo d-flex">
+                                        <div class="velistTwoleft d-flex">
+                                            <p>布丁豆花</p>
+                                        </div>
+                                        <div class="velistTworight d-flex pb-2">
+                                            <p class="velt-1">2</p>
+                                            <p class="velt-1"><span>$</span>35</p>
+                                            <p class="velt-1"><span>$</span>70</p>
+                                        </div>
+                                    </div>
+                                    <div class="vebordertwo"></div>
+                                    <!-- total -->
+                                    <div class="vetotal">
+                                        <div class="velistTwoleft d-flex">
+                                            <p>合計</p>
+                                        </div>
+                                        <div class="velistTworight d-flex pb-2">
+                                            <p class="velt-1 opacity">2</p>
+                                            <p class="velt-1 opacity"><span>$</span>15</p>
+                                            <p class="velt-1 "><span>$</span>140</p>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="vedelorder d-flex">
+                                        <button class="btn-cir_gr2">取消訂單</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- order-4 -->
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ven_news class" id="class3">
+                    
+                    <div class="mn_title">
+                        <div class="mn_subTitle_2 color_mn">
+                            共有<div class="mnS_count">7</div>則通知
+                        </div>
+
+                        <input type="button" value="全選" class="mn_checkBox_1 btn-cir_gr1 ff_m fc_w fw_b" id="check_all">
+                        <button class="btn-cir_pk2 ff_m del_all_button" id="del">刪除通知</button>
+                    </div>
+
+                    <div class="mn_div" id="mnDiv">
+                        <!-- 這邊需要特別注意，資料輸入時，需要依序給每筆區塊最底層input_id、value，label_id不同的數字 -->
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_1" class="read_input delete" value="1"><label for="read_1" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_2" class="read_input delete" value="2"><label for="read_2" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_3" class="read_input delete" value="3"><label for="read_3" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_4" class="read_input delete" value="4"><label for="read_4" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_5" class="read_input delete" value="5"><label for="read_5" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_6" class="read_input delete" value="6"><label for="read_6" class="read_label">已讀</label>
+                            </div>
+                        </div>
+                        <div class="mn_div_in" id="mnDivIn">
+                            <div class="news_div">
+                                <div class="nd_img">
+                                    <img src="./img/general_member/貓_頭貼.png" alt="">
+                                </div>
+                                <div class="triangle"></div>
+                                <div class="mn_text">
+                                    <div class="mnT_title">下港明鵬臭豆腐回復你的評論：</div>
+                                    <div class="mnT_content">感謝遊客001給我們的評價，下次我們也會繼續努力</div>
+                                </div>
+                                <button class="btn-cir_gr1 ff_m del_button">刪除</button>
+                                <input type="checkbox" name="" id="read_7" class="read_input delete" value="7"><label for="read_7" class="read_label">已讀</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="ven_store class" id="class4">
+                    
+                    <div class="my_stand"><!-- 我的店家頁面 -->
+                        <!-- 店家卡區塊 -->
+                        <div class="pic_change">
+                            <img src="./img/vendor_member/ad.jpg">
+                        </div>
+                        <div class="change_photo">
+                            <label>
+                                <i class="fas fa-camera">
+                                    <input type="file">
+                                </i>
+                            </label>
+                        </div>
+                        <div class="border">
+                            <div class="store_intro">
+                                <label>攤位名稱：
+                                    <input type="text" name="store_name" id="" placeholder="攤位名稱">
+                                </label>
+                                <br>
+                                <label>攤位簡介：
+                                    <textarea name="store_intro" id="" placeholder="攤位簡介"></textarea>
+                                </label>
+                            </div>
+                            <div class="store_time">
+                                <label>營業時間：</label>
+                                <div class="time">
+                                    <input type="checkbox" name="time[]" id="sun">
+                                    <label for="sun">日</label>
+                                    <input type="checkbox" name="time[]" id="mon">
+                                    <label for="mon">一</label>
+                                    <input type="checkbox" name="time[]" id="tue">
+                                    <label for="tue">二</label>
+                                    <input type="checkbox" name="time[]" id="wed">
+                                    <label for="wed">三</label>
+                                    <input type="checkbox" name="time[]" id="thu">
+                                    <label for="thu">四</label>
+                                    <input type="checkbox" name="time[]" id="fri">
+                                    <label for="fri">五</label>
+                                    <input type="checkbox" name="time[]" id="sat">
+                                    <label for="sat">六</label>
+                                </div>      
+                            </div>
+                            <!-- 菜單修改 -->
+                            <div class="menu_all menu_grid">
+                                <label>攤商菜單：</label>
+                                <table class="container">
+                                    <thead class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <tr class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                            <th class="col-xl-2 col-lg-2 col-md-2 col-sm-2">類別</th>
+                                            <th class="col-xl-7 col-lg-7 col-md-7 col-sm-7">品名</th>
+                                            <th class="col-xl-2 col-lg-2 col-md-2 col-sm-2">單價</th>
+                                            <th class="col-xl-1 col-lg-1 col-md-1 col-sm-1"></th>
+                                        </tr>
+                                    </thead>
+                                    <tr class="col-xl-12 col-lg-12 col-md-12 col-sm-12" id="item" style="display: none;">
+                                        <td class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <select>
+                                                <option value="">炸物</option>
+                                                <option value="">滷味</option>
+                                                <option value="">烤物</option>
+                                                <option value="">其他美食</option>
+                                                <option value="">茶類</option>
+                                                <option value="">果汁類</option>
+                                                <option value="">其他飲品</option>
+                                                <option value="">遊戲</option>
+                                            </select>
+                                        </td>
+                                        <td class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
+                                            <input type="text" name="" id="food_name">
+                                        </td>
+                                        <td class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                            <input type="text" name="" id="food_price">
+                                        </td>
+                                        <td class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+                                            <i class="fas fa-times">
+                                        </td>
+                                    </tr>
+                                    <tbody class="col-xl-12 col-lg-12 col-md-12 col-sm-12 grid_575" id="menu">
+                                        <!--一列開始 -->
+                                        <tr class="col-xl-12 col-lg-12 col-md-12 col-sm-12 tr_575">
+                                            <td class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                                <select>
+                                                    <option value="">炸物</option>
+                                                    <option value="">滷味</option>
+                                                    <option value="">烤物</option>
+                                                    <option value="">其他美食</option>
+                                                    <option value="">茶類</option>
+                                                    <option value="">果汁類</option>
+                                                    <option value="">其他飲品</option>
+                                                    <option value="">遊戲</option>
+                                                </select>
+                                            </td>
+                                            <td class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
+                                                <input type="text" name="" id="food_name">
+                                            </td>
+                                            <td class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                                <input type="text" name="" id="food_price">
+                                            </td>
+                                            <td class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+                                                <i class="fas fa-times"></i>
+                                            </td>
+                                        </tr>
+                                        <!--一列結束 -->
+                                    </tbody>
+                                </table>
+                                <button class="btn-cir_gr2" id="btnNewItem">新增品項</button>
+                            </div>
+                        </div>
+                        <button class="btn-cir_pk2">確認修改</button>
+                    </div>
+
+                </div>
+
+                <div class="ven_ad class" id="class5">
+                    
+                    <div class="ad-modal">
+                        <div class="ad-form-box">
+                            <button type="button" class="close" id="close">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                            </button>
+                            <div class="ad-form-content">
+                                <div class="ad-form-header">
+                                <h4>申請建立廣告</h4>
+                                </div>
+                                <!-- form表單 -->
+                                <form action="">
+                                    <div id="last" class="ad-form-gp">
+                                    <div class="outer-container">
+                                        <div class="ad-form-input">
+                                        <label>廣告內容<span>(限制20字)</span></label>
+                                        <div class="input">
+                                            <input type="text" class="form-control" placeholder="請輸入廣告內容" required autofocus>
+                                        </div>
+                                        <label>上傳廣告圖片<span>(建議使用1:1圖像且圖檔清晰大小不超過2MB)</span></label>
+                                        <label class="text-center  image-preview-wrapper" for="file-uploader">
+                                            <img src="https://via.placeholder.com/500x170/efefef?text=UPLOAD" alt="image-placehoder" class="img-thumbnail" data-target="image-preview">
+                                            <div class="spinner-wrapper position-absolute" data-target="spinner">
+                                            <div class="spinner-border text-secondary" role="status">
+                                                <span class="sr-only">Loading...</span>
+                                            </div>
+                                            </div>
+                                        </label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" data-target="file-uploader" id="file-uploader">
+                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn-rect_bl1" onclick="next()">下一步</button>
+                                    </div>
+                                    </div>
+                                    <!-- 選擇刊登時間 -->
+                                    <div id="next" class="ad-form-gp">
+                                    <div class="ad-form-input-1">
+                                        <label class="ad-radio">選擇刊登時間</label>
+                                        <div class="ad-radio-box" id="app">
+                                        <div class="btn-group btn-group-vertical" data-toggle="buttons">
+                                            <label class="btn active">
+                                            <input type="radio" v-model="picked" value="500" style="display:none;" name='gender1' checked><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i>
+                                            <span class="ad-radio-tx">  7日 (夜市幣500)</span>
+                                            </label>
+                                            <label class="btn active">
+                                            <input type="radio" v-model="picked" value="800" style="display:none;" name='gender1'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i>
+                                            <span class="ad-radio-tx"> 15日 (夜市幣800)</span>
+                                            </label>
+                                            <label class="btn active">
+                                            <input type="radio" v-model="picked" value="1100" style="display:none;" name='gender1'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i>
+                                            <span class="ad-radio-tx"> 23日 (夜市幣1100)</span>
+                                            </label>
+                                            <label class="btn active">
+                                            <input type="radio" v-model="picked" value="1500" style="display:none;" name='gender1'><i class="fa fa-square-o fa-2x"></i><i class="fa fa-check-square-o fa-2x"></i>
+                                            <span class="ad-radio-tx"> 30日 (夜市幣1500)</span>
+                                            </label>
+                                        </div>
+                                        <div class="ad-radio-text">
+                                            <label for="">品項金額:<span>  {{ picked }}  </span>夜市幣</label><br>
+                                            <label for="">目前餘額:<span> 2000  </span>夜市幣</label>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn-rect_bl1 ad-form-submit" onclick="last()">上一步</button>
+                                        <button type="submit" class="btn-rect_bl1">確定扣款</button>
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ad-form-ok">
+                        <div class="ad-ok-box">
+                            <h4>廣告申請成功</h4>
+                            <div class="ok-icon">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <p>審核需6小時作業時間</p>
+                            <div class="ok-ft">
+                                <button type="button" class="btn-rect_pk2" id="close">回會員中心</button>
+                                <button type="button" class="btn-rect_gr2" id="close" >夜市新鮮事</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="adMgt">
+                        <div class="adMgt-1">
+                            <!-- <h2>廣告管理</h2> -->
+                            <!-- <button class="btn-rect_bl2 open">廣告申請</button> -->
+                        </div>
+                        <div class="adMgt-2">
+                            <button class="btn-rect_gr2 adtab" data-target="adtab1">未上架廣告</button>
+                            <button class="btn-rect_pk2 adtab" data-target="adtab2">已上架廣告</button>
+                        </div>
+                        <div class="ad-table">
+                            <div class="adthead">
+                                <div class="adtr">
+                                    <div class="adth">廣告編號</div>
+                                    <div class="adth">申請日期</div>
+                                    <div class="adth">到期日期</div>
+                                    <div class="adth">狀態</div>
+                                    <div class="adth">
+                                        <button class="btn-rect_bl2 open">廣告申請</button>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- 未上架 -->
+                            <div class="adbody adtab adtab1 -adon">
+                                <div class="adtr">
+                                    <div class="adth">007</div>
+                                    <div class="adth">2020/08/01</div>
+                                    <div class="adth">2020/08/15</div>
+                                    <div class="adth">審核中</div>
+                                    <div class="adth"><button class="btn-rect_bl1" id="myad">看詳細</button></div>
+                                </div>
+                                <div class="adtr">
+                                    <div class="adth">004</div>
+                                    <div class="adth">2020/07/15</div>
+                                    <div class="adth">2020/07/28</div>
+                                    <div class="adth">已下架</div>
+                                    <div class="adth"><button class="btn-rect_bl1" id="myad">看詳細</button></div>
+                                </div>
+                                <div class="adtr">
+                                    <div class="adth">003</div>
+                                    <div class="adth">2020/07/02</div>
+                                    <div class="adth">2020/07/15</div>
+                                    <div class="adth">已下架</div>
+                                    <div class="adth"><button class="btn-rect_bl1" id="myad">看詳細</button></div>
+                                </div>
+                                <div class="adtr">
+                                    <div class="adth">002</div>
+                                    <div class="adth">2020/06/25</div>
+                                    <div class="adth">2020/07/08</div>
+                                    <div class="adth">已下架</div>
+                                    <div class="adth"><button class="btn-rect_bl1" id="myad">看詳細</button></div>
+                                </div>
+                                <div class="adtr">
+                                    <div class="adth">001</div>
+                                    <div class="adth">2020/06/20</div>
+                                    <div class="adth">2020/07/05</div>
+                                    <div class="adth">已下架</div>
+                                    <div class="adth"><button class="btn-rect_bl1" id="myad">看詳細</button></div>
+                                </div>
+                            </div>
+                        <!-- 未上架END -->
+                        <!-- 已上架 -->
+                            <div class="adbody adtab adtab2">
+                                <div class="adtr">
+                                    <div class="adth">006</div>
+                                    <div class="adth">2020/07/26</div>
+                                    <div class="adth">2020/08/05</div>
+                                    <div class="adth">刊登中</div>
+                                    <div class="adth"><button class="btn-rect_bl1" id="myad">看詳細</button></div>
+                                </div>
+                                <div class="adtr">
+                                    <div class="adth">005</div>
+                                    <div class="adth">2020/07/24</div>
+                                    <div class="adth">2020/08/02</div>
+                                    <div class="adth">刊登中</div>
+                                    <div class="adth"><button class="btn-rect_bl1" id="myad">看詳細</button></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 已上架END -->
+                        <!-- 看詳細燈箱 -->
+                        <div id="myadModal" class="admodal">
+                            <span class="adclose">&times;</span>
+                            <div class="modal-content" id="img01">
+                                <div class="item">
+                                    <div class="adImg"> 
+                                        <img class="img-fluid" src="./img/ad/001.jpg" alt="">
+                                    </div>
+                                    <div class="adText">
+                                        <p>粉圓豆花買一送一</p><br>
+                                        <span>2020-08-08</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 看詳細燈箱END -->
+                    </div>
+
+                </div>
+
+                <div class="ven_account class" id="class6">
+                    <!-- <?phprequire_once('store_money.inc');require_once('navigation.inc');?> -->
+                    <div class="utvdcontanier">
+                        <div class="utvdpagetitle">
+                            <div>我的帳戶</div>
+                            <div>
+                                <img src="./img/general_member/coin.png" class="utvd_img">
+                                <span>$125200</span>
+                                <button class="btn-cir_pk1 storeMoneyOpenBtn">儲值</button>
+                            </div>
+                        </div>
+                        <div class="utvdtabbtns">
+                            <button data-target="utvdtab1" class="btn-rect_pk2 utvdtab utvdtab1 active">支出紀錄</button>
+                            <button data-target="utvdtab2" class="btn-rect_pk2 utvdtab utvdtab2">收入紀錄</button>
+                        </div>
+                        <div class="utvdtabctrl">
+                            <div class="utvdtab utvdtab1 active">
+                                <table>
+                                    <tr><th>日期</th><th>類別</th><th>金額</th></tr>
+                                </table>
+                                <table>
+                                    <tr><td>2020/08/04</td><td>廣告支出</td><td>$500</td></tr>
+                                    <tr><td>2020/08/04</td><td>提款</td><td>$500</td></tr>
+                                </table>
+                            </div>
+                            <div class="utvdtab utvdtab2">
+                                <table>
+                                    <tr><th>日期</th><th>類別</th><th>金額</th></tr>
+                                </table>
+                                <table>
+                                    <tr><td>2020/08/04</td><td>夜市幣儲值</td><td>+$200</td></tr>
+                                    <tr><td>2020/08/04</td><td>訂單收入</td><td>+$200</td></tr>
+                                    <tr><td>2020/08/04</td><td>訂單收入</td><td>+$200</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <?phprequire_once('footer.inc')?> -->
+                </div>
+
+            </section>
+            
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <script src="./js/vendor_member_main.js"></script>
+    </body>
+</html>

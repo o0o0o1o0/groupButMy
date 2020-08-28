@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./path/css/fontawesome.min.css">
+        <title>登入</title>
+      </head>
+      <body id="loginup">
+        <div class="navmenu">
+          <div class="wrap">
+            <div class="logo">
+              <div class="img">
+                <a href="./home.html"><img src="./img/layout/logo.png"></a>
+              </div>
+            </div>
+            <div>
+              <ul class="navlist">
+                <li><a href="./book.html">食玩圖鑑</a></li>
+                <li><a href="./guide.html">食玩指南</a></li>
+                <li><a href="./game.html">食尚玩家</a></li>
+                <li><a href="./ad.html">夜市新鮮事</a></li>
+                <li><a href="./create.html">創建指南</a></li>
+                </ul>
+                <div class="rIcon">
+                  <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
+                  <!--<a href=""class="hamburger"><i class="fas fa-bars bar-open"></i></a>-->
+                  <a href="./loginup.html"class="user"><i class="fas fa-user"></i></a>
+                  <a href="./cart.html"class="cart"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
+        <script>
+        let winH = $(window).height();
+        let winW = $(window).width();
+      //每次resize 就把漢堡下拉選單關掉
+        $(window).resize(function(){
+          winW = $(window).width();  //把resize 的值帶進去
+          if(winW>1200){
+            $('.navmenu .wrap div').eq(2).find('ul').css('height','70px')
+            $('.navmenu .wrap div').eq(2).find('ul').css({'display':'flex'});
+          }else if(winW<=1200){
+            $('.navmenu .wrap div').eq(2).find('ul').css('height','0px');
+            $('.navmenu .wrap div').eq(2).find('ul').slideUp();
+            $('.hamburger').removeClass('is-active')
+          }
+        })
+        
+        //導覽列加陰影
+        $(document).scroll(function(){
+          let wt = parseInt($(window).scrollTop())
+          if( wt > 80){                         //scroll > 80
+            $('.navmenu').addClass('letmeout')     //陰影
+          }else{                               //scroll <= 80 
+            $('.navmenu').removeClass('letmeout') //去除陰影
+          }
+        })
+      
+        // 導覽列漢堡、下拉選單切換
+        $(".hamburger").click(function(){
+          $(this).toggleClass("is-active");
+          if($('.hamburger').hasClass('is-active')){
+            $('.navmenu .wrap div').eq(2).find('ul').css('height','calc(100vh - 70px)')
+            $('.navmenu .wrap div').eq(2).find('ul').slideDown();
+          }else{
+            $('.navmenu .wrap div').eq(2).find('ul').css('height','')
+            $('.navmenu .wrap div').eq(2).find('ul').slideUp();
+          }
+        });
+        </script>
+
+
+
+
+
+
+
+
+
+        <!-- 登入註冊 -->
+        <div class="hero">
+            <div class="inimg" id="inimg">
+              <img src="./img/loginup/一般.jpg" alt="">
+            </div>
+            <div class="upimg" id="upimg">
+              <img src="./img/loginup/攤商.jpg" alt="">
+            </div>
+            <!-- 登入 -->
+            <div class="form-box" id=signin>
+              <div class="button-box">
+                  <div id="btn"></div>
+                  <button type="button" class="toggle-btn" onclick="vendormember()">一般會員</button>
+                  <button type="button" class="toggle-btn" onclick="generalmember()">攤商會員</button>
+              </div>
+              <h2>會員登入</h2>
+              <!-- 登入一般會員 -->
+              <form id="generalmember" class="input-group">
+                <div class="group">
+                  <input type="text" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>E-Mail帳號</label>
+                </div>
+                <div class="group">
+                  <input type="password" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>密碼</label>
+                </div>
+                <div class="registr">
+                  <span>忘記密碼</span>
+                  <span onclick="signup()">註冊</span>
+                  <!-- <div class="material-button alt-2"><span class="shape">註冊</span></div> -->
+                </div>
+                <a href="general_member.html"><button type="button" class="submit-btn">登入</button></a>
+              </form>
+              <!-- 登入攤商會員 -->
+              <form id="vendormember" class="input-group">
+                <div class="group">
+                  <input type="text" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>E-Mail帳號</label>
+                </div>
+                <div class="group">
+                  <input type="password" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>密碼</label>
+                </div>
+                <div class="registr">
+                  <span>忘記密碼</span>
+                  <span onclick="signup()">註冊</span>
+                </div>
+                <a href="vendor_member.html"><button type="button" class="submit-btn">登入</button></a>
+              </form>
+            </div> 
+            <!-- 註冊 -->
+            <div class="form-box-up" id="signup">
+              <div class="button-box">
+                  <div id="btnup"></div>
+                  <button type="button" class="toggle-btn" onclick="vendormemberup()">一般會員</button>
+                  <button type="button" class="toggle-btn" onclick="generalmemberup()">攤商會員</button>
+              </div>
+              <h2>會員註冊</h2>
+              <!-- 註冊一般會員 -->
+              <form id="generalmemberup" class="input-group">
+                <div class="group">
+                  <input type="text" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>E-Mail帳號</label>
+                </div>
+                <div class="group">
+                  <input type="text" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>姓名</label>
+                </div>
+                <div class="group">
+                  <input type="text" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>電話</label>
+                </div>
+                <div class="group">
+                  <input type="password" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>密碼</label>
+                </div>
+                <div class="group">
+                  <input type="password" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>確認密碼</label>
+                </div>
+                <button type="submit" class="submit-btn">註冊</button>
+                <div class="registr">
+                  <span onclick="signin()">返回登入</span>
+                </div>
+              </form>
+              <!-- 註冊攤商會員 -->
+              <form id="vendormemberup" class="input-group">
+                <div class="group">
+                  <input type="text" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>E-Mail帳號</label>
+                </div>
+                <div class="group">
+                  <input type="text" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>姓名</label>
+                </div>
+                <div class="group">
+                  <input type="text" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>電話</label>
+                </div>
+                <div class="group">
+                  <input type="text" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>營業登記字號</label>
+                </div>
+                <div class="group">
+                  <input type="password" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>密碼</label>
+                </div>
+                <div class="group">
+                  <input type="password" class="input-field" required>
+                  <span class="linehight"></span>
+                  <span class="bar"></span>
+                  <label>確認密碼</label>
+                </div>
+                <button type="submit" class="submit-btn">註冊</button>
+                <div class="registr">
+                  <span onclick="signin()">返回登入</span>
+                </div>
+              </form>
+            </div> 
+        </div>
+
+        <!-- <div class="footer">
+          <div class="wrap">© YesMan 2020 . All rights reserved.</div>
+        </div> -->
+
+        <script>
+          var x = document.getElementById("generalmember");
+          var y = document.getElementById("vendormember");
+          var z = document.getElementById("btn");
+          var f = document.getElementById("inimg");
+          var g = document.getElementById("upimg");
+    
+            function generalmember(){
+                x.style.left = "-400px";
+                y.style.left = "50px";
+                z.style.left = "110px";
+                f.style.left = "-35%";
+                f.style.width = "5%";
+                f.style.top = "90%";
+                g.style.right = "15%";
+                g.style.width = "10%";
+                g.style.top = "25%";
+            }
+            function vendormember(){
+                x.style.left = "50px";
+                y.style.left = "450px";
+                z.style.left = "0";
+                f.style.left = "15%";
+                f.style.width = "10%";
+                f.style.top = "25%";
+                g.style.right = "-35%";
+                g.style.width = "5%";
+                g.style.top = "90%";
+            }
+
+          var a = document.getElementById("generalmemberup");
+          var b = document.getElementById("vendormemberup");
+          var c = document.getElementById("btnup");
+    
+            function generalmemberup(){
+                a.style.left = "-400px";
+                b.style.left = "50px";
+                c.style.left = "110px";
+                e.style.height = "700px";
+                f.style.left = "-35%";
+                f.style.width = "5%";
+                f.style.top = "90%";
+                g.style.right = "15%";
+                g.style.width = "10%";
+                g.style.top = "25%";
+            }
+            function vendormemberup(){
+                a.style.left = "50px";
+                b.style.left = "450px";
+                c.style.left = "0";
+                e.style.height = "630px";
+                // e.style.margin: 4% auto 6% auto;
+                f.style.left = "15%";
+                f.style.width = "10%";
+                f.style.top = "25%";
+                g.style.right = "-35%";
+                g.style.width = "5%";
+                g.style.top = "90%";
+            }
+
+          var d = document.getElementById("signin");
+          var e = document.getElementById("signup");
+    
+            function signin(){
+                e.style.display = "none";
+                d.style.display = "block";
+            }
+            function signup(){
+                e.style.display = "block";
+                e.style.height = "630px";
+                d.style.display = "none";
+            }    
+        </script>
+</body>
+</html>

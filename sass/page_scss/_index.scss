@@ -963,7 +963,7 @@
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    margin-top: 300px;
+    margin-top: 100px;
     padding: 20px;
     .ad{
       margin-bottom: 80px;
@@ -1218,6 +1218,13 @@
                 background-color: transparent;
                 border: 2px solid $bg-color-2;
                 transition: ease-out 0.4s;
+              }
+              a{
+                text-decoration: none;
+                color: $white-color;
+                &:hover{
+                  color: $bg-color-2;
+                }
               }
             }
           }

@@ -1,3 +1,13 @@
+// ---顏色相關變數
+$btn-star:#FACC39;
+$btn-love-and-addItem:#F42A00;
+$btn-like:grey;
+
+
+  
+
+
+
 // 燈箱
 
 .map_lightBox{
@@ -11,17 +21,15 @@
     display: none;
       .map_frame{     
         width:500px;
-        height:850px;
+        height:650px;
         position: fixed;
         background-color:#fff;
         top:50%;
         left:50%;
-        transform: translate(-50%,-50%);
-        // box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
-        box-shadow: 0px 0px 25px rgb(207, 207, 207);  
+        transform: translate(-50%,-50%);        
           #map{
             width:500px;
-            height:800px;
+            height:600px;
           }
            .close_map{
              position: absolute;
@@ -51,8 +59,7 @@
       top:50%;
       left:50%;
       transform: translate(-50%,-50%);
-      // box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
-      box-shadow: 0px 0px 25px rgb(207, 207, 207);
+
            .title{
             width:100%;
             font-size:$font-size-1;
@@ -102,7 +109,7 @@
 
                     &:hover{
                       cursor: pointer;
-                      color:#FACC39 !important;
+                      color:$btn-star !important;
                       font-weight:900 !important;
                     }
                   }
@@ -146,9 +153,7 @@
       background-color:#fff;
       top:50%;
       left:50%;
-      transform: translate(-50%,-50%);
-      // box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
-      box-shadow: 0px 0px 25px rgb(207, 207, 207);
+      transform: translate(-50%,-50%);      
 
          .title{
            width:100%;
@@ -183,15 +188,17 @@
   }
 
   .cart_frame{
-    width:400px;
+    width:300px;
+    height:100vh;
     position: fixed;    
     right:0%;
-    top:100px;
-    transform: translate(460px,0px);
-    padding:30px;  
-    background-color:orange;    
+    top:0%;
+    transform: translate(320px,0px);
+    padding:10px;  
+    background-color:#fff;    
     z-index:6; 
     transition:1s ease-in;  
+    box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
     // display: none;
     
        .my_order{
@@ -201,45 +208,50 @@
          padding-bottom:10px;       
          border-bottom:1px solid black;
        }
-  
-       .shopping_list{        
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: flex-start;
-         align-items:center;         
-         padding:20px;        
-        
-             span.shop_name{
-              width:86%;
-              font-size:$font-size-2;
-             }
-
-             .cancel_shop{
-               .cancel_shop_btn{
-                  border:2px solid black;                  
-                  padding:5px;
-                  cursor: pointer;
-
-                  &:hover{
-                    color:#fff;
-                    background-color:black;
-                  }
+       .shopping_list_frame{
+          height:75vh;
+          overflow-y: scroll;
+           &::-webkit-scrollbar{
+            display:none;
+          }
+          .shopping_list{        
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items:center;         
+            padding:20px;        
+            
+                span.shop_name{
+                  width:80%;
+                  font-size:$font-size-2;
                 }
-             }
+
+                .cancel_shop{
+                  .cancel_shop_btn{
+                      border:2px solid black;                  
+                      padding:5px;
+                      cursor: pointer;
+
+                      &:hover{
+                        color:#fff;
+                        background-color:black;
+                      }
+                    }
+                }
 
                .shopping_items{
                  display: flex;
-                 flex-wrap: wrap;  
+                 flex-wrap: wrap;                   
                  width:100%;  
                  margin-top:10px;             
                  padding:10px;
                  background-color: #fff;
+                 box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
                  
                  
 
                     .shopping{
-                         width:45%;
-                        //  border:1px solid red;
+                         width:45%;                        
 
                          .item_name{
                            margin-bottom:5px;
@@ -282,7 +294,7 @@
                      
                      }
                }
-
+           }
         } 
         .count_price{
             display: flex;
@@ -294,11 +306,15 @@
             display: flex;
             justify-content: flex-end;
             padding-right:40px;
+            a{
+              text-decoration: none;
+              color: #fff;
+            }
         }
   .slide_cart{
     position: absolute;
-    right:460px;
-    top:0px;
+    right:300px;
+    top:20%;
     background-color: #fff;
     cursor: pointer;
     
@@ -318,7 +334,7 @@
 // 主頁內容
 
 #shop_menu{
-
+ margin-top:70px;
   .shop_banner{
     width:$container-width;
     margin:0 auto;
@@ -338,21 +354,23 @@
           display: flex;
           justify-content: space-evenly;
           margin-top:40px;
-          padding:20px;
-          box-shadow: 0px 0px 25px rgb(207, 207, 207);
+          padding:40px 20px;
+          box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
+          border-radius: 8px;
 
           
           .shop_info_left{
              width:70%;
              display: flex;
-             justify-content: space-evenly;
-             flex-wrap: wrap;
+             justify-content: flex-start;
+             flex-wrap: wrap;             
 
                   #shop_name{
-                    width:25%;
+                    width:15%;
                     display: flex;
                     align-items: center;
-                    font-size:$font-size-1;
+                    font-size:$font-size-1;                    
+                    margin-left:20px;
                    }
                   
                   .shop_collect{
@@ -360,6 +378,7 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
+                    
 
                         #shop_love{
                           font-size: 25px;
@@ -371,10 +390,10 @@
                           
                        .shop_score_block{
                          display: flex;
-                         margin:20px 0 10px 20px;
+                         margin:10px 0 30px 20px;
                        
                              i{
-                               color:red;
+                              color:$btn-star;
                              }
                               .score_num{
                                 margin-left:5px;
@@ -407,10 +426,10 @@
     flex-wrap: wrap;
     margin:40px auto 0;
     // padding:10px;
-    // box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
-    box-shadow: 0px 0px 25px rgb(207, 207, 207);
+    box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
+    border-radius: 8px;
     
-    // border:1px solid red;
+   
 
         .menu_title{
           width:100%;
@@ -433,9 +452,9 @@
               display:flex;
               justify-content:flex-start;
               flex-wrap: wrap;
-              // box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
-              box-shadow: 0px 0px 25px rgb(207, 207, 207);
+              box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);              
               margin:20px 31px;
+              border-radius: 8px;
               // margin:0 auto;
               // border:1px solid red;                  
 
@@ -444,10 +463,18 @@
                                          
                       .menu_item_pic{
                         margin:0 auto;
+                        overflow: hidden;
                         // width:80%;
                         
                         img{
+                          display: block;
                           width:120px;
+                          transform: scale(1,1);                          
+                          transition: 0.3s ease-in;
+
+                          &:hover{
+                            transform: scale(1.3,1.3);
+                          }
                         }
                       }
                   }
@@ -458,27 +485,36 @@
                     flex-wrap: wrap;
                     justify-content: space-evenly;
                     align-items: center;
-                    // border:1px solid red; 
+                                      
 
                         
                          .product{
                            width:40%;                         
-                           font-size:$font-size-3;  
+                           font-size:$font-size-3; 
+                          //  border:1px solid red; 
                            
                                 .menu_item_name{
                                   margin-bottom:10px;
                                 }
-                         } 
+                          } 
                          
                          .menu_add{
-                           width:10%;
-
-                           &:hover{
-                            cursor: pointer;
+                           width:30%;
+                           display: flex;
+                           justify-content: flex-end;                        
                           }
 
                             i{
                               font-size:22px;
+                              transform: scale(1,1);                            
+                               transition: 0.2s ease-in;
+                          
+                              &:hover{
+                                cursor: pointer;
+                                color:$btn-love-and-addItem;
+                                transform: scale(1.5,1.5);                              
+                              
+                             
                             }
                          }
 
@@ -496,8 +532,8 @@
      flex-wrap: wrap;
      justify-content: space-evenly;   
      margin:40px auto;
-     // box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
-     box-shadow: 0px 0px 25px rgb(207, 207, 207);
+     box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
+     border-radius: 8px;
 
 
           .comment_title{
@@ -528,8 +564,9 @@
                   justify-content: flex-start;
                   margin:20px 0;
                   padding:20px;
-                  // box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
-                  box-shadow: 0px 0px 25px rgb(207, 207, 207);
+                  box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
+                  border-radius: 8px;
+                  
 
 
 
@@ -620,7 +657,7 @@
                                     padding-left:10px;
 
                                     i{
-                                      color:#FACC39;
+                                      color:$btn-star;
                                       font-weight: 900;
                                     }
                                  }
@@ -635,7 +672,9 @@
                                     cursor: pointer;
 
                                    i{
-                                    line-height:$font-size-3;                                    }
+                                    line-height:$font-size-3;
+                                    color:$btn-like;
+                                     }
                                    }
                                  
                                  
@@ -692,17 +731,13 @@
        }
      }
    }
-   .cart_frame{
-    width:300px;    
-    transform: translate(320px,0px);
-    padding:10px; 
-     .shopping_list{ 
-        span.shop_name{
-          width:80%;          
-          }
-        }
+   .cart_frame{                
       .slide_cart{        
-        right:320px;       
+        right:320px; 
+         i{
+          font-size:20px;
+          padding:2px;
+         }   
       }
   }
   #shop_menu{
@@ -718,7 +753,8 @@
 
             
        .shop_info{   
-         width: 95%;  
+         width: 85%; 
+         margin:20px auto 0; 
         .shop_info_left{    
             #shop_name{
               width:40%;
@@ -936,7 +972,7 @@
       }
     }
     .shop_comment_list{
-      // width:95%;
+      width:1140px;
     }
   }
 }

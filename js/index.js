@@ -28,19 +28,19 @@ jQuery(document).ready(function ($) {
    
   })
 //scroll down
-$(window).on('wheel', function(e) {   
-                     //當我滾動滑鼠的時候
-  e.stopPropagation();
-  let delta = e.originalEvent.deltaY;
-  console.log(ww,$(window).scrollTop());
+// $(window).on('wheel', function(e) {   
+//                      //當我滾動滑鼠的時候
+//   e.stopPropagation();
+//   let delta = e.originalEvent.deltaY;
+//   console.log(ww,$(window).scrollTop());
    
-    if (delta > 0 && $(window).scrollTop() < 80) {          //滑鼠往下滑  而且  <80
-        $('body,html').animate({scrollTop: ww },800 )
-    } else if(delta < 0 && $(window).scrollTop() > 80 && $(window).scrollTop() <900) {          
-      $('body,html').animate({scrollTop: 0 },800 )                   //滑鼠往上滑 
-    }
-  // return false; // this line is only added so the whole page won't scroll in the demo
-});
+//     if (delta > 0 && $(window).scrollTop() < 80) {          //滑鼠往下滑  而且  <80
+//         $('body,html').animate({scrollTop: ww },800 )
+//     } else if(delta < 0 && $(window).scrollTop() > 80 && $(window).scrollTop() <900) {          
+//       $('body,html').animate({scrollTop: 0 },800 )                   //滑鼠往上滑 
+//     }
+//   // return false; // this line is only added so the whole page won't scroll in the demo
+// });
 
 //scroll
 // let lastST = 0;
@@ -81,7 +81,7 @@ $('.steps1 li').hover(
 }, function(){                  //滑出的時候
   $(this).css("opacity", "0.5");
   currentDot1.css('opacity','1');//定點的不能被影響
-  timeId1=setInterval( () => { moveRight1(); }, 2500);//繼續輪播
+  // timeId1=setInterval( () => { moveRight1(); }, 2500);//繼續輪播
 });
 
 
