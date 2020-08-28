@@ -297,6 +297,7 @@ body#create{
       div.addBtn{
         display: flex;
         justify-content: start;
+        margin: 10px;
         // align-items: center;
         label[for="addBtn"]{
           @extend %grayCBtn;
@@ -377,7 +378,7 @@ body#create{
     form#createVendor{
       .page1,.page2,.page5{
         .pageItem{
-          padding: 10px;
+          padding: 20px;
         }
       }
       .page1{
@@ -390,7 +391,7 @@ body#create{
       .page2{
         .pageItem{
           .meal{
-            margin: 20px;
+            // margin: 20px;
             .mealtextwrap{
               justify-content: space-between;
               text[type="text"]{
@@ -446,6 +447,20 @@ body#create{
 @media screen and (max-width:576px){
   body#create{
     form#createVendor{
+      .steps{
+        padding: 20px 80px 10px;
+        .top .stepwrap::after,
+        .bom .stepwrap::after{
+          bottom: -9%;
+        }
+        .stepwrap .info .num,
+        .stepwrap .info .text{
+          font-size: 14px;
+        }
+      }
+      .page1 .pageItem>div>div{
+        width: 100%;
+      }
       .page2{
         .pageItem{
           .meal{
@@ -458,6 +473,10 @@ body#create{
                 width: 100%;
               }
             }
+          }
+          div.addBtn{
+            justify-content: center;
+            // align-items: center;
           }
         }
       } 
