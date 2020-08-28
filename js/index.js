@@ -315,7 +315,7 @@ dotColorChange3()                //load時就執行一次點點顏色(起始值)
 function moveLeft3() {           //向左走
   $('.slider3 .slides').animate({
     left: + slideWidth3
-  }, 500, function () {
+  }, 300, function () {
     $('.slider3 .slides li:last-child').prependTo('.slider3 .slides');
     $('.slider3 .slides').css('left', '');
     currentLi3 = parseInt($('.slider3 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
@@ -326,7 +326,7 @@ function moveLeft3() {           //向左走
 function moveRight3() {            //向右走
   $('.slider3 .slides').animate({
     left: - slideWidth3
-  }, 500, function () {
+  }, 300, function () {
     $('.slider3 .slides li:first-child').appendTo('.slider3 .slides');
     $('.slider3 .slides').css('left', '');
     currentLi3 = parseInt($('.slider3 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
