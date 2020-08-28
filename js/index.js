@@ -28,19 +28,11 @@ jQuery(document).ready(function ($) {
    
   })
 //scroll down
-<<<<<<< HEAD
-$(window).on('wheel', function(e) { //當我滾動滑鼠的時候
-  e.stopPropagation();
-  //Jquery的event物件，並沒有包含所有 原本javascipt的特殊事件。用event.originalEvent 就可以使用原本javascript的event事件了
-  let delta = e.originalEvent.deltaY;
-  console.log(ww,$(window).scrollTop());
-=======
 // $(window).on('wheel', function(e) {   
 //                      //當我滾動滑鼠的時候
 //   e.stopPropagation();
 //   let delta = e.originalEvent.deltaY;
 //   console.log(ww,$(window).scrollTop());
->>>>>>> 998b9554518ff0aeadc05aa4687048a3c34b0678
    
 //     if (delta > 0 && $(window).scrollTop() < 80) {          //滑鼠往下滑  而且  <80
 //         $('body,html').animate({scrollTop: ww },800 )
@@ -79,7 +71,7 @@ $('.scrollDownBtn').click(function() {
 $('.slider1 .slides li:last-child').prependTo('.slider1 .slides');
 //自動播放輪播
 var timeId1 = 0
-timeId1=setInterval( () => { moveRight1(); }, 2500);
+timeId1=setInterval( () => { moveRight1(); }, 3500);
 //hover   
 $('.steps1 li').hover(
   function(){                   //滑到的時候
@@ -89,9 +81,11 @@ $('.steps1 li').hover(
 }, function(){                  //滑出的時候
   $(this).css("opacity", "0.5");
   currentDot1.css('opacity','1');//定點的不能被影響
-  // timeId1=setInterval( () => { moveRight1(); }, 2500);//繼續輪播
+  timeId1=setInterval( () => { moveRight1(); }, 3500);//繼續輪播
 });
-
+$('.go-order-btn').hover(function(){clearInterval(timeId1)}
+                        ,function(){timeId1=setInterval( () => { moveRight1(); }, 3500)}
+)
 
 
 function dotColorChange1(){      //點點的顏色切換
@@ -102,7 +96,7 @@ dotColorChange1()                //load時就執行一次點點顏色(起始值)
 function moveLeft1() {           //向左走
   $('.slider1 .slides').animate({
     left: + slideWidth1
-  }, 200, function () {
+  }, 800, function () {
     $('.slider1 .slides li:last-child').prependTo('.slider1 .slides');
     $('.slider1 .slides').css('left', '');
     currentLi1 = parseInt($('.slider1 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
@@ -113,7 +107,7 @@ function moveLeft1() {           //向左走
 function moveRight1() {            //向右走
   $('.slider1 .slides').animate({
     left: - slideWidth1
-  }, 200, function () {
+  }, 800, function () {
     $('.slider1 .slides li:first-child').appendTo('.slider1 .slides');
     $('.slider1 .slides').css('left', '');
     currentLi1 = parseInt($('.slider1 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
