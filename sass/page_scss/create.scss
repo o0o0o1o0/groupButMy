@@ -339,6 +339,24 @@ body#create{
       }
     }
   }
+  .page5{
+    .pageItem{
+      padding: 20px;
+      .img{
+        margin: auto;
+        max-width: 400px;
+        height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 
 // 🟡控制顯示

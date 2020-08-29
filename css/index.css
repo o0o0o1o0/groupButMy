@@ -1061,6 +1061,19 @@ html, body {
   font-weight: 600;
 }
 
+body#index {
+  /* stage_01動畫開始 */
+  /* stage_01動畫結束 */
+  /* stage_02動畫開始 */
+  /* stage_02動畫結束 */
+  /* stage_03動畫開始 */
+  /* stage_03動畫結束 */
+  /* stage_04動畫開始 */
+  /* stage_04動畫結束 */
+  /* stage_05動畫開始 */
+  /* stage_05動畫結束 */
+}
+
 @keyframes close_shuffle_button {
   0% {
     opacity: 0;
@@ -1070,7 +1083,6 @@ html, body {
   }
 }
 
-/* stage_01動畫開始 */
 @keyframes stage_01 {
   0% {
     position: absolute;
@@ -1113,8 +1125,6 @@ html, body {
   }
 }
 
-/* stage_01動畫結束 */
-/* stage_02動畫開始 */
 @keyframes stage_02_card01 {
   0% {
     position: absolute;
@@ -1260,8 +1270,6 @@ html, body {
   }
 }
 
-/* stage_02動畫結束 */
-/* stage_03動畫開始 */
 @keyframes stage_03_all {
   0% {
     transform: rotateZ(0deg);
@@ -1271,8 +1279,6 @@ html, body {
   }
 }
 
-/* stage_03動畫結束 */
-/* stage_04動畫開始 */
 @keyframes stage_04_card01 {
   0% {
     transform: translate(0, 0) rotate(0deg);
@@ -1418,8 +1424,6 @@ html, body {
   }
 }
 
-/* stage_04動畫結束 */
-/* stage_05動畫開始 */
 @keyframes stage_05_card01 {
   0% {
     transform: translate(200px, 0px) rotate(0deg);
@@ -1651,7 +1655,6 @@ html, body {
   }
 }
 
-/* stage_05動畫結束 */
 #index {
   /*下面這是banner的*/
 }
@@ -1722,6 +1725,11 @@ html, body {
 
 #index .section:nth-child(2) {
   position: relative;
+  width: 100%;
+}
+
+#index .section:nth-child(2) .slider {
+  width: 100%;
 }
 
 #index .section:nth-child(2) .slider .slides {
@@ -1729,6 +1737,7 @@ html, body {
 }
 
 #index .section:nth-child(2) .slider .slides li {
+  flex-shrink: 0;
   width: 99vw;
   height: 100vh;
   flex-direction: column;
@@ -1907,7 +1916,6 @@ html, body {
 
 #index .container {
   max-width: 1200px;
-  width: 100%;
   margin: auto;
   margin-top: 100px;
   padding: 20px;
