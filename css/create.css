@@ -1501,10 +1501,6 @@ body#create form#createVendor .page5 .pageItem .img img {
   object-fit: cover;
 }
 
-body#create .createVendorContainer form#createVendor .page {
-  display: none;
-}
-
 body#create .createVendorContainer #createVendor[data-page="1"] .page:nth-child(1),
 body#create .createVendorContainer #createVendor[data-page="2"] .page:nth-child(2),
 body#create .createVendorContainer #createVendor[data-page="3"] .page:nth-child(3),
@@ -1567,8 +1563,8 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
 }
 
 @media screen and (max-width: 576px) {
-  body#create .navmenu {
-    display: none;
+  body#create .createVendorContainer h2 {
+    margin: 10px 0 30px;
   }
   body#create form#createVendor .steps {
     padding: 10px 80px 10px;
