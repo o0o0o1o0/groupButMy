@@ -3,6 +3,15 @@
 body#create{
   *{box-sizing: border-box;}
   background:$bgc;
+  .navmenu{
+    .navlist{
+      li  {
+        a[href*="create"]{
+          color: $text-color-5;
+        }
+      }
+    }
+  }
   .createVendorContainer{
     /* height: 100vh;*/
     div{
@@ -362,7 +371,7 @@ body#create{
 // 🟡控制顯示
   .createVendorContainer{
     form#createVendor{
-      // .page{display: none;}
+      .page{display: none;}
     }
     #createVendor[data-page="1"] .page:nth-child(1),
     #createVendor[data-page="2"] .page:nth-child(2),

@@ -1107,6 +1107,10 @@ body#create * {
   box-sizing: border-box;
 }
 
+body#create .navmenu .navlist li a[href*="create"] {
+  color: #F36E30;
+}
+
 body#create .createVendorContainer {
   /* height: 100vh;*/
 }
@@ -1495,6 +1499,10 @@ body#create form#createVendor .page5 .pageItem .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+body#create .createVendorContainer form#createVendor .page {
+  display: none;
 }
 
 body#create .createVendorContainer #createVendor[data-page="1"] .page:nth-child(1),

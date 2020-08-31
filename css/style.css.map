@@ -8,7 +8,7 @@
         "../sass/base/_color.scss",
         "../sass/base/_btn.scss",
         "../sass/mixins/_mixin.scss",
-        "../sass/mixins/_index.scss",
+        "../sass/mixins/_home.scss",
         "../sass/mixins/_book.scss",
         "../sass/mixins/_vendor_member.scss",
         "../sass/mixins/_flex.scss",
