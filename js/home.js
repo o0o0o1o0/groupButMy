@@ -189,18 +189,18 @@ jQuery(document).ready(function ($) {
   //🟡不知道如何逛中壢夜市嗎？ 羅東臭薯條
     var slideCount2 = $('div.slider2 ul.slides li').length;
     var divWidth = $('div.slider2').width();
-    $('div.slider2 ul.slides li').css('width',divWidth);
+    var divHeight = $('div.slider2').height();
+    $('.slider2 .slides li').css({'width':divWidth,'height':divHeight});
     var slideWidth2 = $('div.slider2 ul.slides li').width();
     var slideWidth2LT = $('.plan .littleText li span').width();
     var slideHeight2 = $('div.slider2 ul.slides li').height();
     var sliderUlWidth2 = slideCount2 * slideWidth2;
-    // let currentLi2 = parseInt($('.slider2 ul li:first-child').attr('data-page'));
-    // let currentDot2 = $('.steps2 li').eq(currentLi2-1);
   
   //resize
   $(window).resize(function(){
     divWidth = $('.slider2').width()
-    $('.slider2 .slides li').width(divWidth);
+    divHeight = $('div.slider2').height();
+    $('.slider2 .slides li').css({'width':divWidth,'height':divHeight});
     slideWidth2 = $('.news .section').width();
     slideHeight2 = $('.slider2 .slides li').height();
     sliderUlWidth2 = slideCount2 * slideWidth2;
@@ -212,15 +212,6 @@ jQuery(document).ready(function ($) {
     }
   })
   
-  //hover
-  $('.steps2 li').hover(
-    function(){                   //滑到的時候
-    $(this).css("opacity", "0.7");
-    currentDot2.css('opacity','1');//定點的不能被影響
-  }, function(){                  //滑出的時候
-    $(this).css("opacity", "0.5");
-    currentDot2.css('opacity','1');//定點的不能被影響
-  });
   
   function moveLeft2() {           //向左走
     $('.slider2 .slides').animate({
