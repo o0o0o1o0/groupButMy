@@ -293,9 +293,9 @@ body#create{
         .mealtextwrap{
           min-width: 80%;
           flex-direction: row;
-          justify-content: space-around;
+          justify-content: space-between;
           input[type="text"],.selectcontrol{
-            width: $textWidth3c;
+            width: 150px;
             text-align: center;
           }
           button.deleteBtn{
@@ -417,10 +417,16 @@ body#create{
       }
       .page2{
         .pageItem{
+          padding: 50px;
           .meal{
-            // margin: 20px;
+            flex-wrap: nowrap;
+            // margin: 50px;
+            .putmealhere{
+              margin-right: 20px;
+              white-space: nowrap;
+            }
             .mealtextwrap{
-              justify-content: space-between;
+              // justify-content: space-between;
               text[type="text"]{
                 margin-right: 15px;
               }
@@ -460,20 +466,55 @@ body#create{
         }
       }
       .page2{
+        .pageItem{
+          padding: 20px;
+          .meal{
+            flex-wrap: wrap;
+            .mealtextwrap{
+              width: 100%;
+            }
+          }
+        }
         .putmealhere,input[type="file"],input[type="text"],.selectcontrol,.deleteBtn{
           margin-bottom: 15px;
-        }
-        .mealtextwrap{
-          width: 100%;
         }
       }    
     }
   }
 }
 
+@media screen and (max-width:768px){
+  body#create{
+  form#createVendor{
+    .pagewrap{
+      .page2{
+        .pageItem{
+          .meal{
+            flex-direction: column;
+            justify-content: center;
+            .mealtextwrap{
+              flex-direction: column;
+              align-items: center;
+              margin-bottom: 3em;
+              input[type="text"],label,.selectwrap,.selectcontrol,span{
+                width: 100% ;
+              }
+            }
+          }
+          div.addBtn{
+            justify-content: center;
+            // align-items: center;
+          }
+        }
+      }     
+    }
+  }
+  }
+}
+
 @media screen and (max-width:576px){
   body#create{
-    .createVendorContainer {
+    .createVendorContainer .page1{
       h2{
         margin: 10px 0 30px;
       }
@@ -499,25 +540,7 @@ body#create{
       .page1 .pageItem>div>div{
         width: 100%;
       }
-      .page2{
-        .pageItem{
-          .meal{
-            flex-direction: column;
-            .mealtextwrap{
-              flex-direction: column;
-              align-items: center;
-              margin-bottom: 3em;
-              input[type="file"],input[type="text"],label,.selectwrap,.selectcontrol,span{
-                width: 100%;
-              }
-            }
-          }
-          div.addBtn{
-            justify-content: center;
-            // align-items: center;
-          }
-        }
-      } 
+
     }
   }
 }

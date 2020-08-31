@@ -1433,11 +1433,11 @@ body#create form#createVendor .page2 .pageItem .meal .putmealhere label span {
 body#create form#createVendor .page2 .pageItem .meal .mealtextwrap {
   min-width: 80%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 body#create form#createVendor .page2 .pageItem .meal .mealtextwrap input[type="text"], body#create form#createVendor .page2 .pageItem .meal .mealtextwrap .selectcontrol {
-  width: 120px;
+  width: 150px;
   text-align: center;
 }
 
@@ -1533,8 +1533,15 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   body#create form#createVendor .page1 .pageItem > div {
     justify-content: center;
   }
-  body#create form#createVendor .page2 .pageItem .meal .mealtextwrap {
-    justify-content: space-between;
+  body#create form#createVendor .page2 .pageItem {
+    padding: 50px;
+  }
+  body#create form#createVendor .page2 .pageItem .meal {
+    flex-wrap: nowrap;
+  }
+  body#create form#createVendor .page2 .pageItem .meal .putmealhere {
+    margin-right: 20px;
+    white-space: nowrap;
   }
   body#create form#createVendor .page2 .pageItem .meal .mealtextwrap text[type="text"] {
     margin-right: 15px;
@@ -1554,16 +1561,40 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   body#create form#createVendor .page1 .pageItem > div > div input[type="text"], body#create form#createVendor .page1 .pageItem > div > div textarea, body#create form#createVendor .page1 .pageItem > div > div div.selectcontrol, body#create form#createVendor .page1 .pageItem > div > div label, body#create form#createVendor .page1 .pageItem > div > div img {
     width: 100% !important;
   }
+  body#create form#createVendor .page2 .pageItem {
+    padding: 20px;
+  }
+  body#create form#createVendor .page2 .pageItem .meal {
+    flex-wrap: wrap;
+  }
+  body#create form#createVendor .page2 .pageItem .meal .mealtextwrap {
+    width: 100%;
+  }
   body#create form#createVendor .page2 .putmealhere, body#create form#createVendor .page2 input[type="file"], body#create form#createVendor .page2 input[type="text"], body#create form#createVendor .page2 .selectcontrol, body#create form#createVendor .page2 .deleteBtn {
     margin-bottom: 15px;
   }
-  body#create form#createVendor .page2 .mealtextwrap {
+}
+
+@media screen and (max-width: 768px) {
+  body#create form#createVendor .pagewrap .page2 .pageItem .meal {
+    flex-direction: column;
+    justify-content: center;
+  }
+  body#create form#createVendor .pagewrap .page2 .pageItem .meal .mealtextwrap {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3em;
+  }
+  body#create form#createVendor .pagewrap .page2 .pageItem .meal .mealtextwrap input[type="text"], body#create form#createVendor .pagewrap .page2 .pageItem .meal .mealtextwrap label, body#create form#createVendor .pagewrap .page2 .pageItem .meal .mealtextwrap .selectwrap, body#create form#createVendor .pagewrap .page2 .pageItem .meal .mealtextwrap .selectcontrol, body#create form#createVendor .pagewrap .page2 .pageItem .meal .mealtextwrap span {
     width: 100%;
+  }
+  body#create form#createVendor .pagewrap .page2 .pageItem div.addBtn {
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 576px) {
-  body#create .createVendorContainer h2 {
+  body#create .createVendorContainer .page1 h2 {
     margin: 10px 0 30px;
   }
   body#create form#createVendor .steps {
@@ -1582,20 +1613,6 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
   }
   body#create form#createVendor .page1 .pageItem > div > div {
     width: 100%;
-  }
-  body#create form#createVendor .page2 .pageItem .meal {
-    flex-direction: column;
-  }
-  body#create form#createVendor .page2 .pageItem .meal .mealtextwrap {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3em;
-  }
-  body#create form#createVendor .page2 .pageItem .meal .mealtextwrap input[type="file"], body#create form#createVendor .page2 .pageItem .meal .mealtextwrap input[type="text"], body#create form#createVendor .page2 .pageItem .meal .mealtextwrap label, body#create form#createVendor .page2 .pageItem .meal .mealtextwrap .selectwrap, body#create form#createVendor .page2 .pageItem .meal .mealtextwrap .selectcontrol, body#create form#createVendor .page2 .pageItem .meal .mealtextwrap span {
-    width: 100%;
-  }
-  body#create form#createVendor .page2 .pageItem div.addBtn {
-    justify-content: center;
   }
 }
 
