@@ -1454,11 +1454,17 @@ html, body {
   width: 30.5%;
   margin-left: 40px;
   display: flex;
+}
+
+#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route {
+#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route {
   background-color: #fff;
   border-radius: 15px;
   display: flex;
@@ -1471,29 +1477,29 @@ html, body {
   margin-right: 12px;
   cursor: pointer;
   /*&::after{
-                          content: '\f105';
-                          font-family: 'FontAwesome';
-                          font-size: 30px;
-                          color: $text-color-5;
-                          background-color: $white-color;
-                          width: 35px;
-                          height: 35px;
-                          line-height: 35px;
-                          text-align: center;
-                          border-radius: 50px;
-                          box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-                          position: absolute;
-                          right: -15px;
-                        }
-                        &:hover{
-                          &::after{
-                            background: $text-color-5;
-                            color: $white-color;
+                            content: '\f105';
+                            font-family: 'FontAwesome';
+                            font-size: 30px;
+                            color: $text-color-5;
+                            background-color: $white-color;
+                            width: 35px;
+                            height: 35px;
+                            line-height: 35px;
+                            text-align: center;
+                            border-radius: 50px;
+                            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+                            position: absolute;
+                            right: -15px;
                           }
-                        }*/
+                          &:hover{
+                            &::after{
+                              background: $text-color-5;
+                              color: $white-color;
+                            }
+                          }*/
 }
 
-#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route > div {
+#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route > div {
   padding-top: 20%;
   width: 20%;
   position: relative;
@@ -1501,7 +1507,7 @@ html, body {
   border-radius: 8px;
 }
 
-#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route > div img {
+#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route > div img {
   position: absolute;
   height: 100%;
   top: 50%;
@@ -1509,7 +1515,7 @@ html, body {
   transform: translateY(-50%);
 }
 
-#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route span {
+#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route span {
   font-size: 22px;
   margin-left: 10px;
   white-space: nowrap;

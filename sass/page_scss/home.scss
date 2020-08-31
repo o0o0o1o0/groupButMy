@@ -346,60 +346,65 @@ body{
                       width: 30.5%;
                       margin-left: 40px;
                       display: flex;
-                      flex-direction: column;
-                      justify-content: space-between;
-                      .plan_route{
-                        background-color: $white-color;
-                        border-radius: 15px;
+                      .dragwrap{
+                        width: 100%;
+                        height: 100%;
                         display: flex;
-                        align-items: center;
-                        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
-                        position: relative;
-                        height: calc(20% - 10px);//因為每個上下margin:5px
-                        padding-left:  20px;
-                        padding-right: 20%;
-                        // margin: 5px;
-                        margin-right: 12px;
-                        cursor: pointer;
-                        /*&::after{
-                          content: '\f105';
-                          font-family: 'FontAwesome';
-                          font-size: 30px;
-                          color: $text-color-5;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .plan_route{
                           background-color: $white-color;
-                          width: 35px;
-                          height: 35px;
-                          line-height: 35px;
-                          text-align: center;
-                          border-radius: 50px;
-                          box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-                          position: absolute;
-                          right: -15px;
-                        }
-                        &:hover{
-                          &::after{
-                            background: $text-color-5;
-                            color: $white-color;
-                          }
-                        }*/
-                        >div{
-                          padding-top: 20%;
-                          width: 20%;      
+                          border-radius: 15px;
+                          display: flex;
+                          align-items: center;
+                          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
                           position: relative;
-                          overflow: hidden;
-                          border-radius: 8px;
-                          img{
+                          height: calc(20% - 10px);//因為每個上下margin:5px
+                          padding-left:  20px;
+                          padding-right: 20%;
+                          // margin: 5px;
+                          margin-right: 12px;
+                          cursor: pointer;
+                          /*&::after{
+                            content: '\f105';
+                            font-family: 'FontAwesome';
+                            font-size: 30px;
+                            color: $text-color-5;
+                            background-color: $white-color;
+                            width: 35px;
+                            height: 35px;
+                            line-height: 35px;
+                            text-align: center;
+                            border-radius: 50px;
+                            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
                             position: absolute;
-                            height: 100%;
-                            top: 50%;
-                            left: 0;
-                            transform: translateY(-50%);
+                            right: -15px;
                           }
-                        }
-                        span{
-                          font-size: $font-size-1;
-                          margin-left: 10px;
-                          white-space: nowrap;
+                          &:hover{
+                            &::after{
+                              background: $text-color-5;
+                              color: $white-color;
+                            }
+                          }*/
+                          >div{
+                            padding-top: 20%;
+                            width: 20%;      
+                            position: relative;
+                            overflow: hidden;
+                            border-radius: 8px;
+                            img{
+                              position: absolute;
+                              height: 100%;
+                              top: 50%;
+                              left: 0;
+                              transform: translateY(-50%);
+                            }
+                          }
+                          span{
+                            font-size: $font-size-1;
+                            margin-left: 10px;
+                            white-space: nowrap;
+                          }
                         }
                       }
                     }
