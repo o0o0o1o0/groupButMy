@@ -1469,6 +1469,7 @@ body#create form#createVendor .page3 #map {
 }
 
 body#create form#createVendor .page3 .user_info {
+  display: none;
   width: fit-content;
   position: absolute;
   top: 50%;
