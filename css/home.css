@@ -1200,13 +1200,11 @@ html, body {
 }
 
 #home .section:nth-child(2) .scrollDownBtn .img {
-  animation: scrollDown 2s infinite 2s;
-  width: 35px;
-  height: 35px;
+  width: 15px;
+  height: 30px;
   border: 3px solid black;
-  border-radius: 50%;
+  border-radius: 10px;
   margin-bottom: 20px;
-  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
@@ -1215,13 +1213,13 @@ html, body {
 
 #home .section:nth-child(2) .scrollDownBtn .img::after {
   content: '';
+  animation: scrollDown 2s infinite 2s;
   position: absolute;
-  width: 10px;
+  width: 3px;
   height: 10px;
-  border: 3px solid black;
-  border-width: 0 0 2px 2px;
-  transform: rotate(-45deg);
-  bottom: 35%;
+  background: #000;
+  border-radius: 15px;
+  top: 10%;
 }
 
 #home .slider_option {
