@@ -575,6 +575,202 @@ body#create form#createVendor .page2 .pageItem div.addBtn label[for="addBtn"] {
   height: auto;
 }
 
+.card_menu-btn {
+  font-size: 16px;
+  color: #fff;
+  background-color: #134f6c;
+  width: 80px;
+  border-radius: 50px;
+  height: 35px;
+  text-align: center;
+  margin: 0 8px;
+}
+
+.card_menu-btn:hover {
+  background-color: #4DB7FE;
+  transition: ease-out 0.4s;
+  cursor: pointer;
+}
+
+.card_timenow-btn {
+  font-size: 14px;
+  color: #fff;
+  background-color: #F75C96;
+  width: 80px;
+  border-radius: 50px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 8px;
+  box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+
+.card_look_detail-btn {
+  font-size: 16PX;
+  color: #fff;
+  background-color: #F36E30;
+  width: 90px;
+  height: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card_look_detail-btn:hover {
+  background-color: #4DB7FE;
+  transition: ease-out 0.4s;
+}
+
+.shop_card_lightbox {
+  background-color: #fff;
+  width: 440PX;
+  height: 650px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transform-origin: 0 0;
+  transform: scale(0.4, 0.4);
+  z-index: 10;
+}
+
+.shop_card_lightbox .card_img {
+  width: 100%;
+  position: relative;
+}
+
+.shop_card_lightbox .card_img::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  border-radius: 25px 25px 0 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.shop_card_lightbox .card_img img {
+  display: block;
+  width: 100%;
+  height: 310px;
+  position: relative;
+}
+
+.shop_card_lightbox .card_img .heart_save {
+  display: block;
+  background-color: #F36E30;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.shop_card_lightbox .card_img .heart_save i {
+  display: block;
+  color: #fff;
+  cursor: pointer;
+}
+
+.shop_card_lightbox .card_img .heart_save i:hover {
+  color: #4DB7FE;
+  font-weight: 900;
+  transition: ease-out 0.3s;
+}
+
+.shop_card_lightbox .card_img .card_close {
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 0 8px 0 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.shop_card_lightbox .card_img .card_close i {
+  display: block;
+  font-size: 30px;
+  color: #4DB7FE;
+}
+
+.shop_card_lightbox .card_img .card_timenow-btn {
+  position: absolute;
+  bottom: 50px;
+  right: 20px;
+}
+
+.shop_card_lightbox .card_content {
+  margin: 0 20px;
+  margin-bottom: 15px;
+}
+
+.shop_card_lightbox .card_content .card_warp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop_card_lightbox .card_content .card_warp .card_score {
+  display: flex;
+}
+
+.shop_card_lightbox .card_content .card_warp .card_score .score_num {
+  color: #fff;
+  background-color: #F36E30;
+  width: 50px;
+  height: 50px;
+  line-height: 52px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.shop_card_lightbox .card_content .card_warp .card_score .score_con {
+  margin-left: 15px;
+}
+
+.shop_card_lightbox .card_content .card_warp .card_score .score_con .score_star i {
+  font-size: 16px;
+  color: #FACC39;
+}
+
+.shop_card_lightbox .card_content .card_warp .card_score .score_con .score_comment {
+  font-size: 16px;
+  color: #333333;
+  margin-top: 10px;
+}
+
+.shop_card_lightbox .card_content .card_title {
+  font-size: 22px;
+  color: #333333;
+  margin-top: 15px;
+}
+
+.shop_card_lightbox .card_content .card_detail {
+  color: #707070;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.shop_card_lightbox .card_content .card_detail .card_text {
+  line-height: 25px;
+  margin: 20px 0;
+}
+
+.shop_card_lightbox .card_content .card_detail .card_time {
+  line-height: 25px;
+  margin: 20px 0;
+}
+
+.shop_card_lightbox .card_content .card_warp_btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /*漢堡樣式*/
 .navmenu .hamburger {
   cursor: pointer;
@@ -1371,11 +1567,18 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
 }
 
 @media screen and (max-width: 576px) {
+  body#create .navmenu {
+    display: none;
+  }
   body#create form#createVendor .steps {
-    padding: 20px 80px 10px;
+    padding: 10px 80px 10px;
+  }
+  body#create form#createVendor .steps .top > div, body#create form#createVendor .steps .bom > div {
+    height: 70px;
   }
   body#create form#createVendor .steps .top .stepwrap::after, body#create form#createVendor .steps .bom .stepwrap::after {
-    bottom: -9%;
+    bottom: -13.5%;
+    width: 10px;
   }
   body#create form#createVendor .steps .stepwrap .info .num,
   body#create form#createVendor .steps .stepwrap .info .text {
@@ -1401,6 +1604,14 @@ body#create .createVendorContainer .ctrlBtns button[disabled] {
 }
 
 @media screen and (max-width: 375px) {
+  body#create form#createVendor .steps .top .stepwrap::after, body#create form#createVendor .steps .bom .stepwrap::after {
+    display: -14%;
+  }
+  body#create form#createVendor .steps .top .stepwrap .info .num, body#create form#createVendor .steps .top .stepwrap .info .text {
+    font-size: 12px;
+    transform: translateX(-7%);
+    white-space: nowrap;
+  }
   body#create form#createVendor .page1 > div > div {
     display: block;
   }

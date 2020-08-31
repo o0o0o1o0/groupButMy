@@ -473,12 +473,18 @@ body#create{
 
 @media screen and (max-width:576px){
   body#create{
+    .navmenu{display: none;}
     form#createVendor{
       .steps{
-        padding: 20px 80px 10px;
+        .top >div,
+        .bom >div{
+          height: 70px;
+        }
+        padding: 10px 80px 10px;
         .top .stepwrap::after,
         .bom .stepwrap::after{
-          bottom: -9%;
+          bottom: -13.5%;
+          width: 10px;
         }
         .stepwrap .info .num,
         .stepwrap .info .text{
@@ -514,6 +520,19 @@ body#create{
 @media screen and (max-width:375px){
   body#create{
     form#createVendor{
+      .steps{
+        .top .stepwrap::after,
+        .bom .stepwrap::after{
+          display: -14%;
+        }
+        .top .stepwrap .info{
+          .num,.text{
+            font-size: 12px;
+            transform: translateX(-7%);
+            white-space: nowrap;
+          }
+        }
+      }
       .page1{
         >div>div{display: block;}
         input[type="text"],.selectcontrol,.selectnav,
