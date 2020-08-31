@@ -266,20 +266,20 @@ jQuery(document).ready(function ($) {
   
   //🟡第三個輪播(news)(夜市夯話題)
     var slideCount3 = $('.slider3 .slides li').length;
-    var slideWidth3 = $('.news .section').width();
-    var slideHeight3 = $('.slider3 .slides li').height();
+    var slideWidth3 = $('.slider3').width();
+    var slideHeight3 =slideWidth3 / 2; //$('.slider3').height();
+    $('.slider3 .slides li').css({'height':slideHeight3,'width':slideWidth3});
     var sliderUlWidth3 = slideCount3 * slideWidth3;
     let currentLi3 = parseInt($('.slider3 ul li:first-child').attr('data-page'));
     let currentDot3 = $('.steps3 li').eq(currentLi3-1);
-    $('.slider3').css({ width: slideWidth3, height: slideHeight3 });
     $('.slider3 .slides').css({ width: sliderUlWidth3, marginLeft: - slideWidth3 });
   $('.slider3 .slides li:last-child').prependTo('.slider3 .slides');
   //resize
   $(window).resize(function(){
-    slideWidth3 = $('.news .section').width();
-    slideHeight3 = $('.slider3 .slides li').height();
+    slideWidth3 = $('.slider3').width();
+    slideHeight3 =slideWidth3 / 2;//$('.slider3').height();
+    $('.slider3 .slides li').css({'height':slideHeight3,'width':slideWidth3});
     sliderUlWidth3 = slideCount3 * slideWidth3;
-    $('.slider3').css({ width: slideWidth3, height: slideHeight3 });
     $('.slider3 .slides').css({ width: sliderUlWidth3, marginLeft: - slideWidth3 });
   
   

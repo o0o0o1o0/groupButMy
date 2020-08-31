@@ -296,6 +296,7 @@ body{
           margin-bottom: 0;
           img{
             width: 100%;
+            height: 100%;
             object-fit: cover;
           }
         }
@@ -887,17 +888,27 @@ body{
         width: 100%;
         position: relative;
         .slider{
+          width: 100%;
+          // height: 60vh;
           overflow: hidden;
           border-radius: 8px;
+          // border: 8px solid #000;
           ul.slides{
-            
             li{
+              // border: 5px solid tomato;
               overflow: hidden;
-              width: 100%;
-              height: 450px;
-              img{
+              .news_content{
+                width: 100%;
                 height: 100%;
-                object-fit: cover;
+                .news_img{
+                  width: 100%;
+                  height: 100%;
+                  img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
               }
             }
           }
@@ -921,15 +932,7 @@ body{
           }
         }
       }
-        .news_content{
-        margin-top: 30px;
-        .news_img{
-          height: 500px;
-          img{
-            width: 100%;
-          }
-        }
-      }
+        
     }
   }
   @media screen and (max-width:1200px){
