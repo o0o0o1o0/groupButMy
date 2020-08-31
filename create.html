@@ -237,7 +237,7 @@
   <script>
   let map;
 let markers = [];        
-const image ="./img/create/vendor2.png";
+
 // 限制地圖觀看範圍只在夜市附近(1)
 //     const ChungliNightMarket_Map_Boundary = {
 //         north: 24.962399017033672,
@@ -299,7 +299,7 @@ function addMarker(location) {
         position: location,
         title:"娘娘雞排", //抓攤商於前面步驟輸入的值 (店名)
         map: map,
-        icon:image,
+        
         draggable: true,
     });
     const contentString =

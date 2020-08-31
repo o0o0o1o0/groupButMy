@@ -361,7 +361,7 @@ body{
                         // margin: 5px;
                         margin-right: 12px;
                         cursor: pointer;
-                        &::after{
+                        /*&::after{
                           content: '\f105';
                           font-family: 'FontAwesome';
                           font-size: 30px;
@@ -381,7 +381,7 @@ body{
                             background: $text-color-5;
                             color: $white-color;
                           }
-                        }
+                        }*/
                         >div{
                           padding-top: 20%;
                           width: 20%;      
@@ -998,14 +998,17 @@ body{
                   width: 100%;
                   height: 50%;
                   margin-left: 0;
-                  margin-bottom: 50px;                  
+                  margin-bottom: 50px;  
+                  overflow-x: scroll;
+                  // &::-webkit-scrollbar{display: none;}
                   .plan_route{
+                    background: tomato;
                     display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
+                    // flex-direction: column;
+                    // justify-content: space-around;
                     padding: initial;
                     margin:  initial;
-                    height: 100%;
+                    height: calc(100% - 20px);
                     width: 100%;
                     margin: 10px;
                     &::after{
@@ -1013,7 +1016,7 @@ body{
                       bottom: -30px;
                     }
                     span{
-                      writing-mode: vertical-lr;
+                      // writing-mode: vertical-lr;
                       padding: initial;margin: initial;
                       white-space: pre;
                       padding: 5px;
