@@ -2253,7 +2253,6 @@ html, body {
   }
   #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route {
     flex-shrink: 0;
-    background: tomato;
     display: flex;
     padding: initial;
     margin: initial;
