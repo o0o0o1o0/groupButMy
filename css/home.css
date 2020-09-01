@@ -1061,6 +1061,11 @@ html, body {
   font-weight: 600;
 }
 
+body#home a {
+  color: #000;
+  text-decoration: none;
+}
+
 #home {
   /*下面這是banner的*/
 }
@@ -2215,6 +2220,9 @@ html, body {
     width: 100%;
     font-size: 1.3em;
   }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 {
+    height: 600px;
+  }
   #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li {
     flex-direction: column;
   }
@@ -2227,27 +2235,45 @@ html, body {
     width: 100%;
     height: 20%;
     margin-left: 0;
-    margin-bottom: 50px;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    /*chrome*/
   }
-  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route {
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list::-webkit-scrollbar {
+    display: none;
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap {
+    flex-direction: row;
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route {
+    flex-shrink: 0;
     background: tomato;
     display: flex;
     padding: initial;
     margin: initial;
     height: calc(100% - 20px);
-    width: 100%;
+    width: calc(100% / 3 - 50px);
     margin: 10px;
   }
-  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route::after {
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route::after {
     right: initial;
     bottom: -30px;
   }
-  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .plan_route span {
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route > div {
+    margin-left: 8px;
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route span {
     padding: initial;
     margin: initial;
     white-space: pre;
     padding: 5px;
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list.dragactive {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
   }
   #home .container .plan .plan_content .plan_route_text {
     width: 100%;
@@ -2279,6 +2305,9 @@ html, body {
   #home .section .slider1 .slides1 li .banner .banner_content .banner_text2 {
     width: 100%;
     font-size: 1.125em;
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route {
+    width: calc(100% / 2 - 50px);
   }
 }
 
@@ -2345,6 +2374,12 @@ html, body {
   #home .section .slider1 ul.slides1 li .banner .banner_content .banner_text2 {
     width: 100%;
     font-size: 0.8em;
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 {
+    height: 450px;
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route {
+    width: calc(100% - 100px);
   }
 }
 /*# sourceMappingURL=home.css.map */

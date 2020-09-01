@@ -188,34 +188,27 @@ jQuery(document).ready(function ($) {
   
   //🟡不知道如何逛中壢夜市嗎？ 羅東臭薯條
     var slideCount2 = $('div.slider2 ul.slides li').length;
-    var divWidth = $('div.slider2').width();
+    var divWidth2 = $('div.slider2').width();
     var divHeight = $('div.slider2').height();
-    $('.slider2 .slides li').css({'width':divWidth,'height':divHeight});
-    var slideWidth2 = $('div.slider2 ul.slides li').width();
+    $('.slider2 .slides li').css({'width':divWidth2,'height':divHeight});
+    var sliderUlWidth2 = slideCount2 * divWidth2;
+    $('.slider2 .slides').css({'width':sliderUlWidth2})
     var slideWidth2LT = $('.plan .littleText li span').width();
-    var slideHeight2 = $('div.slider2 ul.slides li').height();
-    var sliderUlWidth2 = slideCount2 * slideWidth2;
   
   //resize
   $(window).resize(function(){
-    divWidth = $('.slider2').width()
+    divWidth2 = $('.slider2').width()
     divHeight = $('div.slider2').height();
-    $('.slider2 .slides li').css({'width':divWidth,'height':divHeight});
-    slideWidth2 = $('.news .section').width();
-    slideHeight2 = $('.slider2 .slides li').height();
-    sliderUlWidth2 = slideCount2 * slideWidth2;
-    
+    $('.slider2 .slides li').css({'width':divWidth2,'height':divHeight});
+    sliderUlWidth2 = slideCount2 * divWidth2;
+    $('.slider2 .slides').css({'width':sliderUlWidth2})
     winW = $(window).width();  //把resize 的值帶進去
-    if(winW>1200){
-    }else if(winW<=1200){
-      
-    }
+    // (winW>1200)?:;
   })
-  
   
   function moveLeft2() {           //向左走
     $('.slider2 .slides').animate({
-      left: + slideWidth2
+      left: + divWidth2
     }, 200, function () {
       $('.slider2 .slides li:last-child').prependTo('.slider2 .slides');
       $('.slider2 .slides').css('left', ''); 
@@ -227,11 +220,10 @@ jQuery(document).ready(function ($) {
       $('.plan .littleText li:last-child').prependTo('.plan .littleText ul');
       $('.plan .littleText ul').css('left', '');
     });
-    
   };
   function moveRight2() {            //向右走
     $('.slider2 .slides').animate({
-      left: - slideWidth2
+      left: - divWidth2
     }, 200, function () {
       $('.slider2 .slides li:first-child').appendTo('.slider2 .slides');
       $('.slider2 .slides').css('left', '');
@@ -253,6 +245,42 @@ jQuery(document).ready(function ($) {
   $('.plan_next-btn').click(function () {
     moveRight2();
   });
+//路線拖曳(小手手)
+let dragTarget = document.querySelector(".plan_route_list");
+let startX = 0;
+let startScroll = 0;
+let startTime = 0;
+let moved = false;
+const startDrag = function(e) {
+  console.log()
+  dragTarget.classList.add("dragactive");
+  startX = e.pageX;
+  startScroll = dragTarget.scrollLeft;
+  startTime = new Date().getTime();
+  moved = false;
+};
+const dragHandler = function(e) {
+  e.preventDefault();
+  if (dragTarget.classList.contains("dragactive")) {
+    moved = true;
+    let move = e.pageX - startX;
+    dragTarget.scrollLeft = startScroll - move * 5;
+  }
+};
+const stopDrag = function(e) {
+  dragTarget.classList.remove("dragactive");
+};
+$(dragTarget).mousedown(startDrag);//touchstart
+$(dragTarget).mousemove(dragHandler);//touchmove
+$(dragTarget).mouseup(stopDrag);//touchend
+$(dragTarget).mouseleave(stopDrag);
+document.querySelectorAll(".plan_route_list a").forEach(dom => {
+  dom.addEventListener("click", function(e) {
+    if (moved) {e.preventDefault();}
+  });
+});
+
+
      
   
   //🟡第三個輪播(news)(夜市夯話題)
