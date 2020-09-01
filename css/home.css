@@ -1061,11 +1061,6 @@ html, body {
   font-weight: 600;
 }
 
-body#home a {
-  color: #000;
-  text-decoration: none;
-}
-
 #home {
   /*下面這是banner的*/
 }
@@ -1400,6 +1395,11 @@ body#home a {
 
 #home .container .plan {
   margin-bottom: 80px;
+}
+
+#home .container .plan a {
+  color: #000;
+  text-decoration: none;
 }
 
 #home .container .plan .plan_title {
@@ -2220,6 +2220,9 @@ body#home a {
     width: 100%;
     font-size: 1.3em;
   }
+  #home .container .ad .ad_img:last-child img {
+    object-position: left;
+  }
   #home .container .plan .plan_content .plan_route_warp .section .slider2 {
     height: 600px;
   }
@@ -2306,6 +2309,9 @@ body#home a {
     width: 100%;
     font-size: 1.125em;
   }
+  #home .container .ad .ad_img:last-child img {
+    object-position: 20% center;
+  }
   #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route {
     width: calc(100% / 2 - 50px);
   }
@@ -2374,6 +2380,9 @@ body#home a {
   #home .section .slider1 ul.slides1 li .banner .banner_content .banner_text2 {
     width: 100%;
     font-size: 0.8em;
+  }
+  #home .container .ad .ad_img:last-child img {
+    object-position: 34% center;
   }
   #home .container .plan .plan_content .plan_route_warp .section .slider2 {
     height: 450px;
