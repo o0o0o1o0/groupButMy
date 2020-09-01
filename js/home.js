@@ -28,38 +28,67 @@ jQuery(document).ready(function ($) {
      
     })
   //scroll down
-  // $(window).on('wheel', function(e) {   
-  //                      //當我滾動滑鼠的時候
-  //   e.stopPropagation();
-  //   let delta = e.originalEvent.deltaY;
-  //   console.log(ww,$(window).scrollTop());
+  function wheelUp(){ $('body,html').animate({scrollTop: ww },800 ) }
+  function wheelDown(){
+    $('body,html').animate({scrollTop: 0 },800 ) }
+  $(window).on('wheel', function(e) {   
+    scroll =true;                   //當我滾動滑鼠的時候
+    // e.preventDefault();
+    e.stopPropagation();
+    let delta = e.originalEvent.deltaY;
+    console.log(ww,$(window).scrollTop(),scroll,delta);
      
-  //     if (delta > 0 && $(window).scrollTop() < 80) {          //滑鼠往下滑  而且  <80
-  //         $('body,html').animate({scrollTop: ww },800 )
-  //     } else if(delta < 0 && $(window).scrollTop() > 80 && $(window).scrollTop() <900) {          
-  //       $('body,html').animate({scrollTop: 0 },800 )                   //滑鼠往上滑 
-  //     }
-  //   // return false; // this line is only added so the whole page won't scroll in the demo
-  // });
+      if (delta > 0 && $(window).scrollTop() < 80) {          //滑鼠往下滑  而且  <80
+        setTimeout(wheelUp(),800)
+        scroll =false;
+      } else if(delta < 0 && ($(window).scrollTop() > 80 && $(window).scrollTop() <=ww)) {          
+        setTimeout(wheelDown(),800)                   //滑鼠往上滑 
+        scroll =false;
+      }
+    // return false; // this line is only added so the whole page won't scroll in the demo
+  });
   
   //scroll
   // let lastST = 0;
   // $(window).scroll(function(){
   //   let winST = $(this).scrollTop();
-  //   console.log('ww'+ww,'lastST'+lastST,'winST'+winST,'windowScrollTop'+$(window).scrollTop());
+  //   console.log('一屏'+ww,'lastST'+lastST,'winST'+winST,'windowScrollTop'+$(window).scrollTop());
   //   if(lastST<winST){   //往下滑
   //     if(winST <= 80){  　　　　　　　　　//scrollTop < 80
-  //       $('body,html').animate({scrollTop: ww } )
+  //       $('body,html').animate({scrollTop: ww },function(){
+
+  //       } )
   //     }
   //     winST = $(window).scrollTop();
   //   }else if(lastST>winST){//往上滑
   //     if(winST < ww-100  && winST>80){
-  //       $('body,html').animate({scrollTop: 0 } ) 
+  //       $('body,html').animate( {scrollTop: 0 },function(){
+
+  //       } ) 
   //     }
   //     // winST = $(window).scrollTop();
   //   }
-  //   lastST = $(window).scrollTop();
+  //   lastST =$(window).scrollTop();
   // });
+
+  //scroll
+  // let lastST=0;
+  // $(document).scroll(function(e){
+  //   let winST = window.pageYOffset || document.documentElement.scrollTop;
+  //   console.log('一屏'+ww,'lastST'+lastST,'windowScrollTop'+$(window).scrollTop());
+  //   if(lastST < winST){ //下滑
+  //     $('body,html').animate({scrollTop:ww},function(){
+  //       winST=$(window).scrollTop();
+  //     });    
+  //   }else if(lastST > winST){//上滑
+  //     $('body,html').animate({scrollTop:0},function(){
+  //       winST=0;
+  //     });
+  //   }
+  //   lastST = winST<=0?0:winST;
+  // })
+
+
   
   $('.scrollDownBtn').click(function() {
     $('html, body').animate({ scrollTop: ww }, 800);
@@ -81,6 +110,7 @@ jQuery(document).ready(function ($) {
   }, function(){                  //滑出的時候
     $(this).css("opacity", "0.5");
     currentDot1.css('opacity','1');//定點的不能被影響
+    timeId1 = 0
     timeId1=setInterval( () => { moveRight1(); }, 3500);//繼續輪播
   });
   $('.go-order-btn').hover(function(){clearInterval(timeId1)}
@@ -194,7 +224,8 @@ jQuery(document).ready(function ($) {
     var sliderUlWidth2 = slideCount2 * divWidth2;
     $('.slider2 .slides').css({'width':sliderUlWidth2})
     var slideWidth2LT = $('.plan .littleText li span').width();
-  
+    var currentLi2 =parseInt($('.slider2 ul li').eq(0).attr('data-page'));
+    console.log(currentLi2)
   //resize
   $(window).resize(function(){
     divWidth2 = $('.slider2').width()
@@ -209,14 +240,15 @@ jQuery(document).ready(function ($) {
   function moveLeft2() {           //向左走
     $('.slider2 .slides').animate({
       left: + divWidth2
-    }, 200, function () {
+    }, 500, function () {
       $('.slider2 .slides li:last-child').prependTo('.slider2 .slides');
       $('.slider2 .slides').css('left', ''); 
-      // currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
+      // currentLi2 = parseInt($('.slider3 ul li:first-child').attr('data-page'));
+      currentLi2 = parseInt($('.slider2 ul li').eq(0).attr('data-page'));//目前slide在第幾頁(數值)
     });
     $('.plan .littleText ul').animate({
       left: + slideWidth2LT
-    }, 0, function () {
+    }, 100, function () {
       $('.plan .littleText li:last-child').prependTo('.plan .littleText ul');
       $('.plan .littleText ul').css('left', '');
     });
@@ -227,11 +259,13 @@ jQuery(document).ready(function ($) {
     }, 200, function () {
       $('.slider2 .slides li:first-child').appendTo('.slider2 .slides');
       $('.slider2 .slides').css('left', '');
-      // currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
+      currentLi2 = parseInt($('.slider2 ul li').eq(0).attr('data-page'));//目前slide在第幾頁(數值)
+      // currentLi2 = parseInt($('.slider3 ul li:last-child').attr('data-page'));
+      console.log(currentLi2)
     });
     $('.plan .littleText ul').animate({
       left: - slideWidth2LT
-    }, 0, function () {
+    }, 100, function () {
       $('.plan .littleText li:first-child').appendTo('.plan .littleText ul');
       $('.plan .littleText ul').css('left', '');
     });
@@ -246,34 +280,39 @@ jQuery(document).ready(function ($) {
     moveRight2();
   });
 //路線拖曳(小手手)
-let dragTarget = document.querySelector(".plan_route_list");
+let dragTarget = document.querySelectorAll(".plan_route_list");
 let startX = 0;
 let startScroll = 0;
 let startTime = 0;
 let moved = false;
 const startDrag = function(e) {
-  console.log()
-  dragTarget.classList.add("dragactive");
+  dragTarget[currentLi2-1].classList.add("dragactive");
   startX = e.pageX;
-  startScroll = dragTarget.scrollLeft;
+  startScroll = dragTarget[currentLi2-1].scrollLeft;
   startTime = new Date().getTime();
   moved = false;
 };
 const dragHandler = function(e) {
   e.preventDefault();
-  if (dragTarget.classList.contains("dragactive")) {
+  if (dragTarget[currentLi2-1].classList.contains("dragactive")) {
     moved = true;
     let move = e.pageX - startX;
-    dragTarget.scrollLeft = startScroll - move * 5;
+    dragTarget[currentLi2-1].scrollLeft = startScroll - move * 5;
   }
 };
 const stopDrag = function(e) {
-  dragTarget.classList.remove("dragactive");
+  dragTarget[currentLi2-1].classList.remove("dragactive");
 };
-$(dragTarget).mousedown(startDrag);//touchstart
-$(dragTarget).mousemove(dragHandler);//touchmove
-$(dragTarget).mouseup(stopDrag);//touchend
-$(dragTarget).mouseleave(stopDrag);
+for(let i=0;i<$(".plan_route_list").length;i++){
+  dragTarget[i].addEventListener("mousedown", startDrag);//touchstart
+  dragTarget[i].addEventListener("mousemove", dragHandler);//touchmove
+  dragTarget[i].addEventListener("mouseup",   stopDrag);//touchend
+  dragTarget[i].addEventListener("mouseleave",stopDrag);
+}
+// $(dragTarget[currentLi2-1]).mousedown(startDrag);//touchstart
+// $(dragTarget[currentLi2-1]).mousemove(dragHandler);//touchmove
+// $(dragTarget[currentLi2-1]).mouseup(stopDrag);//touchend
+// $(dragTarget[currentLi2-1]).mouseleave(stopDrag);
 document.querySelectorAll(".plan_route_list a").forEach(dom => {
   dom.addEventListener("click", function(e) {
     if (moved) {e.preventDefault();}
@@ -320,7 +359,8 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
   $('.news .section').hover(
     function(){                   //滑到的時候
     clearInterval(timeId3)
-  }, function(){                  //滑出的時候
+  }, function(){   
+    timeId3 = 0               //滑出的時候
     timeId3=setInterval( () => { moveRight3(); }, 3500);
   });
   
