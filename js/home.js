@@ -222,7 +222,7 @@ jQuery(document).ready(function ($) {
     var divHeight = $('div.slider2').height();
     $('.slider2 .slides li').css({'width':divWidth2,'height':divHeight});
     var sliderUlWidth2 = slideCount2 * divWidth2;
-    $('.slider2 .slides').css({'width':sliderUlWidth2})
+    $('.slider2 .slides').css({'width':sliderUlWidth2, marginLeft:- divWidth2})
     var slideWidth2LT = $('.plan .littleText li span').width();
     var currentLi2 =parseInt($('.slider2 ul li').eq(0).attr('data-page'));
     console.log(currentLi2)
@@ -232,11 +232,11 @@ jQuery(document).ready(function ($) {
     divHeight = $('div.slider2').height();
     $('.slider2 .slides li').css({'width':divWidth2,'height':divHeight});
     sliderUlWidth2 = slideCount2 * divWidth2;
-    $('.slider2 .slides').css({'width':sliderUlWidth2})
+    $('.slider2 .slides').css({'width':sliderUlWidth2, marginLeft:- divWidth2})
     winW = $(window).width();  //把resize 的值帶進去
     // (winW>1200)?:;
   })
-  
+  $('.slider2 .slides li:last-child').prependTo('.slider2 .slides');
   function moveLeft2() {           //向左走
     $('.slider2 .slides').animate({
       left: + divWidth2
@@ -360,8 +360,8 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
     function(){                   //滑到的時候
     clearInterval(timeId3)
   }, function(){   
-    timeId3 = 0               //滑出的時候
-    timeId3=setInterval( () => { moveRight3(); }, 3500);
+    // timeId3 = 0               //滑出的時候
+    // timeId3=setInterval( () => { moveRight3(); }, 3500);
   });
   
   
