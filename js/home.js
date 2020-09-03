@@ -176,11 +176,13 @@ jQuery(document).ready(function ($) {
     let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
     let imgsW = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
     $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos + imgsW}, 300);
+    console.log(leftPos,imgsW)
   }
   function smoothLeft(e,p){
     let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
     let imgsW = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
     $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos - imgsW}, 300);
+    console.log(leftPos,imgsW)
   }
   $(".tripleNextBtn").click(function () { 
     smoothRight(this,0);
@@ -188,8 +190,10 @@ jQuery(document).ready(function ($) {
   $(".triplePrevBtn").click(function () { 
     smoothLeft(this,0)
   });
+  $(window).resize(function(){
+    // for(let i=0;i<$('.shopcard'))
+  })
   //卡片低於某個寬度，多的要刪掉
-  let ooxx = $('.hot_shop').find('.shop_card').length
   // for(let i=0;i<$('.hot_shop').find('.shop_card').length;i++){
   //   if($('.hot_shop').find('.shop_card').eq(i).has() == false){//沒有東西
   //     console.log('aaa',i)
@@ -360,8 +364,8 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
     function(){                   //滑到的時候
     clearInterval(timeId3)
   }, function(){   
-    // timeId3 = 0               //滑出的時候
-    // timeId3=setInterval( () => { moveRight3(); }, 3500);
+    timeId3 = 0               //滑出的時候
+    timeId3=setInterval( () => { moveRight3(); }, 3500);
   });
   
   
