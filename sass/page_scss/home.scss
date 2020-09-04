@@ -15,7 +15,6 @@ body#home{
       overflow: hidden;
       ul.slides {
         position: relative;
-        // margin: 0;padding: 0;
         list-style: none;
         display: flex;
          li {
@@ -27,7 +26,6 @@ body#home{
           padding: 0;
           width: 500px;
           height: 300px;
-          // background: #ccc;
           text-align: center;
           overflow: hidden;
         }

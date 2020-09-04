@@ -176,11 +176,13 @@ jQuery(document).ready(function ($) {
     let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
     let imgsW = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
     $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos + imgsW}, 300);
+    console.log(leftPos,imgsW)
   }
   function smoothLeft(e,p){
     let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
     let imgsW = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
     $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos - imgsW}, 300);
+    console.log(leftPos,imgsW)
   }
   $(".tripleNextBtn").click(function () { 
     smoothRight(this,0);
@@ -188,8 +190,10 @@ jQuery(document).ready(function ($) {
   $(".triplePrevBtn").click(function () { 
     smoothLeft(this,0)
   });
+  $(window).resize(function(){
+    // for(let i=0;i<$('.shopcard'))
+  })
   //卡片低於某個寬度，多的要刪掉
-  let ooxx = $('.hot_shop').find('.shop_card').length
   // for(let i=0;i<$('.hot_shop').find('.shop_card').length;i++){
   //   if($('.hot_shop').find('.shop_card').eq(i).has() == false){//沒有東西
   //     console.log('aaa',i)
@@ -222,7 +226,7 @@ jQuery(document).ready(function ($) {
     var divHeight = $('div.slider2').height();
     $('.slider2 .slides li').css({'width':divWidth2,'height':divHeight});
     var sliderUlWidth2 = slideCount2 * divWidth2;
-    $('.slider2 .slides').css({'width':sliderUlWidth2})
+    $('.slider2 .slides').css({'width':sliderUlWidth2, marginLeft:- divWidth2})
     var slideWidth2LT = $('.plan .littleText li span').width();
     var currentLi2 =parseInt($('.slider2 ul li').eq(0).attr('data-page'));
     console.log(currentLi2)
@@ -232,11 +236,11 @@ jQuery(document).ready(function ($) {
     divHeight = $('div.slider2').height();
     $('.slider2 .slides li').css({'width':divWidth2,'height':divHeight});
     sliderUlWidth2 = slideCount2 * divWidth2;
-    $('.slider2 .slides').css({'width':sliderUlWidth2})
+    $('.slider2 .slides').css({'width':sliderUlWidth2, marginLeft:- divWidth2})
     winW = $(window).width();  //把resize 的值帶進去
     // (winW>1200)?:;
   })
-  
+  $('.slider2 .slides li:last-child').prependTo('.slider2 .slides');
   function moveLeft2() {           //向左走
     $('.slider2 .slides').animate({
       left: + divWidth2
