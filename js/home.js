@@ -222,17 +222,18 @@ jQuery(document).ready(function ($) {
     var divHeight = $('div.slider2').height();
     $('.slider2 .slides li').css({'width':divWidth2,'height':divHeight});
     var sliderUlWidth2 = slideCount2 * divWidth2;
-    $('.slider2 .slides').css({'width':sliderUlWidth2})
+    $('.slider2 .slides').css({'width':sliderUlWidth2,marginLeft:-divWidth2})
+    //plan_route_list
     var slideWidth2LT = $('.plan .littleText li span').width();
     var currentLi2 =parseInt($('.slider2 ul li').eq(0).attr('data-page'));
-    console.log(currentLi2)
+    $('.slider2 .slides li:last-child').prependTo('.slider2 .slides');
   //resize
   $(window).resize(function(){
     divWidth2 = $('.slider2').width()
     divHeight = $('div.slider2').height();
     $('.slider2 .slides li').css({'width':divWidth2,'height':divHeight});
     sliderUlWidth2 = slideCount2 * divWidth2;
-    $('.slider2 .slides').css({'width':sliderUlWidth2})
+    $('.slider2 .slides').css({'width':sliderUlWidth2,marginLeft:-divWidth2})
     winW = $(window).width();  //把resize 的值帶進去
     // (winW>1200)?:;
   })
@@ -244,11 +245,11 @@ jQuery(document).ready(function ($) {
       $('.slider2 .slides li:last-child').prependTo('.slider2 .slides');
       $('.slider2 .slides').css('left', ''); 
       // currentLi2 = parseInt($('.slider3 ul li:first-child').attr('data-page'));
-      currentLi2 = parseInt($('.slider2 ul li').eq(0).attr('data-page'));//目前slide在第幾頁(數值)
+      currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
     });
     $('.plan .littleText ul').animate({
       left: + slideWidth2LT
-    }, 100, function () {
+    }, 500, function () {
       $('.plan .littleText li:last-child').prependTo('.plan .littleText ul');
       $('.plan .littleText ul').css('left', '');
     });
@@ -256,16 +257,15 @@ jQuery(document).ready(function ($) {
   function moveRight2() {            //向右走
     $('.slider2 .slides').animate({
       left: - divWidth2
-    }, 200, function () {
+    }, 500, function () {
       $('.slider2 .slides li:first-child').appendTo('.slider2 .slides');
       $('.slider2 .slides').css('left', '');
-      currentLi2 = parseInt($('.slider2 ul li').eq(0).attr('data-page'));//目前slide在第幾頁(數值)
+      currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
       // currentLi2 = parseInt($('.slider3 ul li:last-child').attr('data-page'));
-      console.log(currentLi2)
     });
     $('.plan .littleText ul').animate({
       left: - slideWidth2LT
-    }, 100, function () {
+    }, 500, function () {
       $('.plan .littleText li:first-child').appendTo('.plan .littleText ul');
       $('.plan .littleText ul').css('left', '');
     });
@@ -286,24 +286,25 @@ let startScroll = 0;
 let startTime = 0;
 let moved = false;
 const startDrag = function(e) {
-  dragTarget[currentLi2-1].classList.add("dragactive");
+  dragTarget[(currentLi2)%3].classList.add("dragactive");
   startX = e.pageX;
-  startScroll = dragTarget[currentLi2-1].scrollLeft;
+  startScroll = dragTarget[(currentLi2)%3].scrollLeft;
   startTime = new Date().getTime();
   moved = false;
 };
 const dragHandler = function(e) {
   e.preventDefault();
-  if (dragTarget[currentLi2-1].classList.contains("dragactive")) {
+  if (dragTarget[(currentLi2)%3].classList.contains("dragactive")) {
     moved = true;
     let move = e.pageX - startX;
-    dragTarget[currentLi2-1].scrollLeft = startScroll - move * 5;
+    dragTarget[(currentLi2)%3].scrollLeft = startScroll - move * 5;
   }
 };
 const stopDrag = function(e) {
-  dragTarget[currentLi2-1].classList.remove("dragactive");
+  dragTarget[(currentLi2)%3].classList.remove("dragactive");
 };
 for(let i=0;i<$(".plan_route_list").length;i++){
+  // console.log(dragTarget[i])
   dragTarget[i].addEventListener("mousedown", startDrag);//touchstart
   dragTarget[i].addEventListener("mousemove", dragHandler);//touchmove
   dragTarget[i].addEventListener("mouseup",   stopDrag);//touchend
