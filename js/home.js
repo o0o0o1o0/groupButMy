@@ -174,24 +174,25 @@ jQuery(document).ready(function ($) {
   //🟡三倍卡片triple(近期熱門店家、最新合作店家)
   function smoothRight(e,p){
     let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
-    let imgsW = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
-    $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos + imgsW}, 300);
+    let imgsW   = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
+    $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos + imgsW }, 300);
+    console.log(leftPos,imgsW)
   }
   function smoothLeft(e,p){
     let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
-    let imgsW = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
-    $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos - imgsW}, 300);
+    let imgsW   = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
+    $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos - imgsW }, 300);
+    console.log(leftPos,imgsW)
   }
-  $(".tripleNextBtn").click(function () { 
-    smoothRight(this,0);
-  });
-  $(".triplePrevBtn").click(function () { 
-    smoothLeft(this,0)
-  });
+  $(".tripleNextBtn").click(function () { smoothRight(this,0); });
+  $(".triplePrevBtn").click(function () {  smoothLeft(this,0) });
+  $(window).resize(function(){$('.shop_card_list').animate({scrollLeft:''}),10})
   //卡片低於某個寬度，多的要刪掉
-  $(window).resize(function(){
-    $('.shop_card_list').animate({scrollLeft:''},50)
-  })
+  // for(let i=0;i<$('.hot_shop').find('.shop_card').length;i++){
+  //   if($('.hot_shop').find('.shop_card').eq(i).has() == false){//沒有東西
+  //     console.log('aaa',i)
+  //   }
+  // // }
   // if($(window).width() >= 1200){
   
   // }
@@ -200,11 +201,7 @@ jQuery(document).ready(function ($) {
     
     
   // }
-  // else if($(window).width() < 768){
-  
-    
-    
-  // }
+
   // else if($(window).width() < 576){
   
   

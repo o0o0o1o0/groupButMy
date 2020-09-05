@@ -1380,6 +1380,9 @@ html, body {
 }
 
 #home .container .hot_shop .shop_card_list .shop_card, #home .container .new_shop .shop_card_list .shop_card {
+  min-width: calc(100%/3 - 20px);
+  /*因為margin左右20*/
+  margin: 10px;
   margin-top: 30px;
   margin-bottom: 0;
 }
@@ -1390,16 +1393,14 @@ html, body {
   object-fit: cover;
 }
 
-#home .container .hot_shop .shop_card_list .shop_card:nth-child(3n-2), #home .container .new_shop .shop_card_list .shop_card:nth-child(3n-2) {
-  min-width: calc(33.33%);
+#home .container .hot_shop .shop_card_list .shop_card:first-child, #home .container .new_shop .shop_card_list .shop_card:first-child {
+  margin-left: 0;
+  min-width: calc(100%/3 - 10px);
 }
 
-#home .container .hot_shop .shop_card_list .shop_card:nth-child(3n),
-#home .container .hot_shop .shop_card_list .shop_card:nth-child(3n-1), #home .container .new_shop .shop_card_list .shop_card:nth-child(3n),
-#home .container .new_shop .shop_card_list .shop_card:nth-child(3n-1) {
-  min-width: calc(33.33% - 20px);
-  /*因為margin左右20*/
-  margin-left: 20px;
+#home .container .hot_shop .shop_card_list .shop_card:last-child, #home .container .new_shop .shop_card_list .shop_card:last-child {
+  margin-right: 0;
+  min-width: calc(100%/3 - 10px);
 }
 
 #home .container .plan {
@@ -2226,25 +2227,20 @@ html, body {
   #home .container .ad .ad_img:last-child img {
     object-position: left;
   }
+  #home .container .hot_shop .shop_card_list .shop_card, #home .container .new_shop .shop_card_list .shop_card {
+    min-width: calc(100%/2 - 20px);
+    /*因為margin左右20*/
+  }
   #home .container .hot_shop .shop_card_list .shop_card .card_img_2 img, #home .container .new_shop .shop_card_list .shop_card .card_img_2 img {
     height: 250px;
   }
-  #home .container .hot_shop .shop_card_list .shop_card:nth-child(3n-2), #home .container .new_shop .shop_card_list .shop_card:nth-child(3n-2) {
-    min-width: 0;
-  }
-  #home .container .hot_shop .shop_card_list .shop_card:nth-child(3n),
-  #home .container .hot_shop .shop_card_list .shop_card:nth-child(3n-1), #home .container .new_shop .shop_card_list .shop_card:nth-child(3n),
-  #home .container .new_shop .shop_card_list .shop_card:nth-child(3n-1) {
-    min-width: 0;
-    /*因為margin左右20*/
+  #home .container .hot_shop .shop_card_list .shop_card:first-child, #home .container .new_shop .shop_card_list .shop_card:first-child {
     margin-left: 0;
+    min-width: calc(100%/2 - 10px);
   }
-  #home .container .hot_shop .shop_card_list .shop_card:nth-child(2n-1), #home .container .new_shop .shop_card_list .shop_card:nth-child(2n-1) {
-    min-width: 50%;
-  }
-  #home .container .hot_shop .shop_card_list .shop_card:nth-child(2n), #home .container .new_shop .shop_card_list .shop_card:nth-child(2n) {
-    min-width: calc(50% - 20px);
-    margin-left: 20px;
+  #home .container .hot_shop .shop_card_list .shop_card:last-child, #home .container .new_shop .shop_card_list .shop_card:last-child {
+    margin-right: 0;
+    min-width: calc(100%/2 - 10px);
   }
   #home .container .plan .plan_content .plan_route_warp .section .slider2 {
     height: 600px;
@@ -2364,17 +2360,18 @@ html, body {
     height: 35px;
     font-size: 16px;
   }
+  #home .container .hot_shop .shop_card_list .shop_card, #home .container .new_shop .shop_card_list .shop_card {
+    min-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
   #home .container .hot_shop .shop_card_list .shop_card .card_img_2, #home .container .new_shop .shop_card_list .shop_card .card_img_2 {
     height: 250px;
   }
-  #home .container .hot_shop .shop_card_list .shop_card:nth-child(2n-1), #home .container .new_shop .shop_card_list .shop_card:nth-child(2n-1) {
-    min-width: 0;
+  #home .container .hot_shop .shop_card_list .shop_card:first-child, #home .container .new_shop .shop_card_list .shop_card:first-child {
+    min-width: 100%;
   }
-  #home .container .hot_shop .shop_card_list .shop_card:nth-child(2n), #home .container .new_shop .shop_card_list .shop_card:nth-child(2n) {
-    min-width: 0;
-    margin-left: 0;
-  }
-  #home .container .hot_shop .shop_card_list .shop_card:nth-child(n), #home .container .new_shop .shop_card_list .shop_card:nth-child(n) {
+  #home .container .hot_shop .shop_card_list .shop_card:last-child, #home .container .new_shop .shop_card_list .shop_card:last-child {
     min-width: 100%;
   }
   #home .container .plan_route_text {

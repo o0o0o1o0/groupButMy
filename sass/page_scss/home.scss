@@ -282,17 +282,21 @@ body#home{
         max-width: 1200px;
       }
       .shop_card_list{
+        // border: 1px solid #000;
         display: flex;
         // justify-content: space-between;
         margin-bottom: 80px;
+        // margin-left: -10px;
+        // margin-right: -10px;
         width: 100%;
         overflow-x: scroll;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
         &::-webkit-scrollbar{display: none;}
         .shop_card{
-          // min-width: calc(33.33% - 20px);/*因為margin左右20*/
-          // margin: 10px;
+          // border: 1px solid tomato;
+          min-width: calc(100%/3 - 20px);/*因為margin左右20*/
+          margin: 10px;
           margin-top: 30px;
           margin-bottom: 0;
           img{
@@ -301,13 +305,13 @@ body#home{
             object-fit: cover;
           }
         }
-        .shop_card:nth-child(3n-2){
-          min-width: calc(33.33% );
+        .shop_card:first-child{
+          margin-left: 0;
+          min-width: calc(100%/3 - 10px);
         }
-        .shop_card:nth-child(3n),
-        .shop_card:nth-child(3n-1){
-          min-width: calc(33.33% - 20px);/*因為margin左右20*/
-          margin-left: 20px;
+        .shop_card:last-child{
+          margin-right: 0;
+          min-width: calc(100%/3 - 10px);
         }
       }
     }
@@ -999,25 +1003,22 @@ body#home{
       .hot_shop,.new_shop{
         .shop_card_list{
           .shop_card{
+            min-width: calc(100%/2 - 20px);/*因為margin左右20*/
             .card_img_2{
-              img{
-                height: 250px;
-              }
+              img{  height: 250px; }
             }
           }
-          .shop_card:nth-child(3n-2){ min-width:0;}
-          .shop_card:nth-child(3n),
-          .shop_card:nth-child(3n-1){
-            min-width: 0;/*因為margin左右20*/
-            margin-left:0;
+          .shop_card:first-child{
+            margin-left: 0;
+            min-width: calc(100%/2 - 10px);
           }
-          .shop_card:nth-child(2n-1){min-width: 50%;}
-          .shop_card:nth-child(2n){
-            min-width: calc(50% - 20px);
-            margin-left: 20px;
+          .shop_card:last-child{
+            margin-right: 0;
+            min-width: calc(100%/2 - 10px);
           }
         }
       }
+
       .plan{
         .plan_content{
           .plan_route_warp{
@@ -1199,16 +1200,19 @@ body#home{
       .hot_shop,.new_shop{
         .shop_card_list{
           .shop_card{
+            min-width: 100%;
+            margin-right: 0;
+            margin-left: 0;
             .card_img_2{
               height: 250px;
             }
           }
-          .shop_card:nth-child(2n-1){min-width: 0;}
-          .shop_card:nth-child(2n){
-            min-width: 0;
-            margin-left:0;
+          .shop_card:first-child{
+            min-width: 100%;
           }
-          .shop_card:nth-child(n){min-width: 100%;}
+          .shop_card:last-child{
+            min-width: 100%;
+          }
         }
       }
       // .plan{
