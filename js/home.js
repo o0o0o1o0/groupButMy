@@ -28,70 +28,29 @@ jQuery(document).ready(function ($) {
      
     })
   //scroll down
-  function wheelUp(){ $('body,html').animate({scrollTop: ww },800 ) }
-  function wheelDown(){
-    $('body,html').animate({scrollTop: 0 },800 ) }
-  $(window).on('wheel', function(e) {   
-    scroll =true;                   //當我滾動滑鼠的時候
-    // e.preventDefault();
-    e.stopPropagation();
+  function wheelDown()  {
+    // $('.hellowell').show() 
+    $('body,html').stop().animate({scrollTop: ww },800 ,
+      // function(){ $('.hellowell').hide() }
+      )
+    }
+    function wheelUp(){ 
+      // $('.hellowell').show() 
+      $('body,html').stop().animate({scrollTop: '' },800, 
+        // function(){ $('.hellowell').hide() }
+      )  
+  }
+  $(window).on('wheel', function(e) { //當我滾動滑鼠的時候
     let delta = e.originalEvent.deltaY;
-    console.log(ww,$(window).scrollTop(),scroll,delta);
-     
-      if (delta > 0 && $(window).scrollTop() < 80) {          //滑鼠往下滑  而且  <80
-        setTimeout(wheelUp(),800)
-        scroll =false;
+      if (delta > 0 && $(window).scrollTop() < 80) { //滑鼠往下滑  而且  <80
+        setTimeout(wheelDown(),800)
       } else if(delta < 0 && ($(window).scrollTop() > 80 && $(window).scrollTop() <=ww)) {          
-        setTimeout(wheelDown(),800)                   //滑鼠往上滑 
-        scroll =false;
+        setTimeout(wheelUp(),800)                   //滑鼠往上滑 
       }
-    // return false; // this line is only added so the whole page won't scroll in the demo
   });
   
-  //scroll
-  // let lastST = 0;
-  // $(window).scroll(function(){
-  //   let winST = $(this).scrollTop();
-  //   console.log('一屏'+ww,'lastST'+lastST,'winST'+winST,'windowScrollTop'+$(window).scrollTop());
-  //   if(lastST<winST){   //往下滑
-  //     if(winST <= 80){  　　　　　　　　　//scrollTop < 80
-  //       $('body,html').animate({scrollTop: ww },function(){
-
-  //       } )
-  //     }
-  //     winST = $(window).scrollTop();
-  //   }else if(lastST>winST){//往上滑
-  //     if(winST < ww-100  && winST>80){
-  //       $('body,html').animate( {scrollTop: 0 },function(){
-
-  //       } ) 
-  //     }
-  //     // winST = $(window).scrollTop();
-  //   }
-  //   lastST =$(window).scrollTop();
-  // });
-
-  //scroll
-  // let lastST=0;
-  // $(document).scroll(function(e){
-  //   let winST = window.pageYOffset || document.documentElement.scrollTop;
-  //   console.log('一屏'+ww,'lastST'+lastST,'windowScrollTop'+$(window).scrollTop());
-  //   if(lastST < winST){ //下滑
-  //     $('body,html').animate({scrollTop:ww},function(){
-  //       winST=$(window).scrollTop();
-  //     });    
-  //   }else if(lastST > winST){//上滑
-  //     $('body,html').animate({scrollTop:0},function(){
-  //       winST=0;
-  //     });
-  //   }
-  //   lastST = winST<=0?0:winST;
-  // })
-
-
-  
   $('.scrollDownBtn').click(function() {
-    $('html, body').animate({ scrollTop: ww }, 800);
+    $('html, body').stop().animate({ scrollTop: ww }, 800);
   })
   
   
@@ -124,7 +83,7 @@ jQuery(document).ready(function ($) {
   }
   dotColorChange1()                //load時就執行一次點點顏色(起始值)
   function moveLeft1() {           //向左走
-    $('.slider1 .slides').animate({
+    $('.slider1 .slides').stop().animate({
       left: + slideWidth1
     }, 800, function () {
       $('.slider1 .slides li:last-child').prependTo('.slider1 .slides');
@@ -135,7 +94,7 @@ jQuery(document).ready(function ($) {
     });
   };
   function moveRight1() {            //向右走
-    $('.slider1 .slides').animate({
+    $('.slider1 .slides').stop().animate({
       left: - slideWidth1
     }, 800, function () {
       $('.slider1 .slides li:first-child').appendTo('.slider1 .slides');
@@ -175,18 +134,18 @@ jQuery(document).ready(function ($) {
   function smoothRight(e,p){
     let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
     let imgsW   = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
-    $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos + imgsW }, 300);
+    $(e).closest('.tripleImgWrap').find(".shop_card_list").stop().animate({scrollLeft: leftPos + imgsW }, 300);
     console.log(leftPos,imgsW)
   }
   function smoothLeft(e,p){
     let leftPos = $(e).closest('.tripleImgWrap').find('.shop_card_list').scrollLeft();
     let imgsW   = $(e).closest('.tripleImgWrap').find('.shop_card_list').width();
-    $(e).closest('.tripleImgWrap').find(".shop_card_list").animate({scrollLeft: leftPos - imgsW }, 300);
+    $(e).closest('.tripleImgWrap').find(".shop_card_list").stop().animate({scrollLeft: leftPos - imgsW }, 300);
     console.log(leftPos,imgsW)
   }
   $(".tripleNextBtn").click(function () { smoothRight(this,0); });
   $(".triplePrevBtn").click(function () {  smoothLeft(this,0) });
-  $(window).resize(function(){$('.shop_card_list').animate({scrollLeft:''}),10})
+  $(window).resize(function(){$('.shop_card_list').stop().animate({scrollLeft:''}),10})
   //卡片低於某個寬度，多的要刪掉
   // for(let i=0;i<$('.hot_shop').find('.shop_card').length;i++){
   //   if($('.hot_shop').find('.shop_card').eq(i).has() == false){//沒有東西
@@ -233,7 +192,7 @@ jQuery(document).ready(function ($) {
   })
   
   function moveLeft2() {           //向左走
-    $('.slider2 .slides').animate({
+    $('.slider2 .slides').stop().animate({
       left: + divWidth2
     }, 500, function () {
       $('.slider2 .slides li:last-child').prependTo('.slider2 .slides');
@@ -241,7 +200,7 @@ jQuery(document).ready(function ($) {
       // currentLi2 = parseInt($('.slider3 ul li:first-child').attr('data-page'));
       currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
     });
-    $('.plan .littleText ul').animate({
+    $('.plan .littleText ul').stop().animate({
       left: + slideWidth2LT
     }, 500, function () {
       $('.plan .littleText li:last-child').prependTo('.plan .littleText ul');
@@ -249,7 +208,7 @@ jQuery(document).ready(function ($) {
     });
   };
   function moveRight2() {            //向右走
-    $('.slider2 .slides').animate({
+    $('.slider2 .slides').stop().animate({
       left: - divWidth2
     }, 500, function () {
       $('.slider2 .slides li:first-child').appendTo('.slider2 .slides');
@@ -257,7 +216,7 @@ jQuery(document).ready(function ($) {
       currentLi2 = parseInt($('.slider2 ul li').eq(1).attr('data-page'));//目前slide在第幾頁(數值)
       // currentLi2 = parseInt($('.slider3 ul li:last-child').attr('data-page'));
     });
-    $('.plan .littleText ul').animate({
+    $('.plan .littleText ul').stop().animate({
       left: - slideWidth2LT
     }, 500, function () {
       $('.plan .littleText li:first-child').appendTo('.plan .littleText ul');
@@ -367,7 +326,7 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
   }
   dotColorChange3()                //load時就執行一次點點顏色(起始值)
   function moveLeft3() {           //向左走
-    $('.slider3 .slides').animate({
+    $('.slider3 .slides').stop().animate({
       left: + slideWidth3
     }, 300, function () {
       $('.slider3 .slides li:last-child').prependTo('.slider3 .slides');
@@ -378,7 +337,7 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
     });
   };
   function moveRight3() {            //向右走
-    $('.slider3 .slides').animate({
+    $('.slider3 .slides').stop().animate({
       left: - slideWidth3
     }, 300, function () {
       $('.slider3 .slides li:first-child').appendTo('.slider3 .slides');

@@ -160,81 +160,94 @@ body#home{
 }
 
 #home{
+  position: relative;
   background-color: $bg-color-1;
-  li{
-    .banner{
-      width: 100%;
-      position: relative;
-      background-image: url(../img/home/banner.jpg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      // .scroll_banner{
-      //   width: 100%;
-      //   display: block;
-      // }
-      .banner_content{
-        // position: absolute;
-        // top: 20%;
-        // left: 5%;
-        margin-left: 40px;
-        color: $white-color;
+  .hellowell{//第一屏、第二屏會有，動畫觸發時出現
+    display: none;
+    position: absolute;
+    z-index: 3;
+    flex-shrink: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 99, 71,0.6);
+  }
+  .section{
+    position: relative;
+    li{
+      .banner{
+        width: 100%;
+        position: relative;
+        background-image: url(../img/home/banner.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         display: flex;
-        flex-direction: column;
-        .banner_title{
-          text-align: left;
-          font-size: 50px;
+        align-items: center;
+        // .scroll_banner{
+        //   width: 100%;
+        //   display: block;
+        // }
+        .banner_content{
+          // position: absolute;
+          // top: 20%;
+          // left: 5%;
+          margin-left: 40px;
+          color: $white-color;
+          display: flex;
+          flex-direction: column;
+          .banner_title{
+            text-align: left;
+            font-size: 50px;
+          }
+          .banner_text{
+            text-align: left;
+            font-size: 40px;
+            margin-top: 20px;
+          }
+          .banner_text2{
+            text-align: left;
+            font-size: 24px;
+            width: 550px;
+            line-height: 30px;
+            margin: 15px 0;
+            opacity: 0.9;
+          }
         }
-        .banner_text{
-          text-align: left;
-          font-size: 40px;
-          margin-top: 20px;
+        .banner_circle{
+          position: absolute;
+          bottom: 0px;
+          max-height: 33.33%;
+          max-width: 50%;
+          left: 50%;
+          transform:translateX(-50%) ;
+          // object-fit: contain;
         }
-        .banner_text2{
-          text-align: left;
-          font-size: 24px;
-          width: 550px;
-          line-height: 30px;
-          margin: 15px 0;
-          opacity: 0.9;
+        .circle_content{
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          .clrcel_num{
+            color: $text-color-5;
+            font-size: 8em;
+          }
+          .circle_text{
+            font-size: 3em;
+          }
+          .circle_text2{
+            font-size: 2.5em;
+            margin-top: 5px;
+          }
         }
       }
-      .banner_circle{
-        position: absolute;
-        bottom: 0px;
-        max-height: 33.33%;
-        max-width: 50%;
-        left: 50%;
-        transform:translateX(-50%) ;
-        // object-fit: contain;
+      .banbmimg{
+        display: flex;
+        align-items: flex-end;
       }
-      .circle_content{
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        .clrcel_num{
-          color: $text-color-5;
-          font-size: 8em;
-        }
-        .circle_text{
-          font-size: 3em;
-        }
-        .circle_text2{
-          font-size: 2.5em;
-          margin-top: 5px;
-        }
+      .banbmimg3{
+        img{height: 50%;object-fit: cover;}
       }
-    }
-    .banbmimg{
-      display: flex;
-      align-items: flex-end;
-    }
-    .banbmimg3{
-      img{height: 50%;object-fit: cover;}
     }
   }
   .container{
