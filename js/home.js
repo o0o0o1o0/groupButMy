@@ -189,12 +189,9 @@ jQuery(document).ready(function ($) {
     smoothLeft(this,0)
   });
   //卡片低於某個寬度，多的要刪掉
-  let ooxx = $('.hot_shop').find('.shop_card').length
-  // for(let i=0;i<$('.hot_shop').find('.shop_card').length;i++){
-  //   if($('.hot_shop').find('.shop_card').eq(i).has() == false){//沒有東西
-  //     console.log('aaa',i)
-  //   }
-  // // }
+  $(window).resize(function(){
+    $('.shop_card_list').animate({scrollLeft:''},50)
+  })
   // if($(window).width() >= 1200){
   
   // }
