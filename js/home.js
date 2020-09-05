@@ -29,15 +29,11 @@ jQuery(document).ready(function ($) {
     })
   //scroll down
   function wheelDown()  {
-    // $('.hellowell').show() 
     $('body,html').stop().animate({scrollTop: ww },800 ,
-      // function(){ $('.hellowell').hide() }
       )
     }
     function wheelUp(){ 
-      // $('.hellowell').show() 
       $('body,html').stop().animate({scrollTop: '' },800, 
-        // function(){ $('.hellowell').hide() }
       )  
   }
   $(window).on('wheel', function(e) { //當我滾動滑鼠的時候
