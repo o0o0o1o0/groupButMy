@@ -1502,6 +1502,10 @@ body#create form#createVendor .page5 .pageItem .img img {
   object-fit: cover;
 }
 
+body#create .createVendorContainer form#createVendor .page {
+  display: none;
+}
+
 body#create .createVendorContainer #createVendor[data-page="1"] .page:nth-child(1),
 body#create .createVendorContainer #createVendor[data-page="2"] .page:nth-child(2),
 body#create .createVendorContainer #createVendor[data-page="3"] .page:nth-child(3),
