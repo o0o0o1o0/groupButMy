@@ -1,4 +1,63 @@
 jQuery(document).ready(function ($) {
+  //🟡導覽列
+  let winH = parseInt($(window).height());
+  let winW = parseInt($(window).width()+17);
+  let winST = parseInt($(window).scrollTop())
+  //導覽列  load時
+    if(winW>1200 && winST<=0){                 //寬>1200 高<=0
+      $('.navmenu').addClass('bgTransparent')
+      $('.navmenu .logo img').attr('src','./img/layout/logo2.png')//logo改白字(透明底)
+    }else{
+      $('.navmenu .logo img').attr('src','./img/layout/logo.png') //logo改黑字(白底)
+      $('.navmenu').removeClass('bgTransparent')
+    }
+  //導覽列resize (就把漢堡下拉選單關掉、改圖片)
+  $(window).resize(function(){
+    winH = parseInt($(window).height());
+    winW = parseInt($(window).width()+17);
+    winST = parseInt($(window).scrollTop())
+    if(winW>1200){
+      $('.navmenu .wrap div').eq(2).find('ul').css('height','70px')
+      $('.navmenu .wrap div').eq(2).find('ul').css({'display':'flex'});
+      if(winST <=0){$('.navmenu .logo img').attr('src','./img/layout/logo2.png')}//logo改白字(透明底)
+      else{$('.navmenu .logo img').attr('src','./img/layout/logo.png') }//logo改黑字(白底)
+    }else if(winW<=1200){
+      $('.navmenu .wrap div').eq(2).find('ul').css('height','0px');
+      $('.navmenu .wrap div').eq(2).find('ul').slideUp();
+      $('.hamburger').removeClass('is-active')
+      $('.navmenu .logo img').attr('src','./img/layout/logo.png') //logo改黑字(白底)
+    }
+  })
+  
+  //導覽列Scroll(加陰影、改圖片)
+  $(document).scroll(function(){
+    winH = parseInt($(window).height());
+    winW = parseInt($(window).width()+17);
+    winST = parseInt($(window).scrollTop())
+    if( winST > 0){                         //scroll > 80
+      $('.navmenu').addClass('letmeout')     //陰影
+      $('.navmenu').removeClass('bgTransparent') 
+      $('.navmenu .logo img').attr('src','./img/layout/logo.png') //logo改黑字(白底)
+    }else{                               //scroll <= 80 
+      $('.navmenu').removeClass('letmeout') //去除陰影
+      $('.navmenu').addClass('bgTransparent')  
+      if(winW > 1200){$('.navmenu .logo img').attr('src','./img/layout/logo2.png')}//logo改白字(透明底)
+      else if(winW <=1200){$('.navmenu .logo img').attr('src','./img/layout/logo.png') }//logo改黑字(白底)
+    }
+  })
+
+  // 導覽列漢堡、下拉選單切換
+  $(".hamburger").click(function(){
+    $(this).toggleClass("is-active");
+    if($('.hamburger').hasClass('is-active')){
+      $('.navmenu .wrap div').eq(2).find('ul').css('height','calc(100vh - 70px)')
+      $('.navmenu .wrap div').eq(2).find('ul').slideDown();
+    }else{
+      $('.navmenu .wrap div').eq(2).find('ul').css('height','')
+      $('.navmenu .wrap div').eq(2).find('ul').slideUp();
+    }
+  });
+  
   //🟡第一屏(banner輪播)
     var slideCount1 = $('.slider1 .slides li').length;
     var slideWidth1 = document.documentElement.clientWidth//$('.slider1').width();
