@@ -25,8 +25,8 @@ body#home{
           position: relative;
           margin: 0;
           padding: 0;
-          width: 500px;
-          height: 300px;
+          // width: 500px;
+          // height: 300px;
           // background: #ccc;
           text-align: center;
           overflow: hidden;
@@ -74,34 +74,13 @@ body#home{
   }
   /*下面這是banner的*/
   .section:nth-child(2){
-    position: relative;
-    // border: 5px solid pink ;
     .slider{
       // border: 5px solid greenyellow ;
       // overflow: visible;
       .slides{
-        width: 300vw;
+        
         li{
-          width: 99vw;
-          height:100vh;//calc(95vh - 70px)
-          flex-direction: column;
-          justify-content: space-between;
-          overflow: hidden;
-          .banner{
-            height: 60%;
-            .scroll_banner{
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-          .banbmimg{
-            height: 40%;
-            overflow: hidden;
-            img{
-              height: 100%;
-              object-fit: cover;
-            }
-          }
+          
         }
       }
       .steps{
@@ -162,82 +141,101 @@ body#home{
 #home{
   position: relative;
   background-color: $bg-color-1;
-  .section{
+  .section1{
     position: relative;
-    li{
-      .banner{
-        width: 100%;
-        position: relative;
-        background-image: url(../img/home/banner.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        // .scroll_banner{
-        //   width: 100%;
-        //   display: block;
-        // }
-        .banner_content{
-          // position: absolute;
-          // top: 20%;
-          // left: 5%;
-          margin-left: 40px;
-          color: $white-color;
-          display: flex;
+    .slider1{
+      // width: 100vw;
+      height: 100vh;
+      .slides1{
+        // width: 300vw;
+        li{
+          // width: 99vw;
+          height:100vh;
           flex-direction: column;
-          .banner_title{
-            text-align: left;
-            font-size: 50px;
+          justify-content: space-between;
+          overflow: hidden;
+          .banner{
+            height: 60%;
+            width: 100%;
+            position: relative;
+            background-image: url(../img/home/banner.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            .scroll_banner{
+              height: 100%;
+              object-fit: cover;
+            }
+            .banner_content{
+              // position: absolute;
+              // top: 20%;
+              // left: 5%;
+              margin-left: 40px;
+              color: $white-color;
+              display: flex;
+              flex-direction: column;
+              .banner_title{
+                text-align: left;
+                font-size: 50px;
+              }
+              .banner_text{
+                text-align: left;
+                font-size: 40px;
+                margin-top: 20px;
+              }
+              .banner_text2{
+                text-align: left;
+                font-size: 24px;
+                width: 550px;
+                line-height: 30px;
+                margin: 15px 0;
+                opacity: 0.9;
+              }
+            }
+            .banner_circle{
+              position: absolute;
+              bottom: 0px;
+              max-height: 33.33%;
+              max-width: 50%;
+              left: 50%;
+              transform:translateX(-50%) ;
+              // object-fit: contain;
+            }
+            .circle_content{
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              text-align: center;
+              .clrcel_num{
+                color: $text-color-5;
+                font-size: 8em;
+              }
+              .circle_text{
+                font-size: 3em;
+              }
+              .circle_text2{
+                font-size: 2.5em;
+                margin-top: 5px;
+              }
+            }
           }
-          .banner_text{
-            text-align: left;
-            font-size: 40px;
-            margin-top: 20px;
+          .banbmimg{
+            height: 40%;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            img{
+              height: 100%;
+              object-fit: cover;
+            }
           }
-          .banner_text2{
-            text-align: left;
-            font-size: 24px;
-            width: 550px;
-            line-height: 30px;
-            margin: 15px 0;
-            opacity: 0.9;
+          .banbmimg3{
+            img{height: 50%;object-fit: cover;}
           }
         }
-        .banner_circle{
-          position: absolute;
-          bottom: 0px;
-          max-height: 33.33%;
-          max-width: 50%;
-          left: 50%;
-          transform:translateX(-50%) ;
-          // object-fit: contain;
-        }
-        .circle_content{
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          text-align: center;
-          .clrcel_num{
-            color: $text-color-5;
-            font-size: 8em;
-          }
-          .circle_text{
-            font-size: 3em;
-          }
-          .circle_text2{
-            font-size: 2.5em;
-            margin-top: 5px;
-          }
-        }
-      }
-      .banbmimg{
-        display: flex;
-        align-items: flex-end;
-      }
-      .banbmimg3{
-        img{height: 50%;object-fit: cover;}
       }
     }
   }

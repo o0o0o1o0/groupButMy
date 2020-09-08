@@ -1,23 +1,22 @@
 jQuery(document).ready(function ($) {
   //🟡第一屏(banner輪播)
     var slideCount1 = $('.slider1 .slides li').length;
-    var slideWidth1 = $('.slider1 .slides li').width();
-    var slideHeight1 = $('.slider1 .slides li').height();
+    var slideWidth1 = document.documentElement.clientWidth//$('.slider1').width();
+    var slideHeight1 = window.innerHeight;
     var sliderUlWidth1 = slideCount1 * slideWidth1;
-    let slidePage1 = parseInt($('.slides li').attr('data-page'))
     let currentLi1 = parseInt($('.slider1 ul li:first-child').attr('data-page'));
     let currentDot1 = $('.steps1 li').eq(currentLi1-1);
     let ww = parseInt(window.innerHeight- 70+'px' )           //一個..視窗的高度..   然後減掉導覽列高度
-    $('.slider1').css({ width:  window.innerWidth-25, height: parseInt(`${window.innerHeight}`) });
+    //, height: parseInt(`${window.innerHeight}`)
+    $('.slider1,.slider1 .slides li').css({ width: slideWidth1 });
     $('.slider1 .slides').css({ width: sliderUlWidth1, marginLeft: - slideWidth1 });
    //resize
     $(window).resize(function(){
-      slideWidth1 = window.innerWidth-25;
+      slideWidth1 = document.documentElement.clientWidth ;
       slideHeight1 = parseInt(`${window.innerHeight}`);//-100
       sliderUlWidth1 = slideCount1 * slideWidth1;
       ww = parseInt(window.innerHeight- 70+'px' )
-      // console.log(slideWidth1,window.innerWidth,'---',slideHeight1,window.innerHeight,sliderUlWidth1)
-      $('.slider1').css({ width: slideWidth1, height: slideHeight1 });
+      $('.slider1,.slider1 .slides li').css({ width:  slideWidth1 });
       $('.slider1 .slides').css({ width: sliderUlWidth1, marginLeft: - slideWidth1 });
       
       winW = $(window).width();  //把resize 的值帶進去
@@ -28,22 +27,27 @@ jQuery(document).ready(function ($) {
      
     })
   //scroll down
-  function wheelDown()  {
+  function wheelDown(e)  {
     $('body,html').stop().animate({scrollTop: ww },800 ,
       )
     }
-    function wheelUp(){ 
+    function wheelUp(e){ 
       $('body,html').stop().animate({scrollTop: '' },800, 
       )  
   }
-  $(window).on('wheel', function(e) { //當我滾動滑鼠的時候
+  $(window).on('wheel  DOMMouseScroll', function(e) { //當我滾動滑鼠的時候
+    // e.stopPropagation();
+    // e.preventDefault();
+    e.stopImmediatePropagation(); 
     let delta = e.originalEvent.deltaY;
       if (delta > 0 && $(window).scrollTop() < 80) { //滑鼠往下滑  而且  <80
         setTimeout(wheelDown(),800)
       } else if(delta < 0 && ($(window).scrollTop() > 80 && $(window).scrollTop() <=ww)) {          
         setTimeout(wheelUp(),800)                   //滑鼠往上滑 
       }
+      //,{passive: false}
   });
+
   
   $('.scrollDownBtn').click(function() {
     $('html, body').stop().animate({ scrollTop: ww }, 800);
@@ -54,7 +58,7 @@ jQuery(document).ready(function ($) {
   //輪播
   $('.slider1 .slides li:last-child').prependTo('.slider1 .slides');
   //自動播放輪播
-  var timeId1 = 0 ;timeId1=setInterval( () => { moveRight1(); }, 3500);
+  timeId1=timeId1=setInterval( moveRight1, 3500)
   //hover   
   $('.steps1 li').hover(
     function(){                   //滑到的時候
@@ -64,10 +68,10 @@ jQuery(document).ready(function ($) {
   }, function(){                  //滑出的時候
     $(this).css("opacity", "0.5");
     currentDot1.css('opacity','1');//定點的不能被影響
-    timeId1 = 0  ;timeId1=setInterval( () => { moveRight1(); }, 3500);//繼續輪播
+    timeId1=setInterval( moveRight1, 3500)//繼續輪播
   });
   $('.go-order-btn').hover(function(){clearInterval(timeId1)}
-                          ,function(){timeId1=setInterval( () => { moveRight1(); }, 3500)}
+                          ,function(){timeId1=setInterval( moveRight1, 3500)}
   )
   
   
@@ -290,7 +294,7 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
    
   })
   //自動輪播
-  var timeId3 = 0;   timeId3=setInterval( () => { moveRight3(); }, 3500);
+timeId3=setInterval(   moveRight3 , 3500);
       
   //hover
   $('.steps3 li').hover(
@@ -305,7 +309,7 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
     function(){                   //滑到的時候
     clearInterval(timeId3)
   }, function(){                  //滑出的時候
-    timeId3 = 0  ;    timeId3=setInterval( () => { moveRight3(); }, 3500);
+    timeId3=setInterval(   moveRight3 , 3500);
   });
   
   
