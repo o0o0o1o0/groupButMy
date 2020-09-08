@@ -1483,27 +1483,25 @@ html, body {
   padding-right: 20%;
   margin-right: 12px;
   cursor: pointer;
-  /*&::after{
-                            content: '\f105';
-                            font-family: 'FontAwesome';
-                            font-size: 30px;
-                            color: $text-color-5;
-                            background-color: $white-color;
-                            width: 35px;
-                            height: 35px;
-                            line-height: 35px;
-                            text-align: center;
-                            border-radius: 50px;
-                            box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-                            position: absolute;
-                            right: -15px;
-                          }
-                          &:hover{
-                            &::after{
-                              background: $text-color-5;
-                              color: $white-color;
-                            }
-                          }*/
+}
+
+#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route i {
+  font-size: 30px;
+  color: #F36E30;
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+  position: absolute;
+  right: -15px;
+}
+
+#home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route:hover i {
+  background: #F36E30;
+  color: #fff;
 }
 
 #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route > div {

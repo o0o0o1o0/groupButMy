@@ -19,9 +19,9 @@ body#home{
         list-style: none;
         display: flex;
          li {
-           display: flex;
-           justify-content: center;
-           align-items: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           position: relative;
           margin: 0;
           padding: 0;
@@ -382,9 +382,8 @@ body#home{
                           // margin: 5px;
                           margin-right: 12px;
                           cursor: pointer;
-                          /*&::after{
-                            content: '\f105';
-                            font-family: 'FontAwesome';
+                          i{
+                            //content: '\f105';
                             font-size: 30px;
                             color: $text-color-5;
                             background-color: $white-color;
@@ -398,11 +397,11 @@ body#home{
                             right: -15px;
                           }
                           &:hover{
-                            &::after{
+                            i{
                               background: $text-color-5;
                               color: $white-color;
                             }
-                          }*/
+                          }
                           >div{
                             padding-top: 20%;
                             width: 20%;      
