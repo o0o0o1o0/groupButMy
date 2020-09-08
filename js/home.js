@@ -54,8 +54,7 @@ jQuery(document).ready(function ($) {
   //輪播
   $('.slider1 .slides li:last-child').prependTo('.slider1 .slides');
   //自動播放輪播
-  var timeId1 = 0
-  timeId1=setInterval( () => { moveRight1(); }, 3500);
+  var timeId1 = 0 ;timeId1=setInterval( () => { moveRight1(); }, 3500);
   //hover   
   $('.steps1 li').hover(
     function(){                   //滑到的時候
@@ -65,8 +64,7 @@ jQuery(document).ready(function ($) {
   }, function(){                  //滑出的時候
     $(this).css("opacity", "0.5");
     currentDot1.css('opacity','1');//定點的不能被影響
-    timeId1 = 0
-    timeId1=setInterval( () => { moveRight1(); }, 3500);//繼續輪播
+    timeId1 = 0  ;timeId1=setInterval( () => { moveRight1(); }, 3500);//繼續輪播
   });
   $('.go-order-btn').hover(function(){clearInterval(timeId1)}
                           ,function(){timeId1=setInterval( () => { moveRight1(); }, 3500)}
@@ -79,7 +77,7 @@ jQuery(document).ready(function ($) {
   }
   dotColorChange1()                //load時就執行一次點點顏色(起始值)
   function moveLeft1() {           //向左走
-    $('.slider1 .slides').stop().animate({
+    $('.slider1 .slides').animate({
       left: + slideWidth1
     }, 800, function () {
       $('.slider1 .slides li:last-child').prependTo('.slider1 .slides');
@@ -90,7 +88,7 @@ jQuery(document).ready(function ($) {
     });
   };
   function moveRight1() {            //向右走
-    $('.slider1 .slides').stop().animate({
+    $('.slider1 .slides').animate({
       left: - slideWidth1
     }, 800, function () {
       $('.slider1 .slides li:first-child').appendTo('.slider1 .slides');
@@ -108,19 +106,17 @@ jQuery(document).ready(function ($) {
   $('a.control_next1').click(function () {
     moveRight1();
   });
-  for(let i=1;i<=slideCount1;i++){//1~5頁
+  for(let i=1;i<=slideCount1;i++){//1~3頁
      $('.steps1 li').eq(i-1).click(function(){//哪個newP被按了
        if(($(this).index()+1) > currentLi1){
          let mm = ($(this).index()+1) - currentLi1
-          console.log(mm)
           for(let j=0;j<mm;j++){
-            moveRight1();
+            setTimeout( moveRight1() );
           }
        }else if(($(this).index()+1) < currentLi1){
          let mm = currentLi1 - ($(this).index()+1)
-          console.log(mm)
           for(let p=0;p<mm;p++){
-            moveLeft1();
+            setTimeout(  moveLeft1() );
           }
        }
       });
@@ -294,8 +290,7 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
    
   })
   //自動輪播
-  var timeId3 = 0
-      timeId3=setInterval( () => { moveRight3(); }, 3500);
+  var timeId3 = 0;   timeId3=setInterval( () => { moveRight3(); }, 3500);
       
   //hover
   $('.steps3 li').hover(
@@ -309,9 +304,8 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
   $('.news .section').hover(
     function(){                   //滑到的時候
     clearInterval(timeId3)
-  }, function(){   
-    timeId3 = 0               //滑出的時候
-    timeId3=setInterval( () => { moveRight3(); }, 3500);
+  }, function(){                  //滑出的時候
+    timeId3 = 0  ;    timeId3=setInterval( () => { moveRight3(); }, 3500);
   });
   
   
@@ -322,7 +316,7 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
   }
   dotColorChange3()                //load時就執行一次點點顏色(起始值)
   function moveLeft3() {           //向左走
-    $('.slider3 .slides').stop().animate({
+    $('.slider3 .slides').animate({
       left: + slideWidth3
     }, 300, function () {
       $('.slider3 .slides li:last-child').prependTo('.slider3 .slides');
@@ -333,7 +327,7 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
     });
   };
   function moveRight3() {            //向右走
-    $('.slider3 .slides').stop().animate({
+    $('.slider3 .slides').animate({
       left: - slideWidth3
     }, 300, function () {
       $('.slider3 .slides li:first-child').appendTo('.slider3 .slides');
@@ -357,13 +351,13 @@ document.querySelectorAll(".plan_route_list a").forEach(dom => {
          let mm = ($(this).index()+1) - currentLi3
           console.log(mm)
           for(let j=0;j<mm;j++){
-            moveRight3();
+            setTimeout( moveRight3() );
           }
        }else if(($(this).index()+1) < currentLi3){
          let mm = currentLi3 - ($(this).index()+1)
           console.log(mm)
           for(let p=0;p<mm;p++){
-            moveLeft3();
+            setTimeout(  moveLeft3() );
           }
        }
       });

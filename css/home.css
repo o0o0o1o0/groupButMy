@@ -2379,14 +2379,27 @@ html, body {
   #home .container .hot_shop .shop_card_list .shop_card:last-child, #home .container .new_shop .shop_card_list .shop_card:last-child {
     min-width: 100%;
   }
-  #home .container .plan_route_text {
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 {
+    height: 400px;
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list {
+    height: 30%;
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route {
+    width: calc(100% - 100px);
+  }
+  #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route > div {
+    padding-top: 15%;
+    width: 15%;
+  }
+  #home .container .plan .plan_content .plan_route_text {
     flex-direction: column;
     justify-content: center;
   }
-  #home .container .plan_route_text .plan_route_ttitle {
+  #home .container .plan .plan_content .plan_route_text .plan_route_ttitle {
     align-self: center;
   }
-  #home .container .plan_route_text .plan_route_btn {
+  #home .container .plan .plan_content .plan_route_text .plan_route_btn {
     margin-top: 20px;
     align-self: center;
   }
@@ -2416,7 +2429,7 @@ html, body {
     object-position: 34% center;
   }
   #home .container .plan .plan_content .plan_route_warp .section .slider2 {
-    height: 450px;
+    height: 350px;
   }
   #home .container .plan .plan_content .plan_route_warp .section .slider2 ul.slides li .plan_route_list .dragwrap .plan_route {
     width: calc(100% - 100px);

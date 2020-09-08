@@ -1219,15 +1219,29 @@ body#home{
           }
         }
       }
-      // .plan{
-      //   .plan_content{
-      //     .plan_route_warp{
-      //       .section .slider2 ul.slides{
-      //         li{
-  
-      //         }
-      //       }
-      //     }
+      .plan{
+        .plan_content{
+          .plan_route_warp{
+            .section .slider2{
+              height: 400px;
+              ul.slides{
+                li{
+                  .plan_route_list{
+                    height: 30%;
+                    .dragwrap{
+                      .plan_route{
+                        width: calc(100% - 100px);
+                        >div{
+                          padding-top: 15%;
+                          width: 15%;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
           .plan_route_text{
             flex-direction: column;
             justify-content: center;
@@ -1239,8 +1253,8 @@ body#home{
               align-self: center;
             }
           }
-      //   }
-      // }
+        }
+      }
     }
   }
 
@@ -1296,7 +1310,7 @@ body#home{
         .plan_content{
           .plan_route_warp{
             .section .slider2{
-              height: 450px;
+              height: 350px;
               ul.slides{
                 li{
                   .plan_route_list{
