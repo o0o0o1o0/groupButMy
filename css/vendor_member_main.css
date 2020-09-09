@@ -57,7 +57,8 @@ button {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif;
+  font-weight: 600;
   outline: none;
   background-color: transparent;
 }
@@ -71,7 +72,7 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #FF6B6B;
-  border: 1.5px solid transparent;
+  border: 1.8px solid transparent;
   width: 80px;
   height: 35px;
   text-align: center;
@@ -81,7 +82,7 @@ body {
 
 .btn-cir_pk1:hover {
   background-color: transparent;
-  border: 1.5px solid #FF6B6B;
+  border: 1.8px solid #FF6B6B;
   color: #FF6B6B;
   transition: ease-out 0.3s;
 }
@@ -90,7 +91,7 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #FF6B6B;
-  border: 1.5px solid transparent;
+  border: 1.8px solid transparent;
   width: 100px;
   height: 35px;
   text-align: center;
@@ -100,7 +101,7 @@ body {
 
 .btn-cir_pk2:hover {
   background-color: transparent;
-  border: 1.5px solid #FF6B6B;
+  border: 1.8px solid #FF6B6B;
   color: #FF6B6B;
   transition: ease-out 0.3s;
 }
@@ -109,7 +110,7 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #2DC8A9;
-  border: 1.5px solid transparent;
+  border: 1.8px solid transparent;
   width: 80px;
   height: 35px;
   text-align: center;
@@ -119,7 +120,7 @@ body {
 
 .btn-cir_gr1:hover {
   background-color: transparent;
-  border: 1.5px solid #2DC8A9;
+  border: 1.8px solid #2DC8A9;
   color: #2DC8A9;
   transition: ease-out 0.3s;
 }
@@ -128,7 +129,7 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #2DC8A9;
-  border: 1.5px solid transparent;
+  border: 1.8px solid transparent;
   width: 100px;
   height: 35px;
   text-align: center;
@@ -138,7 +139,7 @@ body {
 
 .btn-cir_gr2:hover {
   background-color: transparent;
-  border: 1.5px solid #2DC8A9;
+  border: 1.8px solid #2DC8A9;
   color: #2DC8A9;
   transition: ease-out 0.3s;
 }
@@ -147,7 +148,7 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #FF6B6B;
-  border: 1.5px solid transparent;
+  border: 1.8px solid transparent;
   width: 80px;
   height: 35px;
   text-align: center;
@@ -157,7 +158,7 @@ body {
 
 .btn-rect_pk1:hover {
   background-color: transparent;
-  border: 1.5px solid #FF6B6B;
+  border: 1.8px solid #FF6B6B;
   color: #FF6B6B;
   transition: ease-out 0.3s;
 }
@@ -166,8 +167,8 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #FF6B6B;
-  border: 1.5px solid transparent;
-  width: 110px;
+  border: 1.8px solid transparent;
+  width: 100px;
   height: 35px;
   text-align: center;
   border-radius: 6px;
@@ -176,7 +177,7 @@ body {
 
 .btn-rect_pk2:hover {
   background-color: transparent;
-  border: 1.5px solid #FF6B6B;
+  border: 1.8px solid #FF6B6B;
   color: #FF6B6B;
   transition: ease-out 0.3s;
 }
@@ -185,7 +186,7 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #2DC8A9;
-  border: 1.5px solid transparent;
+  border: 1.8px solid transparent;
   width: 80px;
   height: 35px;
   text-align: center;
@@ -195,7 +196,7 @@ body {
 
 .btn-rect_gr1:hover {
   background-color: transparent;
-  border: 1.5px solid #2DC8A9;
+  border: 1.8px solid #2DC8A9;
   color: #2DC8A9;
   transition: ease-out 0.3s;
 }
@@ -204,8 +205,8 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #2DC8A9;
-  border: 1.5px solid transparent;
-  width: 110px;
+  border: 1.8px solid transparent;
+  width: 100px;
   height: 35px;
   text-align: center;
   border-radius: 6px;
@@ -214,7 +215,7 @@ body {
 
 .btn-rect_gr2:hover {
   background-color: transparent;
-  border: 1.5px solid #2DC8A9;
+  border: 1.8px solid #2DC8A9;
   color: #2DC8A9;
   transition: ease-out 0.3s;
 }
@@ -223,7 +224,7 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #4db7fe;
-  border: 1.5px solid transparent;
+  border: 1.8px solid transparent;
   width: 80px;
   height: 35px;
   text-align: center;
@@ -233,7 +234,7 @@ body {
 
 .btn-cir_bl:hover {
   background-color: transparent;
-  border: 1.5px solid #4db7fe;
+  border: 1.8px solid #4db7fe;
   color: #4db7fe;
   transition: ease-out 0.3s;
 }
@@ -242,7 +243,7 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #4db7fe;
-  border: 1.5px solid transparent;
+  border: 1.8px solid transparent;
   width: 80px;
   height: 35px;
   text-align: center;
@@ -252,7 +253,7 @@ body {
 
 .btn-rect_bl1:hover {
   background-color: transparent;
-  border: 1.5px solid #4db7fe;
+  border: 1.8px solid #4db7fe;
   color: #4db7fe;
   transition: ease-out 0.3s;
 }
@@ -261,8 +262,8 @@ body {
   font-size: 18px;
   color: #fff;
   background-color: #4db7fe;
-  border: 1.5px solid transparent;
-  width: 110px;
+  border: 1.8px solid transparent;
+  width: 100px;
   height: 35px;
   text-align: center;
   border-radius: 6px;
@@ -271,7 +272,7 @@ body {
 
 .btn-rect_bl2:hover {
   background-color: transparent;
-  border: 1.5px solid #4db7fe;
+  border: 1.8px solid #4db7fe;
   color: #4db7fe;
   transition: ease-out 0.3s;
 }
@@ -424,7 +425,7 @@ body {
 }
 
 .card_order-btn:hover {
-  background-color: #4DB7FE;
+  background-color: #dd5a02;
   transition: ease-out 0.4s;
 }
 
@@ -432,7 +433,7 @@ body {
   font-size: 16PX;
   color: #fff;
   background-color: #F36E30;
-  width: 80px;
+  width: 60px;
   height: 30px;
   border-radius: 6px;
   margin-top: 10px;
@@ -440,30 +441,29 @@ body {
 }
 
 .card_plan-btn:hover {
-  background-color: #4DB7FE;
+  background-color: #dd5a02;
   transition: ease-out 0.4s;
 }
 
-.card_plan_X-btn {
+.card_detail-btn {
   font-size: 16PX;
   color: #fff;
   background-color: #F36E30;
-  width: 80px;
+  width: 60px;
   height: 30px;
   border-radius: 6px;
   margin-top: 10px;
   cursor: pointer;
-  display: none;
 }
 
-.card_plan_X-btn:hover {
-  background-color: #4DB7FE;
+.card_detail-btn:hover {
+  background-color: #dd5a02;
   transition: ease-out 0.4s;
 }
 
 .shop_card {
   background-color: #fff;
-  width: 31.5%;
+  width: 31.8%;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -534,6 +534,11 @@ body {
   color: #333333;
 }
 
+.shop_card .card_img_2 {
+  height: 200px;
+  overflow: hidden;
+}
+
 .shop_card .card_img_2 img {
   height: auto;
 }
@@ -550,7 +555,7 @@ body {
 }
 
 .card_menu-btn:hover {
-  background-color: #4DB7FE;
+  background-color: #dd5a02;
   transition: ease-out 0.4s;
   cursor: pointer;
 }
@@ -579,7 +584,7 @@ body {
 }
 
 .card_look_detail-btn:hover {
-  background-color: #4DB7FE;
+  background-color: #dd5a02;
   transition: ease-out 0.4s;
 }
 
@@ -863,7 +868,7 @@ body {
 
 /*主要樣式*/
 .navmenu {
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 6;
   top: 0;
@@ -946,6 +951,7 @@ body {
 
 .navmenu.bgTransparent {
   background-color: transparent !important;
+  position: fixed;
 }
 
 .navmenu.bgTransparent .wrap ul a {
@@ -1067,6 +1073,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+#vendor_member input, #vendor_member button {
+  outline: none;
+}
+
 #vendor_member main {
   height: 100vh;
   display: grid;
@@ -1082,7 +1092,7 @@ html, body {
   background-color: #F36E30;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 30% 15% 50%);
+  grid-template-rows: repeat(3, 30% 20% 50%);
 }
 
 #vendor_member main .left_section .m_mug_shot {
@@ -1106,13 +1116,23 @@ html, body {
   height: 100%;
 }
 
-#vendor_member main .left_section .m_mug_shot .fa-camera {
+#vendor_member main .left_section .m_mug_shot .cpb {
   grid-area: 2/2/3/3;
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+#vendor_member main .left_section .m_mug_shot .cpb .fa-camera {
   color: #E6E6E6;
   font-size: 24px;
   align-self: end;
   justify-self: end;
   cursor: pointer;
+}
+
+#vendor_member main .left_section .m_mug_shot .hiddenInput {
+  display: none;
 }
 
 #vendor_member main .left_section .m_status {
@@ -1147,24 +1167,26 @@ html, body {
   justify-content: space-evenly;
 }
 
-#vendor_member main .left_section .m_status .m_logOut {
-  grid-area: 3/2/4/4;
-  justify-self: center;
-  align-self: end;
+#vendor_member main .left_section .m_status .m_btnOut {
+  grid-area: 3/1/4/5;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
 }
 
-#vendor_member main .left_section .m_status .m_logOut input {
+#vendor_member main .left_section .m_status .m_btnOut .logOut, #vendor_member main .left_section .m_status .m_btnOut .backHome {
+  text-decoration: none;
   text-align: center;
 }
 
-#vendor_member main .left_section .m_status .m_logOut .aLink_1 {
-  text-decoration: none;
+#vendor_member main .left_section .m_status .m_btnOut .logOut:hover, #vendor_member main .left_section .m_status .m_btnOut .backHome:hover {
+  background-color: #E6E6E6;
 }
 
 #vendor_member main .left_section .function_bar {
   grid-area: 3/1/4/2;
   display: grid;
-  grid-template-columns: 25% repeat(2, 1fr) 25%;
+  grid-template-columns: 20% repeat(2, 1fr) 20%;
   grid-template-rows: repeat(7, 1fr);
   align-items: end;
 }
@@ -1185,6 +1207,7 @@ html, body {
 }
 
 #vendor_member main .left_section .function_bar .aLink_1:hover {
+  color: #000000;
   background-color: #E6E6E6;
 }
 
@@ -1196,7 +1219,7 @@ html, body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  color: #707070;
+  color: #000000;
   background-color: #fff;
   border-radius: 100%;
 }
@@ -1215,37 +1238,42 @@ html, body {
 }
 
 #vendor_member main .right_section {
-  grid-area: 1/2/2/4;
   height: 100%;
   min-height: 100vh;
   width: 100%;
-  display: grid;
-  grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 5% 80% 15%;
   background-color: #f7f7f7;
   overflow: auto;
 }
 
+#vendor_member main .right_section .ven_news {
+  margin-top: 100px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 20px minmax(335px, 1200px) 20px;
+}
+
 #vendor_member main .right_section .ven_information {
-  grid-area: 2/2/3/3;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 }
 
 #vendor_member main .right_section .ven_information .all {
-  width: 90%;
-  border-radius: 5px;
-  background-color: #f7f7f7;
+  background-color: #fff;
+  margin-top: 100px;
   padding: 10px;
-  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 #vendor_member main .right_section .ven_information .all .item {
-  width: 90%;
-  border-radius: 5px;
   background-color: #E6E6E6;
-  padding: 10px;
-  margin: 15px auto;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 #vendor_member main .right_section .ven_information .all .item span.title {
@@ -1260,8 +1288,6 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_information .all .btn {
-  width: 90%;
-  border-radius: 5px;
   padding: 10px;
   margin: 15px auto;
   display: flex;
@@ -1273,7 +1299,10 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_order {
-  grid-area: 2/2/3/3;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 0 20px;
 }
 
 #vendor_member main .right_section .ven_order .veright {
@@ -1287,18 +1316,21 @@ html, body {
   }
 }
 
+#vendor_member main .right_section .ven_order .veright .verightOnebutton li {
+  margin-right: 10px;
+}
+
 #vendor_member main .right_section .ven_order .veright .verightOne {
+  overflow: hidden;
   border-radius: 8px;
   background-color: #fff;
-  padding-bottom: 10px;
-  border-radius: 10px;
+  margin-top: 50px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 @media (max-width: 767px) {
   #vendor_member main .right_section .ven_order .veright .verightOne {
     width: 100%;
-    margin: 0 auto;
   }
 }
 
@@ -1312,23 +1344,29 @@ html, body {
 
 #vendor_member main .right_section .ven_order .veright .verightOne .veorder {
   background-color: #E6E6E6;
-  padding: 10px 20px;
+  margin: 20px;
+  padding: 5px 10px;
   border-radius: 8px;
-  width: 90%;
-  margin: 20px auto;
 }
 
 #vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop {
   display: flex;
+  justify-content: space-between;
+}
+
+#vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop .veorderList_warp {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 #vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop .veorderListone {
-  width: 40%;
-  padding: 10px 10px;
+  width: 60%;
+  padding: 10px 0;
 }
 
 #vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop .veorderListone .op {
-  opacity: 0;
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -1339,7 +1377,7 @@ html, body {
 
 #vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop .veorderListtwo {
   width: 40%;
-  padding: 10px 10px;
+  padding: 10px 0;
 }
 
 @media (max-width: 767px) {
@@ -1352,7 +1390,6 @@ html, body {
   width: 20%;
   align-self: center;
   text-align: end;
-  padding-right: 20px;
   transform: scale(1, 1);
 }
 
@@ -1385,6 +1422,7 @@ html, body {
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 5px;
 }
 
 #vendor_member main .right_section .ven_order .veright .veorderTitle .orderNum {
@@ -1404,7 +1442,6 @@ html, body {
   width: 85%;
   background-color: #f2f2f2;
   height: 4px;
-  transform: translateY(-8px);
   margin: 0 auto;
 }
 
@@ -1412,7 +1449,6 @@ html, body {
   width: 85%;
   background-color: #f2f2f2;
   height: 4px;
-  transform: translateY(-8px);
   margin: 0 auto;
 }
 
@@ -1424,7 +1460,6 @@ html, body {
 #vendor_member main .right_section .ven_order .veright .veorderTitle .veorderlistone .velistLeft {
   width: 30%;
   justify-content: center;
-  margin: 5px auto 10px;
 }
 
 #vendor_member main .right_section .ven_order .veright .veorderTitle .veorderlistone .velistLeft p {
@@ -1441,19 +1476,26 @@ html, body {
   text-align: center;
 }
 
+#vendor_member main .right_section .ven_order .veright .veorderTitle .vetotal {
+  padding: 10px 0;
+}
+
 #vendor_member main .right_section .ven_order .veright .veorderTitle .veorderlisttwo {
   background-color: #fff;
+  padding-bottom: 10px;
 }
 
 #vendor_member main .right_section .ven_order .veright .veorderTitle .veorderlisttwo .velistTwoleft {
   width: 30%;
   justify-content: center;
+  margin-top: 20px;
 }
 
 #vendor_member main .right_section .ven_order .veright .veorderTitle .veorderlisttwo .velistTworight {
   width: 70%;
   justify-content: space-around;
   margin-left: 50px;
+  margin-top: 20px;
 }
 
 #vendor_member main .right_section .ven_order .veright .veorderTitle .veorderlisttwo .velistTworight .velt-1 {
@@ -1487,22 +1529,15 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_order .veright .veorderTitle .vedelorder {
-  justify-content: flex-end;
-  margin: 20px 20px;
-  padding: 20px 20px;
+  width: 85%;
+  margin: auto;
+  justify-content: center;
+  padding: 20px 0;
   position: relative;
 }
 
-#vendor_member main .right_section .ven_news {
-  grid-area: 2/2/4/3;
-  display: grid;
-  grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: repeat(18, 1fr);
-}
-
 #vendor_member main .right_section .ven_news .mn_title {
-  grid-area: 1/1/3/15;
-  width: 98%;
+  grid-area: 1/2/2/3;
   justify-items: center;
   display: grid;
   grid-template-columns: repeat(14, 1fr);
@@ -1518,7 +1553,11 @@ html, body {
 
 #vendor_member main .right_section .ven_news .mn_title .mn_checkBox_1 {
   grid-area: 2/12/3/14;
-  justify-self: center;
+  justify-self: flex-start;
+}
+
+#vendor_member main .right_section .ven_news .mn_title .mn_checkBox_1:hover {
+  color: #2DC8A9;
 }
 
 #vendor_member main .right_section .ven_news .mn_title .del_all_button {
@@ -1535,21 +1574,23 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_news .mn_div {
-  grid-area: 4/1/19/15;
+  grid-area: 2/2/3/3;
   overflow: auto;
 }
 
 #vendor_member main .right_section .ven_news .mn_div .mn_div_in {
-  width: 98%;
   height: 200px;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 5%;
   display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: 15% repeat(3, 1fr) 15%;
   border-radius: 10px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 #vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div {
+  grid-area: 1/1/6/19;
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: 15% repeat(3, 1fr) 15%;
@@ -1598,6 +1639,35 @@ html, body {
   grid-area: 3/2/4/3;
 }
 
+#vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .mn_text .fa-reply {
+  grid-area: 4/2/5/3;
+  justify-self: flex-end;
+  cursor: pointer;
+}
+
+#vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .mn_text .mn_text_re {
+  grid-area: 5/2/6/3;
+  display: grid;
+  align-self: start;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 10% 1fr 3fr 1fr;
+  row-gap: 10px;
+}
+
+#vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .mn_text .mn_text_re .mnR_title {
+  grid-area: 2/2/3/3;
+}
+
+#vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .mn_text .mn_text_re .mnR_text {
+  grid-area: 3/2/4/3;
+  justify-self: center;
+}
+
+#vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .mn_text .mn_text_re .mnR_btn {
+  grid-area: 4/2/5/3;
+  justify-self: flex-end;
+}
+
 #vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .read_input {
   grid-area: 1/17/3/18;
   justify-self: flex-end;
@@ -1614,13 +1684,32 @@ html, body {
   justify-self: center;
 }
 
+#vendor_member main .right_section .ven_news .mn_div .mn_div_in .read_input {
+  grid-area: 1/17/3/18;
+  align-self: center;
+  justify-self: flex-end;
+}
+
+#vendor_member main .right_section .ven_news .mn_div .mn_div_in .read_label {
+  grid-area: 1/18/3/19;
+  align-self: center;
+}
+
+#vendor_member main .right_section .ven_news .mn_div .mn_div_in .del_button {
+  grid-area: 3/16/4/19;
+  justify-self: center;
+}
+
 #vendor_member main .right_section .ven_news .mn_div::-webkit-scrollbar {
   display: none;
 }
 
 #vendor_member main .right_section .ven_store {
-  grid-area: 2/2/4/3;
-  overflow: auto;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 #vendor_member main .right_section .ven_store .my_stand {
@@ -1633,6 +1722,7 @@ html, body {
   display: flex;
   flex-direction: column;
   font-size: 20px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 #vendor_member main .right_section .ven_store .my_stand .pic_change {
@@ -1652,6 +1742,7 @@ html, body {
 #vendor_member main .right_section .ven_store .my_stand .change_photo {
   width: 80%;
   margin: 0 auto;
+  color: #F36E30;
 }
 
 #vendor_member main .right_section .ven_store .my_stand .change_photo label {
@@ -1660,9 +1751,9 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_store .my_stand .change_photo label i {
-  font-size: 30px;
+  font-size: 22px;
   float: right;
-  transform: translateX(120%);
+  margin: 0 0 10px 0;
 }
 
 #vendor_member main .right_section .ven_store .my_stand .change_photo label i input {
@@ -1689,12 +1780,16 @@ html, body {
 
 #vendor_member main .right_section .ven_store .my_stand .border .store_intro label input {
   width: 450px;
+  margin: 5px auto;
+  font-size: 22px;
 }
 
 #vendor_member main .right_section .ven_store .my_stand .border .store_intro label textarea {
   width: 450px;
   height: 120px;
+  margin: 5px auto;
   resize: none;
+  font-size: 22px;
 }
 
 #vendor_member main .right_section .ven_store .my_stand .border .store_time {
@@ -1711,62 +1806,86 @@ html, body {
 #vendor_member main .right_section .ven_store .my_stand .border .menu_all {
   width: 80%;
   margin: 15px auto;
-}
-
-#vendor_member main .right_section .ven_store .my_stand .border .menu_all table {
-  width: 100%;
-  padding: 0;
-  margin: 15px auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-#vendor_member main .right_section .ven_store .my_stand .border .menu_all table thead, #vendor_member main .right_section .ven_store .my_stand .border .menu_all table tbody {
-  width: 100%;
-  padding: 0;
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all {
+  width: 90%;
+  margin: 20px auto 20px 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-#vendor_member main .right_section .ven_store .my_stand .border .menu_all table thead tr, #vendor_member main .right_section .ven_store .my_stand .border .menu_all table tbody tr {
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .left {
+  width: 20%;
   display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 5px auto;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#vendor_member main .right_section .ven_store .my_stand .border .menu_all table thead tr th, #vendor_member main .right_section .ven_store .my_stand .border .menu_all table tbody tr th {
-  width: 100%;
-  padding: 0;
-  text-align: center;
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .left label {
+  width: 100px;
+  height: 100px;
+  border: 1px dotted black;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#vendor_member main .right_section .ven_store .my_stand .border .menu_all table thead tr td, #vendor_member main .right_section .ven_store .my_stand .border .menu_all table tbody tr td {
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .left label i {
+  font-size: 24px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0;
-}
-
-#vendor_member main .right_section .ven_store .my_stand .border .menu_all table thead tr td input#food_name, #vendor_member main .right_section .ven_store .my_stand .border .menu_all table tbody tr td input#food_name {
-  width: 85%;
-}
-
-#vendor_member main .right_section .ven_store .my_stand .border .menu_all table thead tr td input#food_price, #vendor_member main .right_section .ven_store .my_stand .border .menu_all table tbody tr td input#food_price {
-  width: 60%;
-}
-
-#vendor_member main .right_section .ven_store .my_stand .border .menu_all table thead tr td i, #vendor_member main .right_section .ven_store .my_stand .border .menu_all table tbody tr td i {
-  margin-top: 6px;
-  display: block;
-  color: #707070;
   cursor: pointer;
 }
 
-#vendor_member main .right_section .ven_store .my_stand .border .menu_all table thead tr td i:hover, #vendor_member main .right_section .ven_store .my_stand .border .menu_all table tbody tr td i:hover {
-  color: #4DB7FE;
-  font-weight: 900;
-  transition: ease-out 0.3s;
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .left label i input {
+  cursor: pointer;
+  display: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .right {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .right label {
+  margin: 5px 0;
+}
+
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .right label select {
+  font-size: 20px;
+}
+
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .right label input#item_name {
+  width: 60%;
+  font-size: 18px;
+}
+
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .right label input#item_price {
+  width: 20%;
+  font-size: 18px;
+}
+
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .x {
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .x i {
+  font-size: 24px;
+  cursor: pointer;
 }
 
 #vendor_member main .right_section .ven_store .my_stand .border .menu_all button.btn-cir_gr2 {
@@ -1774,7 +1893,7 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_store .my_stand button.btn-cir_pk2 {
-  margin: 5px auto;
+  margin: 20px auto;
 }
 
 #vendor_member main .right_section .ven_store::-webkit-scrollbar {
@@ -1782,7 +1901,10 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_ad {
-  grid-area: 2/2/3/3;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  padding: 0 20px;
 }
 
 @keyframes zoom {
@@ -1810,13 +1932,12 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_ad .adMgt .adMgt-2 {
-  padding: 20px 20px 0 20px;
   margin: 0 auto;
 }
 
 #vendor_member main .right_section .ven_ad .adMgt .adMgt-2 button {
   display: inline-block !important;
-  margin-right: 2%;
+  margin-right: 10px;
 }
 
 #vendor_member main .right_section .ven_ad .ad-modal.-on {
@@ -1840,7 +1961,7 @@ html, body {
 #vendor_member main .right_section .ven_ad .ad-form-box {
   width: 50%;
   min-height: 500px;
-  background: #E6E6E6;
+  background-color: #fff;
   left: 30%;
   bottom: 5%;
   padding: 5px;
@@ -1884,16 +2005,6 @@ html, body {
   height: 320px;
 }
 
-#vendor_member main .right_section .ven_ad .ad-form-gp .outer-container .ad-form-input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: -16px;
-  bottom: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
 #vendor_member main .right_section .ven_ad .ad-form-gp .outer-container .ad-form-input label {
   margin-bottom: 8px;
   color: #333333;
@@ -1910,6 +2021,10 @@ html, body {
 
 #vendor_member main .right_section .ven_ad .ad-form-gp .outer-container .ad-form-input .ad-radio-box {
   height: 80%;
+}
+
+#vendor_member main .right_section .ven_ad .ad-form-gp .outer-container .ad-form-input::-webkit-scrollbar {
+  display: none;
 }
 
 #vendor_member main .right_section .ven_ad .ad-form-gp .modal-footer {
@@ -2098,8 +2213,7 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_ad .ad-table .adthead {
-  padding: 20px 20px 0 20px;
-  margin: 20px auto;
+  margin: 50px 0 20px 0;
 }
 
 #vendor_member main .right_section .ven_ad .ad-table .adthead .adtr {
@@ -2111,38 +2225,53 @@ html, body {
   margin-left: 15px;
 }
 
+#vendor_member main .right_section .ven_ad .ad-table .adthead .adtr .adtr_warp {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0 10px;
+}
+
 #vendor_member main .right_section .ven_ad .ad-table .adthead .adtr .adth {
-  width: 100%;
+  width: 20%;
   text-align: center;
   color: #333333;
   font-size: 22px;
+}
+
+#vendor_member main .right_section .ven_ad .ad-table .adthead .adtr .adth button {
+  float: right;
+  transform: translateX(15px);
 }
 
 #vendor_member main .right_section .ven_ad .ad-table .adbody {
   display: none;
   border-radius: 5px;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 10px;
   margin: 20px auto;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 #vendor_member main .right_section .ven_ad .ad-table .adbody .adtr {
   display: flex;
   flex-direction: row;
-  border-radius: 5px;
+  border-radius: 8px;
   background: #eeeeee;
-  margin: 15px auto;
-  margin-right: 15px;
-  margin-left: 15px;
+  margin: 15px;
+}
+
+#vendor_member main .right_section .ven_ad .ad-table .adbody .adtr .adth_warp {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
 }
 
 #vendor_member main .right_section .ven_ad .ad-table .adbody .adtr .adth {
-  width: 100%;
-  margin: auto;
+  width: 20%;
   text-align: center;
-  padding: 20px;
+  padding: 15px 0;
   color: #333333;
   font-size: 20px;
 }
@@ -2226,12 +2355,20 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_account {
-  grid-area: 2/2/3/3;
+  max-width: 1200PX;
+  margin: auto;
+  margin-top: 100px;
+  padding: 0 20px;
+}
+
+#vendor_member main .right_section .ven_account .utvdcontanier .utvdcontanier_warp {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdpagetitle {
   font-size: 20px;
-  margin-bottom: 20px;
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
@@ -2241,19 +2378,16 @@ html, body {
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdpagetitle > div {
   display: flex;
-  display: -webkit-flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-}
-
-#vendor_member main .right_section .ven_account .utvdcontanier .utvdpagetitle > div:last-child * {
-  margin-right: 15px;
 }
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdpagetitle .utvd_img {
   width: 28px;
   height: 28px;
+}
+
+#vendor_member main .right_section .ven_account .utvdcontanier .utvdpagetitle span {
+  margin: 0 20px;
 }
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabbtns button {
@@ -2268,6 +2402,7 @@ html, body {
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl {
   color: #000000;
+  margin-top: 50px;
 }
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl .utvdtab {
@@ -2282,8 +2417,8 @@ html, body {
   border-collapse: separate;
   text-align: center;
   width: 100%;
-  border-spacing: 0 1em;
-  border-radius: 5px;
+  border-spacing: 0 0.7em;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 
@@ -2292,13 +2427,13 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl table:first-child {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl table:last-child {
-  padding: 20px;
+  padding: 12px 24px;
   background: white;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
 }
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl table:last-child td {
@@ -2307,38 +2442,38 @@ html, body {
 }
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl table:last-child td:first-child {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl table:last-child td:last-child {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-#vendor_member main .right_section .fs_1 {
-  font-size: 22px;
-}
-
-#vendor_member main .right_section .fs_20 {
-  font-size: 20px;
-}
-
-#vendor_member main .right_section .ff_m {
-  font-family: "微軟正黑體";
-}
-
-#vendor_member main .right_section .fc_w {
-  color: #fff;
-}
-
-#vendor_member main .right_section .fw_b {
-  font-weight: bolder;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 #vendor_member main .right_section::-webkit-scrollbar {
   display: none;
   scroll-behavior: smooth;
+}
+
+#vendor_member main .fs_1 {
+  font-size: 22px;
+}
+
+#vendor_member main .fs_20 {
+  font-size: 20px;
+}
+
+#vendor_member main .ff_m {
+  font-family: "微軟正黑體";
+}
+
+#vendor_member main .fc_w {
+  color: #fff;
+}
+
+#vendor_member main .fw_6, #vendor_member main .left_section .m_status .nm_money .quantity {
+  font-weight: 600;
 }
 
 #vendor_member::-webkit-scrollbar {
@@ -2354,7 +2489,6 @@ html, body {
     grid-area: 2/2/3/3;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr;
     height: auto;
   }
   #vendor_member main .left_section {
@@ -2364,31 +2498,35 @@ html, body {
     grid-area: 1/1/2/2;
     background-color: #F36E30;
     display: grid;
+    height: 250px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr) 1%;
     row-gap: 5%;
   }
   #vendor_member main .left_section_mobile .mo_mugShot {
-    grid-area: 1/2/2/3;
-    align-self: center;
-    justify-content: space-around;
+    grid-area: 1/1/2/4;
     display: flex;
-  }
-  #vendor_member main .left_section_mobile .mo_mugShot .mo_photo {
-    justify-self: center;
+    align-self: center;
+    justify-content: center;
   }
   #vendor_member main .left_section_mobile .mo_mugShot .mo_photo img {
     width: 50px;
     height: 50px;
   }
-  #vendor_member main .left_section_mobile .mo_mugShot .mo_identity {
+  #vendor_member main .left_section_mobile .mo_mugShot .mo_status {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  #vendor_member main .left_section_mobile .mo_mugShot .mo_status .mo_identity {
     font-size: 24px;
     color: #fff;
   }
-  #vendor_member main .left_section_mobile .mo_mugShot .mo_money {
+  #vendor_member main .left_section_mobile .mo_mugShot .mo_status .mo_money {
     display: flex;
+    margin-left: 20px;
   }
-  #vendor_member main .left_section_mobile .mo_mugShot .mo_money img {
+  #vendor_member main .left_section_mobile .mo_mugShot .mo_status .mo_money img {
     width: 20px;
     height: 20px;
   }
@@ -2416,12 +2554,15 @@ html, body {
     font-size: 24px;
     align-items: center;
     transition: 0.3s ease-in-out;
-    border-radius: 15px;
+    border-radius: 8px;
+    padding: 5px;
     justify-self: center;
     display: grid;
+    gap: 5px;
   }
   #vendor_member main .left_section_mobile .aLink_1_m:hover {
-    background-color: #4DB7FE;
+    color: #000000;
+    background-color: #E6E6E6;
   }
   #vendor_member main .left_section_mobile .aLink_1_m .fas {
     font-size: 18px;
@@ -2437,36 +2578,27 @@ html, body {
     justify-self: center;
   }
   #vendor_member main .right_section {
-    grid-area: 2/1/3/2;
-    display: grid;
     height: 700px;
     grid-template-columns: 98%;
     justify-content: center;
   }
-  #vendor_member main .right_section .ven_information {
-    grid-area: 2/1/3/2;
+  #vendor_member main .right_section .ven_information .all {
+    margin-top: 50px;
   }
   #vendor_member main .right_section .ven_order {
-    grid-area: 2/1/3/2;
-  }
-  #vendor_member main .right_section .ven_order .veright {
-    width: auto;
+    margin-top: 50px;
   }
   #vendor_member main .right_section .ven_news {
-    grid-area: 2/1/3/2;
-  }
-  #vendor_member main .right_section .ven_news .mn_title {
-    width: auto;
-    justify-items: unset;
+    margin-top: 50px;
   }
   #vendor_member main .right_section .ven_store {
-    grid-area: 2/1/3/2;
+    margin-top: 50px;
   }
   #vendor_member main .right_section .ven_ad {
-    grid-area: 2/1/3/2;
+    margin-top: 50px;
   }
   #vendor_member main .right_section .ven_account {
-    grid-area: 2/1/3/2;
+    margin-top: 50px;
   }
 }
 
@@ -2477,32 +2609,152 @@ html, body {
 }
 
 @media screen and (max-width: 767px) {
-  #vendor_member main .right_section {
-    display: grid;
-    grid-template-rows: 5% 80% 15%;
-  }
-  #vendor_member main .right_section .ven_order .veright {
-    margin: 0;
-  }
   #vendor_member main .right_section .ven_news .mn_title .mn_checkBox_1 {
     grid-area: 2/10/3/12;
   }
+  #vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .nd_img img {
+    width: 100%;
+  }
+  #vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .mn_text {
+    grid-template-rows: 10% repeat(4, 1fr) 10%;
+  }
+  #vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .mn_text .mnT_title {
+    grid-area: 2/2/3/3;
+  }
+  #vendor_member main .right_section .ven_news .mn_div .mn_div_in .news_div .mn_text .mnT_content {
+    grid-area: 4/2/5/3;
+  }
+  #vendor_member main .right_section .ven_store .my_stand .pic_change, #vendor_member main .right_section .ven_store .my_stand .change_photo {
+    width: 90%;
+  }
+  #vendor_member main .right_section .ven_store .my_stand .border {
+    width: 90%;
+  }
+  #vendor_member main .right_section .ven_store .my_stand .border .store_intro, #vendor_member main .right_section .ven_store .my_stand .border .menu_all, #vendor_member main .right_section .ven_store .my_stand .border .store_time {
+    width: 90%;
+  }
   #vendor_member main .right_section .ven_store .my_stand .border .store_intro label input {
     width: auto;
+    max-width: 245px;
   }
   #vendor_member main .right_section .ven_store .my_stand .border .store_intro label textarea {
     width: auto;
   }
+  #vendor_member main .right_section .ven_store .my_stand .border .store_time {
+    flex-direction: column;
+  }
+  #vendor_member main .right_section .ven_store .my_stand .border .store_time .time {
+    margin: 10px 0;
+  }
+  #vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all {
+    margin: 20px auto;
+  }
+  #vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .left label {
+    width: 70px;
+    height: 70px;
+  }
+  #vendor_member main .right_section .ven_ad .adMgt {
+    position: relative;
+  }
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adthead {
+    margin-top: 10px;
+  }
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adthead .adtr {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adthead .adtr .adtr_warp {
+    width: 100%;
+    margin-top: 30px;
+  }
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adthead .adtr .adth-btn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adbody .adtr {
+    flex-direction: column;
+  }
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adbody .adtr .adth_warp {
+    width: 100%;
+  }
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adbody .adtr .adth_warp .adth {
+    padding: 15px 10px;
+  }
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adbody .adtr .adth {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 575px) {
-  #vendor_member main .right_section .ven_store .my_stand .border .menu_grid {
-    display: grid;
+  #vendor_member main .right_section .ven_information .all {
+    margin-top: 20px;
   }
-  #vendor_member main .right_section .ven_store .my_stand .border .menu_grid .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+  #vendor_member main .right_section .ven_information .all .item span.title {
+    font-size: 20px;
+    width: 100%;
+  }
+  #vendor_member main .right_section .ven_information .all .item span.content {
+    font-size: 18px;
+    min-width: 150px;
+    margin: 8px 0;
+  }
+  #vendor_member main .right_section .ven_information .all .rwd {
+    flex-direction: column;
+  }
+  #vendor_member main .right_section .ven_information .all .rwd span.content {
+    margin: 8px 0px 0px calc(100% - 150px);
+  }
+  #vendor_member main .right_section .ven_order {
+    margin-top: 20px;
+  }
+  #vendor_member main .right_section .ven_order .veright .verightOne {
+    margin-top: 30px;
+  }
+  #vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop {
+    display: flex;
+  }
+  #vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop .veorderList_warp {
+    flex-direction: column;
+  }
+  #vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop .veorderList_warp .veorderListone {
+    font-size: 18px;
+    padding: 0;
+  }
+  #vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop .veorderList_warp .veorderListtwo {
+    font-size: 18px;
+    padding: 0;
+  }
+  #vendor_member main .right_section .ven_order .veright .verightOne .veorder .veordertop .veorderList_warp .lh_28 {
+    line-height: 25px;
+  }
+  #vendor_member main .right_section .ven_order .veright .veorderTitle {
+    font-size: 18px;
+    padding: 5px;
+  }
+  #vendor_member main .right_section .ven_news {
+    margin-top: 20px;
+  }
+  #vendor_member main .right_section .ven_news .mn_title .mn_checkBox_1 {
+    grid-area: 2/9/3/11;
+  }
+  #vendor_member main .right_section .ven_news .mn_div .mn_div_in .del_button {
+    grid-area: 3/15/4/19;
+  }
+  #vendor_member main .right_section .ven_news .mn_div .mn_div_in .read_input {
+    grid-area: 1/16/3/17;
+  }
+  #vendor_member main .right_section .ven_news .mn_div .mn_div_in .read_label {
+    grid-area: 1/17/3/19;
+  }
+  #vendor_member main .right_section .ven_store {
+    margin-top: 20px;
+  }
+  #vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all {
+    width: 100%;
+  }
+  #vendor_member main .right_section .ven_store .my_stand .border .menu_all .item_all .right {
+    width: 55%;
   }
   #vendor_member main .right_section .ven_store .my_stand .border .menu_grid .container .grid_575 {
     grid-area: 1/2/2/4;
@@ -2510,28 +2762,36 @@ html, body {
   #vendor_member main .right_section .ven_store .my_stand .border .menu_grid .container .grid_575 .tr_575 td {
     justify-content: unset;
   }
-  #vendor_member main .right_section .ven_store .my_stand .border .store_time {
-    display: grid;
+  #vendor_member main .right_section .ven_ad {
+    margin-top: 20px;
   }
-  #vendor_member main .right_section .ven_ad .adMgt .adMgt-2 {
-    padding: 0;
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adthead .adtr .adth {
+    font-size: 20px;
   }
-  #vendor_member main .right_section .ven_ad .adMgt .ad-table {
-    padding: 0;
+  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adbody .adtr .adth_warp .adth {
+    font-size: 18px;
   }
-  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adthead {
-    padding: unset;
+  #vendor_member main .right_section .ven_account {
+    margin-top: 20px;
   }
-  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adthead .adtr {
-    margin-right: unset;
-    margin-left: unset;
+  #vendor_member main .right_section .ven_account .utvdcontanier .utvdcontanier_warp {
+    flex-direction: column;
+    flex-direction: column-reverse;
   }
-  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adbody {
-    padding: 20px 0;
+  #vendor_member main .right_section .ven_account .utvdcontanier .utvdpagetitle {
+    font-size: 20px;
+    justify-content: flex-end;
+    margin-top: 30px;
   }
-  #vendor_member main .right_section .ven_ad .adMgt .ad-table .adbody .adtr {
-    margin-right: unset;
-    margin-left: unset;
+  #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl table {
+    margin-bottom: 0px;
+  }
+  #vendor_member main .right_section .ven_account .utvdcontanier .utvdtabctrl table:first-child {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=vendor_member_main.css.map */

@@ -1,9 +1,13 @@
 @import "../style";
+// @import "./store_money";
 
 #vendor_member{
     font-size: $font-size-2;
     font-family: "微軟正黑體";
     scroll-behavior: smooth;
+    input,button{
+        outline: none;
+    }
 
     main{
         height: 100vh;
@@ -20,7 +24,7 @@
             background-color: $bg-color-2;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, 30% 15% 50%);
+            grid-template-rows: repeat(3, 30% 20% 50%);
             // height: 937px;
 
             .m_mug_shot{
@@ -44,13 +48,22 @@
                     }
                 }
 
-                .fa-camera{
+                .cpb{
                     grid-area: 2/2/3/3;
-                    color: $bg-color-3;
-                    font-size: $font-size-0;
-                    align-self: end;
-                    justify-self: end;
-                    cursor: pointer;
+                    display: flex;
+                    align-self: flex-end;
+                    justify-content: flex-end;
+
+                    .fa-camera{
+                        color: $bg-color-3;
+                        font-size: $font-size-0;
+                        align-self: end;
+                        justify-self: end;
+                        cursor: pointer;
+                    }
+                }
+                .hiddenInput{
+                    display: none;
                 }
             }
                 
@@ -72,9 +85,13 @@
                     color: #ffc145;
                     font-size: $font-size-1;
                     align-items: center;
+
                     img{
                         width: 30px;
                         height: 30px;
+                    }
+                    .quantity{
+                        @extend .fw_6;
                     }
                 }
             
@@ -85,28 +102,30 @@
                     justify-content: space-evenly;
                 }
 
-                .m_logOut{
-                    grid-area: 3/2/4/4;
-                    justify-self: center;
-                    align-self: end;
+                .m_btnOut{
+                    grid-area: 3/1/4/5;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-self: center;
 
-                    input{
-                        text-align: center;
-                    }
-
-                    .aLink_1{
+                    .logOut{
                         text-decoration: none;
+                        text-align: center;
+                        &:hover{
+                            background-color: $bg-color-3;
+                        }
+                    }
+                    .backHome{
+                        @extend .logOut;
                     }
                 }
-                
             }
-                
             .function_bar{
                 // border: 1px solid purple;
                 // margin-top: 40px;
                 grid-area: 3/1/4/2;
                 display: grid;
-                grid-template-columns: 25% repeat(2, 1fr) 25%;
+                grid-template-columns: 20% repeat(2, 1fr) 20%;
                 grid-template-rows: repeat(7, 1fr);
                 align-items: end;
             
@@ -124,6 +143,7 @@
                     display: flex;
                     justify-content: space-evenly;
                     &:hover{
+                        color: $text-color-1;
                         background-color: $bg-color-3;
                     }
 
@@ -135,7 +155,7 @@
                         justify-content: center;
                         align-items: center;
                         overflow: hidden;
-                        color: $text-color-4;
+                        color: $text-color-1;
                         background-color: $white-color;
                         border-radius: 100%;
                     }
@@ -158,31 +178,50 @@
         }
 
         .right_section{
-            grid-area: 1/2/2/4;
+            // grid-area: 1/2/2/4;
             height: 100%;
             min-height: 100vh;
             width: 100%;
-            display: grid;
-            grid-template-columns: 5% 90% 5%;
-            grid-template-rows: 5% 80% 15%;
+            // display: grid;
+            // grid-template-columns: 5% 90% 5%;
+            // grid-template-rows: 5% 80% 15%;
             background-color: $bg-color-1;
             overflow: auto;
 
+            %rsg{
+                margin-top: 100px;
+                justify-content: center;
+                display: grid;
+                grid-template-columns: 20px minmax(335px, 1200px) 20px;
+            }
+
             .ven_information{
-                grid-area: 2/2/3/3;
+                // grid-area: 2/2/3/3;
+                max-width: 1200px;
+                margin: auto;
+                padding: 0 20px;
 
                 .all{
-                    @include list-style;
-                    background-color: $bg-color-1;
-                    padding: $padding1;
-                    margin: $center2;
+                    // @include list-style;
+                    background-color: $white-color;
+                    // padding: $padding1;
+                    // margin: $center2;
+                    margin-top: 100px;
+                    padding: 10px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+
                     .item{
-                        @include list-style;
+                        // @include list-style;
                         background-color: $bg-color-3;
-                        padding: $padding1;
-                        margin: $center3;
+                        // padding: $padding1;
+                        // margin: $center3;
+                        border-radius: 8px;;
+                        padding: 20px;
+                        margin: 15px;
                         display: flex;
                         flex-direction: row;
+                        align-items: center;
                         span.title{
                             font-weight: bold;
                             font-size: $font-size-1;
@@ -194,7 +233,7 @@
                         }
                     }
                     .btn{
-                        @include list-style;
+                        // @include list-style;
                         padding: $padding1;
                         margin: $center3;
                         display: flex;
@@ -207,8 +246,11 @@
             }
 
             .ven_order{
-                grid-area: 2/2/3/3;
-
+                // grid-area: 2/2/3/3;
+                max-width: 1200px;
+                margin: auto;
+                margin-top: 100px;
+                padding: 0 20px;
                 @mixin pad{
                     @media(max-width:768px){
                         @content;
@@ -226,23 +268,30 @@
                     @include mobile{
                         width: 100%;
                         margin: 0 auto;
+                        
+                    }
+                    .verightOnebutton{
+                        li{
+                            margin-right: 10px;
+                        }
                     }
                     .verightOne {
                         // margin: 20px 20px;
-                        border-radius: 8px;
-                        background-color: $white-color;
                         // width: 80%;
                         // margin: 0 auto;
-                        padding-bottom: 10px;
-                        border-radius: 10px;
+                        // padding: 10px;
+                        // border-radius: 10px;
+                        overflow: hidden;
+                        border-radius: 8px;
+                        background-color: $white-color;
+                        margin-top: 50px;
                         box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-                        
                         // .tab2 {
                         //     display: none;
                         // }
                         @include mobile{
                             width: 100%;
-                            margin: 0 auto;
+                            // margin: 0 auto;
                         }
                         //第二層白底
                         .verightOnebutton{
@@ -255,24 +304,32 @@
                         .veorder {
                             background-color: $bg-color-3;
                             // margin: 20px 20px;
-                            padding: 10px 20px;
+                            // width: 90%;
+                            // margin: 20px auto;
+                            margin: 20px ;
+                            padding: 5px 10px;
                             border-radius: 8px;
-                            width: 90%;
-                            margin: 20px auto;
                             
                             .veordertop{
                                 display: flex;
+                                justify-content: space-between;
 
                                 @include mobile {
                                     // display: inline;
                                     // display: flex;
                                     // flex-wrap: wrap;
                                 }
+                                .veorderList_warp{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 100%;
+                                }
                                 .veorderListone {
-                                    width: 40%;
-                                    padding: 10px 10px;
+                                    width: 60%;
+                                    padding: 10px 0;
                                     .op {
-                                        opacity: 0;
+                                        // opacity: 0;
+                                        display: none;
                                     }
                                     @include mobile {
                                         width: 100%;
@@ -281,7 +338,7 @@
                                 .veorderListtwo{
                                     // text-align: center;
                                     width: 40%;
-                                    padding: 10px 10px;
+                                    padding: 10px 0;
                                     @include mobile {
                                         width: 50%;
                                     } 
@@ -291,7 +348,7 @@
                                     // display: flex;
                                     align-self: center;
                                     text-align: end;
-                                    padding-right: 20px;
+                                    // padding-right: 20px;
                                     transform: scale(1, 1);
                                     @include mobile {
                                         width: 50%;   
@@ -321,6 +378,7 @@
                         border-radius: 8px;
                         position: relative;
                         overflow: hidden;
+                        margin-bottom: 5px;
                         .orderNum{
                             display: flex;
                             padding: 10px 10px;
@@ -342,14 +400,14 @@
                             width: 85%;
                             background-color: #f2f2f2;
                             height: 4px;
-                            transform: translateY(-8px);
+                            // transform: translateY(-8px);
                             margin: 0 auto;
                         }
                         .veborderOne {
                             width: 85%;
                             background-color: #f2f2f2;
                             height: 4px;
-                            transform: translateY(-8px);
+                            // transform: translateY(-8px);
                             margin: 0 auto;
                         }
                         .veorderlistone {
@@ -359,7 +417,7 @@
                             .velistLeft {
                                 width: 30%;
                                 justify-content: center;
-                                margin: 5px auto 10px;
+                                // margin: 5px auto 10px;
                                 p {
                                     font-weight: bold;
                                 }  
@@ -377,17 +435,24 @@
                                 }
                             }
                         }
+
+                        .vetotal{
+                            padding: 10px 0;
+                        }
                         .veorderlisttwo {
                             background-color: $white-color;
+                            padding-bottom: 10px;
                             .velistTwoleft{
                                 width: 30%;
                                 justify-content: center;
+                                margin-top: 20px;
                             }
                             .velistTworight {
                                 width: 70%;
                                 // justify-content: space-between;
                                 justify-content: space-around;
                                 margin-left: 50px;
+                                margin-top: 20px;
                                 .velt-1{
                                     width: 18%; 
                                     text-align:center;
@@ -425,9 +490,10 @@
                         }
                         
                         .vedelorder {
-                            justify-content: flex-end;
-                            margin: 20px 20px;
-                            padding: 20px 20px;
+                            width: 85%;
+                            margin: auto;
+                            justify-content: center;
+                            padding: 20px 0;
                             position: relative;
     
                         }
@@ -436,23 +502,16 @@
             }
 
             .ven_news{
-                grid-area: 2/2/4/3;
-                display: grid;
-                grid-template-columns: repeat(14, 1fr);
-                grid-template-rows: repeat(18, 1fr);
+                @extend %rsg;
             
                 .mn_title{
-                    grid-area: 1/1/3/15;
-                    width: 98%;
+                    grid-area: 1/2/2/3;
                     justify-items: center;
                     display: grid;
                     grid-template-columns: repeat(14, 1fr);
                     grid-template-rows: 1fr;
                     white-space: nowrap;
-            
-                    // .mn_subTitle_1{
-                    //     grid-area: 1/1/2/3;
-                    // }
+
                     .mn_subTitle_2{
                         display: flex;
                         grid-area: 1/1/2/3;
@@ -460,11 +519,11 @@
                     }
                     .mn_checkBox_1{
                         grid-area: 2/12/3/14;
-                        justify-self: center;
+                        justify-self: flex-start;
+                        &:hover{
+                            color: #2DC8A9;
+                        }
                     }
-                    // .mn_checkBox_2{
-                    //     grid-area: 4/12/5/15;
-                    // }
 
                     .del_all_button{
                         grid-area: 2/12/3/15;
@@ -480,22 +539,22 @@
                 }
 
                 .mn_div{
-                    grid-area: 4/1/19/15;
+                    grid-area: 2/2/3/3;
                     // background-color: $white-color;
                     overflow: auto;
 
                     .mn_div_in{
-                        width: 98%;
                         height: 200px;
                         margin: auto;
-                        margin-top: 2%;
+                        margin-top: 5%;
                         display: grid;
-                        // grid-template-columns: 1fr;
-                        // gap: 2.5%;
+                        grid-template-columns: repeat(18, 1fr);
+                        grid-template-rows: 15% repeat(3, 1fr) 15%;
                         border-radius: 10px;
                         box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
 
                         .news_div{
+                            grid-area: 1/1/6/19;
                             display: grid;
                             grid-template-columns: repeat(18, 1fr);
                             grid-template-rows: 15% repeat(3, 1fr) 15%;
@@ -538,7 +597,34 @@
                                 .mnT_content{
                                     grid-area: 3/2/4/3;
                                 }
+                                .fa-reply{
+                                    grid-area: 4/2/5/3;
+                                    justify-self: flex-end;
+                                    cursor: pointer;
+                                }
+
+                                .mn_text_re{
+                                    grid-area: 5/2/6/3;
+                                    display: grid;
+                                    align-self: start;
+                                    grid-template-columns: 5% 90% 5%;
+                                    grid-template-rows: 10% 1fr 3fr 1fr;
+                                    row-gap: 10px;
+    
+                                    .mnR_title{
+                                        grid-area: 2/2/3/3;
+                                    }
+                                    .mnR_text{
+                                        grid-area: 3/2/4/3;
+                                        justify-self: center;
+                                    }
+                                    .mnR_btn{
+                                        grid-area: 4/2/5/3;
+                                        justify-self: flex-end;
+                                    }
+                                }
                             }
+                            
                             .read_input{
                                 grid-area: 1/17/3/18;
                                 justify-self: flex-end;
@@ -553,6 +639,19 @@
                                 justify-self: center;
                             }
                         }
+                        .read_input{
+                            grid-area: 1/17/3/18;
+                            align-self: center;
+                            justify-self: flex-end;
+                        }
+                        .read_label{
+                            grid-area: 1/18/3/19;
+                            align-self: center;
+                        }
+                        .del_button{
+                            grid-area: 3/16/4/19;
+                            justify-self: center;
+                        }
                     }
 
                     &::-webkit-scrollbar{
@@ -562,19 +661,23 @@
             }
 
             .ven_store{
-                grid-area: 2/2/4/3;
-                overflow: auto;
+                max-width: 1200px;
+                margin: auto;
+                // overflow: auto;
+                margin-top: 100px;
+                padding: 0 20px;
+                box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
 
                 .my_stand{
                     @include list-style;
                     width: auto;
                     background-color: $white-color;
                     padding: $padding1;
-                    // margin: $center2;
                     color: $text-color-4;
                     display: flex;
                     flex-direction: column;
                     font-size: $font-size-2;
+                    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
                     .pic_change{
                         width: $aside_width1;
                         margin: $center3;
@@ -591,14 +694,14 @@
                     .change_photo{
                         width: $aside_width1;
                         margin: $center;
+                        color: $bg-color-2;
                         label{
                             width: 95%;
                             color: $bg-color-2;
                             i{
-                                font-size: 30px;
+                                font-size: $font-size-1;
                                 float: right;
-                                transform: translateX(120%);
-
+                                margin: 0 0 10px 0;
                                 input{
                                     display: none;
                                 }
@@ -617,13 +720,23 @@
                             flex-direction: column;
                             label{
                                 width: $aside_width1;
+                                // display: flex;
+                                // flex-direction: row;
+                                // justify-content: center;
+                                // span{
+                                //     margin: -60px 0 0 0;
+                                // }
                                 input{
                                     width: 450px;
+                                    margin: 5px auto;
+                                    font-size: $font-size-1;
                                 }
                                 textarea{
                                     width: 450px;
                                     height: 120px;
+                                    margin: 5px auto;
                                     resize: none;
+                                    font-size: $font-size-1;
                                 }    
                             }
                         }
@@ -639,53 +752,74 @@
                             }
                         }
                         .menu_all{
-                            width: 80%;
+                            width: $aside_width1;
                             margin: 15px auto;
-                            table{
-                                width: 100%;
-                                padding: 0;
-                                margin: 15px auto;
+                            display: flex;
+                            flex-direction: column;
+                            .item_all{
+                                width: 90%;
+                                margin: 20px auto 20px 0;
                                 display: flex;
-                                flex-wrap: wrap;
-                                thead, tbody{
-                                    width: 100%;
-                                    padding: 0;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                .left{
+                                    width: 20%;
                                     display: flex;
-                                    flex-wrap: wrap;
-                                    tr{
-                                        // width: 100%;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    label{
+                                        width: 100px;
+                                        height: 100px;
+                                        border: 1px dotted black;
+                                        border-radius: 50%;
                                         display: flex;
-                                        flex-wrap: wrap;
-                                        padding: 0;
-                                        margin: 5px auto;
-                                        th{
-                                            width: 100%;
-                                            padding: 0; 
-                                            text-align: center;
-                                        }
-                                        td{
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        i{
+                                            font-size: $font-size-0;
                                             display: flex;
                                             flex-direction: row;
                                             justify-content: center;
-                                            padding: 0;
-                                            input#food_name{
-                                                width: 85%;
-                                            }
-                                            input#food_price{
-                                                width: 60%;
-                                            }
-                                            i{
-                                                margin-top: 6px;
-                                                display: block;
-                                                color: $text-color-4;
+                                            cursor: pointer;
+                                            input{
                                                 cursor: pointer;
-                                                &:hover{
-                                                color: $text-color-2;
-                                                font-weight: 900;
-                                                transition: ease-out 0.3s;
-                                                }
+                                                display: none;
+                                                width: 100px;
+                                                height: 100px;
+                                                border-radius: 50%;
+                                                visibility: hidden;
                                             }
                                         }
+                                    }
+                                    
+                                }
+                                .right{
+                                    width: 65%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    label{
+                                        margin: 5px 0;
+                                        select{
+                                            font-size: $font-size-2;
+                                        }
+                                        input#item_name{
+                                            width: 60%;
+                                            font-size: $font-size-3;
+                                        }
+                                        input#item_price{
+                                            width: 20%;
+                                            font-size: $font-size-3;
+                                        }
+                                    }
+                                }
+                                .x{
+                                    width: 5%;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    i{
+                                        font-size: $font-size-0;
+                                        cursor: pointer;
                                     }
                                 }
                             }
@@ -695,7 +829,7 @@
                         }
                     }
                     button.btn-cir_pk2{
-                        margin: 5px auto;
+                        margin: 20px auto;
                     }
                 }
 
@@ -705,7 +839,11 @@
             }
 
             .ven_ad{
-                grid-area: 2/2/3/3;
+                // grid-area: 2/2/3/3;
+                max-width: 1200px;
+                margin: auto;
+                margin-top: 100px;
+                padding: 0 20px;
                 // 得文css請放這裡
                   // 攤商會員廣告管理
                     @keyframes zoom {
@@ -726,11 +864,11 @@
                             }
                         }
                         .adMgt-2{
-                            padding: 20px 20px 0 20px;
+                            // padding: 20px 20px 0 20px;
                             margin: 0 auto;
                             button{
                                 display: inline-block !important;
-                                margin-right: 2% ;
+                                margin-right: 10px ;
                             }
                         }
                     }
@@ -754,7 +892,8 @@
                     .ad-form-box{
                         width: 50%;
                         min-height: 500px;
-                        background: $bg-color-3;
+                        // background: $bg-color-1;
+                        background-color: $white-color;
                         left: 30%;
                         bottom: 5%;
                         padding: 5px;
@@ -764,12 +903,14 @@
                         animation-name: zoom;
                         animation-duration: 0.4s;
                         z-index: -3000;
+
                         .close{
                             font-size: 3rem;
                         }
                         .ad-form-content{
                             padding-left: 5%;
                             padding-right: 5%;
+
                             .ad-form-header{
                                 margin-top: 5%;
                                 h4{
@@ -785,19 +926,22 @@
                         position: absolute;
                         width: 80%;
                         transition: .5s;
+
                         .outer-container{
                             position: relative;
                             overflow: hidden;
                             margin-top: 5%;
                             height: 320px;
+
                             .ad-form-input{
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                right: -16px;
-                                bottom: 0;
-                                overflow-x: hidden;
-                                overflow-y: scroll;
+                                // position: absolute;
+                                // left: 0;
+                                // top: 0;
+                                // right: -16px;
+                                // bottom: 0;
+                                // overflow-x: hidden;
+                                // overflow-y: scroll;
+
                                 label{
                                     margin-bottom: 8px;
                                     color: $text-color-3;
@@ -811,6 +955,9 @@
                                 }   
                                 .ad-radio-box{
                                     height: 80%;
+                                }
+                                &::-webkit-scrollbar{
+                                    display: none;
                                 }
                             }
                         }
@@ -978,9 +1125,8 @@
                             width: 100%;
                             border-radius: 5px;
                             .adthead{
-                                // width: 95%;
-                                padding: 20px 20px 0 20px;
-                                margin: 20px auto;
+                                margin: 50px 0 20px 0;
+
                             .adtr{
                                 display: flex;
                                 align-items: center;
@@ -988,11 +1134,23 @@
                                 margin: 15px auto;
                                 margin-right: 15px;
                                 margin-left: 15px;
+
+                                .adtr_warp{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 80%;
+                                    padding: 0 10px;
+                                }
                                 .adth{
-                                    width: 100%;
+                                    // border: 1px solid red;
+                                    width: 20%;
                                     text-align: center;
                                     color: $text-color-3;
                                     font-size: $font-size-1;
+                                    button{
+                                        float: right;
+                                        transform: translateX(15px);
+                                    }
                                 }
                             }
                             }
@@ -1001,24 +1159,28 @@
                                 // width: 95%;
                                 border-radius: 5px;
                                 background-color: #ffffff;
-                                padding: 20px;
+                                padding: 10px;
                                 margin: 20px auto;
-                                border-radius: 10px;
+                                border-radius: 8px;
                                 box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
                                 
                                 .adtr{
                                     display: flex;
                                     flex-direction: row;
-                                    border-radius: 5px;
+                                    border-radius: 8px;
                                     background: rgb(238, 238, 238);
-                                    margin: 15px auto;
-                                    margin-right: 15px;
-                                    margin-left: 15px;
+                                    margin: 15px;
+
+                                    .adth_warp{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        width: 80%;
+                                    }
                                     .adth{
-                                        width: 100%;
-                                        margin: auto;
+                                        width: 20%;
+                                        // margin: auto;
                                         text-align: center;
-                                        padding: 20px;
+                                        padding: 15px 0;
                                         color: $text-color-3;
                                         font-size: $font-size-2;
                                     }
@@ -1101,8 +1263,11 @@
             }
 
             .ven_account{
-                grid-area: 2/2/3/3;
-
+                // grid-area: 2/2/3/3;
+                max-width: 1200PX;
+                margin: auto;
+                margin-top: 100px;
+                padding: 0 20px;
                 @mixin flexcolum($jc:center,$ai:center) {
                     display: flex;
                     display: -webkit-flex;
@@ -1121,19 +1286,29 @@
                 .utvdcontanier{
                     // padding: 50px; 
                     // width: 80vw;
+                    .utvdcontanier_warp{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row-reverse;
+                    }
                     .utvdpagetitle{
                         font-size: 20px;
-                        margin-bottom: 20px;
+                        // margin-bottom: 20px;
                         @include flexrow(space-between,);
                         >div{
-                            @include flexrow(space-between,);
+                            // @include flexrow(space-between,);
+                            display: flex;
+                            align-items: center;
                         }
-                        >div:last-child{
-                            *{margin-right: 15px;}
-                        }
+                        // >div:last-child{
+                        //     *{margin-right: 15px;}
+                        // }
                         .utvd_img{
                             width: 28px;
                             height: 28px;
+                        }
+                        span{
+                            margin: 0 20px;
                         }
                     }
                     .utvdtabbtns{
@@ -1148,6 +1323,7 @@
                     }
                     .utvdtabctrl{
                         color: $text-color-1;
+                        margin-top: 50px;
                         .utvdtab{
                             display: none;
                         }
@@ -1158,57 +1334,56 @@
                             border-collapse: separate;
                             text-align: center;
                             width: 100%;
-                            border-spacing: 0 1em;  
-                            border-radius: 5px;
+                            border-spacing: 0 0.7em;  
+                            border-radius: 8px;
                             margin-bottom: 20px;
                             th,td{
                             width: 33.33%;
                             }
                         }
                         table:first-child{
-                            font-size: 20px;
+                            font-size: 22px;
                         }
                         table:last-child{
-                                padding: 20px;
+                                padding: 12px 24px;
                                 background: white;
-                                box-shadow: 0 0 8px rgba(0, 0, 0,.3);
+                                box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
                             td{
                                 padding: 20px;
                                 background: $bg-color-3;
                             }
                             td:first-child{
-                                border-top-left-radius: 10px;
-                                border-bottom-left-radius: 10px;
+                                border-top-left-radius: 8px;
+                                border-bottom-left-radius: 8px;
                             }
                             td:last-child{
-                                border-top-right-radius: 10px;
-                                border-bottom-right-radius: 10px;
+                                border-top-right-radius: 8px;
+                                border-bottom-right-radius: 8px;
                             }
                         }
                     }
                 }
             }
 
-            .fs_1{
-                font-size: $font-size-1;
-            }
-            .fs_20{
-                font-size: $font-size-2;
-            }
-            .ff_m{
-                font-family: "微軟正黑體";
-            }
-            .fc_w{
-                color: $white-color;
-            }
-            .fw_b{
-                font-weight: bolder;
-            }
-
             &::-webkit-scrollbar{
                 display: none;
                 scroll-behavior: smooth;
             }
+        }
+        .fs_1{
+            font-size: $font-size-1;
+        }
+        .fs_20{
+            font-size: $font-size-2;
+        }
+        .ff_m{
+            font-family: "微軟正黑體";
+        }
+        .fc_w{
+            color: $white-color;
+        }
+        .fw_6{
+            font-weight: 600;
         }
     }
     &::-webkit-scrollbar{
@@ -1229,7 +1404,7 @@
             grid-area: 2/2/3/3;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 4fr;
+            // grid-template-rows: 1fr 4fr;
             height: auto;
 
             .left_section{
@@ -1239,34 +1414,41 @@
                 grid-area: 1/1/2/2;
                 background-color: $bg-color-2;
                 display: grid;
+                height: 250px;
                 grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr) 1%;
                 row-gap: 5%;
 
                 .mo_mugShot{
-                    grid-area: 1/2/2/3;
-                    align-self: center;
-                    justify-content: space-around;
+                    grid-area: 1/1/2/4;
                     display: flex;
+                    align-self: center;
+                    justify-content: center;
 
                     .mo_photo{
-                        justify-self: center;
 
                         img{
                             width: 50px;
                             height: 50px;
                         }
                     }
-                    .mo_identity{
-                        font-size: $font-size-0;
-                        color: $white-color;
-                    }
-                    .mo_money{
+                    .mo_status{
                         display: flex;
+                        align-items: center;
+                        margin-left: 20px;
 
-                        img{
-                            width: 20px;
-                            height: 20px;
+                        .mo_identity{
+                            font-size: $font-size-0;
+                            color: $white-color;
+                        }
+                        .mo_money{
+                            display: flex;
+                            margin-left: 20px;
+    
+                            img{
+                                width: 20px;
+                                height: 20px;
+                            }
                         }
                     }
                 }
@@ -1294,11 +1476,14 @@
                     font-size: $font-size-0;
                     align-items: center;
                     transition: 0.3s ease-in-out;
-                    border-radius: 15px;
+                    border-radius: 8px;
+                    padding: 5px;
                     justify-self: center;
                     display: grid;
+                    gap: 5px;
                     &:hover{
-                        background-color: $bg-color-4;
+                        color: $text-color-1;
+                        background-color: $bg-color-3;
                     }
                     .fas{
                         font-size: 18px;
@@ -1319,38 +1504,38 @@
                 // }
             }
             .right_section{
-                grid-area: 2/1/3/2;
-                display: grid;
                 height: 700px;
                 grid-template-columns: 98%;
                 justify-content: center;
 
                 .ven_information{
-                    grid-area: 2/1/3/2;
+                    // grid-area: 2/1/3/2;
+                    .all{
+                        margin-top: 50px;
+                    }
                 }
                 .ven_order{
-                    grid-area: 2/1/3/2;
+                    // grid-area: 2/1/3/2;
 
-                    .veright{
-                        width: auto;
-                    }
+                    // .veright{
+                    //     width: auto;
+                    // }
+                    margin-top: 50px;
                 }
                 .ven_news{
-                    grid-area: 2/1/3/2;
-
-                    .mn_title{
-                        width: auto;
-                        justify-items: unset;
-                    }
+                    margin-top: 50px;
                 }
                 .ven_store{
-                    grid-area: 2/1/3/2;
+                    // grid-area: 2/1/3/2;
+                    margin-top: 50px;
                 }
                 .ven_ad{
-                    grid-area: 2/1/3/2;
+                    // grid-area: 2/1/3/2;
+                    margin-top: 50px;
                 }
                 .ven_account{
-                    grid-area: 2/1/3/2;
+                    // grid-area: 2/1/3/2;
+                    margin-top: 50px;
                 }
             }
         }
@@ -1375,33 +1560,118 @@
     #vendor_member{
         main{
             .right_section{
-                display: grid;
-                grid-template-rows: 5% 80% 15%;
+                // display: grid;
+                // grid-template-rows: 5% 80% 15%;
 
-                .ven_order{
-                    .veright{
-                        margin: 0;
-                    }
-                }
+                // .ven_order{
+                //     .veright{
+                //         margin: 0;
+                //     }
+                // }
                 .ven_news{
                     .mn_title{
                         .mn_checkBox_1{
                             grid-area: 2/10/3/12;
                         }
                     }
+                    .mn_div{
+                        .mn_div_in{
+                            .news_div{
+
+                                .nd_img{
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                                .mn_text{
+                                    grid-template-rows: 10% repeat(4, 1fr) 10%;
+
+                                    .mnT_title{
+                                        grid-area: 2/2/3/3;
+                                    }
+                                    .mnT_content{
+                                        grid-area: 4/2/5/3;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
                 .ven_store{
                     .my_stand{
+                        .pic_change, .change_photo{
+                            width: 90%;
+                        }
                         .border{
+                            width: 90%;
+                            .store_intro, .menu_all, .store_time{
+                                width: 90%;
+                            }
                             .store_intro{
                                 label{
                                     input{
                                         width: auto;
+                                        max-width: 245px;
                                     }
                                 }
                                 label{
                                     textarea{
                                         width: auto;
+                                    }
+                                }
+                            }
+                            .store_time{
+                                flex-direction: column;
+                                .time{
+                                    margin: 10px 0;
+                                }
+                            }
+                            .menu_all{
+                                .item_all{
+                                    margin: 20px auto;
+                                    .left{
+                                        label{
+                                            width: 70px;
+                                            height: 70px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .ven_ad{
+                    .adMgt{
+                        position: relative;
+                        .ad-table{
+                            .adthead{
+                                margin-top: 10px;
+                                .adtr{
+                                    flex-direction: column;
+                                    flex-direction: column-reverse;
+                                    .adtr_warp{
+                                        width: 100%;
+                                        margin-top: 30px;
+                                    }
+                                    .adth-btn{
+                                        // width: 100%;
+                                        position: absolute;
+                                        top: 0;
+                                        right: 15px;
+                                    }
+                                }
+                            }
+                            .adbody{
+                                .adtr{
+                                    flex-direction: column;
+                                    .adth_warp{
+                                        width: 100%;
+                                        .adth{
+                                            padding: 15px 10px;
+                                        }
+                                    }
+                                    .adth{
+                                        width: 100%;
                                     }
                                 }
                             }
@@ -1416,16 +1686,102 @@
     #vendor_member{
         main{
             .right_section{
+                .ven_information{
+                    .all{
+                        margin-top: 20px;
+                        .item{
+                            span.title{
+                                font-size: $font-size-2;
+                                width: 100%;
+                            }
+                            span.content{
+                                font-size: $font-size-3;
+                                min-width: 150px;
+                                margin: 8px 0;
+                            }
+                        }
+                        .rwd{
+                            flex-direction: column;
+                            span.content{
+                                margin: 8px 0px  0px calc(100% - 150px);
+                            }
+                        }
+                    }
+                }
+                .ven_order{
+                    margin-top: 20px;
+                    .veright{
+                        .verightOne{
+                            margin-top: 30px;
+                            .veorder{
+                                .veordertop{
+                                    display: flex;  
+                                    .veorderList_warp{
+                                        flex-direction: column;
+                                        .veorderListone{
+                                            font-size: 18px;
+                                            padding: 0;
+                                        }
+                                        .veorderListtwo{
+                                            font-size: 18px;
+                                            padding: 0;
+                                        }
+                                        .lh_28{
+                                            line-height: 25px;
+                                        }
+                                        
+                                    }
+                                } 
+                            }
+                        }
+                        .veorderTitle{
+                            font-size: 18px;
+                            padding: 5px;
+                        }
+                    }
+                }
+                .ven_news{
+                    margin-top: 20px;
+
+                    .mn_title{
+                        .mn_checkBox_1{
+                            grid-area: 2/9/3/11;
+                        }
+                    }
+                    .mn_div{
+                        .mn_div_in{
+                            .del_button{
+                                grid-area: 3/15/4/19;
+                            }
+                            .read_input{
+                                grid-area: 1/16/3/17;
+                            }
+                            .read_label{
+                                grid-area: 1/17/3/19;
+                            }
+                        }
+                    }
+                }
                 .ven_store{
+                    margin-top: 20px;
+
                     .my_stand{
                         .border{
+                            .menu_all{
+                                .item_all{
+                                    width: 100%;
+                                    .right{
+                                        width: 55%;
+                                    }
+                                }
+                            }
                             .menu_grid{
-                                display: grid;
+                                // display: grid;
 
                                 .container{
-                                    display: grid;
-                                    grid-template-columns: repeat(3, 1fr);
-                                    grid-template-rows: 1fr;
+                                    // display: grid;
+                                    // grid-template-columns: repeat(3, 1fr);
+                                    // grid-template-rows: 1fr;
 
                                     .grid_575{
                                         grid-area: 1/2/2/4;
@@ -1438,39 +1794,59 @@
                                     }
                                 }
                             }
-                            .store_time{
-                                display: grid;
-                            }
+                            // .store_time{
+                            //     display: grid;
+                            // }
                         }
                     }
                 }
                 .ven_ad{
+                    margin-top: 20px;
                     .adMgt{
-                        .adMgt-2{
-                            padding: 0;
-                        }
                         .ad-table{
-                            padding: 0;
-                            
                             .adthead{
-                                padding: unset;
-
                                 .adtr{
-                                    margin-right: unset;
-                                    margin-left: unset;
+                                    .adth{
+                                        font-size: 20px;
+                                    }
                                 }
                             }
                             .adbody{
-                                padding: 20px 0;
-
                                 .adtr{
-                                    margin-right: unset;
-                                    margin-left: unset;
+                                    .adth_warp{
+                                        .adth{
+                                            font-size: 18px;
+                                        }
+                                    }
                                 }
                             }
                         }
                     }
                 }
+                .ven_account{
+                    margin-top: 20px;
+                    .utvdcontanier{
+                        .utvdcontanier_warp{
+                            flex-direction: column;
+                            flex-direction: column-reverse;
+                        }
+                        .utvdpagetitle{
+                            font-size: 20px;
+                            justify-content: flex-end;
+                            margin-top: 30px;
+                        }
+                        .utvdtabctrl{
+                            font-size: 18px;
+                            margin-top: 20px;
+                            table{
+                                margin-bottom: 0px;
+                            }
+                            table:first-child{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                } 
             }
         }
     }

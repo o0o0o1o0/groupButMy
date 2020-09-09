@@ -1,7 +1,7 @@
 //商店卡
 @mixin shop_card{
   background-color: $white-color;
-  width: 31.5%;
+  width: 31.8%;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -65,21 +65,7 @@
 
 //商店卡-btn
 
-@mixin report_comment_content($bg){
-  font-size: 14PX;
-  color: $white-color;
-  background-color: $bg;
-  width: 170px;
-  height: 50px;
-  border-radius: 50px;
-  cursor: pointer;
-  &:hover{
-    background-color: $bg-color-2;
-    transition: ease-out 0.4s;
-  }
-}
-
-@mixin card_order-btn{
+@mixin card_order-btn{  //去點餐
   font-size: 14PX;
   color: $white-color;
   background-color: $bg-color-2;
@@ -97,11 +83,11 @@
     transition: ease-out 0.4s;
   }
 }
-@mixin card_plan-btn{
+@mixin card_plan-btn{   //去規劃
   font-size: 16PX;
   color: $white-color;
   background-color: $bg-color-2;
-  width: 80px;
+  width: 60px;
   height: 30px;
   border-radius: 6px;
   margin-top: 10px;
@@ -111,11 +97,11 @@
     transition: ease-out 0.4s;
   }
 }
-@mixin card_plan_X-btn{
+@mixin card_detail-btn{  //看詳細
   font-size: 16PX;
   color: $white-color;
   background-color: $bg-color-2;
-  width: 80px;
+  width: 60px;
   height: 30px;
   border-radius: 6px;
   margin-top: 10px;
@@ -133,9 +119,8 @@
 .card_plan-btn{
   @include card_plan-btn;
 }
-.card_plan_X-btn{
-  @include card_plan_X-btn;
-  display: none;
+.card_detail-btn{
+  @include card_detail-btn;
 }
 
 //商店卡
@@ -143,6 +128,8 @@
   @include shop_card;
   margin-top: 30px;
   .card_img_2{
+    height: 200px;
+    overflow: hidden;
     img{
       height: auto;
     }

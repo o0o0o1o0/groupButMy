@@ -2,12 +2,11 @@
 
 #loginup{
     background-image: url(../img/loginup/login.jpg);
-    
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),url(../img/loginup/login.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    // background: rgb(255, 255, 255) ;
-    min-height: 100vh;
+    height: 100vh;
     // 動畫
     @-webkit-keyframes inputHighlighter {
         from { background:#5264AE; }
@@ -25,6 +24,26 @@
         from {transform:scale(0.8)}
         to {transform:scale(1)}
     }
+
+    // 晏瑋 header test
+   .rIcon {
+       .user {
+            .fa-user {
+                color:$bg-color-2;
+            }
+       }
+    }
+    @media(max-width:1200px) {
+        .navmenu .wrap > div:last-child ul li:nth-child(3){
+            display: none !important;
+          }
+    } 
+   
+   //test end 
+
+
+
+
     // .loginimg{
     //     width: 100%;
     //     position: absolute;
@@ -36,12 +55,11 @@
     //     }
     // }
     .hero{
+        height: 100vh;
        .inimg{
-        //    position: absolute;
         position: fixed;
            width: 10%;
            left: 15%;
-            // left: -40%;
            top: 25%;
            transition: .5s;
            img{
@@ -49,13 +67,9 @@
            }
        }
        .upimg{
-            // position: absolute;
             position: fixed;
-            // width: 25%;
             width: 5%;
-            // right: 10%;
             right: -30%;
-            // top: 25%;
             top: 90%;
             transition: .5s;
             img{
@@ -64,28 +78,18 @@
     }
 
         .form-box{
-            width: 380px;
+            max-width: 380px;
             height: 480px;
             position: relative;
-            margin: 4% auto;
-            // margin: 0 auto;
+            margin: 0 auto;
             background: rgba(255, 255, 255, 0.739);
-            box-shadow: 0 0 15px #929292c0;
+            box-shadow: 0 0 15px #00000066;
             padding: 5px;
             overflow: hidden;
             transition: .5s;
             animation-name: zoom;
             animation-duration: 0.4s;
-            margin-top: 200px;
-            // &:before{
-            //     content: '';
-            //     position:absolute;
-            //     background: rgba(255, 255, 255, 0.5);
-            //     top: 0; right: 0; bottom: 0; left: 0;
-            //     z-index: -1;
-            //     -webkit-filter: blur(10px);
-            //     filter: blur(10px);
-            //   }
+            top: 15%;
             .button-box{
                 width: 220px;
                 margin: 35px auto;
@@ -140,7 +144,7 @@
                         &:focus ~ label, &:valid ~ label{
                             top:-20px;
                             font-size:14px;
-                            color:#5264AE;
+                            color: #f4703b;
                         }
                         &:focus ~ .bar:before, &:focus ~ .bar:after{
                             width: 50%;
@@ -170,7 +174,7 @@
                             width:0;
                             bottom:1px; 
                             position:absolute;
-                            background:#5264AE; 
+                            background:#f4703b; 
                             transition:0.2s ease all; 
                             -moz-transition:0.2s ease all; 
                             -webkit-transition:0.2s ease all;
@@ -196,13 +200,15 @@
                     }
                 }
                 .registr{
-                    // display: inline-block;
                     float: right;
                     margin-bottom: 45px;
                     span{
                         font-size: 14px;
                         cursor: pointer;
                         color: $text-color-3;
+                        &:hover{
+                            color: #f4703b;
+                        }
                     }
                 }
                 a{
@@ -235,20 +241,18 @@
 
         // 註冊
         .form-box-up{
-            // display: inline-block;
-            width: 380px;
-            // height: 630px;
+            max-width: 380px;
+            height: 480px;
             position: relative;
-            margin: 4% auto;
-            // margin: 0 auto;
-            // background: rgba(255, 255, 255, 0.578);
+            margin: 0 auto;
             background: rgba(255, 255, 255, 0.739);
-            box-shadow: 0 0 15px #929292c0;
+            box-shadow: 0 0 15px #00000066;
             padding: 5px;
             overflow: hidden;
             animation-name: zoom;
             animation-duration: 0.4s;
             transition: .5s;
+            top: 15%;
             .button-box{
                 width: 220px;
                 margin: 35px auto;
@@ -283,7 +287,7 @@
                 color: $text-color-3;
             }
             .input-group{
-                top: 170px;
+                top: 150px;
                 position: absolute;
                 width: 280px;
                 transition: .5s;
@@ -303,7 +307,7 @@
                         &:focus ~ label, &:valid ~ label{
                             top:-20px;
                             font-size:14px;
-                            color:#5264AE;
+                            color:#f4703b;
                         }
                         &:focus ~ .bar:before, &:focus ~ .bar:after{
                             width: 50%;
@@ -333,7 +337,7 @@
                             width:0;
                             bottom:1px; 
                             position:absolute;
-                            background:#5264AE; 
+                            background:#f4703b; 
                             transition:0.2s ease all; 
                             -moz-transition:0.2s ease all; 
                             -webkit-transition:0.2s ease all;
@@ -365,6 +369,9 @@
                         font-size: 14px;
                         cursor: pointer;
                         color: $text-color-3;
+                        &:hover{
+                            color: #f4703b;
+                        }
                     }
                 }
                 .submit-btn{
@@ -378,11 +385,6 @@
                     outline: none;
                     border-radius: 30px;
                     color: $white-color;
-                    // &:hover{
-                    //     background-color: transparent;
-                    //     border: 1.5px solid #7881aa;
-                    //     transition: ease-out 0.3s;
-                    // }
                 }
             }
         }
@@ -395,9 +397,67 @@
     }
     #signup{
         display: none;
-        height: 0;
     }
     
+}
+.up-group{
+    height: 230px;
+    width: 290px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+@media screen and (max-width: 992px) {
+    #loginup .hero .upimg{
+        display: none;
+    }
+    #loginup .hero .inimg{
+        display: none;
+    }
+}
+@media screen and (max-width: 414px) {
+    #loginup .hero .form-box .input-group{
+        padding-left: 15px;
+    }
+    #loginup .hero .form-box-up .input-group{
+        padding-left: 15px;
+    }
+    #loginup .hero .form-box {
+        max-width: 100%;
+        height: 89%;
+        top: 9.6%;
+    }
+    #loginup .hero .form-box-up {
+        max-width: 100%;
+        height: 89%;
+        top: 9.6%;
+    }
+    .up-group{
+        height: 300px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 375px) {
+    #loginup .hero .form-box .input-group{
+        padding-left: 0;
+    }
+    #loginup .hero .form-box-up .input-group{
+        padding-left: 0;
+    }
+    #loginup .hero .form-box {
+        height: 90.2%;
+        top: 8.6%;
+    }
+    #loginup .hero .form-box-up {
+        height: 90.2%;
+        top: 8.6%;
+    }
+    .up-group{
+        height: 300px;
+    }
 }
 
 

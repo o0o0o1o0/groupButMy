@@ -1,5 +1,5 @@
-let app = new Vue({
-    el: '#app',
+let cart = new Vue({
+    el: '#cart',
     data: { 
             priceAll: 0,
             itemList:[
@@ -66,10 +66,13 @@ let app = new Vue({
             let min = item.count;
             min--;
             this.priceAll = this.priceAll + min * item.price;
-        }
+        },
         
     },
     computed: {  
-        
-    },
+        cartadd(){
+            // document.querySelector('.cartNum span') = this.itemList.length;
+             return  this.itemList.length;
+        }
+    }
 });

@@ -1,5 +1,4 @@
 @import "../style";
-
 #admin{
     width: 100%;
     margin: 0;
@@ -44,27 +43,28 @@
             ul{ 
                 width: fit-content;
                 padding: 0;
-                margin: $center;
+                margin: $center4;
                 list-style: none;
                 li{
-                    margin: $center5;
+                    margin: $center2;
                     width: 200px;
                     height: 55px;
                     line-height: 55px;
                     border-radius: 50px;
-                    &:hover{
-                        background-color: #CDB9B0;
+                    // &:hover{
+                    //     background-color: #CDB9B0;
                         
-                    }
-                    &:active{
-                        background-color: #2C5D77;
-                    }
+                    // }
+                    // &:active{
+                    //     background-color: #2C5D77;
+                    // }
                     a{
                         color: $white-color;
                         font-size: $font-size-0;
                         text-decoration: none;
                         display: flex;
                         justify-content: center;
+                        border-radius: 50px;
                         i{
                             width: 28px;
                             height: 28px;
@@ -79,10 +79,18 @@
                             border-radius: 100%;
                             font-size: 15px;
                         }
+                        &:hover{
+                            background-color: #CDB9B0;
+                            
+                        }
                     }
                     a.-on{
                         background-color: $admin_on;
                         border-radius: 50px;
+                        &:hover{
+                            background-color: $admin_on;
+                            
+                        }
                     }
                 }
             }
@@ -203,16 +211,23 @@
                         th, td{
                             text-align: center;
                             font-size: $font-size-3;
-                            height: 35px;
-                            line-height: 35px;
+                            height: 50px;
+                            line-height: 50px;
                         }
                         th{
                             color: $admin_th;
                         }
-                        td{
+                        td.toggle{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            span{
+                                margin: 0 10px;
+                            }
                             .toggle {
                                 position: relative;
-                                display: inline-block;
+                                display: inline-flex;
+                                height: fit-content;
                                     input{
                                         height: 0;
                                         width: 0;
@@ -245,7 +260,7 @@
                                             box-shadow: inset 0px 2px 4px -2px rgba(0,0,0,0.2), 0px 1px 2px 0px rgba(151, 151, 151, 0.2);
                                         }
                                     }
-                                #normal:checked + label {
+                                .normal:checked + label {
                                     background: #af4c4c;
                                     &:before {
                                         left: 40px;
@@ -253,7 +268,7 @@
                                 }
                                 label.toggle-item {
                                     width: 70px;
-                                    margin: 12px auto;
+                                    margin: 9px auto;
                                     background: #adb5bd;
                                     height: 30px;
                                     display: inline-block;
@@ -285,4 +300,17 @@
         }
 
     }  
+}
+
+//====== RWD ======//
+@media screen and (max-width: 1599px){
+    #admin{
+        aside{
+            .account{
+                img{
+                    visibility: hidden;
+                }
+            }
+        }
+    }
 }

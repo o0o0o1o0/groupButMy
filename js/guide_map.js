@@ -7,23 +7,45 @@
         //----------------以button的class去取得所有新增/刪除地圖資訊------------------------------//
         //----------------只要button的class命名正確,不受搜尋店家數量影響------------------------------//
 
+
+        //    限制地圖觀看範圍只在夜市附近(1)
+        const ChungliNightMarket_Map_Boundary = {
+            north: 24.962399017033672,
+            south: 24.95570693350778,
+            west: 121.21120964864063,
+            east: 121.21965324261951,
+           };
+
+
         function initMap() {
             const ChungliNightMarket = {lat: 24.96015215165077, lng: 121.2154904542284,};
                      
 
             map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 17,
-                center: ChungliNightMarket,
+                center: ChungliNightMarket,                
+                mapTypeId: "roadmap",  
                 
-                mapTypeId: "roadmap",                
+                 // 限制地圖觀看範圍只在夜市附近(2)
+                 restriction: {
+                    latLngBounds: ChungliNightMarket_Map_Boundary,
+                    strictBounds: false,
+                },               
+                
+             
             }); 
 
 
             // map2 = new google.maps.Map(document.getElementById("map2"), {
             //     zoom: 17,
-            //     center: ChungliNightMarket,
+            //     center: ChungliNightMarket,                
+            //     mapTypeId: "roadmap", 
                 
-            //     mapTypeId: "roadmap",                
+            //      // 限制地圖觀看範圍只在夜市附近(2)
+            //      restriction: {
+            //         latLngBounds: ChungliNightMarket_Map_Boundary,
+            //         strictBounds: false,
+            //     },    
             // });
                
 
@@ -42,14 +64,18 @@
                     ],
                 }
 
-                map.setOptions({
+               map.setOptions({
                 styles: styles["hide"]
                });
 
             //    map2.setOptions({
             //     styles: styles["hide"]
             //    });
-              
+
+
+        
+        
+            
             
             let item = document.getElementsByClassName('card_plan-btn');           
                
@@ -57,30 +83,6 @@
             
             for(let i=0;i<item.length;i++){ 
                 let count = 0;
-
-
-
-
-
-                // add_cart(item) {
-                //     if (this.cart_items.length == 0) {
-                //         this.cart_items.push(item);
-                //     } else {
-                //         let check = true;
-                //         for (i = 0; i < this.cart_items.length; i++) {
-                //             if (this.cart_items[i].id == item.id) {
-                //                 check = false;
-                //             };
-                //         }
-
-                //         if (check) {
-                //             this.cart_items.push(item);
-                //         }
-                //     }
-                // },
-                // remove_item(index) {
-                //     this.cart_items.splice(index, 1);
-                // }
 
 
 
@@ -105,13 +107,13 @@
                              });
 
 
-                        var marker2 = new google.maps.Marker({
-                            // map:map,
-                            draggable: false,
-                            animation: google.maps.Animation.DROP,
-                            position: {lat: latitude, lng: longitude,}, 
+                        // var marker2 = new google.maps.Marker({
+                        //     // map:map,
+                        //     draggable: false,
+                        //     animation: google.maps.Animation.DROP,
+                        //     position: {lat: latitude, lng: longitude,}, 
                             
-                            });
+                        //     });
 
                          
                         
@@ -129,9 +131,8 @@
                             shopComment = e.target.previousElementSibling.children[2].firstChild.nodeValue;
 
                             
-                            marker.setMap(map); 
-                            marker.setAnimation(google.maps.Animation.BOUNCE); 
-                            
+                            marker.setMap(map);
+                            marker.setAnimation(google.maps.Animation.BOUNCE);                             
 
                             // marker2.setMap(map2); 
                             // marker2.setAnimation(google.maps.Animation.BOUNCE); 
@@ -152,17 +153,15 @@
 
 
                                 marker.addListener("click", () => {
-                                infowindow.open(map, marker);
+                                    infowindow.open(map1, marker);
                                 });
+
+                                // marker2.addListener("click", () => {
+                                //     infowindow.open(map2, marker2);
+                                // });
                         
+                                                   
                             markers.push(marker);
-
-
-                            //     marker2.addListener("click", () => {
-                            //     infowindow.open(map, marker2);
-                            //     });
-                        
-                            // markers2.push(marker2);
 
                  
 
@@ -241,6 +240,7 @@
 
 
 
+
 $(document).ready(function(){
 
 //--側邊規劃菜單滑入滑出
@@ -248,6 +248,32 @@ $(document).ready(function(){
       $(".slide_map").toggleClass("slide");
 
     });
+
+
+// 分頁tab標籤
+$(function(){
+    $('a.tab').on('click', function(e){
+      e.preventDefault(); 
+      
+      $(this).closest('ul').find('a.tab').removeClass("-on");
+  
+      $(this).addClass('-on');
+      
+      $('div.tab').removeClass('-on');
+      
+      $('div.tab.' + $(this).attr('data-target')).addClass('-on');
+    });
+  });
+  
+//篩選
+  $(function(){
+    $(".filter_select").on("click", function(){
+      $(this).addClass("part_filter").siblings().removeClass("part_filter");
+      $(".guide_contents > div").hide();
+      $("." + $(this).data("content")).fadeIn(500);
+    });
+  })
+
 
 
 });

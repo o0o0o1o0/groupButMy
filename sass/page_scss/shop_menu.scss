@@ -1,9 +1,26 @@
 @import "../style";
 
+
+
 // ---顏色相關變數
 $btn-star:#FACC39;
 $btn-love-and-addItem:#F42A00;
 $btn-like:grey;
+
+@mixin report_comment_content2($bg){
+  font-size: 16PX;
+  color: $white-color;
+  background-color: $bg;
+  width: 180px;
+  height: 55px;
+  border-radius: 50px;
+  cursor: pointer;
+  &:hover{
+    background-color: #aaa !important;
+    transition: ease-out 0.4s;
+  }
+}
+
 
 
 
@@ -25,7 +42,9 @@ $btn-like:grey;
         background-color:#fff;
         top:50%;
         left:50%;
-        transform: translate(-50%,-50%);        
+        transform: translate(-50%,-50%);     
+        border-radius: 5px;   
+        overflow: hidden;
           #map{
             width:500px;
             height:600px;
@@ -53,11 +72,13 @@ $btn-like:grey;
       justify-content:center;
       flex-wrap: wrap;
       position: fixed;
-      padding:30px;
+      width:380px;
+      padding: 30px 20px 0 20px;
       background-color:#fff;
       top:50%;
       left:50%;
       transform: translate(-50%,-50%);
+      border-radius: 5px;
 
            .title{
             width:100%;
@@ -68,7 +89,7 @@ $btn-like:grey;
            .cancel{
              position: absolute;
              left:90%;
-             top:5%; 
+             top:3%; 
              cursor: pointer;            
               
                i{
@@ -77,17 +98,16 @@ $btn-like:grey;
            } 
 
            .content{
-              width:250px;
               display: flex;
-              justify-content: flex-start;
+              justify-content: center;
               align-items: center;
               flex-wrap: wrap;
               margin:40px auto;
               
 
               .member_photo{
-                width:30%;               
-                margin-top:20px;
+                width:40%;               
+                margin-top:10px;
                 
                  img{
                    width:80px;
@@ -96,15 +116,20 @@ $btn-like:grey;
               
               span.mem_id{   
                 width:40%;                
-                font-size:$font-size-2;               
-                margin:20px 0 0 20px;
+                font-size:$font-size-1;               
               }
               .comment_star{
-                width:100%;
+                width:80%;
+                text-align: start;
                 margin:20px 0 20px;
-                  
+
+                  span{
+                    font-size: 20px;
+                  }
                   button{
+                    font-size: 20px;
                     cursor: pointer;
+                    font-weight:900;
 
                     &:hover{
                       cursor: pointer;
@@ -115,15 +140,21 @@ $btn-like:grey;
               }
 
               .comment{
-                width:100%;
+                width:80%;
+                text-align: start;
                 margin-bottom:20px;
+                textarea{
+                  width: 100%;
+                  outline: none;
+                  margin-bottom: 10px;
+                }
               }
 
               .comment-btn-frame{
-                width:100%;
+                width:80%;
                 display: flex;
-                justify-content:flex-end;
-                
+                justify-content:center;
+                margin-top: 10px;
               }
            }
      }
@@ -148,8 +179,9 @@ $btn-like:grey;
       justify-content:center;
       flex-wrap: wrap;
       position: fixed;
-      padding:40px;
+      padding:30px;
       background-color:#fff;
+      border-radius: 5px;
       top:50%;
       left:50%;
       transform: translate(-50%,-50%);      
@@ -164,18 +196,20 @@ $btn-like:grey;
             display: flex;
             flex-direction: column;
             margin-top:20px;
+            width: 100%;
 
 
             .report_comment_content-1,.report_comment_content-2,.report_comment_content-3{
-              @include report_comment_content(#bbc3c6);
+              @include report_comment_content2(#bbc3c6);
               margin: 10px 0;
             }            
           }
 
          .funtion_btn{
            display: flex;
-           justify-content: space-evenly;
+           justify-content: space-between;
            margin-top: 20px;
+          
          }
     }
 
@@ -201,7 +235,7 @@ $btn-like:grey;
     // display: none;
     
        .my_order{
-         margin: 0 auto;
+         margin: 20px auto 0;
          text-align: center;
          font-size:$font-size-1;
          padding-bottom:10px;       
@@ -216,7 +250,7 @@ $btn-like:grey;
           .shopping_list{        
             display: flex;
             flex-wrap: wrap;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items:center;         
             padding:20px;        
             
@@ -298,31 +332,40 @@ $btn-like:grey;
         .count_price{
             display: flex;
             justify-content: flex-end;
-            padding:40px;
+            padding:30px;
         }   
 
         .pay_bill{
             display: flex;
-            justify-content: flex-end;
-            padding-right:40px;
+            justify-content: space-evenly;
+
             a{
-              text-decoration: none;
-              color: #fff;
+              text-decoration: none;             
+              display: inline-block;
+              line-height: 35px; 
+              padding-top:2px;             
             }
+          
         }
   .slide_cart{
     position: absolute;
-    right:300px;
+    right:320px;
     top:20%;
     background-color: #fff;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     cursor: pointer;
-    
-    
+    overflow: hidden;
       i{
-        color:orange;
-        font-size:40px;
-        padding:10px;
-        border:4px solid orange;
+        font-size: 24px;
+        color:#fff; 
+        background-color: $bg-color-2;   
+        display: block;
+        text-align: center;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        
       }
       
     }    
@@ -335,13 +378,32 @@ $btn-like:grey;
 #shop_menu{
  margin-top:70px;
   .shop_banner{
-    width: 1200px;
-    margin:0 auto;
-     
+    width: 1140px;
+    margin:0 auto;    
+      
       .shop_picture{
         height:400px;
         max-width: 1200px;
         overflow: hidden;
+        position: relative;
+              .todayClosed{
+                position: absolute;
+                top:0;
+                left:0;
+                background-color:hsla(0, 0%, 0%, .8);
+                width: 1140px;
+                height:400px;
+                z-index:5;
+                display: none;
+                  span{
+                    position: absolute;
+                    top:50%;
+                    left:50%;
+                    color:#fff;
+                    transform: translate(-50%,-50%);
+                    font-size:40px;
+                  }
+            }
 
             img{
               max-width:100%;
@@ -353,10 +415,10 @@ $btn-like:grey;
           display: flex;
           justify-content: space-evenly;
           margin-top:40px;
-          padding:40px 20px;
+          page-break-after: 30px;
           box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
           border-radius: 8px;
-
+          padding: 30px;
           
           .shop_info_left{
              width:70%;
@@ -369,7 +431,6 @@ $btn-like:grey;
                     display: flex;
                     align-items: center;
                     font-size:$font-size-1;                    
-                    margin-left:20px;
                    }
                   
                   .shop_collect{
@@ -389,7 +450,7 @@ $btn-like:grey;
                           
                        .shop_score_block{
                          display: flex;
-                         margin:10px 0 30px 20px;
+                         margin: 20px 0;
                        
                              i{
                               color:$btn-star;
@@ -403,15 +464,25 @@ $btn-like:grey;
 
                     .shop_intro{
                         font-size:$font-size-3;
-                        margin-left: 20px;
+                        line-height: 25px;
                         
+                    }
+
+                    .openDate{
+                      font-size: 18px;
+                      display: flex;
+                      margin-top:20px;
+                      align-items: center;
+                       div{
+                         margin-right:5px;
+                       }
                     }
             }
 
            .shop_info_right{
             width:30%;
             display: flex;
-            justify-content: flex-end;            
+            justify-content: flex-end;                         
            }
         }
  
@@ -427,22 +498,23 @@ $btn-like:grey;
     // padding:10px;
     box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
     border-radius: 8px;
+    padding-bottom: 30px;
     
    
 
         .menu_title{
           width:100%;
           font-size:$font-size-1;
-          padding:20px 20px 0px 40px;    
+          padding: 30px 30px 0 30px;  
         }
     
         .menu_content_frame{
           width:100%;
           display:flex;
           flex-wrap: wrap;
-          justify-content:flex-start;
+          justify-content:space-between;
           margin:0 auto;
-          padding:20px;
+          // padding:20px;
           
 
           
@@ -452,24 +524,23 @@ $btn-like:grey;
               justify-content:flex-start;
               flex-wrap: wrap;
               box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);              
-              margin:20px 31px;
-              border-radius: 8px;
-              // margin:0 auto;
-              // border:1px solid red;                  
+              // margin:20px 31px;
+              margin: 30px;
+              border-radius: 5px;
+              overflow: hidden;                            
 
                   .menu_content_left{
                     width:25%;
                                          
                       .menu_item_pic{
-                        margin:0 auto;
-                        overflow: hidden;
-                        // width:80%;
+                        margin:0 auto; 
+                        overflow: hidden;                        
                         
                         img{
                           display: block;
                           width:120px;
                           transform: scale(1,1);                          
-                          transition: 0.3s ease-in;
+                          transition: 0.3s ease-in;                          
 
                           &:hover{
                             transform: scale(1.3,1.3);
@@ -533,26 +604,28 @@ $btn-like:grey;
      margin:40px auto;
      box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
      border-radius: 8px;
+     padding-bottom: 20px;
 
 
           .comment_title{
             width:25%;
             font-size:$font-size-1;
-            padding:30px;
+            padding:30px 30px 0 30px;
           }
 
           .write_comment{
              display: flex;
              justify-content: flex-end;
              flex-grow: 1;
-             padding:20px;
+             padding:30px 30px 0 30px;               
           }
 
           .frame{
-            width:95%;
+            width:100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
+            padding: 0 30px;
             
             
 
@@ -560,7 +633,7 @@ $btn-like:grey;
                   width:100%;
                   display: flex;
                   flex-wrap: wrap;
-                  justify-content: flex-start;
+                  justify-content: space-between;
                   margin:20px 0;
                   padding:20px;
                   box-shadow: 0px 2px 8px 0 rgba(0,0,0,0.08);
@@ -570,8 +643,9 @@ $btn-like:grey;
 
 
                         .comment_frame_left{
-                          width:15%;
-                          
+                          width:8%;
+                          display: flex;
+                          align-items: center;
 
                               .member_photo{                                 
                                   img{
@@ -584,12 +658,14 @@ $btn-like:grey;
 
 
                         .comment_frame_right{
-                            width:85%;
+                            width:88%;
                             display: flex;
                             flex-wrap: wrap;
                             position: relative;                            
                             font-size:$font-size-3;
+                            padding:8px;
                             background-color: $bg-color-5;
+                            border-radius: 5px;
 
                             &::before{
                               content: '';
@@ -625,21 +701,22 @@ $btn-like:grey;
                                       .judge_hint.showHint{                                        
                                         opacity: 1;                                     
                                         cursor: pointer;
+                                        background-color: #BBC3C6;
 
                                         &:hover{
-                                          color:$bg-color-4;
-                                          background-color:$white-color;
-                                          border:2px solid $bg-color-4;
+                                          color:$white-color;
+                                          background-color: #aaa;
+                
                                         }
                                       }
 
                                       .judge_hint{
                                         position: absolute;
                                         right:20px;                                        
-                                        padding:10px; 
-                                        background-color:$bg-color-4;
+                                        padding:12px 10px; 
+                                        background-color:#BBC3C6;
                                         color:$white-color; 
-                                        border:2px solid transparent;                                          
+                                        border-radius: 5px;                                         
                                         transition: 0.3s ease-in;                                    
                                         opacity: 0;               
                                         
@@ -652,35 +729,40 @@ $btn-like:grey;
                                  .star{
                                     width:100%;
                                     margin-top: 5px;
-                                    margin-bottom:20px;
+                                    margin-bottom:15px;
                                     padding-left:10px;
 
                                     i{
                                       color:$btn-star;
+                                      font-size:15px;
                                       font-weight: 900;
                                     }
                                  }
                                   .comment_content{
+                                    // display: flex;   
+                                    // align-items: center;                                 
                                     padding-left:10px;
-                                  }
-                                 .good-btn{
-                                    margin-left:10px;
-                                    margin-right:5px;
-                                    padding-bottom:2px;
-                                    display: block;
-                                    cursor: pointer;
-
-                                   i{
-                                    line-height:$font-size-3;
-                                    color:$btn-like;
-                                     }
-                                   }
-                                 
-                                 
-                                 
-                             
-
-                        }
+                                    font-size: 20px;
+                                    
+                                      span{
+                                        line-height: 25px;                                                                                 
+                                      } 
+                                      .good-btn{
+                                        margin-left:10px;
+                                        margin-right:5px;
+                                        // padding-bottom:2px;
+                                        display: inline;
+                                        cursor: pointer;
+                                          i{
+                                            line-height:$font-size-3;
+                                            color:$btn-like;
+                                            }
+                                        }
+                                      .good_count{
+                                        display: inline-block;
+                                      }
+                                  }  
+                         }
                 }
 
           }
@@ -722,38 +804,47 @@ $btn-like:grey;
 @media screen and (max-width: 575px){
   .map_lightBox{    
     .map_frame{     
-       width:300px;
-       height:550px;
+       width:100vW;
+       height:calc(100vh - 70px);
        #map{
-         width:300px;
-         height:500px;
+         width:100%;
+         height:calc(100% - 70px);
        }
      }
    }
-   .cart_frame{                
-      .slide_cart{        
-        right:320px; 
-         i{
-          font-size:20px;
-          padding:2px;
-         }   
-      }
-  }
+
+   .write_comment_lightbox{
+    .frame{
+      width:85%;
+    }
+   }
+
+   
+  
   #shop_menu{
     .shop_banner{
-      width:100%;
+      width:95%;
       .shop_picture{
         height:auto;       
           img{
            max-width:100%;
            transform:translate(0,0);
           }
-         }
-
-            
+      }
+      .openDate{
+        display: flex;
+        flex-wrap: wrap;
+        #time{
+          width:100%; 
+          margin-bottom:10px;        
+        }
+      }
+      
        .shop_info{   
-         width: 85%; 
-         margin:20px auto 0; 
+         width: 84%; 
+         margin: 30px auto  0; 
+         display: flex;
+         justify-content: space-between;
         .shop_info_left{    
             #shop_name{
               width:40%;
@@ -777,9 +868,9 @@ $btn-like:grey;
       width:95%;
       .menu_content_frame{
         width:100%;
-        padding:10px;
          .menu_content{
           width:100%;
+          margin: 15px  30px;
           .menu_content_left{
             width:20%;
                                  
@@ -788,7 +879,7 @@ $btn-like:grey;
                 // width:80%;
                 
                 img{
-                  width:80px;
+                  max-width:100%;
                 }
               }
           }
@@ -804,28 +895,39 @@ $btn-like:grey;
     .shop_comment_list{
       width:95%;
        .frame{        
-         .comment_frame{ 
-           padding:10px;   
+         .comment_frame{   
             .comment_frame_left{
-              width:10%;
+              width:25%;
+              position: relative;
               .member_photo{                                 
                 img{
                   width:50px;
+                  position: absolute;
+                  top:-28px;
+                  left:20px;
+                  z-index:4;
                 }
               }
             }
             .comment_frame_right{
-              width:75%;
-              margin-left: 35px;
-              // border:1px solid red;
-
+              width:100%;
+              margin:0 auto;
+              padding-top:20px;
+                &::before{
+                  display: none;
+                }
+              
               .member_id{
-                width:40%;
+                width:50%;
                 // border:1px solid red;
               }
               .judge_comment{
                 width:42%;
                 // border:1px solid red;
+
+                .judge_hint{
+                  font-size:15px;
+                }
               }
               .comment_content{
                 width:95%;
@@ -851,32 +953,19 @@ $btn-like:grey;
           }
         }
     }
-  
-  .cart_frame{
-    width:300px;    
-    transform: translate(320px,0px);
-    padding:10px; 
-     .shopping_list{ 
-        span.shop_name{
-          width:80%;          
-          }
-        }
-      .slide_cart{        
-        right:320px;       
-      }
-  }
-
+   
   #shop_menu{
     .shop_banner{
       width:95%;
        .shop_info{     
         .shop_info_left{    
             #shop_name{
-              width:28%;
-              display: flex;
-              align-items: center;
-              font-size:$font-size-1;              
+              width:28%;              
             }
+            .shop_collect{
+              width:60%;
+            }
+            
          } 
       }  
     }
@@ -899,8 +988,8 @@ $btn-like:grey;
               width:13%;
             }
             .comment_frame_right{
-              width:80%;
-              margin-left: 30px;
+              width:74%;
+              // margin-left: 30px;
               // border:1px solid red;
             }
           }
@@ -912,10 +1001,24 @@ $btn-like:grey;
 @media screen and (min-width: 768px) and (max-width: 991px){
   #shop_menu{
     .shop_banner{
-      width:95%;     
+      width:95%;  
+        .shop_info{
+          .shop_info_left{
+            #shop_name{
+              width:20%;
+            }
+            .shop_collect{
+              width:68%;
+            }
+          }
+          .shop_info_right{
+            width:30%;
+          }
+        }
+
     }
     .shop_menu_list{
-      width:95%;
+      width:95%;      
       .menu_content_frame{
         width:95%;
          .menu_content{
@@ -925,6 +1028,13 @@ $btn-like:grey;
     }
     .shop_comment_list{
       width:95%;
+      .frame{
+        .comment_frame{
+          .comment_frame_right{
+            width:80%;
+          }
+        }
+      }
     }
   }
 }
@@ -951,6 +1061,13 @@ $btn-like:grey;
     }
     .shop_comment_list{
       width:95%;
+      .frame{
+        .comment_frame{
+          .comment_frame_right{
+            width:86%;
+          }
+        }
+      }
     }
   }
 }

@@ -3,7 +3,7 @@
   font-size: 18px;
   color: $white-color;
   background-color: $bgc;
-  border: 1.5px solid transparent;
+  border: 1.8px solid transparent;
   width: $w;
   height: 35px;
   text-align: center;
@@ -11,7 +11,7 @@
   cursor: pointer;
   &:hover{
     background-color: transparent;
-    border: 1.5px solid $bgc;
+    border: 1.8px solid $bgc;
     color: $bgc;
     transition: ease-out 0.3s;
   }
@@ -32,13 +32,13 @@
   @include btn(80px,#FF6B6B,6px); //粉色方形2個字
 }
 .btn-rect_pk2{
-  @include btn(110px,#FF6B6B,6px); //粉色方形4.5個字
+  @include btn(100px,#FF6B6B,6px); //粉色方形4.5個字
 }
 .btn-rect_gr1{
   @include btn(80px,#2DC8A9,6px); //綠色方形2個字
 }
 .btn-rect_gr2{
-  @include btn(110px,#2DC8A9,6px); //綠色方形4.5個字
+  @include btn(100px,#2DC8A9,6px); //綠色方形4.5個字
 }
 .btn-cir_bl{
   @include btn(80px,#4db7fe,50px); //藍色圓形2個字
@@ -47,5 +47,5 @@
   @include btn(80px,#4db7fe,6px); //藍色方形3個字
 }
 .btn-rect_bl2{
-  @include btn(110px,#4db7fe,6px); //藍色方形4.5個字
+  @include btn(100px,#4db7fe,6px); //藍色方形4.5個字
 }

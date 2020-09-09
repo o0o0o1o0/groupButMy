@@ -1,9 +1,6 @@
 window.addEventListener('load',function(){
 
-    // e.stoppropagation()
-
-
-// ---當評價被檢舉時,抓取該評價的編號==>寫入檢舉表單中(打包送後台用)--------------------------------------------//
+ // ---當評價被檢舉時,抓取該評價的編號==>寫入檢舉表單中(打包送後台用)--------------------------------------------//
    
    var number = document.getElementsByClassName("judge_hint");
     
@@ -307,6 +304,20 @@ window.addEventListener('load',function(){
              });
         
         }; 
+
+
+
+
+
+
+
+// 撰寫新評價的相關檢查
+// comment_submit = document.getElementById('comment_submit');
+
+// comment_submit.addEventListener("click",function(){
+  
+
+// });
       
       
 
@@ -399,19 +410,48 @@ $(document).ready(function(){
              });
     
     // --開啟"撰寫您的評價"燈箱後==>檢查當送出評價時,評分是否有選取-------------------------
-    
+         remainChar = $('#count_char > span').text();   //一開始的剩餘可輸入的總字數    
+
+        $('#textarea').keyup(function(){
+            // var reg = /[^/x00-/xff]/g;
+            // var reg = new RegExp("^[A-Za-z0-9\u4e00-\u9fa5] $"); //使用正則表示法,偵測數字、中文及英文各佔的字元數
+            reg = new RegExp("[^\a-\z\A-\Z0-9\u4E00-\u9FA5\@\.]");
+            uesrComment = $('#textarea').val().trim(); //去除使用者輸入頭尾兩端的空格
+
+            newRemainChar = remainChar-(uesrComment.replace(reg,'**').length); //目前的剩餘可輸入的總字數
+            
+            if(newRemainChar >=0 & newRemainChar <=50){           
+                $('#count_char > span').text(newRemainChar);
+                    
+                }else{
+                    alert("已超過字數上限，請精簡您的內容。");
+                    $('#comment_submit').click().remove;
+                }
+
+        });
+        
+
         $('#comment_submit').click(function(){
+            inputChar = $('#textarea').val().length;
+            
                 if($('#comment_star').val() == ""){
                     alert("請選擇您的評分");
                     return false;
-                }else if($('#textarea').replace(/(^s*)|(s*$)/g,"").length == 0){
-                    alert("請撰寫您的評論");
+
+                }else if($('#comment_star').val() != "" && inputChar == 0){
+                    alert("請撰寫您的評論");                   
                     return false;
+
+                }else if($('#comment_star').val() != "" &&　inputChar > 50){                                
+                    return false;
+                    
                 }else{
                     return true;
                 }
         });
-    
+
+
+        
     //--開啟"撰寫您的評價"燈箱後==>點擊右上角叉叉,關閉燈箱
     $('#canel_comment').click(function(){
         $('.write_comment_lightbox').fadeOut();

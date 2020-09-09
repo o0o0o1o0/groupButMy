@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>菜單詳情</title>
     <!-- css -->
-    <link rel="stylesheet" href="./css/style.css">
+    
     <link rel="stylesheet" href="./css/shop_menu.css">
 
     <!-- Font Awesome -->
@@ -17,14 +17,6 @@
 
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-
-    <!-- Google map API -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
-
-
-    <!-- Google map API:顯示攤商所在位置 -->
-    <script src="./js/vendor_position.js"></script>
 
     <!-- shop_menu本頁JS -->
     <script src="./js/shop_menu.js"></script>
@@ -111,7 +103,7 @@
                 <div class="lon" style="display:none">121.214998</div>
             </div>
             <div class="close_map">
-                <button type="button" class="btn-rect_bl2" id="close_map_btn">關閉地圖</button>
+                <button type="button" class="btn-rect_pk2" id="close_map_btn">關閉地圖</button>
             </div>
         </div>
     </div>
@@ -140,9 +132,10 @@
                     </div>
                     <div class="comment">
                         <textarea style="resize:none;" name="" id="textarea" cols="32" rows="10" placeholder="詳細說明你在這個地點親身體驗"></textarea>
+                        <div id="count_char">可輸入的剩餘字數:<span>50</span></div>
                     </div>
                     <div class="comment-btn-frame">
-                        <button type="submit" class="btn-rect_bl2" id="comment_submit">發佈評價</button>
+                        <button type="submit" class="btn-rect_pk2" id="comment_submit">發佈評價</button>
                     </div>
                 </div>
             </form>
@@ -162,8 +155,8 @@
                     <input type="hidden" name="evaluation_accuse" id="judge_comment_code"> <!-- 抓取檢舉的類別用 -->
                 </div>
                 <div class="funtion_btn">
-                    <button type="submit" class="send-btn" id="judge_submit" onclick="return false">送出</button>
-                    <button type="button" class="return-btn">取消</button>
+                    <button type="submit" class="btn-rect_pk1" id="judge_submit">送出</button>
+                    <button type="button" class="return-btn btn-rect_pk1">取消</button>
                 </div>
             </form>
         </div>
@@ -208,11 +201,12 @@
                 <div class="total_price_number" id="total_price_number">0</div>
             </div>
             <div class="pay_bill">
-                <button type="submit" class="btn-rect_bl2" id="pay_bill"><a href="./cart.html">來去結帳</a></button>
+                <button type="button" ><a href="./book.html" class="btn-rect_pk2">繼續點餐</a></button>
+                <button type="submit" id="pay_bill"><a href="./cart.html"  class="btn-rect_pk2">來去結帳</a></button>
             </div>
         </form>
         <div class="slide_cart">
-            <i class="fas fa-cart-plus"></i>
+            <i class="fas fa-shopping-cart"></i>
         </div>
     </div>
 
@@ -222,8 +216,11 @@
     <div id="shop_menu">
         <div id="vendor_num" style="display: none;">{{vendor_id}}</div> <!-- 從前一頁抓取攤商會員編號用 -->
         <!-- 商家基本資料 -->
-        <div class="shop_banner">
+        <div class="shop_banner">            
             <div class="shop_picture">
+                <div class="todayClosed">
+                    <span>非營業時間</span>
+                </div>
                 <img src="./img/shop_menu/060-shop-picture.jpg" alt="shop_banner">
             </div>
             <div class="shop_info">
@@ -231,8 +228,8 @@
                     <div id="shop_name">{{shopName}}</div> <!-- 從$sql撈攤商名稱 -->
                     <div class="shop_collect">
                         <form action="#.php" method="GET">
-                            <button type="button" id="shop_collect_submit"><i class="far fa-heart"
-                                    id="shop_love"></i></button>
+                            <button type="button" id="shop_collect_submit">
+                                <i class="far fa-heart" id="shop_love"></i></button>
                             <input type="hidden" id="shop_collect_state"> <!-- 偵測收藏攤商的狀態 -->
                         </form>
                     </div>
@@ -243,10 +240,20 @@
                         </div>
                     </div>
                     <div class="shop_intro">{{intro}}</div> <!-- 從$sql撈攤商簡介 -->
+                    <div class="openDate">
+                        <div id="time">營業時間 :</div>
+                        <div id="mon">一</div>
+                        <div id="tue">二</div>
+                        <div id="wen">三</div>
+                        <div id="thr">四</div>
+                        <div id="fri">五</div>
+                        <div id="sat">六</div>
+                        <div id="sun">日</div>
+                    </div>
                 </div>
 
                 <div class="shop_info_right">
-                    <button id="see_map" class="btn-cir_bl">看地圖</button>
+                    <button id="see_map" class="btn-rect_pk1">看地圖</button>
                 </div>
             </div>
         </div>
@@ -277,7 +284,7 @@
             <div class="comment_title">商家評價</div>
 
             <div class="write_comment">
-                <button id="write_comment_btn" class="btn-cir_bl">我要評價</button>
+                <button id="write_comment_btn" class="btn-rect_pk2">我要評價</button>
             </div>
             <div class="frame">
                 <div class="comment_frame" v-for="comm in comments">
@@ -302,11 +309,11 @@
                         </div>
                         <div class="comment_content">
                             <span>{{comm.comment}}</span>
-                        </div>
-                        <button class="good-btn">
-                            <i class="far fa-thumbs-up"></i>
-                        </button>
-                        <div class="good_count">{{comm.likecount}}</div>
+                            <button class="good-btn">
+                                <i class="far fa-thumbs-up"></i>
+                            </button>
+                            <div class="good_count">{{comm.likecount}}</div>
+                        </div>                        
                     </div>
                 </div>               
             </div>
@@ -416,6 +423,14 @@
 
        
     </script>
+
+    <!-- Google map API -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+
+
+    <!-- Google map API:顯示攤商所在位置 -->
+    <script src="./js/vendor_position.js"></script>
 
 </body>
 

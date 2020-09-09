@@ -20,7 +20,6 @@ let bossPhoto = document.querySelector('.bossPhoto');
 //遊戲畫面結束綁定
 let gameOver = document.querySelector('.gameOverbutton');
 
-
 let over = 0;
 let num = 7;
 
@@ -157,3 +156,22 @@ gameOver.addEventListener('click',function(){
     document.querySelector('.gameOver').style.display='none';
     location.reload();
 },false);
+
+//width < 1200 跳轉到首頁
+$(window).resize(function() {
+    if($(this).width() < 1200){
+        // history.back();
+        window.location.href = './home.html';
+    }  
+ });
+
+// window.addEventListener('resize',function(e){
+//     e.target
+//     console.log(e.target);
+//     if(window.resize.width < 1200){
+//         alert('hello');
+//     }
+//     });
+
+
+

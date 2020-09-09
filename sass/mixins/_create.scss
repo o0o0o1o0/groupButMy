@@ -1,68 +1,67 @@
 /*全域樣式*/
   /*color*/
-  $bgc:$bg-color-1;
-  $pageItemBG:white;
-  $bdrs:8px;
-  $textbdrs:8px;
-  $h2color:$text-color-1;
-  $textWidth2c:350px;
-  $textWidth3c:120px;
-  $LH:30px;
-  $textM: 5px;
-  $textP: 0 5px;
-  $textBGC:$bg-color-3;
-  $STRONGcolor:#4db7fe;
-  $STRONGgrren:#2DC8A9;
-  $STRONGred:#FF6B6B;
-  $addBtnLabel:(
-
-  );
-  %rectBtn{
-    width: 100px;
-    line-height: $LH;
-    border-radius: $textbdrs;
-    border: 0 solid #000;
-    background-color: white;
-    box-shadow: 0px 3px 6px rgba(0,0,0,.3);
-  }
-  %ctrlBtn{
-    width: 100px;
-    line-height: $LH;
-    border-radius: $textbdrs;
-    border: 0 solid #000;
-  }
-  %greenBtn{
-    width: 100px;
-    line-height: $LH;
-    background-color: $STRONGgrren;
-  }
-  %greenCBtn{
-    border: 0 ;
-    width: 30px;
-    height: 30px;
-    color: white;
-    border-radius: 50%;
-    padding: 5px;
-    background-color: $STRONGgrren;
-    box-shadow: 2px 2px 8px rgba(0,0,0,.3);
-  }
-  %grayCBtn{
-    border: 0 ;
-    width:  40px;
-    height: 40px;
-    color: white;
-    font-weight: 900;
-    font-size: 25px;
-    border-radius: 50%;
-    padding: 5px;
-    background-color: #ccc;
-    box-shadow: 0px 3px 6px rgba(0,0,0,.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // margin: 1em;
-    // margin-left: 3em;
-    margin-right: 20px;
-  }
- 
+    $bgc:$bg-color-1;
+    $pageItemBG:white;
+    $bdrs:8px;
+    $textbdrs:8px;
+    $h2color:$text-color-1;
+    $textWidth2c:350px;
+    $textWidth3c:120px;
+    $LH:30px;
+    $textM: 5px;
+    $textP: 0 5px;
+    $textBGC:$bg-color-3;
+    $STRONGcolor:#4db7fe;
+    $STRONGgrren:#2DC8A9;
+    $STRONGred:#FF6B6B;
+    $addBtnLabel:(
   
+    );
+    %rectBtn{
+      width: 100px;
+      line-height: $LH;
+      border-radius: $textbdrs;
+      border: 0 solid #000;
+      background-color: white;
+      box-shadow: 0px 3px 6px rgba(0,0,0,.3);
+    }
+    %ctrlBtn{
+      width: 100px;
+      line-height: $LH;
+      border-radius: $textbdrs;
+      border: 0 solid #000;
+    }
+    %greenBtn{
+      width: 100px;
+      line-height: $LH;
+      background-color: $STRONGgrren;
+    }
+    %greenCBtn{
+      border: 0 ;
+      width: 30px;
+      height: 30px;
+      color: white;
+      border-radius: 50%;
+      padding: 5px;
+      background-color: $STRONGgrren;
+      box-shadow: 2px 2px 8px rgba(0,0,0,.3);
+    }
+    %grayCBtn{
+      border: 0 ;
+      width:  40px;
+      height: 40px;
+      color: white;
+      font-weight: 900;
+      font-size: 25px;
+      border-radius: 50%;
+      padding: 5px;
+      background-color: #ccc;
+      box-shadow: 0px 3px 6px rgba(0,0,0,.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1em;
+      // margin-left: 3em;
+    }
+   
+    

@@ -115,7 +115,9 @@
 }
 /*主要樣式*/
 .navmenu{
-  position: fixed;
+  position: sticky;
+  // position: fixed;
+
   width: 100%;
   z-index: 6;
   top: 0;
@@ -173,7 +175,9 @@
   }
 .navmenu.bgTransparent{
   background-color: transparent !important;
+  position: fixed;
   .wrap{
+
     ul{
       a{
         color: white;
@@ -196,6 +200,7 @@
   .navmenu{
     background: $white-color;//
     // position: sticky;
+    
     .wrap{
       .logo{
         position: fixed;

@@ -12,24 +12,28 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/08520791a5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./path/css/fontawesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
   <title>夜市客</title>
 </head>
-<body id="cart">
-  <!-- 🟡複製下方即可 -->
-  <div class="navmenu">
-    <div class="wrap">
-      <div class="logo">
-        <div class="img">
-          <a href="./home.html"><img src="./img/layout/logo.png"></a>
+
+<body>
+  <div id="cart">
+    <!-- 🟡複製下方即可 -->
+    <div class="navmenu">
+      <div class="wrap">
+        <div class="logo">
+          <div class="img">
+            <a href="./home.html"><img src="./img/layout/logo.png"></a>
+          </div>
         </div>
-      </div>
-      <div>
-        <ul class="navlist">
-          <li><a href="./book.html">食玩圖鑑</a></li>
-          <li><a href="./guide.html">食玩指南</a></li>
-          <li><a href="./game.html">食尚玩家</a></li>
-          <li><a href="./ad.html">夜市新鮮事</a></li>
-          <li><a href="./create.html">創建指南</a></li>
+        <div>
+          <ul class="navlist">
+            <li><a href="./book.html">食玩圖鑑</a></li>
+            <li><a href="./guide.html">食玩指南</a></li>
+            <li><a href="./game.html">食尚玩家</a></li>
+            <li><a href="./ad.html">夜市新鮮事</a></li>
+            <li><a href="./create.html">創建指南</a></li>
           </ul>
           <div class="rIcon">
             <button class="hamburger hamburger--squeeze" type="button">
@@ -38,71 +42,16 @@
               </span>
             </button>
             <!--<a href=""class="hamburger"><i class="fas fa-bars bar-open"></i></a>-->
-            <a href="./loginup.html"class="user"><i class="fas fa-user"></i></a>
-            <a href="./cart.html"class="cart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="./loginup.html" class="user"><i class="fas fa-user"></i></a>
+            <a href="./cart.html" class="cart"><i class="fas fa-shopping-cart"></i></a>
+            <div class="cartNum">
+              <span>{{cartadd}}</span>
+            </div>
           </div>
+        </div>
       </div>
     </div>
-  </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'></script>
-  <script>
-  let winH = $(window).height();
-  let winW = $(window).width();
-//每次resize 就把漢堡下拉選單關掉
-  $(window).resize(function(){
-    winW = $(window).width();  //把resize 的值帶進去
-    if(winW>1200){
-      $('.navmenu .wrap div').eq(2).find('ul').css('height','70px')
-      $('.navmenu .wrap div').eq(2).find('ul').css({'display':'flex'});
-    }else if(winW<=1200){
-      $('.navmenu .wrap div').eq(2).find('ul').css('height','0px');
-      $('.navmenu .wrap div').eq(2).find('ul').slideUp();
-      $('.hamburger').removeClass('is-active')
-    }
-  })
-  
-  //導覽列加陰影
-  $(document).scroll(function(){
-    let wt = parseInt($(window).scrollTop())
-    if( wt > 80){                         //scroll > 80
-      $('.navmenu').addClass('letmeout')     //陰影
-    }else{                               //scroll <= 80 
-      $('.navmenu').removeClass('letmeout') //去除陰影
-    }
-  })
-
-  // 導覽列漢堡、下拉選單切換
-  $(".hamburger").click(function(){
-    $(this).toggleClass("is-active");
-    if($('.hamburger').hasClass('is-active')){
-      $('.navmenu .wrap div').eq(2).find('ul').css('height','calc(100vh - 70px)')
-      $('.navmenu .wrap div').eq(2).find('ul').slideDown();
-    }else{
-      $('.navmenu .wrap div').eq(2).find('ul').css('height','')
-      $('.navmenu .wrap div').eq(2).find('ul').slideUp();
-    }
-  });
-  </script>
- <!-- 🟡複製上方即可 -->
-
-  <div id="app">
-    <!-- <div class="menu">
-      <div class="wrap mb-5">
-        <div class="logo">LOGO</div>
-        <ul>
-          <li><a href="#">食玩圖鑑</a></li>
-          <li><a href="#">食玩指南</a></li>
-          <li><a href="#">食尚玩家</a></li>
-          <li><a href="#">夜市新鮮事</a></li>
-          <li><a href="#">創建指南</a></li>
-          <li><a href="#" class="order">去點餐<i class="fas fa-arrow-right"></i></a></li>
-          <li>
-            <a href="#" class="user"><i class="fas fa-user"></i></a>
-            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i></a>
-          </li>
-        </ul>
-      </div>
-    </div> -->
+    <!-- <div id="app"> -->
 
     <!-- main -->
     <div class="main">
@@ -144,7 +93,7 @@
                     <p><span>NT$</span>{{item.price}}</p>
                   </div>
                 </div>
-                  
+
                 <!-- 加減功能 -->
                 <div class="bgcolorTwo">
                   <div class="add">
@@ -161,7 +110,7 @@
                     <p><span>NT$</span>{{item.price*item.count}}</p>
                   </div>
                 </div>
-                  
+
 
 
                 <div class="buttonDelete">
@@ -169,7 +118,7 @@
                 </div>
               </div>
             </div>
-          </div>  
+          </div>
       </section>
       <!-- map -->
       <div class="mapRwd">
@@ -178,9 +127,13 @@
       <!-- 儲值夜市幣 -->
       <section class="stored">
         <div class="storedLift">
-          <button class="btn-rect_gr2">         
+          <!-- <button class="btn-rect_pk2">
             <a href="./loginup.html">儲值夜市幣</a>
-          </button>
+          </button> -->
+          
+            <a href="./loginup.html">
+              <button class="btn-rect_pk2">儲值夜市幣</button>
+            </a>
         </div>
         <div class="storedRight">
           <div class="storeTitle d-flex mb-3">
@@ -223,30 +176,36 @@
             </div>
           </div>
           <div class="btn-rect">
-            <button class="btn-rect_gr2">
+            <!-- <button class="btn-rect_pk2">
               <a href="./book.html">繼續購物</a>
-            </button>
-            <button class="btn-rect_gr2">
+            </button> -->
+            <a href="./book.html">
+              <button class="btn-rect_pk2">
+                繼續購物
+              </button>
+            </a>
+            <!-- <button class="btn-rect_gr2">
               <a href="./cart_final.html">前往結帳</a>
-            </button>
+            </button> -->
+            <a href="./cart_final.html">
+              <button class="btn-rect_gr2">前往結帳</button>
+            </a>
           </div>
         </div>
       </section>
     </div>
-    <footer div="footer"></footer>
+    <!-- </div> -->
+
+
+    <div class="footer">
+      <div class="wrap">© YesMan 2020 . All rights reserved.</div>
+    </div>
+
   </div>
-  <!-- map script -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
-  <!-- js -->
-  <script src="./sass/function/cart.js"></script>
-  <script src="./sass/function/cartmap.js"></script>
-  <script src="./js/cartmap.js"></script>
   <script src="./js/cart.js"></script>
-
-  <div class="footer">
-    <div class="wrap">© YesMan 2020 . All rights reserved.</div>
-  </div>
+  <script src="./js/cartmap.js"></script>
 
 </body>
 

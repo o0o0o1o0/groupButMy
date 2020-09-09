@@ -17,6 +17,7 @@
     *{
         box-sizing: border-box;
     }
+    
     @mixin pad{
         @media(max-width:768px){
           @content;
@@ -27,24 +28,64 @@
             @content;
         }
     }
-    
+    // 晏瑋 header test
+   .rIcon {
+        .cart {
+            .fa-shopping-cart {
+                color:$bg-color-2;
+            }
+        }
+        .cartNum {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            background: red;
+            border-radius: 50px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 14px;
+            span {
+                font-size: 14px;
+                text-align: center;
+                color:$bg-color-1;
+            }
+        }
+    }
+
+    //漢堡關閉 時尚玩家
+    @media(max-width:1200px) {
+        .navmenu .wrap > div:last-child ul li:nth-child(3){
+            display: none !important;
+          }
+    }   
+    //test end 
     .main {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 20px;
+        
         .mainListone{
-            margin-top: 80px;
+            margin-top: 50px;
+            @include pad{
+                margin-top: 20px;
+            }
             h1{
                 // color:$white-color;
                 font-size: $font-size-1;
-                padding: 20px 75px;
+                padding: 20px 75px 20px 0;
+            //     text-align: center;
             }
-            @include mobile{
-                text-align: center;
-            }
+            // @include mobile{
+            //     text-align: center;
+            // }
         }
         .mainListtwo {
             max-width: 1200px;
             margin-top: 80px;
+            @include pad{
+                margin-top: 0px;
+            }
             .titleOne {
                     width: 100%;
                     color:$white-color;
@@ -54,6 +95,7 @@
                     @include mobile{
                         justify-content: flex-end;
                     }
+                    
                     .opcart {
                         opacity: 0;
                     }
@@ -82,6 +124,7 @@
                 border-radius: 8px;
                 display: flex;
                 box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+                padding: 0  20px;
                 @include mobile{
                     display: block;
                 }
@@ -304,13 +347,21 @@
             }
             .storedLift{
                 width: 60%;
-                a {
-                    text-decoration:none;
-                    color: #f7f7f7;
-                    &:hover{
-                        color: #2DC8A9;
-                    }
-                }
+
+                // .btn-rect_pk2 {
+                //     &:hover{
+                //         a {
+                //             text-decoration:none;
+                //             color: #FF6B6B;                            
+                //         }
+                //     }
+                //     a {
+                //         text-decoration:none;
+                //         color: #f7f7f7; 
+                //     }
+                   
+                // }
+                
                 @include mobile{
                     display: none;
                 }
@@ -349,13 +400,32 @@
                     button {
                         margin-left: 80px;
                     }
-                    a {
-                        text-decoration:none;
-                        color: #f7f7f7;
-                        &:hover{
-                            color: #2DC8A9;
-                        }
-                    }
+                    // .btn-rect_pk2 {
+                    //     &:hover{
+                    //         a {
+                    //             text-decoration:none;
+                    //             color: #FF6B6B;                            
+                    //         }
+                    //     }
+                    //     a {
+                    //         text-decoration:none;
+                    //         color: #f7f7f7; 
+                    //     }
+                       
+                    // }
+                    // .btn-rect_gr2 {
+                    //     &:hover{
+                    //         a {
+                    //             text-decoration:none;
+                    //             color: #2DC8A9;                            
+                    //         }
+                    //     }
+                    //     a {
+                    //         text-decoration:none;
+                    //         color: #f7f7f7; 
+                    //     }
+                       
+                    // }
                 }
             }
         }
